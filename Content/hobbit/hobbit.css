@@ -1,0 +1,4 @@
+﻿.abs{position:relative}
+.abs>*{position:absolute}
+.fs_s{font-size:14px}
+.arrow:after{content:'';width:6px;height:6px;border-right:2px solid #7C7C81;border-top:2px solid #7C7C81;-webkit-transform:rotate(45deg);transform:rotate(45deg);position:absolute;right:12px;top:50%;margin-top:-3px;display:block}

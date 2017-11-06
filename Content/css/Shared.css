@@ -1,0 +1,17 @@
+﻿.nodata_show{text-align:center;line-height:30px;padding:15% 0 20% 0}
+.nodata_show a{display:inline}
+.extheight{height:40px}
+.price{color:#FF8001}
+.marketprice{text-decoration:line-through;color:#777}
+.ellipsis{display:inline-block;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;width:100%}
+.bold{font-weight:bold}
+div.clear{clear:both;font-size:0;height:0;width:0;line-height:0;overflow:hidden}
+.hiddeninput{visibility:hidden;position:absolute;width:0}
+#header_ui_menu a{width:25%}
+
+.ui_calendar_selector{position:absolute;top:50%;margin-top:-42px;display:block;width:120px;height:84px}
+.ui_calendar_selector_lable{position:absolute;line-height:12px;font-size:12px;top:10px;left:0;height:14px;width:100px;text-align:center;color:#B4B4B4}
+.ui_calendar_selector_date{font-size:44px;line-height:44px;position:absolute;top:30px;left:0;height:44px;font-weight:normal;width:100px;text-align:center}
+.ui_calendar_selector_week{position:absolute;line-height:20px;font-size:12px;top:54px;right:20px}
+.ui_calendar_selector_month{position:absolute;line-height:20px;font-size:12px;top:32px;right:20px}
+.ui_calendar_selector .ui_icon_arrow_r{right:-9px;margin-top:-5px}

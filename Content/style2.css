@@ -1,0 +1,309 @@
+﻿/*==base==*/
+*{outline:medium none;font-family:Arial,"microsoft yahei","宋体"}
+html,body{height:100%}
+body{background:url(images/left-bg.png) repeat-y;color:#555;font-size:12px;line-height:1.8;margin:0;padding:0;text-align:center;position:relative}
+ul,ol,dl,dd,h1,h2,h3,h4,h5,h6,form,p,dfn{margin:0;padding:0}
+em{font-style:normal}
+h1{font-size:20px;font-weight:normal}
+h2{font-size:14px}
+h3{font-size:14px;font-weight:normal}
+h4{font-size:12px}
+h5{font-size:12px;font-weight:normal}
+ul{list-style:none outside none}
+img{border:0 none}
+input{font-size:12px;outline:none}
+a{color:#555;text-decoration:none}
+a:hover{color:#F60}
+table{border-collapse:collapse;border-spacing:0}
+dfn{font-style:normal;font-family:arial}
+.clear{clear:both;font-size:1px;height:0;line-height:0}
+.wrap:after{display:block;clear:both;content:'\20'}
+
+
+/*==common==*/
+#container{clear:both;overflow:hidden;padding-top:42px;margin-bottom:10px}
+
+#mengban{background-color:#000;position:absolute;z-index:998;left:0;top:0;display:none;width:100%;height:100%;opacity:0.6;filter:alpha(opacity=60);-moz-opacity:0.6}
+.promptbox{width:60%;left:20%;height:80%;top:10%;clear:both;position:absolute;border:solid 1px #e2e2e2;border-radius:5px;z-index:999;background:#FFF;display:none}
+.coupons_list ul{clear:both;height:100%;overflow-x:hidden;overflow-y:auto}
+.coupons_list li{clear:both;overflow:hidden;font-size:14px;border-bottom:solid 1px #e2e2e2;height:29px;line-height:29px}
+.coupons_list li.cur{background:#ff4902;color:#FFF}
+.time_list ul{clear:both;height:100%;overflow-x:hidden;overflow-y:auto}
+.time_list li{clear:both;overflow:hidden;font-size:14px;border-bottom:solid 1px #e2e2e2;height:29px;line-height:29px}
+.time_list li.cur{background:#ff4902;color:#FFF}
+
+.table{clear:both;overflow:hidden}
+.table .tr{clear:both;overflow:hidden;height:50px;border-bottom:solid 1px #e5e5e5;line-height:50px;padding:0 10px}
+.table .tr li{float:left;text-align:left}
+
+
+/*==header==*/
+#header{height:42px;line-height:42px;background:#17b9e3;position:fixed;top:0;clear:both;overflow:hidden;width:100%;z-index:3}
+#header a{width:42px;height:42px;overflow:hidden;position:absolute;top:0;background-image:url(images1/site.png);background-size:714% 714%;background-repeat:no-repeat;text-indent:-100px} 
+#header .back{left:0;background-position:0 -155px}
+#header .home{right:0;background-position:-47px -155px}
+#header h1,#header .h1{display:block;margin:0px auto;width:50%;clear:both;overflow:hidden;font-size:16px;color:#FFF;white-space:nowrap;text-overflow:ellipsis;text-shadow:0 0 3px #000}
+
+
+/*==footer==*/
+#footer{background:#f7fafb;clear:both;overflow:hidden;padding:8px 0;width:100%;bottom:0;z-index:2}
+#footer .links{clear:both;overflow:hidden;margin-bottom:3px}
+#footer .links li{display:inline;margin:0 5%}
+#footer .links li a{color:#18bbe4}
+#footer .copyright{clear:both;overflow:hidden}
+
+
+/*==navigation==*/
+#navigation ul{position:fixed;bottom:0;clear:both;overflow:hidden;background:#17b9e3;height:36px;line-height:36px;width:100%;z-index:3}
+#navigation li{float:left;width:25%}
+#navigation li.cur{background:#10819f}
+#navigation a{font-size:14px;color:#FFF;clear:both;display:block ;width:100%;text-shadow:0 0 3px #000}
+
+
+/*==hotel==*/
+.hotel{padding-bottom:36px}
+.hotel .attr{padding:10px 92px 0 10px;clear:both;overflow:hidden;text-align:left}
+.hotel .attr dd{margin:2px 0 10px}
+.hotel .attr .img{float:right;width:82px;height:82px;margin-right:-82px}
+.hotel .attr .img img{border:solid 1px #e2e2e2;border-radius:5px}
+.hotel .attr .service,.hotel .attr .addr,.hotel .attr .tel{display:block;height:20px;line-height:23px;overflow:hidden}
+.hotel .attr .service li{width:20px;height:20px;float:left;background-image:url(images1/site.png);background-repeat:no-repeat;background-size:1500% 1500%;text-indent:-200px;overflow:hidden;margin-right:5%}
+.hotel .attr .service li.park{background-position:0 0}
+.hotel .attr .service li.restaurant{background-position:-25px 0}
+.hotel .attr .service li.wifi{background-position:-50px 0}
+.hotel .attr .service li.net{background-position:-75px 0}
+.hotel .attr .service li.swim{background-position:-100px 0}
+.hotel .attr .service li.printing{background-position:-125px 0}
+.hotel .attr .service li.gym{background-position:-150px 0}
+.hotel .attr .service li.meeting{background-position:-175px 0}
+.hotel .attr .service li.dispark{background-position:0 -25px}
+.hotel .attr .service li.disrestaurant{background-position:-25px -25px}
+.hotel .attr .service li.diswifi{background-position:-50px -25px}
+.hotel .attr .service li.disnet{background-position:-75px -25px}
+.hotel .attr .service li.disswim{background-position:-100px 0}
+.hotel .attr .service li.disprinting{background-position:-125px -25px}
+.hotel .attr .service li.disgym{background-position:-150px -25px}
+.hotel .attr .service li.dismeeting{background-position:-175px -25px}
+.hotel .attr .addr,.hotel .attr .tel{padding-left:30px}
+.hotel .attr .addr .dot, .hotel .attr .tel .dot{width:20px;height:20px;float:left;margin-right:10px;background-image:url(images1/site.png);background-repeat:no-repeat;background-size:1500% 1500%;margin-left:-30px}
+.hotel .attr .addr .dot{background-position:-200px 0}
+.hotel .attr .tel .dot{background-position:-225px 0}
+
+.hotel .filter{clear:both;overflow:hidden;height:42px;padding:0 10px;text-align:left}
+.hotel .filter li{float:left;color:#36bee5;width:50%;border:solid 1px #e2e2e2;height:40px;line-height:40px}
+.hotel .filter li.intime{border-right:none}
+.hotel .filter li.outtime{margin-left:-3px}
+.hotel .filter li .key{float:left;margin:0 2% 0 5%}
+.hotel .filter li .value{float:left;width:52px;line-height:normal;margin-top:4px}
+.hotel .filter li .dot_right{float:right;width:40px;height:40px;background-image:url(images1/site.png);background-repeat:no-repeat;background-position:-50px -160px;background-size:1000% 1000%}
+
+.hotel .rooms{margin-top:5px;border-top:solid 1px #e2e2e2;background:#e2e2e2}
+.hotel .rooms dl{margin-bottom:5px;background:#FFF;text-align:left;position:relative;overflow:hidden;clear:both;padding:10px 195px 10px 10px}
+.hotel .rooms dt{font-size:16px;color:#000;float:left}
+.hotel .rooms dt span{width:100%;font-size:12px;color:#555;float:left;line-height:normal;margin-bottom:4px}
+.hotel .rooms .menprice{float:right;margin-right:-70px;width:65px;font-size:12px;margin-top:-4px;font-size:18px;color:#F60;font-family:"微软雅黑"}
+.hotel .rooms .menprice em{font-size:14px;margin-right:3px}
+
+.hotel .rooms .price{float:right;width:65px;margin-right:-135px;margin-top:-4px}
+.hotel .rooms .price .shiprice{font-size:18px;color:#F60;font-family:"微软雅黑"}
+.hotel .rooms .price .shiprice em{font-size:14px;margin-right:3px}
+.hotel .rooms .price .jifen{float:right;width:100%;line-height:normal;color:#F60}
+.hotel .rooms .book{width:45px;float:right;margin-right:-185px}
+.hotel .rooms .book a{border-radius:3px;width:100%;background:#17b9e3;text-align:center;display:inline-block;font-weight:bold;color:#FFF;font-size:14px}
+.hotel .rooms .th{margin-bottom:0;border-bottom:solid 1px #e2e2e2}
+.hotel .rooms .th dt{font-size:12px}
+.hotel .rooms .th .menprice{font-size:12px;margin-top:0;color:#000}
+.hotel .rooms .th .price{margin-top:0;color:#000}
+.hotel .rooms .more{position:relative;display:block;clear:both;margin-right:-185px}
+.hotel .rooms .more .dot_border{position:absolute;right:10px;top:-29px;height:0;width:0;border-width:15px;border-style:solid;border-color:rgba(255,255,255,0) rgba(255,255,255,0) #E2E2E2 rgba(255,255,255,0)}
+.hotel .rooms .more .dot_bg{position:absolute;right:10px;top:-28px;height:0;width:0;border-width:15px;border-style:solid;border-color:rgba(255,255,255,0) rgba(255,255,255,0) #F6FAFB rgba(255,255,255,0)}
+.hotel .rooms .more ul{border-radius:5px;background:#f6fafb;border:solid 1px #e2e2e2;display:block;clear:both;overflow:hidden;padding:10px}
+.hotel .rooms .more li{float:left;margin-right:5%}
+
+
+/*==hotel_info==*/
+.hotel_info{text-align:left;padding-bottom:36px}
+.hotel_info h2{border-bottom:solid 1px #c6c6c6;color:#4dc3e7;height:23px;line-height:23px;font-size:14px;padding:0 10px}
+.hotel_info .attr{padding:10px;clear:both;overflow:hidden}
+.hotel_info .attr li{clear:both;overflow:hidden}
+.hotel_info .attr li .key{float:left;position:relative;z-index:2;font-weight:bold}
+.hotel_info .attr li .value{float:left}
+.hotel_info .base li{padding-left:45px}
+.hotel_info .base .key{width:45px;margin-left:-45px}
+.hotel_info .service li{padding-left:65px}
+.hotel_info .service .key{width:65px;margin-left:-65px}
+.hotel_info .traffic{padding:5px 10px 15px;clear:both;overflow:hidden}
+.hotel_info .traffic li{clear:both;overflow:hidden;border-bottom:dashed 1px #c6c6c6;height:28px;line-height:28px;padding-right:60px}
+.hotel_info .traffic li .key{float:left;white-space:nowrap;text-overflow:ellipsis;overflow:hidden;width:100%}
+.hotel_info .traffic li .value{float:right;width:60px;text-align:right;margin-right:-60px}
+.hotel_info .traffic li em{color:#61c8e9;margin-right:2px}
+.hotel_info .intro{padding:10px}
+
+
+/*==hotel_pic==*/
+.hotel_pic{background:#17292e}
+.hotel_pic .list{clear:both;overflow:hidden;padding-bottom:36px}
+.hotel_pic .list dt{clear:both;overflow:hidden;height:24px;line-height:24px;background:#26383d;text-align:left;color:#FFF;padding:0 10px;margin-bottom:10px}
+.hotel_pic .list dd{float:left;margin:0 0 10px 10px}
+.hotel_pic .list dd img{width:90px;height:75px;float:left;overflow:hidden}
+
+.hotel_pic .focus{width:100%;overflow:hidden;clear:both}
+.hotel_pic .focus li{float:left;width:100%;min-height:400px;line-height:400px}
+.hotel_pic .focus li img{vertical-align:middle;display:inline-block}
+.hotel_pic .operation{height:40px;line-height:30px;padding:0 0 36px;position:fixed;width:100%;bottom:0}
+.hotel_pic .operation a{width:30px;height:30px;background-image:url(images1/site.png);background-repeat:no-repeat;background-size:1000% 1000%;overflow:hidden;text-indent:-100px;position:absolute;top:0} 
+.hotel_pic .operation .pre{left:30px;background-position:0 -50px}
+.hotel_pic .operation .next{right:30px;background-position:-40px -50px}
+.hotel_pic .operation span{display:block;margin:0px auto;width:50%;clear:both;overflow:hidden;font-size:14px;color:#FFF;white-space:nowrap;text-overflow:ellipsis;text-shadow:0 0 3px #000}
+
+
+/*==news==*/
+.news .list{padding:0 5px;overflow:hidden;display:block;clear:both}
+.news .list li{clear:both;overflow:hidden;border-bottom:solid 1px #c6c6c6;padding-right:50px}
+.news .list a{float:left;width:100%;height:50px;line-height:50px;white-space:nowrap;text-overflow:ellipsis;overflow:hidden;text-align:left;color:#18bbe4;font-size:14px}
+.news .list span{margin-right:-50px;height:50px;line-height:55px;float:right;text-align:right;width:50px;position:relative}
+.news .list span em{position:absolute;right:0;top:7px;width:32px;border-radius:3px;height:13px;line-height:13px;font-size:12px;color:#FFF;background:#ff4902;text-align:center}
+
+.news .info h1{font-size:14px;padding:5px 20px;background:#f7fafb;border-bottom:solid 1px #dee1e1;line-height:18px;color:#000}
+.news .info .con{padding:10px;clear:both;overflow:hidden;text-align:left}
+.news .info .operation{position:relative;height:20px;line-height:20px;padding:10px}
+.news .info .operation a{display:inline-block;width:50px;height:20px;background-image:url(images1/site.png);background-repeat:no-repeat;background-size:600% 1500%;text-indent:100px;overflow:hidden}
+
+.news .info .operation .pre{position:absolute;top:10px;left:10px;background-position:0 -237px}
+.news .info .operation .next{position:absolute;top:10px;right:10px;background-position:-120px -237px}
+.news .info .operation .back{margin:0 auto;width:60px;display:block;clear:both;overflow:hidden;font-size:14px;white-space:nowrap;text-overflow:ellipsis;background-position:-55px -237px;background-size:500% 1500%}
+
+
+/*==mapnav==*/
+#mapnav{position:fixed;top:0;clear:both;overflow:hidden;height:30px;width:100%}
+#mapnav .transparent{clear:both;background:#FFF;height:29px;width:100%;filter:alpha(opacity=80);-moz-opacity:0.8;opacity:0.8;border-bottom:solid 1px #e2e1df}
+
+#mapnav ul{position:absolute;top:0;width:100%;clear:both;overflow:hidden;height:30px;line-height:30px}
+#mapnav li{float:left;width:25%}
+#mapnav li.orange{background:#f66}
+#mapnav li.green{background:#6ec800}
+#mapnav li.red{background:#ff4cc3}
+#mapnav li.blue{background:#3d5bf5}
+#mapnav a{font-size:14px;color:#000;float:left;width:100%;text-shadow:0 0 1px #FFF}
+#mapnav li.orange a,#mapnav li.green a,#mapnav li.red a,#mapnav li.blue a{color:#FFF}
+
+
+/*==coupons==*/
+.coupons .money{clear:both;overflow:hidden;padding:0 10px}
+.coupons .money dt{font-size:14px;color:#000;clear:both;overflow:hidden;height:30px;line-height:30px;text-align:left}
+.coupons .money dd{float:left;padding:5px 15px;border:solid 1px #dee1e1;font-family:"微软雅黑";font-size:16px;color:#17b9e3;background:#f7fafb;margin-right:10px;margin-bottom:10px}
+.coupons .money dd.cur{background:#ff4902;color:#FFF}
+.coupons .preview{border-radius:5px;background:#fae192;margin:10px;box-shadow:2px 2px 3px rgba(150,150,150,1);text-align:left;margin-bottom:20px}
+.coupons .preview dt{font-size:14px;height:30px;line-height:30px;padding:0 10px;color:#000}
+.coupons .preview .intro{height:57px;font-size:20px;color:#FFF;text-align:center;background:#c86d00;line-height:23px;padding:8px 0 0;font-weight:bold;font-family:"微软雅黑";letter-spacing:1px}
+.coupons .preview .intro em{font-size:50px;font-family:"微软雅黑";display:inline-block;line-height:45px;margin-right:5px}
+.coupons .preview ul{padding:7px 10px;overflow:hidden;clear:both}
+.coupons .preview li{color:#cc7711;line-height:1.4;padding-left:60px;clear:both;overflow:hidden}
+.coupons .preview li span{float:left}
+.coupons .preview li .key{margin-left:-60px;width:60px}
+.coupons .operation{clear:both;overflow:hidden;padding:10px}
+.coupons .operation a{border-radius:5px;padding:6px 6%;color:#FFF;font-size:16px;float:left;text-shadow:0 0 3px #000}
+.coupons .operation .touse{background:#4ea20b}
+.coupons .operation .tomember{background:#17b9e3;float:right}
+.coupons .operation .toget{float:none;clear:both;background:#17b9e3;width:100%;padding:6px 0;display:block;margin-top:-10px}
+
+.coupons .list .tr{padding-right:167px}
+.coupons .list .td1{font-size:14px;color:#000}
+.coupons .list .td2{float:right;width:52px;font-size:14px;color:#ff4902;margin:0 -157px 0 15px}
+.coupons .list .td3{float:right;width:85px;line-height:normal;padding-top:8px;margin-right:-90px;word-wrap:break-word;
+word-break:normal}
+.coupons .list .td3 em{color:#10819f;padding-left:4px}
+.coupons .list .gray{color:#555}
+
+
+/*==order==*/
+.order .attr{clear:both;overflow:hidden;border-bottom:solid 1px #dee1e1;background:#f7fafb;text-align:left;padding:10px 10px 3px}
+.order .attr dt{font-weight:bold;line-height:28px;font-size:16px;color:#000;clear:both;overflow:hidden}
+.order .attr dd{float:left;margin-right:10%}
+.order .attr dd.night{float:right;margin-right:0;font-size:14px;color:#17b9e3;margin-top:-2px}
+
+.order .form{padding:14px 10px 0;clear:both;overflow:hidden}
+.order .form li{clear:both;overflow:hidden;padding-left:100px;font-size:14px;margin-bottom:10px;position:relative}
+.order .form li .key{float:left;position:relative;z-index:2;margin-left:-100px;width:80px;padding-right:20px;text-align:right}
+.order .form li .price{float:left;color:#ff4902;font-size:18px;text-align:left;margin-top:-2px}
+.order .form li .price em{font-weight:normal;margin-right:3px;font-size:14px;font-style:normal}
+.order .form li .text{float:right;height:28px;line-height:28px;border:solid 1px #e2e2e2;padding:0;font-size:14px;border-radius:3px;text-align:left;width:98%;padding:0 1%}
+.order .form li .count{width:100px;text-align:center;font-family:"微软雅黑";color:#17b9e3;border-radius:0}
+.order .form li .time{width:158px;text-align:center;font-family:"微软雅黑";color:#17b9e3}
+.order .form li .select{float:right;height:28px;line-height:28px;border:solid 1px #e2e2e2;padding:0;font-size:14px;border-radius:3px;text-align:left;width:79%;padding:0 20% 0 1%;color:#17b9e3}
+.order .form li .dot{background-image:url(images1/site.png);background-repeat:no-repeat;width:30px;height:30px;float:right}
+.order .form li .dot_left{background-position:0 -202px;background-size:1000% 1000%;margin-right:-1px}
+.order .form li .dot_right{background-position:-35px -202px;background-size:1000% 1000%;margin-left:-1px}
+.order .form li .dot_down{background-position:-70px -202px;background-size:1000% 1000%;position:absolute;right:0}
+
+.order .info{padding:10px 10px 0;clear:both;overflow:hidden}
+.order .info li{clear:both;overflow:hidden;padding-left:100px;font-size:14px;margin-bottom:5px}
+.order .info li .key{float:left;position:relative;z-index:2;margin-left:-100px;width:80px;padding-right:20px;text-align:right}
+.order .info li .value{float:left;color:#17b9e3;text-align:left}
+.order .info li .value em{color:#ff4902;font-style:normal}
+.order .info li .value .sm{color:#555;clear:both;display:block;line-height:14px;font-size:12px}
+.order .info li .gray{color:#555}
+
+.order .tishi{padding:0 10px 2px;clear:both;overflow:hidden;text-align:left}
+.order .tishi em{color:#17b9e3;font-style:normal}
+.order .operation{clear:both;overflow:hidden;padding:10px}
+.order .operation a{border-radius:5px;padding:6px 6%;color:#FFF;font-size:16px;float:left;text-shadow:0 0 3px #000}
+.order .operation .tohotel{background:#4ea20b}
+.order .operation .tomember{background:#ff4902;float:right}
+.order .operation .submit{background:#17b9e3;padding:6px 40px;margin:0 auto;display:inline-block;clear:both;float:none}
+
+.order .list .tr{padding-right:167px}
+.order .list .td1{font-size:14px;color:#000;line-height:19px;padding-top:8px}
+.order .list .td2{float:right;width:52px;font-size:20px;color:#ff4902;margin:0 -157px 0 15px}
+.order .list .td3{float:right;width:85px;line-height:normal;padding-top:8px;margin-right:-90px;word-wrap:break-word;word-break:normal}
+.order .list .td2 em{font-size:14px}
+.order .list .td3 em{color:#10819f;padding-left:4px}
+.order .nolist{clear:both;overflow:hidden;padding:10px}
+.order .nolist p{color:#17b9e3;font-size:14px;clear:both;overflow:hidden;margin:20px auto}
+.order .nolist a{border-radius:5px;padding:6px 28px;color:#FFF;font-size:16px;background:#17b9e3;display:inline-block;clear:both;margin:0 auto;text-shadow:0 0 3px #000}
+
+
+/*==reward==*/
+.reward .list .tr{padding-right:110px}
+.reward .list .td1{font-size:14px;color:#000}
+.reward .list .td2{float:right;width:100px;margin:0 -100px 0 0;line-height:normal;padding-top:10px;padding-left:10px}
+
+
+/*==jifen==*/
+.jifen .list .tr{padding-right:185px}
+.jifen .list .td1{font-size:14px;color:#000;line-height:19px;padding-top:8px}
+.jifen .list .td2{float:right;width:85px;font-size:20px;color:#ff4902;margin:0 -175px 0 15px}
+.jifen .list .td3{float:right;width:70px;margin-right:-75px;word-wrap:break-word;word-break:normal}
+.jifen .list .td2 em{font-size:14px}
+.jifen .list .td3 em{color:#10819f;padding-left:4px}
+.jifen .nolist{clear:both;overflow:hidden;padding:10px}
+.jifen .nolist p{color:#17b9e3;font-size:14px;clear:both;overflow:hidden;margin:20px auto}
+.jifen .nolist a{border-radius:5px;padding:6px 28px;color:#FFF;font-size:16px;background:#17b9e3;display:inline-block;clear:both;margin:0 auto;text-shadow:0 0 3px #000}
+
+
+/*==user==*/
+.user .attr{padding:10px;text-align:left;background:#f7fafb;border-bottom:solid 1px #dee1e1;line-height:1.5;font-size:14px}
+.user .attr .img{float:left;margin-right:10px}
+.user .attr .img img {width:58px;height:58px;border:solid 1px #dee1e1;border-radius:3px}
+.user .attr dt{color:#17b9e3;margin-bottom:4px}
+.user .attr dd span{margin-right:10%}
+.user .attr dd span em{color:#17b9e3}
+.user .nav{clear:both;overflow:hidden}
+.user .nav li{height:49px;line-height:49px;border-bottom:solid 1px #e5e5e5;position:relative}
+.user .nav li.cur{background:#e7f8fc}
+.user .nav li a{font-size:16px;color:#000;display:block}
+.user .nav li span{width:30px;height:30px;float:right;background-image:url(images1/site.png);background-repeat:no-repeat;background-position:-110px -120px;background-size:1000% 1000%;text-indent:-100px;overflow:hidden;margin:10px 10px 0 0}
+.user .nav li.cur span{background-position:-145px -120px}
+
+.user .form{padding:20px 10px 0;clear:both;overflow:hidden}
+.user .form li{clear:both;overflow:hidden;padding-left:100px;font-size:14px;margin-bottom:10px;position:relative}
+.user .form li .key{float:left;position:relative;z-index:2;margin-left:-102px;width:80px;padding-right:20px;text-align:right}
+.user .form li .text{float:right;height:28px;line-height:28px;border:solid 1px #888;padding:0;font-size:14px;border-radius:3px;text-align:left;width:96%;padding:0 2%}
+.user .form li .gray{color:#999}
+.user .form li .nan,.user .form li .nv{color:#000;background:#FFF;border:solid 1px #e2e2e2;float:left;height:32px;line-height:32px;width:50%}
+.user .form li .nan{border-right:none;border-radius:3px 0 0 3px;margin-left:-3px}
+.user .form li .nv{border-radius:0 3px 3px 0}
+.user .form li .cur .nan{background:#17b9e3;color:#FFF}
+.user .form li .cur .nv{background:#f19ec2;color:#FFF}
+.user .operation{clear:both;overflow:hidden;padding:10px}
+.user .operation .submit{background:#17b9e3;border-radius:5px;padding:6px 25px;color:#FFF;font-size:16px;clear:both;display:block;overflow:hidden;text-shadow:0 0 3px #000}

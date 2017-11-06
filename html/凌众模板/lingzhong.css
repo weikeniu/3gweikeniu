@@ -1,0 +1,29 @@
+.yu-blue,.yu-blue2,.iconfont.yu-blue::before{
+	color: #004da8 !important;
+}
+.t-arr{
+	border-top: .03rem solid #004da8;
+	border-right: .03rem solid #004da8;
+}
+.h-youhui.blue {
+    border-color: #004da8;
+    color: #004da8;
+}
+.select-item > .cur{
+	background: #004da8;
+}
+.index a{
+    color: #004da8;
+	
+}
+.price-screen > .cur, .type-screen > .cur {
+    border: .01rem solid #004da8;
+    color: #004da8;
+}
+.room-mark{
+	color: #004da8;
+border: 1px solid #004da8;
+}
+.foot-nav > .cur{
+	color: #004da8;
+}

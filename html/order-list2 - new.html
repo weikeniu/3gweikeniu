@@ -1,0 +1,125 @@
+﻿
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html;charset=utf-8" />
+<meta name="keywords" content="关键词1,关键词2,关键词3" />
+<meta name="description" content="对网站的描述" />
+<meta name="format-detection" content="telephone=no">
+<!--自动将网页中的电话号码显示为拨号的超链接-->
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+<!--width宽度height高度，initial-scale初始的缩放比例，minimum-scale允许缩放到的最小比例，maximum-scale允许缩放到的最大比例，user-scalable是否可以手动缩放-->
+<meta name="apple-mobile-web-app-capable" content="yes">
+<!--IOS设备-->
+<meta name="apple-touch-fullscreen" content="yes">
+<!--IOS设备-->
+<meta http-equiv="Access-Control-Allow-Origin" content="*">
+<title>我的订单</title>
+
+<link type="text/css" rel="stylesheet" href="../css/booklist/sale-date.css"/>
+<link type="text/css" rel="stylesheet" href="../css/booklist/order-list.css"/>
+<link type="text/css" rel="stylesheet" href="../css/booklist/font/iconfont.css"/>
+<!--<link type="text/css" rel="stylesheet" href="../css/booklist/patch.css"/>-->
+<link type="text/css" rel="stylesheet" href="../css/booklist/fontSize.css"/>
+<script type="text/javascript" src="../Scripts/jquery-1.8.0.min.js"></script>
+<script type="text/javascript" src="../Scripts/fontSize.js"></script>
+</head>
+<body>
+ <!--<header class="yu-bor bbor">
+ 	<a href="javascript:;" class="back"><div class="new-l-arr"></div></a>
+	 	
+ 	我的订单
+ </header>-->
+  <header class="yu-bor bbor yu-h84r yu-f36r yu-l84r">
+ 	<!--<a href="javascript:;" class="back"><div></div></a>-->
+ 	<a href="javascript:;" class="back yu-arr iconfont icon-zuox yu-f36r yu-black"></a>
+ 	我的订单
+ </header>
+ <section class="yu-grid o-tab yu-bor bbor">
+ 	 <div class="yu-overflow cur"><span>全部</span></div>
+ 	 <div class="yu-overflow"><span>有效单</span></div>
+ 	 <div class="yu-overflow new"><span>待支付</span></div>
+ 	 <div class="yu-overflow"><span>退款单</span></div>
+</section>
+<div class="order-tab-box">
+	<div class="order-tab cur">
+		<dl class="yu-bmar20r">
+			<dt class="yu-grid yu-alignc yu-h70r">
+				<p class="iconfont icon-jiudian yu-f26r yu-rmar20r yu-black"></p>
+				<a href="#" class="yu-overflow yu-f26r yu-black">
+					<span>北京首都机场华艺酒店式公寓</span>
+					<span class="iconfont icon-youx yu-f26r yu-caa"></span>
+				</a>
+				<p class="yu-blue yu-f26r">已离店</p>
+			</dt>
+			<dd>
+				<div  class="yu-grid details">
+					<div class="order-list-img yu-rmar20r">
+						<img src="../images/hotel-bigimg.jpg" />
+						<p class=""><span class="yu-arial">5</span>张</p>
+					</div>
+					<div class="yu-overflow">
+						<p class="yu-f26r yu-bmar15r">标准大床房（预付）</p>
+						<div class="yu-f22r yu-c99">
+							<p>1间 1晚</p>
+							<p>2017/01/10至2017/01/11</p>
+						</div>
+					</div>
+					<div class="yu-f28r">￥<span class="yu-arial">399</span></div>
+				</div>
+				<div class="yu-grid yu-alignc yu-h80r yu-rpad25r yu-f-end">
+					<a href="#" class="order-list-btn type1">评价一下</a>
+					<a href="#" class="order-list-btn type1">再次预定</a>
+					
+				</div>
+			</dd>
+		</dl>
+		<dl class="yu-bmar20r">
+			<dt class="yu-grid yu-alignc yu-h70r">
+				<p class="iconfont icon-jiudian yu-f26r yu-rmar20r yu-black"></p>
+				<a href="#" class="yu-overflow yu-f26r yu-black">
+					<span>北京首都机场华艺酒店式公寓</span>
+					<span class="iconfont icon-youx yu-f26r yu-caa"></span>
+				</a>
+				<p class="yu-blue yu-f26r">已离店</p>
+			</dt>
+			<dd>
+				<div  class="yu-grid details">
+					<div class="order-list-img yu-rmar20r">
+						<img src="../images/hotel-bigimg.jpg" />
+						<p class=""><span class="yu-arial">5</span>张</p>
+					</div>
+					<div class="yu-overflow">
+						<p class="yu-f26r yu-bmar15r">标准大床房（预付）</p>
+						<div class="yu-f22r yu-c99">
+							<p>1间 1晚</p>
+							<p>2017/01/10至2017/01/11</p>
+						</div>
+					</div>
+					<div class="yu-f28r">￥<span class="yu-arial">399</span></div>
+				</div>
+				<div class="yu-grid yu-alignc yu-h80r yu-rpad25r yu-f-end">
+					<a href="#" class="order-list-btn type2">立即支付</a>
+					
+				</div>
+			</dd>
+		</dl>
+	</div>
+</div>
+
+<section class="yu-tpad120r">
+	<div class="no-r-ico"></div>
+	<p class="yu-c77 yu-f28r yu-textc">您还没有相关的订单哦！</p>
+</section>
+<script type="text/javascript">
+	$(function(){
+		var tabNum;
+		$(".o-tab").children("div").on("click",function(){
+			$(this).addClass("cur").siblings().removeClass("cur");
+			tabNum=$(this).index();
+			$(".order-tab").eq(tabNum).addClass("cur").siblings().removeClass("cur");
+		})
+	})
+</script>
+</body>
+</html>

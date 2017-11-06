@@ -1,0 +1,363 @@
+﻿
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html;charset=utf-8" />
+<meta name="keywords" content="关键词1,关键词2,关键词3" />
+<meta name="description" content="对网站的描述" />
+<meta name="format-detection" content="telephone=no">
+<!--自动将网页中的电话号码显示为拨号的超链接-->
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+<!--width宽度height高度，initial-scale初始的缩放比例，minimum-scale允许缩放到的最小比例，maximum-scale允许缩放到的最大比例，user-scalable是否可以手动缩放-->
+<meta name="apple-mobile-web-app-capable" content="yes">
+<!--IOS设备-->
+<meta name="apple-touch-fullscreen" content="yes">
+<!--IOS设备-->
+<meta http-equiv="Access-Control-Allow-Origin" content="*">
+<title>酒店订餐</title>
+<link type="text/css" rel="stylesheet" href="../css/booklist/sale-date.css"/>
+<link type="text/css" rel="stylesheet" href="../css/booklist/Restaurant.css"/>
+<link type="text/css" rel="stylesheet" href="../css/booklist/new-style.css"/>
+<link type="text/css" rel="stylesheet" href="../css/booklist/fontSize.css"/>
+<script type="text/javascript" src="../Scripts/jquery-1.8.0.min.js"></script>
+<script type="text/javascript" src="../Scripts/fontSize.js"></script>
+</head>
+<body >
+	<article class="full-page">
+		<aside class="l-side">
+			<nav>
+				<a href="#" class="yu-grid yu-alignc">
+					<p class="ico shouye"></p>
+					<p>首页</p>
+				</a>
+				<a href="#" class="yu-grid yu-alignc">
+					<p class="ico jianjie"></p>
+					<p>酒店简介</p>
+				</a>
+				<a href="#" class="yu-grid  yu-alignc">
+					<p class="ico yuding"></p>
+					<p>客房预定</p>
+				</a>
+				<a href="#" class="yu-grid  yu-alignc">
+					<p class="ico dingcan"></p>
+					<p>酒店订餐</p>
+				</a>
+				<a href="#" class="yu-grid  yu-alignc">
+					<p class="ico chaoshi"></p>
+					<p>酒店超市</p>
+				</a>
+				<a href="#" class="yu-grid  yu-alignc">
+					<p class="ico youxuan"></p>
+					<p>特惠优选</p>
+				</a>
+				<a href="#" class="yu-grid  yu-alignc">
+					<p class="ico sheshi"></p>
+					<p>设施服务</p>
+				</a>
+				<a href="#" class="yu-grid  yu-alignc">
+					<p class="ico yanhui"></p>
+					<p>会议宴会</p>
+				</a>
+				<a href="#" class="yu-grid  yu-alignc">
+					<p class="ico huodong"></p>
+					<p>酒店活动</p>
+				</a>
+			</nav>
+		</aside>
+		<header class="yu-grid yu-alignc yu-h40 yu-lrpad10">
+				<div>
+					<div class="yu-grid yu-alignc">
+						<p class="nav-ico l-side-btn"></p>
+						<p class="copy-bor1"></p>
+						<p class="wx-ico"></p>
+					</div>
+				</div>
+				<div class="yu-overflow"></div>
+				<div>
+					<div class="yu-grid yu-alignc">
+						<p class="phone-ico"></p>
+						<p class="copy-bor1"></p>
+						<p class="person-ico"></p>
+					</div>
+				</div>
+			</header>
+		<section class="show-body">
+			
+			<section class="content2 yu-bpad60">
+				<div class="show-header">
+										<div class="inner yu-h360r">
+											<img src="../images/booking.jpg">
+											<!--<div class="cart">
+												<p class="ico"></p>
+												<p class="num"></p>
+											</div>-->
+											<div class="txt-bar yu-grid yu-alignc">
+												<p class="yu-overflow yu-f30r">西餐5人套餐</p>
+											</div>
+										</div>
+										<div class="yu-bgw yu-h50 yu-grid yu-alignc yu-bor bbor yu-lrpad10">
+											<p class="yu-overflow yu-f30r">￥138</p>
+											<div class="ar yu-grid">
+													<p class="reduce ico type2"></p>
+													<p class="food-num"></p>
+													<p class="add ico type2"></p>
+											</div>
+										</div>
+				</div>
+				<div class="yu-bgw yu-bmar20r yu-lpad10">
+					<div class="yu-h50 yu-bor bbor yu-grid yu-alignc yu-rpad10">
+						<div class="l-ico type5 yu-rmar10"></div>
+						<p class="yu-w60 yu-f30r">联系人</p>
+						<div class="yu-overflow"><input type="text" class="yu-input2" placeholder="请输入姓名"></div>
+						<div class="yu-grid sex-select yu-alignc yu-f30r">
+								<label class="yu-rmar45r">
+									<span>先生</span><span class="ico"></span>
+								</label>
+								<label>
+									<span>女士</span><span class="ico"></span>
+								</label>
+							</div>
+					</div>
+					<div class="yu-h50 yu-bor bbor yu-grid yu-alignc yu-rpad10">
+						<div class="l-ico type6 yu-rmar10"></div>
+						<p class="yu-w60 yu-f30r">手机号</p>
+						<div class="yu-overflow"><input type="number" class="yu-input2" placeholder="请输入订餐人手机号码"></div>
+					</div>
+					<div class="yu-h50 yu-bor bbor yu-grid yu-alignc yu-rpad10">
+						
+						<p class="yu-overflow yu-f30r">收货地址</p>
+						<!--<div class="yu-overflow"><input type="text" class="yu-input2" placeholder="请输入姓名"></div>-->
+						<div class="yu-grid sex-select yu-alignc yu-f30r">
+								<label class="yu-rmar45r">
+									<span>酒店</span><span class="ico"></span>
+								</label>
+								<label>
+									<span>其它</span><span class="ico"></span>
+								</label>
+							</div>
+					</div>
+					<div class="yu-h50 yu-bor bbor yu-grid yu-alignc yu-rpad10">
+						<div class="l-ico type10 yu-rmar10"></div>
+						<p class="yu-w60 yu-f30r">房间号</p>
+						<div class="yu-overflow"><input type="text" class="yu-input2" placeholder="请输入房间号"></div>
+					</div>
+					<div class="yu-h50 yu-bor bbor yu-grid yu-alignc yu-rpad10">
+						<div class="l-ico type7 yu-rmar10"></div>
+						<p class="yu-w60 yu-f30r">备注</p>
+						<div class="yu-overflow"><input type="text" class="yu-input2" placeholder="请输入其它要求"></div>
+					</div>
+					<div class="yu-h50 yu-bor bbor yu-grid yu-alignc yu-rpad10">
+						<div class="l-ico type12 yu-rmar10"></div>
+						<p class="yu-w60 yu-f30r">积分</p>
+						<div class="yu-overflow yu-f30r">
+							可用<span class="yu-orange">1680</span>积分兑换
+						</div>
+						<div class="radio"></div>
+					</div>
+					<div class="yu-h50 yu-bor bbor yu-grid yu-alignc yu-rpad10">
+						<div class="l-ico type12 yu-rmar10"></div>
+						<p class="yu-w60 yu-f30r">积分</p>
+						<div class="yu-overflow yu-f30r">
+							可用<span class="yu-orange">1680</span>积分兑换
+						</div>
+						<div class="radio dis"></div>
+					</div>
+					<div class="yu-h50 yu-bor bbor yu-grid yu-alignc yu-rpad10 yu-arr hongbao-btn">
+						<div class="l-ico type8 yu-rmar10"></div>
+						<p class="yu-w60 yu-f30r">红包</p>
+						<div class="yu-overflow">
+							<p class="yu-c40 yu-f36r"><i class="yu-f30r">￥</i>10</p>
+							<p class="yu-c66 yu-f22r">已从房费金额中扣除</p>
+						</div>
+					</div>
+					<div class="yu-h50 yu-bor bbor yu-grid yu-alignc yu-rpad10">
+						<div class="l-ico type9 yu-rmar10"></div>
+						<p class="yu-w60 yu-f30r">总房价</p>
+						<div class="yu-overflow">
+							<p class="yu-c40 yu-f36r"><i class="yu-f30r">￥</i>480</p>
+							<p class="yu-c66 yu-f22r">已优惠10元，可获<i class="yu-c40">470</i>积分</p>
+						</div>
+					</div>
+				</div>
+				
+				<div class="yu-bgw yu-bor tbor yu-bmar10">
+					<table class="details-tb1">
+						<tr>
+							<th>菜单明细</th>
+							<td>江南餐前小菜、牛排五份、菠萝鸡肉沙拉、洋葱汤、意大利蔬菜汤 、爱尔兰烩羊肉、也可以把烤熟的杏仁碾碎拌在西式的炒饭里吃！别有一番风味呦！</td>
+						</tr>
+						<tr>
+							<th>建议</th>
+							<td>5人使用</td>
+						</tr>
+						<tr>
+							<th>营业时间</th>
+							<td>11：30-14：00/17：30-22：00</td>
+						</tr>
+						<tr>
+							<th>售卖地点</th>
+							<td>1F采悦轩西餐厅</td>
+						</tr>
+					</table>
+				</div>
+			</section>
+			<footer class="yu-grid fix-bottom yu-bor tbor yu-lpad10 sp">
+	
+				<div class="yu-overflow">
+					<p class="yu-f34r">合计￥168</p>
+					<p class="yu-grey yu-f26r">包含服务及增值税￥0</p>
+				</div>
+				<div class="yu-btn yu-bg40" onclick="window.location=#">立即支付</div>
+				
+			</footer>
+		</section>
+		<!--红包-->
+	<section class="mask hongbao-mask">
+		<div class="mask-bottom-inner yu-bgw">
+			<p class="yu-h110r yu-l110r yu-textc yu-bor bbor yu-f34r">红包</p>
+			<ul class="yu-lrpad10 yu-c99 hongbao-select">
+				<li class="yu-h120r yu-grid yu-alignc yu-bor bbor cur">
+					<p class="yu-overflow yu-f34r">不使用红包</p>
+					<p class="copy-radio"></p>
+				</li>
+				<li class="yu-h120r yu-grid yu-alignc yu-bor bbor">
+					<p class="yu-rmar10 yu-l120r"><i class="yu-f25r">￥</i><i class="yu-f50r yu-fontb">10</i></p>
+					<div class="yu-overflow yu-f24r">
+						<p>0元起用</p>
+						<p>有效期2017.01.01-2017.01.15</p>
+					</div>
+					<p class="copy-radio"></p>
+				</li>
+				<li class="yu-h120r yu-grid yu-alignc yu-bor bbor">
+					<p class="yu-rmar10 yu-l120r"><i class="yu-f25r">￥</i><i class="yu-f50r yu-fontb">20</i></p>
+					<div class="yu-overflow yu-f24r">
+						<p>0元起用</p>
+						<p>有效期2017.01.01-2017.01.15</p>
+					</div>
+					<p class="copy-radio"></p>
+				</li>
+				<li class="yu-h120r yu-grid yu-alignc yu-bor bbor">
+					<p class="yu-rmar10 yu-l120r"><i class="yu-f25r">￥</i><i class="yu-f50r yu-fontb">30</i></p>
+					<div class="yu-overflow yu-f24r">
+						<p>0元起用</p>
+						<p>有效期2017.01.01-2017.01.15</p>
+					</div>
+					<p class="copy-radio"></p>
+				</li>
+			</ul>
+			<div class="yu-l100r yu-h100r yu-bg40 yu-white  yu-textc mask-close yu-font32r">关闭</div>
+		</div>
+	</section>
+	<!--积分不足-->
+	<section class="mask jf-mask">
+		<div class="inner jf-inner">
+			<p class="yu-bor bbor">不好意思您剩下5200积分，不够兑换本商品</p>
+			<p class="close yu-c40">知道了</p>
+		</div>
+	</section>
+	</article>
+	<script>
+		$(function(){
+			//左导航
+			var lSideNum=0;
+			$(".l-side-btn").click(function(){
+				if(lSideNum==0){
+					$(".full-page").addClass("shin-slide-right").removeClass("shin-slide-left");
+					$(".l-side").fadeIn();
+					lSideNum=1;
+				}else{
+					$(".full-page").removeClass("shin-slide-right").addClass("shin-slide-left");
+					$(".l-side").fadeOut();
+					lSideNum=0;
+				}
+			})
+			//选项卡
+		  var tabIndex;
+		  $(".tab-nav").children("li").on("click",function(){
+		  	$(this).addClass("cur").siblings("li").removeClass("cur");
+		  	tabIndex=$(this).index();
+		  	$(this).parent(".tab-nav").siblings(".tab-inner").children("li").eq(tabIndex).addClass("cur").siblings().removeClass("cur");
+		  })
+			
+			//加减餐
+			var foodNum=0;
+			var totalNum=0;
+			$(".add").on("click",function(){
+		//	$(".food-list,.food-details").find("dd").on("click",".add",function(){
+				totalNum++;
+//				$(".yu-btn").text("选好了");
+				if($(this).siblings(".food-num").text()==""){
+					foodNum=1;
+					$(this).siblings(".food-num").text(foodNum);
+//					$(this).parents(".show-header").find(".cart").fadeIn().children(".num").text(foodNum);
+				}else{
+					foodNum=parseInt($(this).siblings(".food-num").text());
+					foodNum++;
+					$(this).siblings(".food-num").text(foodNum);
+//					$(this).parents(".show-header").find(".cart").children(".num").text(foodNum);
+										
+			};
+				$(this).siblings().fadeIn();
+//				$(".gwc-ico .num").text(totalNum);
+//				$(".gwc-ico .num").fadeIn();
+			});
+			
+			$(".reduce").on("click",function(){
+		//		$(".food-list,.food-details").find("dd").on("click",".reduce",function(){
+				foodNum=parseInt($(this).siblings(".food-num").text());
+				if(foodNum>0){
+					totalNum--;
+					foodNum--;
+					$(this).siblings(".food-num").text(foodNum);
+					$(this).parents(".show-header").find(".cart").children(".num").text(foodNum);
+//					$(".gwc-ico .num").text(totalNum);
+//					totalNum==0?$(".yu-btn").text("请选择"):$(".yu-btn").text("选好了");
+					if(totalNum==0){
+//						$(".yu-btn").text("请选择");
+//						$(".gwc-ico .num").fadeOut();
+					}
+					if(foodNum==0&&$(this).parents("dl").hasClass("food-list")){
+						 $(this).fadeOut().siblings(".food-num").fadeOut();	
+					}
+				};
+			});
+			
+			 //radio
+//        $(".radio").on("click",function(){
+//          if($(this).hasClass("cur")){
+//            $(this).parents(".fapiao").siblings("div").fadeOut();
+//            $(this).removeClass("cur");
+//          }else{
+//              $(this).parents(".fapiao").siblings("div").fadeIn();
+//              $(this).addClass("cur");
+//          }
+//        })
+			$(".radio").click(function(){
+			    	if($(this).hasClass("dis")){
+			    		$(".jf-mask").fadeIn();
+			    	}else{
+			    		$(this).toggleClass("cur");
+			    	}
+			    })
+          //性别
+          $(".sex-select>label").on("click",function(){
+          	$(this).addClass("cur").siblings().removeClass("cur");
+          })
+		//红包
+		$(".hongbao-select>li").on("click",function(){
+			$(this).addClass("cur").siblings().removeClass("cur");
+		})
+		$(".hongbao-btn").click(function(){
+			$(".hongbao-mask").fadeIn();
+			$(".mask-bottom-inner").addClass("shin-slide-up");
+		})
+		$(".mask-close,.mask").click(function(){
+			$(".mask").fadeOut();
+		})
+		$(".mask-bottom-inner").on("click",function(e){
+			e.stopPropagation();
+		})		
+		})
+	</script>
+</body>
+</html>

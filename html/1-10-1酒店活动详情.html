@@ -1,0 +1,144 @@
+﻿
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html;charset=utf-8" />
+<meta name="keywords" content="关键词1,关键词2,关键词3" />
+<meta name="description" content="对网站的描述" />
+<meta name="format-detection" content="telephone=no">
+<!--自动将网页中的电话号码显示为拨号的超链接-->
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+<!--width宽度height高度，initial-scale初始的缩放比例，minimum-scale允许缩放到的最小比例，maximum-scale允许缩放到的最大比例，user-scalable是否可以手动缩放-->
+<meta name="apple-mobile-web-app-capable" content="yes">
+<!--IOS设备-->
+<meta name="apple-touch-fullscreen" content="yes">
+<!--IOS设备-->
+<meta http-equiv="Access-Control-Allow-Origin" content="*">
+<title>酒店超市</title>
+<link type="text/css" rel="stylesheet" href="../css/booklist/sale-date.css"/>
+<link type="text/css" rel="stylesheet" href="../css/booklist/Restaurant.css"/>
+<link type="text/css" rel="stylesheet" href="../css/booklist/new-style.css"/>
+<link type="text/css" rel="stylesheet" href="../css/booklist/fontSize.css"/>
+<script type="text/javascript" src="../Scripts/jquery-1.8.0.min.js"></script>
+<script type="text/javascript" src="../Scripts/fontSize.js"></script>
+</head>
+<body>
+	<article class="full-page">
+		<aside class="l-side">
+			<nav>
+				<a href="#" class="yu-grid yu-alignc">
+					<p class="ico shouye"></p>
+					<p>首页</p>
+				</a>
+				<a href="#" class="yu-grid yu-alignc">
+					<p class="ico jianjie"></p>
+					<p>酒店简介</p>
+				</a>
+				<a href="#" class="yu-grid  yu-alignc">
+					<p class="ico yuding"></p>
+					<p>客房预定</p>
+				</a>
+				<a href="#" class="yu-grid  yu-alignc">
+					<p class="ico dingcan"></p>
+					<p>酒店订餐</p>
+				</a>
+				<a href="#" class="yu-grid  yu-alignc">
+					<p class="ico chaoshi"></p>
+					<p>酒店超市</p>
+				</a>
+				<a href="#" class="yu-grid  yu-alignc">
+					<p class="ico youxuan"></p>
+					<p>特惠优选</p>
+				</a>
+				<a href="#" class="yu-grid  yu-alignc">
+					<p class="ico sheshi"></p>
+					<p>设施服务</p>
+				</a>
+				<a href="#" class="yu-grid  yu-alignc">
+					<p class="ico yanhui"></p>
+					<p>会议宴会</p>
+				</a>
+				<a href="#" class="yu-grid  yu-alignc">
+					<p class="ico huodong"></p>
+					<p>酒店活动</p>
+				</a>
+			</nav>
+		</aside>
+		<header class="yu-grid yu-alignc yu-h40 yu-lrpad10">
+				<div>
+					<div class="yu-grid yu-alignc">
+						<p class="nav-ico l-side-btn"></p>
+						<p class="copy-bor1"></p>
+						<p class="wx-ico"></p>
+					</div>
+				</div>
+				<div class="yu-overflow"></div>
+				<div>
+					<div class="yu-grid yu-alignc">
+						<p class="phone-ico"></p>
+						<p class="copy-bor1"></p>
+						<p class="person-ico"></p>
+					</div>
+				</div>
+			</header>
+		<section class="show-body">
+			<section class="content2">
+				<div class="yu-bgw yu-lrpad30r yu-tbpad50r">
+					<hgroup class="yu-bmar65r">
+						<h1 class="yu-f48r yu-fontn">2017端午 |礼棕 · 飘香</h1>
+						<h2 class="yu-fontn yu-f32r">
+							<span class="yu-c88 yu-f30r yu-rmar40r">2017-4-24</span>
+							<a href="#" class="yu-f32r yu-c57">万家丽国际大酒店</a>
+						</h2>
+					</hgroup>
+					<div class="full-img yu-bmar60r">
+						<img src="../images/wz.jpg"  />
+					</div>
+					<div class="yu-textc yu-f30r text-block yu-l50r">
+						万家李国际大酒店精心为您定制的<span class="yu-c40">2017端午礼棕，</span>
+						精选优质糯米及辅料。手工包制，
+						清香不腻，软糯爽滑，
+						滋味鲜美，特色浓郁。
+						经典口味，尽在其中，
+						给您及您的家人带去吉祥如意的祝福!
+						清香不腻，软糯爽滑，
+						滋味鲜美，特色浓郁。
+						经典口味，尽在其中，
+						给您及您的家人带去吉祥如意的祝福!
+
+					</div>
+				</div>
+				
+			</section>
+		</section>
+		
+	</article>
+	<script>
+		$(function(){
+			//左导航
+			var lSideNum=0;
+			$(".l-side-btn").click(function(){
+				if(lSideNum==0){
+					$(".full-page").addClass("shin-slide-right").removeClass("shin-slide-left");
+					$(".l-side").fadeIn();
+					lSideNum=1;
+				}else{
+					$(".full-page").removeClass("shin-slide-right").addClass("shin-slide-left");
+					$(".l-side").fadeOut();
+					lSideNum=0;
+				}
+			})
+			//选项卡
+		  var tabIndex;
+		  $(".tab-nav").children("li").on("click",function(){
+		  	$(this).addClass("cur").siblings("li").removeClass("cur");
+		  	tabIndex=$(this).index();
+		  	$(this).parent(".tab-nav").siblings(".tab-inner").children("li").eq(tabIndex).addClass("cur").siblings().removeClass("cur");
+		  })
+			
+			
+
+		})
+	</script>
+</body>
+</html>

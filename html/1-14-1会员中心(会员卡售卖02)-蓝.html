@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+	<meta charset="UTF-8" />
+	<title></title>
+	<meta name="format-detection" content="telephone=no">
+	<!--自动将网页中的电话号码显示为拨号的超链接-->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+	<!--width宽度height高度，initial-scale初始的缩放比例，minimum-scale允许缩放到的最小比例，maximum-scale允许缩放到的最大比例，user-scalable是否可以手动缩放-->
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<!--IOS设备-->
+	<meta name="apple-touch-fullscreen" content="yes">
+	<!--IOS设备-->
+	<meta http-equiv="Access-Control-Allow-Origin" content="*">
+	<link rel="stylesheet" href="../css/booklist/sale-date.css" />
+	<link rel="stylesheet" href="../css/booklist/Restaurant.css" />
+	<link rel="stylesheet" href="../css/booklist/new-style.css" />
+	<link rel="stylesheet" href="../css/booklist/mend-reset.css" />
+	
+	<script src="../Scripts/jquery-1.8.0.min.js"></script>
+	<script src="../Scripts/fontSize.js"></script>
+</head>
+<body>
+	
+	<!-- <>主体页面 -->
+	<article class="full-page">
+		<!--//侧边栏-->
+		<aside class="l-side">
+			<nav>
+				<a href="#" class="yu-grid yu-alignc">
+					<p class="ico shouye"></p>
+					<p>首页</p>
+				</a>
+				<a href="#" class="yu-grid yu-alignc">
+					<p class="ico jianjie"></p>
+					<p>酒店简介</p>
+				</a>
+				<a href="#" class="yu-grid  yu-alignc">
+					<p class="ico yuding"></p>
+					<p>客房预定</p>
+				</a>
+				<a href="#" class="yu-grid  yu-alignc">
+					<p class="ico dingcan"></p>
+					<p>酒店订餐</p>
+				</a>
+				<a href="#" class="yu-grid  yu-alignc">
+					<p class="ico chaoshi"></p>
+					<p>酒店超市</p>
+				</a>
+				<a href="#" class="yu-grid  yu-alignc">
+					<p class="ico youxuan"></p>
+					<p>特惠优选</p>
+				</a>
+				<a href="#" class="yu-grid  yu-alignc">
+					<p class="ico sheshi"></p>
+					<p>设施服务</p>
+				</a>
+				<a href="#" class="yu-grid  yu-alignc">
+					<p class="ico yanhui"></p>
+					<p>会议宴会</p>
+				</a>
+				<a href="#" class="yu-grid  yu-alignc">
+					<p class="ico huodong"></p>
+					<p>酒店活动</p>
+				</a>
+			</nav>
+		</aside>
+		
+		<!--//顶部-->
+		<header class="yu-grid yu-alignc yu-h40 yu-lrpad10">
+			<div>
+				<div class="yu-grid yu-alignc">
+					<p class="nav-ico l-side-btn"></p>
+					<p class="copy-bor1"></p>
+					<p class="business-ico"><img src="../images/business-img.png" /></p>
+				</div>
+			</div>
+			<div class="yu-overflow"></div>
+			<div>
+				<div class="yu-grid yu-alignc">
+					<p class="phone-ico"></p>
+					<p class="copy-bor1"></p>
+					<p class="person-ico"></p>
+				</div>
+			</div>
+		</header>
+		
+		<!--//内容区-->
+		<section class="show-body">
+			<section class="content2 yu-bpad60">
+				
+				<div class="pg__ucenter" style="padding-bottom: 0;">
+					<!--//会员卡售卖(列表)-->
+					<div class="uc__memberCard-sale" style="background: #fff;">
+						<ul class="clearfix">
+							<li>
+								<div class="card-cnt type01">
+									<img class="card-img" src="../images/icon__card-bg01.png" />
+									<div class="hd">
+										<img class="logo fl" src="../images/business-img.png" />
+										<div class="name">
+											<h2>北京新世纪日航饭店</h2>
+											<p>金牌会员卡</p>
+										</div>
+										<label class="type">终身卡</label>
+									</div>
+									<div class="ct">
+										<div class="inner clearfix">
+											<div class="discount fl">立减 <em>50</em> 元</div>
+											<div class="tips fl">
+												<p>开卡即享预订酒店现金立减</p>
+												<p>超值会员价</p>
+											</div>
+										</div>
+									</div>
+									<div class="ft">
+										<p>有效期：长期有效</p>
+									</div>
+								</div>
+							</li>
+						</ul>
+						<div class="notice-tips">
+							说明：会员卡为优惠折扣卡，不可储值，不可退换
+						</div>
+					</div>
+					
+					<!--//支付密码-->
+					<div class="uc__account-info" style="margin-top: .2rem;">
+						<div class="form">
+							<ul class="clearfix">
+								<li class="row2">
+									<div class="inner flexbox">
+										<label>微信名称</label>
+										<div class="iptbox flex1">
+											<div class="divtext">李可为</div>
+										</div>
+									</div>
+								</li>
+								<li class="row2">
+									<div class="inner flexbox">
+										<label>用户名称</label>
+										<div class="iptbox flex1">
+											<input class="ipttext" type="text" name="username" placeholder="请输入用户名" />
+										</div>
+									</div>
+								</li>
+								<li class="row2">
+									<div class="inner flexbox">
+										<label>手机号码</label>
+										<div class="iptbox flex1">
+											<input class="ipttext" type="tel" name="telphone" placeholder="请输入手机号码" />
+											<button class="btn-getCode style2">获取验证码</button>
+										</div>
+									</div>
+								</li>
+								<li class="row2">
+									<div class="inner flexbox">
+										<label>验证号码</label>
+										<div class="iptbox flex1">
+											<input class="ipttext" type="text" name="vcode" placeholder="请输入验证码" />
+										</div>
+									</div>
+								</li>
+								<li>
+									<div class="inner flexbox">
+										<label>支付密码</label>
+										<div class="iptbox flex1">
+											<input class="ipttext" type="password" name="payPwd" placeholder="请输入支付密码" />
+										</div>
+									</div>
+								</li>
+							</ul>
+						</div>
+						<div class="text__tips">
+							<p>会员卡开通后，不可退卡</p>
+						</div>
+					</div>
+				</div>
+			</section>
+			<!--底部-->
+			<footer class="yu-grid fix-bottom yu-bor tbor yu-lpad10 sp">
+				<div class="yu-overflow yu-f30r">
+					<p id="p-total-amount">合计￥500.00</p>
+					<p class="yu-grey yu-font12"></p>
+				</div>
+				<div class="yu-btn yu-bg40" onclick="javascript:toPay();">立即支付</div>
+			</footer>
+		</section>
+	</article>
+	
+	<script type="text/javascript">
+		$(function(){
+			//左导航
+			var lSideNum=0;
+			$(".l-side-btn").click(function(){
+				if(lSideNum==0){
+					$(".full-page").addClass("shin-slide-right").removeClass("shin-slide-left");
+					$(".l-side").fadeIn();
+					lSideNum=1;
+				}else{
+					$(".full-page").removeClass("shin-slide-right").addClass("shin-slide-left");
+					$(".l-side").fadeOut();
+					lSideNum=0;
+				}
+			})
+			
+			//选项卡
+			var tabIndex;
+			$(".tab-nav").children("li").on("click",function(){
+				$(this).addClass("cur").siblings("li").removeClass("cur");
+				tabIndex=$(this).index();
+				$(this).parent(".tab-nav").siblings(".tab-inner").children("li").eq(tabIndex).addClass("cur").siblings().removeClass("cur");
+			})
+		})
+	</script>
+	
+</body>
+</html>

@@ -1,0 +1,469 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+.logo-tell{
+	 border-collapse:collapse; 
+	 border-spacing:0; 
+	 width: 100%;
+}
+.logo-tell img{
+	 width: 100%;
+}
+.logo-tell a{
+	text-decoration:none;
+	white-space: nowrap;
+	font-family: microsoft yahei,simhei;
+}
+.fl {
+	float: left;
+}
+.fr {
+	float: right;
+}
+ul {
+	list-style: none;
+}
+li {
+	float: left;
+}
+a:link, a:visited {
+	text-decoration: none;
+}
+img{
+	display: block;
+}
+body{
+	background-color: #d72a22;
+	width: 100%;
+	font-family: microsoft yahei,simhei;
+
+}
+
+h1{
+	font:bold 20px/30px "microsoft yahei",simhei;
+	color: #fff;
+	padding:5px 0;
+}
+
+.box1{
+	padding: 0 20px;
+	padding-top: 10px;
+}.box1 img{
+	width: 100%;
+}
+.zsm{
+	width: 100%;
+}
+.fankui h3,.kt-no h3{
+	text-align: center;
+	color: #ffff00;
+	font:bold 24px/50px "microsoft yahei",simhei;
+	border-bottom:1px solid #ffff00 ;
+	padding:0 10px;
+	margin: 50px 0 0 0;
+}
+.tijiao p{
+	text-align: center;
+}
+.header{
+		width: 100%;
+		position: fixed;
+		top: 0;
+		left:0;
+		background: rgba(0,0,0,0);
+		z-index: 9999;
+}
+.top1{
+		width: 100%;
+		height: 50px;
+		top: 0;
+		left:0;
+		background: rgba(0,0,0,0.75);
+		padding-left: 5px;
+}
+.top1 h3{
+		width: 100%;
+		color: #ffff00;
+		font:bold 16px/50px "microsoft yahei","simhei";
+}
+.top2{
+	/*padding-left: 5px;*/
+	height: 30px;
+	background: rgba(0,0,0,0.5);
+	color: #fff;
+	font:14px/30px "microsoft yahei",simhei;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	padding-top: 45px;
+}
+.b_shadow{
+  height:100%;
+  width: 22%;
+  padding: 0 5px;
+  color: #dddddd;
+  margin-left: 2px;
+  font:bold 14px/25px "microsoft yahei",simhei;
+  border-style: none;
+  border-radius: 5px; 
+  background-color:#e5007e;
+  -webkit-box-shadow: 2px 2px 2px rgba(157, 8, 70, 1);
+  -moz-box-shadow: 2px 2px 2px rgba(157, 8, 70, 1);
+  box-shadow: 2px 2px 2px rgba(157, 8, 70, 1);
+  /*IE6,IE7语法*/
+  filter:progid:DXImageTransform.Microsoft.dropshadow(OffX=5, OffY=5, Color='gray');
+  /*IE8语法,可恶的IE，不同的版本还要写的不一样*/
+  -ms-filter:"progid:DXImageTransform.Microsoft.dropshadow(OffX=5, OffY=5, Color='gray')"
+} 
+.b_shadow1{
+  height:25px;
+  width: 18%;
+  padding: 0 5px;
+  color: #dddddd;
+  margin-left: 2px;
+  font:bold 14px/25px "microsoft yahei",simhei;
+  border-style: none;
+  border-radius: 5px; 
+  background-color:#7c0022;
+  -webkit-box-shadow: 5px 5px 5px rgba(60, 12, 10, 1);
+  -moz-box-shadow: 5px 5px 5px rgba(60, 12, 10, 1);
+  box-shadow: 5px 5px 5px rgba(60, 12, 10, 1);
+  /*IE6,IE7语法*/
+  filter:progid:DXImageTransform.Microsoft.dropshadow(OffX=5, OffY=5, Color='gray');
+  /*IE8语法,可恶的IE，不同的版本还要写的不一样*/
+  -ms-filter:"progid:DXImageTransform.Microsoft.dropshadow(OffX=5, OffY=5, Color='gray')"
+} 
+
+.top2 p{
+	width: 100%;
+	text-align: center;
+	animation: scrolly 20s infinite linear;
+	-webkit-animation: scrolly 20s infinite linear;
+	-moz-animation: scrolly 20s infinite linear;
+	-o-animation: scrolly 20s infinite linear;
+}
+.fankui,.kt-no,.kt-yes{
+	width: 100%;
+	height: 100%;
+	font:bold 16px/30px "microsoft yahei",simhei;
+	margin-top: 20px;
+	color: #FFFFFF;
+	margin: 0 auto;
+	display: none;
+	position: fixed;
+	background: rgba(215,42,34,1);
+	margin-bottom: 30px;
+	padding: 10px 0;
+	left: 0;
+	/*bottom: -210%;*/
+	top: 0;
+	z-index: 10;
+}
+.fankui p,.kt-no p,.kt-yes p{
+	margin-top: 10px;
+	text-align: center;
+}
+.b-b{
+	border-bottom: 1px solid #7d0000;
+}
+
+.ma-c{
+	margin: 0 auto;
+	width: 80%;
+}
+
+.lianxi{
+	width: 93%;
+	border: 1px solid #7d0000;
+	margin: 0 auto;
+	padding: 0 0 30px 0;
+	position: relative;
+	margin-bottom: 30px;
+}
+.lianxi img{
+	display: block;
+    width: 60%;
+    margin: 0 auto;
+}
+.lianxi p{
+    text-align: center;
+    color: #FFFFFF;
+    line-height: 40px;
+    font: 20px/30px "microsoft yahei",simhei;
+}
+
+.box2{
+	padding: 20px;
+}
+.box2 input{
+    padding-left: 10px;
+	height: 50px;
+	color: #666;
+    font: 14px/30px "microsoft yahei",simhei;
+    border-style:none;
+    margin-left: 10px;
+    width: 68%;
+}
+
+.anniu{
+	background-color:#ffff00;
+	height:40%;
+	border-top:none;
+	border-left:none;
+	border-right:none;
+	border-bottom: 5px solid  #eb9411;
+	font:bold 20px/50px "microsoft yahei",simhei;
+	color: #000000;
+	letter-spacing:5px;
+	text-align: center;
+	width: 50%;
+}
+.box2 p{
+    margin: 15px 0;
+    width: 100%;
+}
+
+.heise{
+	color: #000000;
+}
+.i-1{
+	background-image: url(../img/kuang.png);
+	width: 20px;
+	height: 20px;
+	display: block;
+	float: left;
+	margin-right: 5px;
+	background-size:100%;
+}
+.i-1.cur{
+	background-image: url(../img/kuang-q.png);
+	width: 20px;
+	height: 20px;
+	display: block;
+	float: left;
+	margin-right: 5px;
+	background-size:100%;
+}
+span{
+	float: left;
+	line-height: 20px;
+	font-size: 16px;
+	display: block;
+	width: 50%;
+	height: 40px;
+	margin: 5px 0;
+}
+
+
+
+.banner {
+	font-family: microsoft yahei,simhei;
+	text-align: center;
+	color: #fff;
+	margin-bottom: 10px;
+}
+
+.banner .type1{
+	font-size: 50px;
+	text-shadow:2px 2px 2px rgba(0,0,0,0.5);
+	/*margin-bottom: 10px;*/
+
+}
+.banner .type2{
+	font-size: 35px;
+	/*font-weight: bold;*/
+}
+.banner>img{
+	/*margin-bottom: 10px;*/
+}
+.banner .type3{
+	font-size: 26px;
+	font-weight: 100;
+}
+.banner .type4{
+	font-size: 60px;
+	color: #fffa00;
+}
+
+
+
+
+.yu-grid {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+}
+.yu-overflow {
+    -webkit-box-flex: 1;
+    -webkit-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+    overflow: hidden;
+}
+.yu-white{
+	color: #fff;
+}
+.icons{
+	width: 80px;
+	height: 80px;
+	background: url(../img/icons.png) no-repeat;
+	opacity: 0.5;
+}
+.icons.type1{
+	background-position: 0 0;
+}
+.icons.type2{
+	background-position: -80px 0;
+}
+.icons.type3{
+	background-position: -160px 0;
+}
+.icons.type4{
+	background-position: -240px 0;
+}
+.icons.type5{
+	background-position: -320px 0;
+}
+.icons.type6{
+	background-position: 0 -80px;
+}
+.icons.type7{
+	background-position: -80px -80px;
+}
+.icons.type8{
+	background-position: -160px -80px;
+}
+.icons.type9{
+	background-position: -240px -80px;
+}
+
+.text-box{
+	color: #fff;
+	    /*width: 500px;*/
+	    width: 480px;
+    margin: 0 auto;
+    margin-bottom: 30px;
+
+}
+.yu-lpad10{
+	padding-left: 10px;
+}
+.text-box .type1{
+	font-size: 30px;
+	font-weight: bold;
+	margin-bottom: 5px;
+}
+.text-box .type2{
+	font-size: 20px;
+	margin-bottom: 5px;
+
+}
+.text-box .type3{
+	font-size: 20px;
+	color: #fffa00;
+	margin-bottom: 5px;
+
+}
+.yu-bmar20{
+	margin-bottom: 20px;
+}
+
+
+
+
+.yu-rmar5{
+	margin-right: 5px;
+}
+.yu-nowrap{
+	white-space: nowrap;
+}
+.top a{
+	    line-height: 24px;
+    font-size: 14px;
+}
+
+.yu-overflow2{
+-webkit-box-flex: 2;
+    -webkit-flex: 2;
+    -ms-flex: 2;
+    flex: 2;
+    overflow: hidden;	
+}
+.top img{
+	width: 100%;
+}
+.top .icon{
+	width: 30px;
+	padding-top: 10px;
+}
+.logo{
+	width: 150px;
+}
+
+body{
+	min-width: 320px;
+	padding-top: 50px;
+}
+.top2{
+	padding: 0;
+}
+
+@media screen and (min-width: 620px){
+.text-box{
+	width: 600px;
+		}
+}	
+}
+@media screen and (max-width: 620px){
+	.banner .type1{
+		font-size: 40px;
+	}
+	.text-box{
+	width: 480px;
+}
+}
+@media screen and (max-width: 500px){
+	.banner .type1{
+		font-size: 28px;
+	}
+	.banner .type2{
+		font-size: 20px;
+	}
+	.banner .type4{
+		font-size: 30px;
+	}
+	.text-box{
+	width: 320px;
+		}
+	.text-box .type1{
+		font-size: 26px;
+	}
+
+
+	.top .icon {
+	    width: 20px;
+	    padding-top: 10px;
+	}
+	.logo {
+	    width: 100px;
+	    padding-top: 5px;
+	}
+	.top a {
+	    line-height: 20px;
+	    font-size: 12px;
+	}
+
+	
+	.text-box .type2 {
+		font-size: 16px;
+	}
+	.icons {
+		-webkit-transform:scale(0.7,0.7);
+		-moz-transform:scale(0.7,0.7);
+		-o-transform:scale(0.7,0.7);
+		-ms-transform:scale(0.7,0.7);
+		transform:scale(0.7,0.7);
+	}
+}

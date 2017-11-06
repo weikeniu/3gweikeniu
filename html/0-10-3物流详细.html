@@ -1,0 +1,125 @@
+
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html;charset=utf-8" />
+<meta name="keywords" content="关键词1,关键词2,关键词3" />
+<meta name="description" content="对网站的描述" />
+<meta name="format-detection" content="telephone=no">
+<!--自动将网页中的电话号码显示为拨号的超链接-->
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+<!--width宽度height高度，initial-scale初始的缩放比例，minimum-scale允许缩放到的最小比例，maximum-scale允许缩放到的最大比例，user-scalable是否可以手动缩放-->
+<meta name="apple-mobile-web-app-capable" content="yes">
+<!--IOS设备-->
+<meta name="apple-touch-fullscreen" content="yes">
+<!--IOS设备-->
+<meta http-equiv="Access-Control-Allow-Origin" content="*">
+<title>订单明细</title>
+<link type="text/css" rel="stylesheet" href="../css/booklist/sale-date.css"/>
+<link type="text/css" rel="stylesheet" href="../css/booklist/Restaurant.css"/>
+<!--<link type="text/css" rel="stylesheet" href="../css/newpay.css">-->
+<link type="text/css" rel="stylesheet" href="../css/booklist/fontSize.css"/>
+<script type="text/javascript" src="../Scripts/jquery-1.8.0.min.js"></script>
+<script type="text/javascript" src="../Scripts/fontSize.js"></script>
+</head>
+<body class="yu-bpad60">
+	<section class="yu-bgw yu-pad10 yu-bmar10 yu-grid ">
+		<div class="logistics-pic yu-bor bor yu-rmar10">
+			<img src="../images/market.jpg" />
+			<p>3间商品</p>
+		</div>
+		<div class="yu-line30 yu-tpad10">
+			<p>
+				<span class="yu-c99 yu-rmar10">物流公司</span>
+				<span>圆通快递</span>
+			</p>
+			<p>
+				<span class="yu-c99 yu-rmar10">快递单号</span>
+				<span class="yu-fontv">1545154945485</span>
+			</p>
+		</div>
+	</section>
+	<section class="yu-bgw">
+		<ul class="logistics-details yu-bor tbbor">
+			<li class="finish">
+				<div class="l-pad">
+					<p class="border"></p>
+					<p class="point"></p>
+				</div>
+				<div class="yu-overflow yu-bor bbor yu-tbpad20 yu-rpad10">
+					<p class="yu-font16 yu-bmar5">[淄博市]山东淄博博山公司的派件已签收，签收人是本人，感谢试用快捷快递，期待再次为您服务</p>
+					<p class="yu-font12">2017-04-10  14：41：29</p>
+				</div>
+			</li>
+			<li>
+				<div class="l-pad">
+					<p class="border"></p>
+					<p class="point"></p>
+				</div>
+				<div class="yu-overflow yu-bor bbor yu-tbpad20 yu-rpad10">
+					<p class="yu-font16 yu-bmar5">[淄博市]山东淄博博山公司派送员：郑成刚
+					<span class="yu-fontv yu-blue2">13710145754</span>正在为您派件</p>
+					<p class="yu-font12">2017-04-10  14：41：29</p>
+				</div>
+			</li>
+			<li>
+				<div class="l-pad">
+					<p class="border"></p>
+					<p class="point"></p>
+				</div>
+				<div class="yu-overflow yu-bor bbor yu-tbpad20">
+					<p class="yu-font16 yu-bmar5">[淄博市]山东淄博博山公司  已发出</p>
+					<p class="yu-font12">2017-04-10  14：41：29</p>
+				</div>
+			</li>
+			<li>
+				<div class="l-pad">
+					<p class="border"></p>
+					<p class="point"></p>
+				</div>
+				<div class="yu-overflow yu-tbpad20">
+					<p class="yu-font16 yu-bmar5">包裹正在等待揽收</p>
+					<p class="yu-font12">2017-04-10  14：41：29</p>
+				</div>
+			</li>
+		</ul>
+	</section>
+    <!--提示-->
+    <section class="mask lengthen-mask" >
+			<div class="yu-bgw pay-cancel-tip">
+				<p class="yu-font18 yu-bmar10">确认延长收货时间？</p>
+				<p class="yu-font16 yu-bmar20">每笔订单只能延迟一次哦</p>
+				<div class="yu-grid yu-bor tbor yu-h50 yu-line50 yu-font16">
+					<p class="yu-overflow yu-bor rbor yu-greys cancel" >
+						取消
+					</p>
+					<p class="yu-overflow yu-blue ">
+						确定
+					</p>
+				</div>
+		</div>
+	</section>
+    <!--end-->
+	<footer class="fix-bottom yu-pad10 yu-bgw yu-grid">
+		<div class="yu-overflow yu-bor1 bor bottom-btn1 type2 yu-c40 lengthen-btn">延长收货</div>
+		<div class="yu-overflow yu-bor1 bor bottom-btn1 type2 yu-blue2 sp">确定收货</div>
+	</footer>
+<script>
+	$(function(){
+	//mask操作
+	$(".mask").on("click",function(){
+		$(this).fadeOut();
+	})
+	$(".pay-cancel-tip").on("click",function(e){
+		e.stopPropagation();
+	})
+	$(".lengthen-btn").click(function(){
+		$(".lengthen-mask").show();
+	})
+	$(".lengthen-mask .cancel").click(function(){
+		$(".lengthen-mask").hide();
+	})
+	})
+</script>
+</body>
+</html>

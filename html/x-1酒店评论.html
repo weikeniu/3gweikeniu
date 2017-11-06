@@ -1,0 +1,221 @@
+
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html;charset=utf-8" />
+<meta name="keywords" content="关键词1,关键词2,关键词3" />
+<meta name="description" content="对网站的描述" />
+<meta name="format-detection" content="telephone=no">
+<!--自动将网页中的电话号码显示为拨号的超链接-->
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+<!--width宽度height高度，initial-scale初始的缩放比例，minimum-scale允许缩放到的最小比例，maximum-scale允许缩放到的最大比例，user-scalable是否可以手动缩放-->
+<meta name="apple-mobile-web-app-capable" content="yes">
+<!--IOS设备-->
+<meta name="apple-touch-fullscreen" content="yes">
+<!--IOS设备-->
+<meta http-equiv="Access-Control-Allow-Origin" content="*">
+<title>酒店评论</title>
+<link type="text/css" rel="stylesheet" href="../css/booklist/sale-date.css"/>
+<link type="text/css" rel="stylesheet" href="../css/booklist/fontSize.css"/>
+<script type="text/javascript" src="../Scripts/jquery-1.8.0.min.js"></script>
+<script type="text/javascript" src="../Scripts/fontSize.js"></script>
+<style>
+		.circle {
+			width: 1.19rem;
+			height: 1.19rem;
+			position: relative;
+			border-radius: 50%;
+			background: #12b7f5;
+			margin: 0 auto;
+		}
+		.pie_left, .pie_right {
+			width:1.19rem; 
+			height:1.19rem;
+			position: absolute;
+			top: 0;left: 0;
+		}
+		.left, .right {
+			width:1.19rem; 
+			height:1.19rem;
+			background:#ccc;
+			border-radius: 50%;
+			position: absolute;
+			top: 0;
+			left: 0;
+		}
+		.pie_right, .right {
+			clip:rect(0,auto,auto,.595rem);
+		}
+		.pie_left, .left {
+			clip:rect(0,.595rem,auto,0);
+		}
+		.mask {
+			width: 1.03rem;
+			height: 1.03rem;
+			border-radius: 50%;
+			left: .08rem;
+			top: .08rem;
+			background: #FFF;
+			position: absolute;
+			text-align: center;
+			line-height: 1.03rem;
+			font-size: .3rem;
+			color: #666;
+			display: block;
+		}
+</style>
+</head>
+<body>
+<section class="yu-bgw">
+	<div class="yu-pad20r yu-bor bbor yu-grid">
+		<div class="yu-w230r">
+			<div class="circle">
+				<div class="pie_left"><div class="left"></div></div>
+				<div class="pie_right"><div class="right"></div></div>
+				<div class="mask"><span>4.5</span>分</div>
+			</div>
+			</div>
+		<div class="yu-f30r yu-overflow yu-c66 yu-l60r">
+		<ul>
+			<li class="fl yu-rmar75r">
+				卫生：<span class="yu-blue2">4.8分</span>
+			</li>
+			<li class="fl yu-rmar75r">
+				设施：<span class="yu-blue2">4.8分</span>
+			</li>
+			<li class="fl yu-rmar75r">
+				网络：<span class="yu-blue2">4.8分</span>
+			</li>
+			<li class="fl yu-rmar75r">
+				服务：<span class="yu-blue2">4.8分</span>
+			</li>
+		</ul>
+	</div>
+	</div>
+	
+	
+	<div class="yu-h100r yu-grid yu-alignc yu-lrpad20r yu-f24r screen">
+		<a href="#" class="yu-blue2">全部（46）</a>
+		<a href="#" class="yu-blue2">有图评价（46）</a>
+	</div>
+</section>
+
+
+<section>
+	<ul class="pl-list">
+		<li class="yu-lrpad20r yu-bor bbor">
+			<div class="yu-grid">
+                  <div class="full-img"><img src="../images/plhead.png" /></div>
+                  <div class="ca-flex-two">
+                        <div class="fl">
+                            <p class="yu-f32r">乐乐</p>
+                            <p class="yu-c99 yu-f24r">2017-05-25 13:30</p>
+                        </div>
+                        <div class="fr ca-new-comment">
+                            <p class="yu-f36r yu-blue2">5.0分</p>
+                            <p class="yu-c99 yu-f24r">新华四皇冠大床房</p>
+                        </div>
+                  </div>
+                  <!--ca-flex-two end-->
+            </div>
+            <!--yu-grid end-->
+            <p class="yu-f30r yu-c66 ca-martr30">很满意，这次要谢谢里面的员工，我儿子把背包丢也帮我捡到了很快就能找到退还我，还有那天退房太匆忙了，忘记4件衣服，也帮我快递送回了！真的感谢他们！我们已经去了三次酒店，适合亲子游玩。吃的也可以。</p>
+            <div class="ca-coment-imgs">
+                  <ul>
+                       <li><img src="../images/coment-pht.png"></li>
+                       <li><img src="../images/coment-pht.png"></li>
+                       <li><img src="../images/coment-pht.png"></li>
+                       <li><img src="../images/coment-pht.png"></li>
+                  </ul>
+            </div>
+            <!--ca-coment-imgs end-->
+            <div class="htl_rever-sion">
+                  <div class="rev_back"><label>酒店回复：</label><span class="fr yu-blue">展开</span></div>
+                  <p id="backContent" style="display:none;">感谢您的信任，我们将再接再厉感谢您的信任，我们将再接再厉感谢您的信任，我们将再接再厉感谢您的信任，我们将再接再厉感谢您的信任，我们将再接再厉感谢您的信任，我们将再接再厉</p>
+            </div>
+            <!--htl_rever-sion end-->
+		 </li>
+         <li class="yu-lrpad20r yu-bor bbor">
+			<div class="yu-grid">
+                  <div class="full-img"><img src="../images/plhead.png" /></div>
+                  <div class="ca-flex-two">
+                        <div class="fl">
+                            <p class="yu-f32r">乐乐</p>
+                            <p class="yu-c99 yu-f24r">2017-05-25 13:30</p>
+                        </div>
+                        <div class="fr ca-new-comment">
+                            <p class="yu-f36r yu-blue2">4.8分</p>
+                            <p class="yu-c99 yu-f24r">新华四皇冠大床房</p>
+                        </div>
+                  </div>
+                  <!--ca-flex-two end-->
+            </div>
+            <!--yu-grid end-->
+            <p class="yu-f30r yu-c66 ca-martr30">我们已经去了三次酒店，适合亲子游玩吃的也可以。</p>
+         </li>
+         <li class="yu-lrpad20r yu-bor bbor">
+			<div class="yu-grid">
+                  <div class="full-img"><img src="../images/plhead.png" /></div>
+                  <div class="ca-flex-two">
+                        <div class="fl">
+                            <p class="yu-f32r">乐乐</p>
+                            <p class="yu-c99 yu-f24r">2017-05-25 13:30</p>
+                        </div>
+                        <div class="fr ca-new-comment">
+                            <p class="yu-f36r yu-blue2">5.0分</p>
+                            <p class="yu-c99 yu-f24r">新华四皇冠大床房</p>
+                        </div>
+                  </div>
+                  <!--ca-flex-two end-->
+            </div>
+            <!--yu-grid end-->
+            <p class="yu-f30r yu-c66 ca-martr30">我们已经去了三次酒店，适合亲子游玩吃的也可以。</p>
+         </li>
+         <li class="yu-lrpad20r yu-bor bbor">
+			<div class="yu-grid">
+                  <div class="full-img"><img src="../images/plhead.png" /></div>
+                  <div class="ca-flex-two">
+                        <div class="fl">
+                            <p class="yu-f32r">乐乐</p>
+                            <p class="yu-c99 yu-f24r">2017-05-25 13:30</p>
+                        </div>
+                        <div class="fr ca-new-comment">
+                            <p class="yu-f36r yu-blue2">5.0分</p>
+                            <p class="yu-c99 yu-f24r">新华四皇冠大床房</p>
+                        </div>
+                  </div>
+                  <!--ca-flex-two end-->
+            </div>
+            <!--yu-grid end-->
+            <p class="yu-f30r yu-c66 ca-martr30">房间里面的设备绝对是好，非常不错的，加上夜晚酒店的灯光表演超级棒</p>
+         </li>
+	</ul>
+</section>
+
+<script type="text/javascript">
+		$(function() {
+//			分数环形
+			$('.circle').each(function(index, el) {
+					var num = $(this).find('span').text() * 3.6*20;
+					if (num<=180) {
+						$(this).find('.right').css('transform', "rotate(" + num + "deg)");
+					} else {
+						$(this).find('.right').css('transform', "rotate(180deg)");
+						$(this).find('.left').css('transform', "rotate(" + (num - 180) + "deg)");
+					};
+			});
+
+		});
+		//评论回复
+		$(".rev_back span").click(function(){
+		   $("#backContent").slideToggle();
+		   var OTEXT=$(this).text()
+		   if(OTEXT=="展开"){
+			   $(this).text("收起")
+			   }else{
+				   $(this).text("展开")
+			   }
+		});
+</script>
+</body>
+</html>

@@ -1,0 +1,549 @@
+﻿
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html;charset=utf-8" />
+<meta name="keywords" content="关键词1,关键词2,关键词3" />
+<meta name="description" content="对网站的描述" />
+<meta name="format-detection" content="telephone=no">
+<!--自动将网页中的电话号码显示为拨号的超链接-->
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+<!--width宽度height高度，initial-scale初始的缩放比例，minimum-scale允许缩放到的最小比例，maximum-scale允许缩放到的最大比例，user-scalable是否可以手动缩放-->
+<meta name="apple-mobile-web-app-capable" content="yes">
+<!--IOS设备-->
+<meta name="apple-touch-fullscreen" content="yes">
+<!--IOS设备-->
+<meta http-equiv="Access-Control-Allow-Origin" content="*">
+<title>酒店预订</title>
+<link type="text/css" rel="stylesheet" href="../css/booklist/jquery-ui.css"/>
+<link type="text/css" rel="stylesheet" href="../css/booklist/sale-date.css"/>
+<link type="text/css" rel="stylesheet" href="../css/booklist/Restaurant.css"/>
+<link type="text/css" rel="stylesheet" href="../css/booklist/new-style.css"/>
+<script type="text/javascript" src="../Scripts/jquery-1.8.0.min.js"></script>
+<script type="text/javascript" src="../css/booklist/jquery-ui.js"></script>
+<script type="text/javascript" src="../css/booklist/dateRangePicker.js"></script>
+<style type="text/css">
+	.specialdays.first .room-num{color:#fff;display: block;}
+	.specialdays.first .room-num.sp{display: none;}
+	.specialdays.last .room-num.sp{color:#fff;display: block;}
+	
+	.specialdays.first:after{
+		content: "入住"; color: #fff;
+		position: absolute;
+	    top: 32px;
+	    left: 0;
+	    width: 100%;
+	    text-align: center;
+	    cursor: pointer;
+	}
+	.specialdays.last:after{
+		content: "离店"; color: #fff;
+		position: absolute;
+	    top: 32px;
+	    left: 0;
+	    width: 100%;
+	    text-align: center;
+	    cursor: pointer;
+	}
+</style>
+</head>
+<body>
+	<article class="full-page">
+		<aside class="l-side">
+			<nav>
+				<a href="#" class="yu-grid yu-alignc">
+					<p class="ico shouye"></p>
+					<p>首页</p>
+				</a>
+				<a href="#" class="yu-grid yu-alignc">
+					<p class="ico jianjie"></p>
+					<p>酒店简介</p>
+				</a>
+				<a href="#" class="yu-grid  yu-alignc">
+					<p class="ico yuding"></p>
+					<p>客房预定</p>
+				</a>
+				<a href="#" class="yu-grid  yu-alignc">
+					<p class="ico dingcan"></p>
+					<p>酒店订餐</p>
+				</a>
+				<a href="#" class="yu-grid  yu-alignc">
+					<p class="ico chaoshi"></p>
+					<p>酒店超市</p>
+				</a>
+				<a href="#" class="yu-grid  yu-alignc">
+					<p class="ico youxuan"></p>
+					<p>特惠优选</p>
+				</a>
+				<a href="#" class="yu-grid  yu-alignc">
+					<p class="ico sheshi"></p>
+					<p>设施服务</p>
+				</a>
+				<a href="#" class="yu-grid  yu-alignc">
+					<p class="ico yanhui"></p>
+					<p>会议宴会</p>
+				</a>
+				<a href="#" class="yu-grid  yu-alignc">
+					<p class="ico huodong"></p>
+					<p>酒店活动</p>
+				</a>
+			</nav>
+		</aside>
+		<header class="yu-grid yu-alignc yu-h40 yu-lrpad10">
+				<div>
+					<div class="yu-grid yu-alignc">
+						<p class="nav-ico l-side-btn"></p>
+						<p class="copy-bor1"></p>
+						<p class="wx-ico"></p>
+					</div>
+				</div>
+				<div class="yu-overflow"></div>
+				<div>
+					<div class="yu-grid yu-alignc">
+						<p class="phone-ico"></p>
+						<p class="copy-bor1"></p>
+						<p class="person-ico"></p>
+					</div>
+				</div>
+			</header>
+		<section class="show-body">
+			<section class="content2 yu-font14 yu-bpad60">
+				<div class="booking-pic">
+					<img src="../images/booking.jpg"  />
+				</div>
+				<div class="yu-h50 yu-lrpad10 yu-grid yu-alignc yu-bor bbor">
+					<p class="yu-overflow">豪华客房山景大床*无早</p>
+					<p>共一晚</p>
+				</div>
+				<div class="yu-bgw yu-bmar10 yu-lpad10">
+					<div class="yu-h50 yu-bor bbor yu-grid yu-alignc yu-rpad10">
+						<div class="l-ico type1 yu-rmar10"></div>
+						<div class="yu-overflow">房间数量</div>
+						<div class="ar yu-grid">
+								<p class="reduce ico type2 cur"></p>
+								<p class="food-num cur">1</p>
+								<p class="add ico type2"></p>
+						</div>
+					</div>
+					<div class="yu-h50 yu-bor bbor yu-grid yu-alignc yu-rpad10 data-select">
+						<div class="l-ico type2 yu-rmar10"></div>
+						<div class="yu-overflow">
+							<span class="yu-rmar10">入住时间</span>
+							<span>2017-04-17</span>
+						</div>
+					</div>
+					<div class="yu-h50 yu-bor bbor yu-grid yu-alignc yu-rpad10 data-select">
+						<div class="l-ico type3 yu-rmar10"></div>
+						<div class="yu-overflow">
+							<span class="yu-rmar10">退房时间</span>
+							<span>2017-04-17</span>
+						</div>
+					</div>
+					<div class="yu-h50 yu-bor bbor yu-grid yu-alignc yu-rpad10 yu-arr  lasttimeselect">
+						<div class="l-ico type2 yu-rmar10"></div>
+						<div class="yu-overflow">
+							<span class="yu-rmar10">保留到</span>
+							<span>18：00</span>
+						</div>
+					</div>
+					<div class="yu-h50 yu-bor bbor yu-grid yu-alignc yu-rpad10 add-bed">
+						<div class="l-ico type4 yu-rmar10"></div>
+						<div class="yu-overflow">
+							<span class="yu-rmar10">需要加床</span>
+							<span class="yu-c40">￥300</span>
+						</div>
+					</div>
+				</div>
+				<div class="yu-bgw yu-bmar10 yu-lpad10">
+					<div class="yu-bor bbor usernamelist">
+						<div class="yu-h50 yu-grid yu-alignc yu-rpad10">
+							<div class="l-ico type5 yu-rmar10"></div>
+							<p class="yu-w60">联系人</p>
+							<div class="yu-overflow"><input type="text" class="yu-input2" placeholder="请输入姓名" /></div>
+							<div class="yu-grid sex-select yu-alignc">
+								<label class="yu-rmar10">
+									<span>先生</span><span class="ico"></span>
+								</label>
+								<label>
+									<span>女士</span><span class="ico"></span>
+								</label>
+							</div>
+						</div>
+					</div>
+					<div class="yu-h50 yu-bor bbor yu-grid yu-alignc yu-rpad10">
+						<div class="l-ico type6 yu-rmar10"></div>
+						<p class="yu-w60">手机号</p>
+						<div class="yu-overflow"><input type="text" class="yu-input2" placeholder="请输入订餐人手机号码" /></div>
+					</div>
+					<div class="yu-h50 yu-bor bbor yu-grid yu-alignc yu-rpad10">
+						<div class="l-ico type7 yu-rmar10"></div>
+						<p class="yu-w60">备注</p>
+						<div class="yu-overflow"><input type="text" class="yu-input2" placeholder="请输入其它要求" /></div>
+					</div>
+					<div class="yu-h50 yu-bor bbor yu-grid yu-alignc yu-rpad10 yu-arr hongbao-btn">
+						<div class="l-ico type8 yu-rmar10"></div>
+						<p class="yu-w60">红包</p>
+						<div class="yu-overflow">
+							<p class="yu-c40 yu-font22"><i class="yu-font12">￥</i>10</p>
+							<p class="yu-c66 yu-font12">已从房费金额中扣除</p>
+						</div>
+					</div>
+					<div class="yu-h50 yu-bor bbor yu-grid yu-alignc yu-rpad10">
+						<div class="l-ico type9 yu-rmar10"></div>
+						<p class="yu-w60">总房价</p>
+						<div class="yu-overflow">
+							<p class="yu-c40 yu-font22"><i class="yu-font12">￥</i>480</p>
+							<p class="yu-c66 yu-font12">已优惠10元，可获<i class="yu-c40">470</i>积分</p>
+						</div>
+					</div>
+				</div>
+				<div class="yu-bgw yu-bmar10 yu-lpad10">
+					<div class="yu-h50 yu-bor bbor yu-grid yu-alignc yu-rpad10 fapiao">
+						<p class="yu-w60">发票</p>
+						<div class="yu-overflow">
+							<div class="radio cur"></div>
+						</div>
+					</div>
+					<div class="yu-h50 yu-bor bbor yu-grid yu-alignc yu-rpad10">
+						<p class="yu-w60">发票抬头</p>
+						<div class="yu-overflow">
+							<input type="text" placeholder="请输入个人/单位名称" class="yu-input2" />
+						</div>
+					</div>
+				</div>
+				<div class="tab-con">
+					<ul class="tab-nav type0 yu-grid yu-bor bbor">
+						<li class="yu-overflow cur">房间配套</li>
+						<li class="yu-overflow">入住须知</li>
+						<li class="yu-overflow">客房介绍</li>
+					</ul>
+					<ul class="tab-inner">
+						<li class="cur yu-bgw">
+							<table width="100%" class="room-de-tb">
+								<colgroup>
+									<col style="width: 50%;"/>
+									<col style="width: 50%;"/>
+								</colgroup>
+								<tbody>
+								<tr>
+									<td class="yu-bor rbbor">
+										<span class="ico wifi"></span>
+										<span>WIFI</span>
+									</td>
+									<td  class="yu-bor bbor">
+										<span class="ico weiyu"></span>
+										<span>独立卫浴</span>
+									</td>
+								</tr>
+								<tr>
+									<td class="yu-bor rbbor">
+										<span class="ico dachuang"></span>
+										<span>大床</span>
+									</td>
+									<td class="yu-bor bbor">
+										<span class="ico kongtiao"></span>
+										<span>空调</span>
+									</td>
+								</tr>
+								<tr>
+									<td class="yu-bor rbbor">
+										<span class="ico chuifengji"></span>
+										<span>吹风机</span>
+									</td>
+									<td class="yu-bor bbor">
+										<span class="ico chuanghu"></span>
+										<span>窗户</span>
+									</td>
+								</tr>
+								</tbody>
+							</table>
+						</li>
+						<li class="yu-bgw yu-lrpad10">
+							<div class="yu-tbpad20">
+								<div class="yu-grid yu-alignc">
+									<p class="star-ico"></p>
+									<p class="yu-overflow">支付成功后，不可更改及取消；</p>
+								</div>
+								<div class="yu-grid yu-alignc">
+									<p class="star-ico"></p>
+									<p class="yu-overflow">价格已已经包含服务费及税费；</p>
+								</div>
+								<div class="yu-grid yu-alignc">
+									<p class="star-ico"></p>
+									<p class="yu-overflow">价格不含次日早餐；</p>
+								</div>
+							</div>
+						</li>
+						<li class="yu-bgw yu-lrpad10">
+							<div class="yu-tbpad20">
+								53 平米的吸烟客房设有 10 平米的阳台、32 英寸
+									液晶电视、独立淋浴间 /浴缸和雨林花洒，可欣赏壮
+									丽的山景。 •571 英尺 / 53 平米 •甜梦之床 •山峦
+									景观 •阳台 •高速上网（需额外付费）
+							</div>
+						</li>
+					</ul>
+				</div>
+			</section>
+			<footer class="yu-grid fix-bottom yu-bor tbor yu-lpad10 sp">
+	
+				<div class="yu-overflow">
+					<p class="yu-c40">合计￥168</p>
+					<p class="yu-grey yu-font12">为您优惠5元</p>
+				</div>
+				<div class="yu-btn yu-bg40" onclick="window.location='订餐支付.html'">立即预订</div>
+				
+			</footer>
+		</section>
+		<section class="data-page">
+			<div id="datepicker"></div>
+			<div class="fix-bottom yu-bor tbor yu-grid yu-alignc yu-lrpad10">
+				<p class="yu-overflow">入住共1晚</p>
+				<div>
+					<div class="yu-grid yu-alignc">
+						<p class="data-btn cal yu-bor1 bor">取消</p>
+						<p class="data-btn sub">确定</p>
+					</div>
+				</div>
+			</div>
+		</section>
+	</article>
+	<!--红包-->
+	<section class="mask hongbao-mask">
+		<div class="mask-bottom-inner yu-bgw">
+			<p class="yu-h60 yu-line60 yu-textc yu-bor bbor">红包</p>
+			<ul class="yu-lrpad10 yu-c99 hongbao-select">
+				<li class="yu-h60 yu-grid yu-alignc yu-bor bbor cur">
+					<p class="yu-overflow">不使用红包</p>
+					<p class="copy-radio"></p>
+				</li>
+				<li class="yu-h60 yu-grid yu-alignc yu-bor bbor">
+					<p class="yu-rmar10"><i class="yu-font12">￥</i><i class="yu-font26">10</i></p>
+					<div class="yu-overflow yu-font12">
+						<p>0元起用</p>
+						<p>有效期2017.01.01-2017.01.15</p>
+					</div>
+					<p class="copy-radio"></p>
+				</li>
+				<li class="yu-h60 yu-grid yu-alignc yu-bor bbor">
+					<p class="yu-rmar10"><i class="yu-font12">￥</i><i class="yu-font26">30</i></p>
+					<div class="yu-overflow yu-font12">
+						<p>0元起用</p>
+						<p>有效期2017.01.01-2017.01.15</p>
+					</div>
+					<p class="copy-radio"></p>
+				</li>
+				<li class="yu-h60 yu-grid yu-alignc yu-bor bbor">
+					<p class="yu-rmar10"><i class="yu-font12">￥</i><i class="yu-font26">50</i></p>
+					<div class="yu-overflow yu-font12">
+						<p>0元起用</p>
+						<p>有效期2017.01.01-2017.01.15</p>
+					</div>
+					<p class="copy-radio"></p>
+				</li>
+			</ul>
+			<div class="yu-h60 yu-bg40 yu-white yu-line60 yu-textc mask-close">关闭</div>
+		</div>
+	</section>
+	<!--弹窗-->
+	<section class="mask alert">
+		<div class="inner">
+			<div class="yu-bgw">
+				<p class="yu-pad20 yu-textc yu-bor bbor">提交订单成功！服务人员会尽快联系您。请保持手机畅通！</p>
+				<div class="mask-close yu-pad20 yu-textc yu-c40">知道了</div>
+			</div>
+		</div>
+		<div class="inner">
+			<div class="yu-bgw">
+				<p class="yu-pad20 yu-textc yu-bor bbor">请您输入订购信息</p>
+				<div class="mask-close yu-pad20 yu-textc yu-c40">知道了</div>
+			</div>
+		</div>
+	</section>
+	<!--最晚到店--> 
+	<section class="mask lasttime-mask">
+		<div class="mask-bottom-inner yu-bgw">
+			<p class="yu-h60 yu-line60 yu-textc yu-bor bbor">最晚到店时间</p>
+			<p class="yu-h60 yu-line60 yu-textc yu-bor bbor yu-font14 yu-c40 yu-bgf9">该酒店14：00办理入住，早到可能需要等待。</p>
+			<ul class="yu-lrpad10 yu-c99 hongbao-select">
+				<li class="yu-h60 yu-grid yu-alignc yu-bor bbor">
+					<div class="yu-overflow yu-font20">
+						18:00
+					</div>
+					<p class="copy-radio"></p>
+				</li>
+				<li class="yu-h60 yu-grid yu-alignc yu-bor bbor">
+					<div class="yu-overflow yu-font20">
+						19:00
+					</div>
+					<p class="copy-radio"></p>
+				</li>
+				<li class="yu-h60 yu-grid yu-alignc yu-bor bbor">
+					<div class="yu-overflow yu-font20">
+						20:00
+					</div>
+					<p class="copy-radio"></p>
+				</li>
+				<li class="yu-h60 yu-grid yu-alignc yu-bor bbor">
+					<div class="yu-overflow yu-font20">
+						21:00
+					</div>
+					<p class="copy-radio"></p>
+				</li>
+			</ul>
+			<div class="yu-h60 yu-bg40 yu-white yu-line60 yu-textc mask-close">关闭</div>
+		</div>
+	</section>
+	<script>
+	   
+	    /*日期选择初始号*/
+        var __drp; 
+        __drp = $("#datepicker").datepicker({
+        	dateFormat: 'yy/mm/dd',
+           dayNamesMin: ["日", "一", "二", "三", "四", "五", "六"],
+           monthNames: ["1月", "2月", "3月", "4月", "5月", "6月",
+     "7月", "8月", "9月", "10月", "11月", "12月"],
+           yearSuffix: '年',
+           showMonthAfterYear: true,
+           minDate: new Date(),
+           maxDate: '2017-12-31',
+           numberOfMonths:2,
+           showButtonPanel:false
+        });
+        
+        //确定按钮(获取选择日期)
+        $(".data-btn.sub").on("click", function(){
+        	var dateHtml = "";
+        	$(__drp.getDateRange()).each(function() {
+        		dateHtml += $.datepicker.formatDate("yy/mm/dd",this) + "\n"
+        	});
+        	alert(dateHtml)
+        	
+        	//获取最小日期-最大日期
+        	alert($.datepicker.formatDate("yy/mm/dd", __drp.getDateMinMax()[0]))
+        	alert($.datepicker.formatDate("yy/mm/dd", __drp.getDateMinMax()[1]))
+        });
+        
+        
+        
+	   
+	   
+		$(function(){
+			//左导航
+			var lSideNum=0;
+			$(".l-side-btn").click(function(){
+				if(lSideNum==0){
+					$(".full-page").addClass("shin-slide-right").removeClass("shin-slide-left");
+					$(".l-side").fadeIn();
+					lSideNum=1;
+				}else{
+					$(".full-page").removeClass("shin-slide-right").addClass("shin-slide-left");
+					$(".l-side").fadeOut();
+					lSideNum=0;
+				}
+			})
+			//加减
+			var foodNum=0;
+			
+			$(".add").on("click",function(){
+				var uesrNameRow=$('<div class="yu-h50 yu-grid yu-alignc yu-rpad10 adduser">'+
+							'<div class="yu-w96"></div>'+
+							'<div class="yu-overflow"><input type="text" class="yu-input2" placeholder="请输入姓名" /></div>'+
+							'<div class="yu-grid sex-select yu-alignc">'+
+							'<label class="yu-rmar10">'+
+							'<span>先生</span><span class="ico"></span>'+
+							'</label>'+
+							'<label>'+
+							'<span>女士</span><span class="ico"></span>'+
+							'</label>'+
+							'</div>'+
+							'</div>');
+				
+				
+				if($(this).siblings(".food-num").text()==""){
+					foodNum=1;
+					$(this).siblings(".food-num").text(foodNum);
+				}else{
+					foodNum=parseInt($(this).siblings(".food-num").text());
+					foodNum++;
+					$(this).siblings(".food-num").text(foodNum);
+				};
+				$(".usernamelist").append(uesrNameRow);
+			
+			});
+			
+			$(".reduce").on("click",function(){
+				foodNum=parseInt($(this).siblings(".food-num").text());
+				if(foodNum>1){
+					foodNum--;
+					$(this).siblings(".food-num").text(foodNum);
+					$(".usernamelist").children(".adduser").last().remove();
+				};
+			});
+			//加床
+			$(".add-bed").click(function(){
+				$(this).toggleClass("cur");
+			})
+			 //radio
+          $(".radio").on("click",function(){
+            if($(this).hasClass("cur")){
+              $(this).parents(".fapiao").siblings("div").fadeOut();
+              $(this).removeClass("cur");
+            }else{
+                $(this).parents(".fapiao").siblings("div").fadeIn();
+                $(this).addClass("cur");
+            }
+          })
+          //性别
+          $(".sex-select>label").on("click",function(){
+          	$(this).addClass("cur").siblings().removeClass("cur");
+          })
+          $(".usernamelist").on("click","label",function(){
+          	$(this).addClass("cur").siblings().removeClass("cur");
+          	})
+		//选项卡
+		  var tabIndex;
+		  $(".tab-nav").children("li").on("click",function(){
+		  	$(this).addClass("cur").siblings("li").removeClass("cur");
+		  	tabIndex=$(this).index();
+		  	$(this).parent(".tab-nav").siblings(".tab-inner").children("li").eq(tabIndex).addClass("cur").siblings().removeClass("cur");
+		  })
+		//红包
+		$(".hongbao-select>li").on("click",function(){
+			$(this).addClass("cur").siblings().removeClass("cur");
+		})
+		$(".hongbao-btn").click(function(){
+			$(".hongbao-mask").fadeIn();
+			$(".mask-bottom-inner").addClass("shin-slide-up");
+		})
+		$(".mask-close,.mask").click(function(){
+			$(".mask").fadeOut();
+		})
+		$(".mask-bottom-inner").on("click",function(e){
+			e.stopPropagation();
+		})
+		})
+		//预订按钮
+		$(".yu-btn").click(function(){
+			$(".alert").fadeIn();
+		})
+		//最晚到店
+		$(".lasttimeselect").click(function(){
+			$(".lasttime-mask").fadeIn();
+			$(".mask-bottom-inner").addClass("shin-slide-up");
+			
+		})
+		//选择时间
+		$(".data-select").on("click",function(){
+			$(".show-body").hide();
+			$("header").hide();
+			$(".data-page").show();
+		})
+		$(".data-btn.cal").click(function(){
+			$(".show-body").show();
+			$("header").show();
+			$(".data-page").hide();
+		})
+	</script>
+</body>
+</html>

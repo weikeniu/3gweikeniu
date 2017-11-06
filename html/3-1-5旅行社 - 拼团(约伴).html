@@ -1,0 +1,416 @@
+
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html;charset=utf-8" />
+<meta name="keywords" content="关键词1,关键词2,关键词3" />
+<meta name="description" content="对网站的描述" />
+<meta name="format-detection" content="telephone=no">
+<!--自动将网页中的电话号码显示为拨号的超链接-->
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+<!--width宽度height高度，initial-scale初始的缩放比例，minimum-scale允许缩放到的最小比例，maximum-scale允许缩放到的最大比例，user-scalable是否可以手动缩放-->
+<meta name="apple-mobile-web-app-capable" content="yes">
+<!--IOS设备-->
+<meta name="apple-touch-fullscreen" content="yes">
+<!--IOS设备-->
+<meta http-equiv="Access-Control-Allow-Origin" content="*">
+<title>旅行社-约伴</title>
+<link type="text/css" rel="stylesheet" href="../css/booklist/jquery-ui.css"/>
+<link type="text/css" rel="stylesheet" href="../css/booklist/sale-date.css"/>
+
+<link type="text/css" rel="stylesheet" href="../css/booklist/Restaurant.css"/>
+<link type="text/css" rel="stylesheet" href="../css/booklist/new-style.css"/>
+
+<link type="text/css" rel="stylesheet" href="../css/booklist/travel.css"/>
+<link type="text/css" rel="stylesheet" href="../css/booklist/font/iconfont.css"/>
+<link type="text/css" rel="stylesheet" href="../css/booklist/fontSize.css"/>
+<script type="text/javascript" src="../Scripts/jquery-1.8.0.min.js"></script>
+<script type="text/javascript" src="../css/booklist/jquery-ui.js"></script>
+<script type="text/javascript" src="../css/booklist/date-range-picker.js"></script>
+<script type="text/javascript" src="../Scripts/fontSize.js"></script>
+<style>
+	body{
+		overflow: auto;
+		max-width: 7.5rem;
+	}
+	.date-page{
+		max-width: 7.5rem;
+		margin: 0 auto;
+	}
+	.room-num{
+		display: none;
+	}
+	#datepicker{
+		max-width: 7.5rem;
+		padding-bottom: 1.2rem;
+		box-sizing: border-box;
+	}
+	.room-price-d{
+		display: none;
+	}
+	.ui-datepicker td span, .ui-datepicker td a{
+		line-height: 1.08rem;
+	}
+	#datepicker .specialdays a{
+		line-height: .8rem;
+	}
+	.specialdays.first::after,.specialdays.last::after{
+		top: .55rem;
+	}
+	.data-btn.sub{
+		background: #12B7F5;
+	}
+	.ui-datepicker th{
+		background: #12B7F5;	
+		border:1px solid  #17a7d0;
+	}
+	.fix-bottom {
+	    left: auto !important;
+	    max-width: 750px;
+	    height: 1.2rem;
+	}
+	.tab-nav.type3 > .cur{
+		border-bottom: 0;
+		height: 1rem;
+		line-height: 1rem;
+	}
+</style>
+</head>
+<body class="yu-font12">
+	<!--约伴-->
+	<article class="partner-page">
+		<div class="partner-wrap yu-grid yu-grid-column">
+			<div class="forms-box yu-flex1 yu-lrpad20r">
+				<ul>
+					<li class="yu-grid yu-alignc">
+						<label class="lbl yu-f28r">约伴主题</label> <input class="ipt_text yu-flex1" type="text" name="theme" />
+					</li>
+					<li class="yu-grid yu-alignc" id="J__startPlace"><label class="lbl yu-f28r">出发地</label> <em class="res yu-flex1"></em><i class="yu-arr"></i></li>
+					<li class="yu-grid yu-alignc" id="J__endPlace">
+						<label class="lbl yu-f28r">目的地</label>
+						<div class="yu-f28r yu-l70r yu-grid yu-w-full J__multiPlace">
+							<span class="yu-c99 J__place yu-rpad20r yu-textr yu-flex1">可逐个添加多个地点</span>
+							<i class="icon-add yu-blue2">+</i>
+						</div>
+						<!--<div class="yu-f28r yu-l70r yu-grid yu-w-full J__multiPlace">
+							<span class="J__place yu-rpad20r yu-flex1">
+								<a class="plist"><em class="iconfont icon-dingwei1"></em>青海<i class="i_xx">×</i></a>
+								<a class="plist"><em class="iconfont icon-dingwei1"></em>青海<i class="i_xx">×</i></a>
+								<a class="plist"><em class="iconfont icon-dingwei1"></em>青海<i class="i_xx">×</i></a>
+								<a class="plist"><em class="iconfont icon-dingwei1"></em>青海<i class="i_xx">×</i></a>
+							</span>
+							<i class="icon-add yu-blue2">+</i>
+						</div>-->
+					</li>
+					<li class="yu-grid yu-alignc" id="J__travelDate"><label class="lbl yu-f28r">行程日期</label> <em class="res yu-flex1"></em><i class="yu-arr"></i></li>
+					<li class="yu-grid yu-alignc" id="J__setTime"><label class="lbl yu-f28r">集合时间</label> <em class="res yu-flex1"></em><i class="yu-arr"></i></li>
+					<li class="yu-grid yu-alignc" id="J__activityType"><label class="lbl yu-f28r">活动类型</label> <em class="res yu-flex1"></em><i class="yu-arr"></i></li>
+					
+					<li class="yu-grid yu-alignc yu-tbpad20r">
+						<label class="yu-f28r">活动费用</label>
+						<div class="activity-cost yu-flex1 J__activityCost">
+							<i class="btn__avg cur" data-type="0">人均分摊</i><i class="btn__fixed" data-type="1">固定收费</i><i class="btn__free" data-type="2">免费</i>
+						</div>
+					</li>
+					<li class="yu-grid yu-alignc">
+						<div class="expect__input yu-flex1 yu-f28r">
+							<span class="lbl_cost">人均分摊</span> 预计：<input class="ipt_cost" type="text" />元/人
+						</div>
+					</li>
+					
+					<li class="yu-grid yu-alignc">
+						<label class="lbl yu-f28r">人数限定</label> <input class="ipt_text yu-flex1" type="tel" name="memNumLimit" /> <!--<span class="yu-c99 yu-f28r">15人以内</span>-->
+					</li>
+					
+					<li>
+						<p class="yu-grid yu-f28r yu-l70r"><em class="yu-flex1">活动内容</em> <span class="pic yu-c99 yu-f28r">图片<i class="icon-add yu-blue2">+</i></span></p>
+						<textarea class="ipt_area" name="content"></textarea>
+					</li>
+				</ul>
+			</div>
+			<div class="ft-btn">
+				<a class="publish" href="#">发布</a>
+			</div>
+		</div>
+	</article>
+	
+	<!--出发地/出发地-->
+	<article class="local-page">
+		<section class="yu-lpad20r yu-tpad40r">
+		<dl class="yu-bmar40r">
+			<dt class="yu-c77 yu-f26r yu-bmar30r">我的位置</dt>
+			<dd class="yu-grid select-item yu-flex-w-w">
+				<p class="sp">乌鲁木齐市乌鲁木齐市乌鲁木齐市</p>
+			</dd>
+		</dl>
+		<!--<dl class="yu-bmar40r">
+			<dt class="yu-c77 yu-f26r yu-bmar30r">历史</dt>
+			<dd class="yu-grid select-item yu-flex-w-w">
+				<p class="sp">广州</p>
+			</dd>
+		</dl>-->
+		<dl>
+			<dt class="yu-c77 yu-f26r yu-bmar30r">热门</dt>
+			<dd class="yu-grid select-item yu-flex-w-w select-item">
+				<p>丽江</p>
+				<p>北京</p>
+				<p>上海</p>
+				<p>杭州</p>
+				<p>高雄</p>
+				<p>台北</p>
+				<p>香港</p>
+				<p>澳门</p>
+				<p>厦门</p>
+				<p>武汉</p>
+				<p>惠州</p>
+				<p class="cur">广州</p>
+				<p>深圳</p>
+				<p>珠海</p>
+				<p>佛山</p>
+				<p>桂林</p>
+			</dd>
+		</dl>
+	</section>
+	<section class="letter">
+		<dl>
+			<dt id="a">A</dt>
+			<dd>
+				<p class="yu-bor bbor">阿里</p>
+				<p class="yu-bor bbor">阿里</p>
+				<p class="yu-bor bbor">阿里</p>
+				<p class="yu-bor bbor">阿里</p>
+				<p class="yu-bor bbor">阿里</p>
+				<p class="yu-bor bbor">阿里</p>
+				<p class="yu-bor bbor">阿里</p>
+				<p class="yu-bor bbor">阿里</p>
+				<p class="yu-bor bbor">阿里</p>
+				<p class="yu-bor bbor">阿里</p>
+				<p class="yu-bor bbor">阿里</p>
+				
+			</dd>
+			<dt  id="b">B</dt>
+			<dd>
+				<p class="yu-bor bbor">宝鸡</p>
+				<p class="yu-bor bbor">宝鸡</p>
+				<p class="yu-bor bbor">宝鸡</p>
+				<p class="yu-bor bbor">宝鸡</p>
+				<p class="yu-bor bbor">宝鸡</p>
+				<p class="yu-bor bbor">宝鸡</p>
+				<p class="yu-bor bbor">宝鸡</p>
+				<p class="yu-bor bbor">宝鸡</p>
+				<p class="yu-bor bbor">宝鸡</p>
+				
+			</dd>
+		</dl>
+	</section>
+	<ul class="index">
+		<li><a href="#a">A</a></li>
+		<li><a href="#b">B</a></li>
+		<li><a href="#c">C</a></li>
+		<li><a href="#a">D</a></li>
+		<li><a href="#a">E</a></li>
+		<li><a href="#a">F</a></li>
+		<li><a href="#a">G</a></li>
+		<li><a href="#a">H</a></li>
+		<li><a href="#a">I</a></li>
+		<li><a href="#a">J</a></li>
+		<li><a href="#a">K</a></li>
+		<li><a href="#a">L</a></li>
+		<li><a href="#a">M</a></li>
+		<li><a href="#a">N</a></li>
+		<li><a href="#a">O</a></li>
+		<li><a href="#a">P</a></li>
+		<li><a href="#a">Q</a></li>
+		<li><a href="#a">R</a></li>
+		<li><a href="#a">S</a></li>
+		<li><a href="#a">T</a></li>
+		<li><a href="#a">U</a></li>
+		<li><a href="#a">V</a></li>
+		<li><a href="#a">W</a></li>
+		<li><a href="#a">X</a></li>
+		<li><a href="#a">Y</a></li>
+		<li><a href="#a">Z</a></li>
+	</ul>
+	</article>
+	<!--出发地end-->
+	
+	<!--日历-->
+	<article class="date-page">
+		<div id="datepicker"></div>
+			<div class="fix-bottom yu-bor tbor yu-grid yu-alignc yu-lrpad10 yu-h34r">
+				<p class="yu-overflow ">入住共<span class="selectNum">1</span>晚</p>
+				<div>
+					<div class="yu-grid yu-alignc">
+						<p class="data-btn cal yu-bor1 bor">取消</p>
+						<p class="data-btn sub">确定</p>
+					</div>
+				</div>
+			</div>
+	</article>
+	<!--日历end-->
+	
+	<!--集合时间--> 
+	<section class="mask lasttime-mask">
+		<div class="mask-bottom-inner yu-bgw">
+			<p class="yu-h110r yu-l110r yu-textc yu-bor bbor yu-f34r">集合时间</p>
+			<!--<p class="yu-h110r yu-l110r yu-textc yu-bor bbor yu-f20r yu-c40 yu-bgf9">该酒店14：00办理入住，早到可能需要等待。</p>-->
+			<ul class="yu-lrpad10 yu-c99 yu-blue2 hongbao-select">
+				<li class="yu-h120r yu-grid yu-alignc yu-bor bbor">
+					<div class="yu-overflow yu-f30r">
+						18:00
+					</div>
+					<p class="copy-radio blue"></p>
+				</li>
+				<li class="yu-h120r yu-grid yu-alignc yu-bor bbor">
+					<div class="yu-overflow yu-f30r">
+						19:00
+					</div>
+					<p class="copy-radio blue"></p>
+				</li>
+				<li class="yu-h120r yu-grid yu-alignc yu-bor bbor">
+					<div class="yu-overflow yu-f30r">
+						20:00
+					</div>
+					<p class="copy-radio blue"></p>
+				</li>
+				<li class="yu-h120r yu-grid yu-alignc yu-bor bbor">
+					<div class="yu-overflow yu-f30r">
+						21:00
+					</div>
+					<p class="copy-radio blue"></p>
+				</li>
+			</ul>
+			<div class="yu-h120r yu-bgblue2 yu-white yu-l120r yu-textc mask-close yu-f30r">关闭</div>
+		</div>
+	</section>
+	
+	 <!--活动类型-->
+	<div class="mask screen-mask">
+	 	<div class="mask-inner yu-lrpad20r">
+	 		<div class="yu-grid yu-h90r yu-f32r yu-alignc yu-bor bbor yu-textc yu-j-s  yu-bmar60r" >
+	 			<p class="yu-w120r cancel-btn2">取消</p>
+	 			<p class="yu-w120r yu-blue2  cancel-btn2">完成</p>
+	 		</div>
+		 	<dl class="yu-bpad30r">
+	 			<dt class="yu-f26r yu-c99 yu-bmar30r">类别筛选(复选)</dt>
+		 		<dd class="yu-grid yu-j-s type-screen">
+		 			<div class="cur">不限</div>
+		 			<div>休闲户外</div>
+		 			<div>山野</div>
+		 			<div>旅行</div>
+		 			<div>骑行</div>
+		 			<div>潜水</div>
+		 			<div>自驾</div>
+		 			<div>跑步</div>
+		 			<div>水上运动</div>
+		 			<div>技术攀登</div>
+		 			<div>日常锻炼</div>
+		 			<div>极限运动</div>
+		 			<div>滑雪</div>
+		 			<div>公益</div>
+		 			<div>其他</div>
+		 		</dd>
+		 	</dl>
+	 	</div>
+	</div>
+	
+	
+	<script type="text/javascript">
+		var dClickNum=0;
+	    /*日期选择初始号*/
+        var __drp; 
+        __drp = $("#datepicker").datepicker({
+        	dateFormat: 'yy-mm-dd',
+           dayNamesMin: ["日", "一", "二", "三", "四", "五", "六"],
+           monthNames: ["1月", "2月", "3月", "4月", "5月", "6月",
+     "7月", "8月", "9月", "10月", "11月", "12月"],
+           yearSuffix: '年',
+           showMonthAfterYear: true,
+           minDate: new Date(),
+           maxDate: '2017-12-31',
+           numberOfMonths:2,
+           showButtonPanel:false,
+           onSelect:function(date){
+           		if(dClickNum==0){
+		    	 	console.log("第一次")
+		    	 	dClickNum=1;
+		    	 }else{
+		    	 	console.log("第二次")
+		    	 	dClickNum=0;
+		    	 }
+           }
+        });
+        
+        
+		/** ---活动费用(文本框控制)--- */
+		$(".J__activityCost i").on("click", function(){
+			var type = $(this).attr("data-type");
+			console.log(type);
+			
+			$(this).addClass("cur").siblings().removeClass("cur");
+			if(type == 0 || type == 1){
+				$(".expect__input").parent("li").show();
+				$(".expect__input .lbl_cost").text($(this).text());
+			}else if(type == 2){
+				$(".expect__input").parent("li").hide();
+			}
+		});
+		
+		/** ---出发地、目的地--- */
+		$("#J__startPlace, #J__endPlace .icon-add").on("click", function(){
+			$(".partner-page").hide();
+			$(".local-page").show();
+		});
+		$(".select-item>p").on("click",function(){
+			$(this).addClass("cur").siblings().removeClass("cur");
+			$(".partner-page").show();
+			$(".local-page").hide();
+		});
+		$(".letter dd>p").on("click",function(){
+			$(this).addClass("cur").siblings().removeClass("cur");
+			$(".partner-page").show();
+			$(".local-page").hide();
+		});
+		$(".J__multiPlace .plist").on("click", ".i_xx", function(e){
+			$(this).parent().remove();
+			e.preventDefault();
+		});
+		
+		/** ---行程日期(日历)--- */
+		$("#J__travelDate").on("click", function(){
+			$(".partner-page").hide();
+			$(".date-page").show();
+		});
+		$(".data-btn.cal").click(function(){
+			$(".partner-page").show();
+			$(".date-page").hide();
+		});
+		
+		/** ---集合时间--- */
+		$("#J__setTime").click(function(){
+			$(".lasttime-mask").fadeIn();
+			$(".mask-bottom-inner").addClass("shin-slide-up");
+		});
+		$(".hongbao-select>li").on("click",function(){
+			$(this).addClass("cur").siblings().removeClass("cur");
+		});
+		$(".mask-close,.mask").click(function(){
+			$(".mask").fadeOut();
+		});
+		$(".mask-bottom-inner, .mask-inner").on("click",function(e){
+			e.stopPropagation();
+		});
+		
+		/** ---活动类型--- */
+		$("#J__activityType").on("click", function(){
+			$(".screen-mask").fadeIn();
+		});
+		$(".cancel-btn2").on("click",function(){
+			$(".mask").fadeOut();
+		});
+		$(".type-screen>div").on("click",function(){
+			$(this).toggleClass("cur");
+		});
+	</script>
+</body>
+</html>

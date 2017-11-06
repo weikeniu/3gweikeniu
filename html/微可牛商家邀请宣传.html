@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+	<meta charset="UTF-8" />
+	<title></title>
+	<meta name="format-detection" content="telephone=no">
+	<!--自动将网页中的电话号码显示为拨号的超链接-->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+	<!--width宽度height高度，initial-scale初始的缩放比例，minimum-scale允许缩放到的最小比例，maximum-scale允许缩放到的最大比例，user-scalable是否可以手动缩放-->
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<!--IOS设备-->
+	<meta name="apple-touch-fullscreen" content="yes">
+	<!--IOS设备-->
+	<meta http-equiv="Access-Control-Allow-Origin" content="*">
+	<link rel="stylesheet" href="../css/booklist/mend-reset.css" />
+	<link rel="stylesheet" href="../css/booklist/mend-weikeniu.css" />
+	
+	<script src="../Scripts/jquery-1.8.0.min.js"></script>
+	<script src="../Scripts/fontSize.js"></script>
+</head>
+<style>
+/*微可牛商家邀请*/
+.ca-body-bg{background:#241242;}
+.ca-navbar-bg{background:url(../images/icon/wkn-nav-bg.jpg)  left no-repeat; width:100%; height:3.52rem; background-size:100% 100%;}
+.ca-navbar-top{height:.5rem; line-height:.5rem; background:rgba(0,0,0,0.5); color:#fff; font-size:.3rem; text-align:center; margin-bottom:.25rem;}
+.ca-wkn-logobar{background:url(../images/icon/wkn-logorbar.png) left no-repeat; width:1.7rem; height:.48rem; background-size:100% 100%; margin-left:.28rem; margin-bottom:.08rem;}
+.ca-company-case{ color:#ffff00; position:relative; height:1.96rem; width:100%;}
+.ca-company-case .shode{-webkit-text-stroke-width:10px; -webkit-text-stroke-color:#0f0831; -webkit-text-fill-color:##ffff00;}
+.ca-company-case span{position:absolute;}
+.ca-company-case h1{font-size:.6rem;}
+.ca-company-case h1 span{left:1.68rem;}
+.ca-company-case h2{font-size:.26rem;}
+.ca-company-case h2 span{top:.92rem; left:.66rem;}
+.ca-company-case h2 span em{border-bottom:.02rem solid #ffff00; width:.22rem; margin-top:.21rem;}
+.ca-company-case h2 span i{border-bottom:.02rem solid #ffff00; width:.62rem; display:block; margin-top:.21rem; margin-left:1px; margin-right:1px;}
+.ca-case-hotel{height:auto; display:inline-block;}
+.ca-case-hotel li{width:3rem; font-size:.26rem; color:#ffff00;  text-align:center; margin-bottom:.35rem;}
+.ca-case-hotel li:nth-child(odd){float:left; margin-left:.4rem;}
+.ca-case-hotel li:nth-child(even){float:right; margin-right:.4rem;}
+.ca-case-hotel li img{width:3rem; height:3rem;}
+.ca-case-hotel li span{height:.65rem; line-height:.65rem; width:3rem; float:left; text-overflow:ellipsis; white-space:nowrap; overflow:hidden; }
+.ca-bottom-bg{background:#ffa900; height:5.75rem; position:relative; top:.35rem;}
+.ca-btop-bg{background:#241242; width:.52rem; height:.52rem; position:absolute; top:-.34rem; left:3.52rem; transform:rotate(45deg); -ms-transform:rotate(45deg); -moz-transform:rotate(45deg); -webkit-transform:rotate(45deg); -o-transform:rotate(45deg);}
+.ca-more-than{text-align:center; color:#000; font-size:.26rem; padding-top:.45rem;}
+.ca-wkenu-public{background:url(../images/icon/wkn-public.jpg) left no-repeat; width:2.58rem; height:2.58rem; margin:0 auto; margin-top:.15rem; background-size:100%;}
+.ca-recom-prize{color:#fff; font-size:.32rem; width:1.9rem; position:absolute; float:right; right:0rem; top:1rem;}
+.ca-recom-prize li{ height:.9rem; line-height:.9rem; padding-left:.22rem;}
+.ca-recom-prize li a{width:100%; display:block;}
+.ca-recom-prize li em{background:url(../images/icon/iconfont.png) no-repeat -.04rem -6.51rem; width:0.18rem; height:.3rem; float:right; margin-top:.32rem; margin-right:.2rem; background-size:8rem 8rem;} 
+.ca-recom-prize li.li1{height:1rem; background:#ff0000;  line-height:.38rem; padding-top:.1rem; border-top-left-radius:.25rem;}
+.ca-recom-prize li.li1 em{margin-top:.08rem;}
+.ca-recom-prize li.li1 span{font-size:.42rem; color:#ffff00;}
+.ca-recom-prize li.li1 span i{font-size:.32rem;}
+.ca-recom-prize li.li2{background:#ff00ff;}
+.ca-recom-prize li.li3{background:#aa00ff;}
+.ca-recom-prize li.li4{background:#5500ff; border-bottom-left-radius:.25rem;}
+</style>
+<body class="ca-body-bg">
+	  <div class="ca-navbar-bg">
+           <div class="ca-navbar-top">关注微可牛公众号，迅速提高酒店销售额！</div> 
+           <div class="ca-wkn-logobar"></div>
+           <div class="ca-company-case">
+                <h1>
+                     <span class="shode">微可牛合作案例</span>
+                     <span><b>微可牛合作案例</b></span>
+                </h1>
+                <h2>
+                     <span class="shode"><i class="fl"></i><em class="fl"></em>微信内长按二维码，识别查看酒店案例<i class="fr"></i><em class="fr"></em></span>
+                     <span><i class="fl"></i><em class="fl"></em>微信内长按二维码，识别查看酒店案例<i class="fr"></i><em class="fr"></em></span>
+                </h2>
+           </div>
+           <!--ca-company-case end-->
+           <div class="ca-case-hotel">
+                <ul>
+                     <li><img src="../images/icon/wkn-erw.jpg"><span>北京德胜门华宇假日酒店</span></li>
+                     <li><img src="../images/icon/wkn-erw.jpg"><span>北京德胜门华宇假日酒店</span></li>
+                     <li><img src="../images/icon/wkn-erw.jpg"><span>北京德胜门华宇假日酒店</span></li>
+                     <li><img src="../images/icon/wkn-erw.jpg"><span>北京德胜门华宇假日酒店</span></li>
+                     <li><img src="../images/icon/wkn-erw.jpg"><span>北京德胜门华宇假日酒店</span></li>
+                     <li><img src="../images/icon/wkn-erw.jpg"><span>北京德胜门华宇假日酒店</span></li>
+                     <li><img src="../images/icon/wkn-erw.jpg"><span>北京德胜门华宇假日酒店</span></li>
+                     <li><img src="../images/icon/wkn-erw.jpg"><span>北京德胜门华宇假日酒店</span></li>
+                </ul>
+           </div>
+           <!--ca-navbar-bg end-->
+           <div class="ca-bottom-bg">
+                <div class="ca-btop-bg"></div>
+                <div class="ca-more-than">
+                      <ul>
+                           <li>更多案例，更多酒店营销方式</li>
+                           <li>请关注微可牛公众号</li>
+                           <li class="ca-wkenu-public"></li>
+                      </ul>
+                </div>
+                <!--ca-more-than end-->
+                <div class="ca-recom-prize">
+                     <ul>
+                           <li class="li1"><a href="javascript:;">推荐有奖<span><i>￥</i>500</span><em class="em1"></em></a></li>
+                           <li class="li2"><a href="javascript:;">有意向<em></em></a></li>
+                           <li class="li3"><a href="javascript:;">看案例<em></em></a></li>
+                           <li class="li4"><a href="javascript:;">看官网<em></em></a></li>
+                     </ul>
+                </div>
+                <!--ca-recom-prize end-->
+           </div>
+           <!--ca-bottom-bg end-->
+      </div>
+	  <!--ca-case-hotel end-->
+	
+	<script type="text/javascript">
+		/** __公共函数 */
+		$(function(){
+			//TODO...
+		});
+		
+		/** __自定函数 */
+		$(function(){
+			//TODO...
+		});
+	</script>
+	
+</body>
+</html>

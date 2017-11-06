@@ -1,0 +1,17 @@
+.yu-arr.iconfont::before {
+    transform: rotate(0deg) !important;
+    border: 0;
+    top: 0;
+    color: #aaa;
+    margin-top: 1px;
+}
+.no-r-ico {
+    width: 90px;
+    height: 90px;
+    background: url(../../images/no-resoult1.png) no-repeat;
+        background-size: auto auto;
+    background-size: 100%;
+    margin: 0 auto;
+        margin-bottom: 0px;
+    margin-bottom: .8rem;
+}

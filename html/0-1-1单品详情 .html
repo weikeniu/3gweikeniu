@@ -1,0 +1,79 @@
+﻿
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html;charset=utf-8" />
+<meta name="keywords" content="关键词1,关键词2,关键词3" />
+<meta name="description" content="对网站的描述" />
+<meta name="format-detection" content="telephone=no">
+<!--自动将网页中的电话号码显示为拨号的超链接-->
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+<!--width宽度height高度，initial-scale初始的缩放比例，minimum-scale允许缩放到的最小比例，maximum-scale允许缩放到的最大比例，user-scalable是否可以手动缩放-->
+<meta name="apple-mobile-web-app-capable" content="yes">
+<!--IOS设备-->
+<meta name="apple-touch-fullscreen" content="yes">
+<!--IOS设备-->
+<meta http-equiv="Access-Control-Allow-Origin" content="*">
+<title></title>
+<link type="text/css" rel="stylesheet" href="../swiper/swiper-3.4.1.min.css"/>
+<link type="text/css" rel="stylesheet" href="../css/booklist/sale-date.css"/>
+<link type="text/css" rel="stylesheet" href="../css/booklist/Restaurant.css"/>
+<script type="text/javascript" src="../Scripts/jquery-1.8.0.min.js"></script>
+<script type="text/javascript" src="../swiper/swiper-3.4.1.jquery.min.js"></script>
+<script type="text/javascript" src="../Scripts/fontSize.js"></script>
+
+</head>
+<body class="yu-bpad60 yu-bgw">
+	<style type="text/css">
+		body{font-size: 12px;}
+		.clearfix {_zoom:1;}
+		.clearfix:after {content: "";clear: both;display: block;}
+		* html .clearfix { /* for IE6 */
+			display: inline-block;
+		}
+		* + html .clearfix { /* for IE7 */
+			display: inline-block;
+		}
+		.zone__labels{padding: .1rem;}
+		.zone__labels .lbl-list span{border: 1px solid #999; border-radius: 20px; float: left; font-size: 12px; margin-bottom: 10px; margin-right: 10px; padding: 5px 10px;}
+		.zone__labels .lbl-list span.selected{background: #ff4400; border-color: #ff4400; color: #fff;}
+		.zone__labels .lbl-list span .close{background: #999; color: #fff; border-radius: 50%;display: inline-block; margin: 2px 0 0 3px; vertical-align: top; text-align: center; height: 12px; line-height: 10px; width: 12px;}
+		.zone__labels .formbox{margin-top: .1rem;}
+		.zone__labels .formbox .ipt-text{background: #fff; border: 1px solid #ddd; line-height: 30px;}
+		.zone__labels .formbox .ipt-btn{background: #eee; border: 1px solid #ddd; padding: 0 10px; line-height: 30px;}
+	</style>
+	<div class="zone__labels">
+		<label class="lbl-list clearfix" id="J__labels">
+			<span><i>周末通用</i></span>
+			<span><i>超长有效期</i></span>
+			<span><i>官网独家</i></span>
+			<span><i>爆款返场</i></span>			
+			<span><i>爆款返场</i> <em class="close">×</em></span>
+		</label>
+		<div class="formbox">
+			<input class="ipt-text" type="text" name="kw" />
+			<input class="ipt-btn" id="J__save" type="button" value="保存" />
+		</div>
+	</div>
+	<script type="text/javascript">
+	    $(function () {
+	        $("#J__labels span").on("click", function () {
+	            $(this).toggleClass("selected");
+	        });
+
+	        //保存
+	        $("#J__save").on("click", function () {
+	            var val = $.trim($("input[name='kw']").val()).replace(",", "");
+	            if (val != "") {
+	                $("#J__labels").append("<span><i>" + val + "</i> <em class='close'>×</em></span>");
+	                $("input[name='kw']").val("");
+	            }
+	        });
+	        //关闭
+	        $("body").on("click", "#J__labels .close", function () {
+	            $(this).parent("span").remove();
+	        });
+	    });
+	</script>
+</body>
+</html>

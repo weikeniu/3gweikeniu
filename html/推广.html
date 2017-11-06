@@ -1,0 +1,424 @@
+﻿<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html;charset=utf-8" />
+<meta name="keywords" content="关键词1,关键词2,关键词3" />
+<meta name="description" content="对网站的描述" />
+<meta name="format-detection" content="telephone=no">
+<!--自动将网页中的电话号码显示为拨号的超链接-->
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+<!--width宽度height高度，initial-scale初始的缩放比例，minimum-scale允许缩放到的最小比例，maximum-scale允许缩放到的最大比例，user-scalable是否可以手动缩放-->
+<meta name="apple-mobile-web-app-capable" content="yes">
+<!--IOS设备-->
+<meta name="apple-touch-fullscreen" content="yes">
+<!--IOS设备-->
+<meta http-equiv="Access-Control-Allow-Origin" content="*">
+<title>开启酒店全民分销新时代</title>
+<link type="text/css" rel="stylesheet" href="../css/booklist/sale-date.css"/>
+<script type="text/javascript" src="js/jquery-1.8.3.min.js"></script>
+<script type="text/javascript" src="../Scripts/fontSize.js"></script>
+</head>
+<style>
+	.top-block{
+		position: relative;
+		padding: 0 .25rem;
+		padding-top: .4rem;
+		background: url(../images/topbg2.jpg) no-repeat 0 0;
+		background-size: 100%;
+		height: 4.68rem;
+	}
+	.fx-logo{
+		width: 1.62rem;
+		height: .47rem;
+		background: url(../images/logo.png) no-repeat;
+		background-size: 1.62rem;
+		top: .42rem;
+		left:.3rem;
+		position: absolute;
+	}
+	hgroup{
+		width: 4.84rem;
+		height: 1.36rem;
+		background: url(../images/h-txt.png) no-repeat;
+		background-size: 4.84rem;
+		margin: 0 auto;
+		margin-bottom: .35rem;
+	}
+	.js{
+		color: #fff;
+		font-size: .2rem;
+		line-height: .4rem;
+		text-shadow: 1px 1px 5px #000;
+		position: relative;
+	}
+	.js .text-shadow{
+		position: absolute;
+	-webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: #161646;
+    -webkit-text-fill-color: #ffff00;
+    z-index: 49;
+	}
+	.js .text-body{
+		position: relative;
+		z-index: 50;
+	}
+	.h-txt2{
+		width: 4.45rem;
+		margin: 0 auto;
+		padding-top: .4rem;
+	}
+	.h-txt2>img{
+		width: 100%;
+	}
+	.yu-lpad56r{
+		padding-left: .56rem;
+	}
+	.fx-ico{
+		width: .8rem;
+		height: .8rem;
+		background: url(../images/fx-ico.png) no-repeat;
+		background-size: 2.6rem;
+		margin-right: .3rem;
+	}
+	.fx-ico.type1{
+		background-position:0 0 ;
+	}
+	.fx-ico.type2{
+		background-position:-0.85rem 0 ;
+	}
+	.fx-ico.type3{
+		background-position:-1.75rem 0 ;
+	}
+	.yu-ffff00{
+		color: #ffff00;
+	}
+	.yu-00ffff{
+		color: #00ffff;
+	}
+	.yu-01a6af{
+		color: #01a6af;
+	}
+	.fx-tb{
+		color: #fff;
+		font-size: .18rem;
+		font-weight: 100;
+		width: 100%;
+		border-collapse: collapse;
+		text-align: center;
+		margin-bottom: .2rem;
+		margin-top: .15rem;
+	}
+	.fx-tb th{
+		font-weight: 100;
+		background: #023d61;
+		height: .6rem;
+	}
+	.fx-tb td{
+		height: .6rem;
+	}
+	.fx-tb tr:nth-child(2) td{
+		background: #1c264e;
+	}
+	.fx-tb tr:nth-child(3) td{
+		background: #283157;
+	}
+	.fx-tb tr:nth-child(4) td{
+		background: #353d61;
+	}
+	.tj-block{
+		padding: 0 .1rem;
+	}
+	.tj-block>.inner{
+		border-radius: .18rem;
+		background: #5c1ee2 url(../images/tjbg_01.jpg) no-repeat;
+		background-size: 100%;
+		width: 100%;
+		padding-top: 1.4rem;
+		padding-bottom: .45rem;
+	}
+	.time-bt{
+		width: 3.6rem;
+		height: .3rem;
+		background: #00ffff;
+		color: #000;
+		line-height: .3rem;
+		font-size: .26rem;
+		margin: 0 auto;
+		margin-bottom: .7rem;
+		text-align: center;
+	}
+	.mb{
+		text-shadow:0px 0px 5px #5c1ee2;
+	}
+	.yu-bgae0fdb{
+		background: #ae0fdb;
+	}
+	.fxdj{
+		width: .32rem;
+		height: .32rem;
+		background: url(../images/fxdj.jpg) no-repeat;
+		background-size: 100%;
+		margin-right: .17rem;
+	}
+	.bm-tb th{
+		color: #fff;
+		font-size: .3rem;
+		font-weight: normal;
+		width: 1.2rem;
+		text-align: right;
+	}
+	.bm-tb td{
+		padding-left: .2rem;
+		font-size: .3rem;
+		height: .9rem;
+	}
+	.bm-tb input[type="text"],.bm-tb input[type="number"]{
+		width: 5.3rem;
+		height: .6rem;
+		border: 0;
+		outline: 0;
+		font-size: .3rem;
+		text-indent: .2rem;
+	}
+	.bm-tb input[type="submit"]{
+		width: 5.3rem;
+		height: .65rem;
+		font-size: .4rem;
+		color: #000;
+		border: 0;
+		outline: 0;
+		border-bottom: 0.05rem solid #eb9411;
+		background: #ffff00;
+	}
+	.fix-nav{
+		position: fixed;
+		right: 0;
+		top: 4.74rem;
+		border-top-left-radius: .28rem;
+		border-bottom-left-radius: .28rem;
+		overflow: hidden;
+		
+	}
+	.fix-nav a{
+		display: block;
+		color: #fff;
+		width: 1.9rem;
+		height: .9rem;
+		line-height: .9rem;
+		font-size: .32rem;
+		text-align: center;
+		position: relative;
+	}
+	.fix-nav a:before{
+		content:" ";
+		width:.2rem ;
+		height: .2rem;
+		border-top: .04rem solid #fff;
+		border-right: .04rem solid #fff;
+		transform: rotate(45deg);
+		-webkit-transform: rotate(45deg);
+		-o-transform: rotate(45deg);
+		-moz-transform: rotate(45deg);
+		
+		position: absolute;
+		right: .2rem;
+		top: .36rem;
+	}
+	.fix-nav a:nth-child(1){
+		background: #ff0000;
+		height: 1rem;
+		line-height: .5rem;
+	}
+	.fix-nav a:nth-child(1):before{
+		top: .63rem;
+	}
+	.fix-nav a:nth-child(1)>div{
+		text-indent: -0.2rem;
+	}
+	.fix-nav a:nth-child(2){
+		background: #ff00ff;
+	}
+	.fix-nav a:nth-child(3){
+		background: #aa00ff;
+	}
+	.fix-nav a:nth-child(4){
+		background: #5500ff;
+	}
+</style>
+<body style="background: #020d3a;">
+	<article style="width: 100%;">
+		<section class="top-block">
+			<div class="fx-logo"></div>
+			<hgroup>
+				
+			</hgroup>
+			<div class="js">
+				<p class="text-shadow">
+					通过设置分销佣金奖励机制，发动全民帮助酒店扩大品牌宣传，以客推客发展新
+顾客，增加订单收入，提高酒店销售额，同时发展会员直销和激励老会员推广酒
+店，迅速打造酒店的分销大军，直接降低成本增强运营。
+				</p>
+				<p class="text-body">
+					通过设置分销佣金奖励机制，发动全民帮助酒店扩大品牌宣传，以客推客发展新
+顾客，增加订单收入，提高酒店销售额，同时发展会员直销和激励老会员推广酒
+店，迅速打造酒店的分销大军，直接降低成本增强运营。
+				</p>
+			</div>
+			<div class="h-txt2">
+				<img src="../images/h-txt2.png" />
+			</div>
+		</section>
+		<section class="yu-lpad56r">
+			<div class="yu-grid yu-alignc yu-bmar70r">
+				<p class="fx-ico type1"></p>
+				<div class="yu-overflow yu-white">
+					<p class="yu-f40r">微官网</p>
+					<p class="yu-f26r yu-f-w100">推广全民分销，发展直销会员</p>
+				</div>
+			</div>
+			<div class="yu-grid yu-alignc yu-bmar70r">
+				<p class="fx-ico type2"></p>
+				<div class="yu-overflow yu-white">
+					<p class="yu-f40r">阿里直连</p>
+					<p class="yu-f26r yu-f-w100">先付预付独家产品，8%佣金率</p>
+				</div>
+			</div>
+			<div class="yu-grid yu-alignc yu-bmar70r">
+				<p class="fx-ico type3"></p>
+				<div class="yu-overflow yu-white">
+					<p class="yu-f40r">分销</p>
+					<p class="yu-f26r yu-f-w100">全国旅行社、商务公司，全国景区等合作商家</p>
+				</div>
+			</div>
+		</section>
+		<section class="yu-lrpad10r">
+			<p class="yu-f24r yu-ffff00 yu-f-w100">有效的会员体系将会给酒店带来以下的回头客收益：</p>
+			<table class="fx-tb">
+				<tr>
+					<th>发展会员</th>
+					<th>会员平均发展会员数</th>
+					<th>房间量</th>
+					<th>会员率</th>
+					<th>1天会员量</th>
+					<th>30天会员量</th>
+					<th>1年会员量</th>
+				</tr>
+				<tr>
+					<td>普通</td>
+					<td>1</td>
+					<td>100</td>
+					<td>10%</td>
+					<td class="yu-00ffff">10</td>
+					<td class="yu-00ffff">300</td>
+					<td class="yu-00ffff">3600</td>
+				</tr>
+				<tr>
+					<td>分销推广员</td>
+					<td>3</td>
+					<td>100</td>
+					<td>10%</td>
+					<td class="yu-00ffff">30</td>
+					<td class="yu-00ffff">900</td>
+					<td class="yu-00ffff">10800</td>
+				</tr>
+			</table>
+			<p class="yu-f18r yu-01a6af yu-f-w100">（换算法）会员数X回头率X会员单月订房频次X会员平均间夜数=会员回头订房间夜数</p>
+			<table class="fx-tb">
+				<tr>
+					<th>会员数（如）</th>
+					<th>回头率</th>
+					<th>会员单月订房频次</th>
+					<th>会员平均间夜数</th>
+					<th>会员回头订房间夜数</th>
+				</tr>
+				<tr>
+					<td><span class="yu-00ffff">1000</span>个会员</td>
+					<td>21.4%</td>
+					<td>0.6</td>
+					<td>1.2</td>
+					<td>154间夜/月</td>
+				</tr>
+				<tr>
+					<td><span class="yu-00ffff">5000</span>个会员</td>
+					<td>21.4%</td>
+					<td>0.6</td>
+					<td>1.2</td>
+					<td>770间夜/月</td>
+				</tr>
+				<tr>
+					<td><span class="yu-00ffff">10000</span>个会员</td>
+					<td>21.4%</td>
+					<td>0.6</td>
+					<td>1.2</td>
+					<td>1540间夜/月</td>
+				</tr>
+			</table>
+			<p class="yu-f18r yu-00ffff yu-f-w100">阿里直连的价值（增加阿里现付预付产品上线，目前信用住单量大概占一半）</p>
+			<table class="fx-tb">
+				<tr>
+					<th>信用住月产量</th>
+					<th>信用住年产量</th>
+					<th>直连预估月可增产量</th>
+					<th>直连预估年可增产量</th>
+				</tr>
+				<tr class="yu-00ffff">
+					<td >30</td>
+					<td>360</td>
+					<td>30</td>
+					<td>30</td>
+				</tr>
+			</table>
+		</section>
+		<section class="tj-block">
+			<div class="inner">
+				<div class="time-bt">活动时间：5月12号-6月30号</div>
+				<div class="yu-lrpad20r yu-f30r yu-ffff00 yu-l55r yu-f-w100 mb yu-bmar20r">活动时间内推荐人成功推荐酒店与微可牛达成合作，
+<span class="yu-f36r yu-00ffff">奖励200元</span>，达成合作后2个月内产单50单成功
+预付订单（需真实有效订单），<span class="yu-f36r yu-00ffff">再奖励300元</span>。</div>
+				<div class="yu-grid yu-h88r yu-alignc yu-bgae0fdb yu-j-c">
+					<p class="fxdj"></p>
+					<p class="yu-f36r yu-white">报名参与活动</p>
+				</div>
+				<form>
+					<table class="bm-tb">
+						<tr>
+							<th>酒店:</th>
+							<td><input type="text" placeholder="请填写酒店名称"/></td>
+						</tr>
+						<tr>
+							<th>姓名:</th>
+							<td><input type="text"/></td>
+						</tr>
+						<tr>
+							<th>手机:</th>
+							<td><input type="number"/></td>
+						</tr>
+						<tr>
+							<th>&nbsp;</th>
+							<td><input type="submit"/></td>
+						</tr>
+					</table>
+				</form>
+			</div>
+		</section>
+		<div class="fix-nav">
+			<a href="#">
+				<p>推荐有奖</p>
+				<div class="yu-ffff00">
+					<span class="yu-f32r">￥</span>
+					<span class="yu-f42r yu-fontb">500</span>
+				</div>
+			</a>
+			<a href="#">
+				有意向
+			</a>
+			<a href="#">
+				看案例
+			</a>
+			<a href="#">
+				看官网
+			</a>
+		</div>
+	</article>
+</body>
+</html>

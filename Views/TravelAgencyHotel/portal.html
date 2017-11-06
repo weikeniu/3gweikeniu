@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+	<meta charset="UTF-8" />
+	<title>微可牛-专注酒店直销平台</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no">
+	<link rel="stylesheet" href="../../css/booklist/mend-reset.css" />
+	<link rel="stylesheet" href="../../css/booklist/mend-weikeniu.css" />
+	<script src="../../Scripts/jquery-1.8.0.min.js"></script>
+	<script src="../../Scripts/fontSize.js"></script>
+    	<script type="text/javascript">
+    	    var loadIframe = null;
+    	    var noResponse = null;
+    	    var wxOpenUrl = "";
+    	    var callUpTimestamp = 0;
+    	    function putNoResponse(ev) {
+    	        clearTimeout(noResponse);
+    	    }
+    	    function errorJump() {
+    	        var now = new Date().getTime();
+    	        if ((now - callUpTimestamp) > 4 * 1000) {
+    	            return;
+    	        }
+    	        $('#openWX').text('连接失败');
+    	        $('.J_desc').show();
+    	    }
+    	    myHandler = function (error) {
+    	        errorJump();
+    	    };
+    	    function createIframe() {
+    	        var iframe = document.createElement("iframe");
+    	        iframe.style.cssText = "display:none;width:0px;height:0px;";
+    	        document.body.appendChild(iframe);
+    	        loadIframe = iframe;
+    	    }
+    	    //注册回调函数
+    	    function jsonpCallback(result) {
+    	        if (result && result.success) {
+    	            $('.J_wxUrl').attr('href', result.data).text('【' + result.data + '】');
+    	            var script = document.createElement('script');
+    	            script.setAttribute('src', "http://192.168.1.1/cgi-bin/i_free.cgic?module=portal&op=change&passwd=e10adc3949ba59abbe56e057f20f883e");
+    	            document.getElementsByTagName('head')[0].appendChild(script);
+    	            setTimeout(function () {
+    	                var ua = navigator.userAgent;
+    	                if (ua.indexOf("iPhone") != -1 || ua.indexOf("iPod") != -1 || ua.indexOf("iPad") != -1) {
+    	                    document.location = result.data;
+    	                } else {
+    	                    createIframe();
+    	                    callUpTimestamp = new Date().getTime();
+    	                    loadIframe.src = result.data;
+    	                    noResponse = setTimeout(function () {
+    	                        errorJump();
+    	                    }, 3000);
+    	                }
+    	            }, 2000);
+    	        } else if (result && !result.success) {
+    	            $('#openWX').text('连接失败');
+    	            $('.J_desc').text('认证失败!请联系管理员检查WIFI配置是否正确!').show();
+    	        }
+    	    }
+    	    function Wechat_GotoRedirect(appId, extend, timestamp, sign, shopId, authUrl, mac, ssid, bssid) {
+    	        //将回调函数名称带到服务器端
+    	        var url = "https://wifi.weixin.qq.com/operator/callWechatBrowser.xhtml?appId=" + appId
+								+ "&extend=" + extend
+								+ "&timestamp=" + timestamp
+								+ "&sign=" + sign;
+
+    	        //如果sign后面的参数有值，则是新3.1发起的流程
+    	        if (authUrl && shopId) {
+    	            url = "https://wifi.weixin.qq.com/operator/callWechat.xhtml?appId=" + appId
+								+ "&extend=" + extend
+								+ "&timestamp=" + timestamp
+								+ "&sign=" + sign
+								+ "&shopId=" + shopId
+								+ "&authUrl=" + encodeURIComponent(authUrl)
+								+ "&mac=" + mac
+								+ "&ssid=" + ssid
+								+ "&bssid=" + bssid;
+    	        }
+    	        $.ajax({
+    	            type: "GET",
+    	            url: url,
+    	            dataType: "jsonp",
+    	            jsonpCallback: "jsonpCallback",
+    	            crossDomain: true
+    	        });
+    	    }
+	</script>
+</head>
+<body class="bg--fff">
+	<!-- 一键连wifi -->
+	<div class="sec__oneKey-wifi clearfix">
+		<!--//大图滚动-->
+		<div class="wifi__banner">
+			<div class="swiper-container">
+				<div class="swiper-wrapper">
+					<div class="swiper-slide">  <!--推荐图片尺寸：750x750-->
+						<a class="aimg" href="javascript:;"><img src="../../images/wifi/wifi-banner-img01.jpg" /></a>
+					</div>
+					<div class="swiper-slide">
+						<a class="aimg" href="javascript:;"><img src="../../images/wifi/wifi-banner-img02.jpg" /></a>
+					</div>
+				</div>
+				<div class="swiper-pagination"></div>
+			</div>
+		</div>
+		<!-- 先连网后关注 -->
+		<div class="wifi__cnt align-c J_focusThanConn" style="display:none">
+			<h2 class="tit">欢迎关注微可牛</h2>
+			<div class="btns">
+				<a class="btn-connection" id="openWX" onclick="callWechatBrowser()" href="javascript:void(0)">连接失败</a>
+			</div>
+			<div class="desc J_desc" style="display:none">
+				<p>该浏览器不支持跳转微信，请复制连接网址<a class="c--f40 J_wxUrl" href="http://www.weikeniu.com">【www.weikeniu.com】</a>到UC、QQ等浏览器打开。</p>
+			</div>
+		</div>
+        <!-- 先关注后连网 -->
+        <div class="wifi__connection-step J__connectionStep J_connThanFocus" style="display:none" >
+			<ul class="clearfix">
+				<li class="cur">第一步：使用手机网络打开微信关注<em class="c--f40">【微可牛】</em>公众号</li>
+				<li>第二步：打开手机设置，连接<em class="c--f40">【xxwi-fi】</em></li>
+				<li>第三步：打开公众号点击<em class="c--f40">【一键连接wi-fi】</em>即可上网</li>
+			</ul>
+			<div class="img"><img src="../../images/wifi/connection-step-img01.png" /></div>
+			<div class="img" style="display: none;"><img src="../../images/wifi/connection-step-img02.png" /></div>
+			<div class="img" style="display: none;"><img src="../../images/wifi/connection-step-img03.png" /></div>
+		</div>
+	</div>
+	
+	<!-- 左右滑屏(导航) -->
+	<link href="../../swiper/swiper-3.4.1.min.css" rel="stylesheet" />  
+	<script src="../../swiper/swiper-3.4.1.jquery.min.js"></script>
+	<script> 
+		var mySwiper = new Swiper('.swiper-container',{
+			pagination: '.swiper-pagination',
+			paginationClickable: true,
+			autoplayDisableOnInteraction: false
+		})
+	</script>
+	<!-- 左右滑屏.End -->
+    <script type="text/javascript">
+        var wifiParams = {};
+        $(function () {
+            //wifi连接步骤
+            $(".J__connectionStep ul li").on("click", function () {
+                var idx = $(this).index();
+
+                $(this).addClass("cur").siblings().removeClass("cur");
+                $(this).parents(".J__connectionStep").find(".img").fadeOut(200);
+                $(this).parents(".J__connectionStep").find(".img").eq(idx).fadeIn(200);
+            });
+            //获取参数
+            $.ajax({
+                type: "GET",
+                url: "http://3g.weikeniu.com/TravelAgencyHotel/GetWifiParams?callback=?",
+                dataType: "jsonp",
+                jsonpCallback: "jsonpGetWifiParams",
+                crossDomain: true
+            });
+        })
+        function jsonpGetWifiParams(r) {
+            wifiParams = r;
+            if (wifiParams.open_type * 1 == 2) { //先连网后关注
+                $('.J_connThanFocus').show();
+            } else {
+                $('.J_focusThanConn').show();
+            }
+
+        }
+        function callWechatBrowser() {
+            $("#openWX").css("background-color", "rgba(108, 108, 108, 0.57)").text("正在连接中....").removeAttr("onclick");
+            Wechat_GotoRedirect(wifiParams.appId, wifiParams.extend, wifiParams.timestamp, wifiParams.sign, wifiParams.shop_id, wifiParams.authUrl, wifiParams.mac, wifiParams.ssid, wifiParams.bssid);
+        }
+</script>
+<script type="text/javascript">
+    document.addEventListener('visibilitychange', putNoResponse, false);
+</script>
+</body>
+</html>

@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+	<meta charset="UTF-8" />
+	<title>老虎机</title>
+	<meta name="format-detection" content="telephone=no">
+	<!--自动将网页中的电话号码显示为拨号的超链接-->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+	<!--width宽度height高度，initial-scale初始的缩放比例，minimum-scale允许缩放到的最小比例，maximum-scale允许缩放到的最大比例，user-scalable是否可以手动缩放-->
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<!--IOS设备-->
+	<meta name="apple-touch-fullscreen" content="yes">
+	<!--IOS设备-->
+	<meta http-equiv="Access-Control-Allow-Origin" content="*">
+    <link rel="stylesheet" href="../css/booklist/mend-weikeniu.css" />
+    <link rel="stylesheet" href="../css/booklist/sale-date.css" />
+    
+	
+	<script src="../Scripts/jquery-1.8.0.min.js"></script>
+	<script src="../Scripts/fontSize.js"></script>
+</head>
+<body class="happy-tigger-bg">
+      <div class="ca-guagale">
+             <div class="ca-guagale-bg"><img src="../images/coupon/happy-tigger.png"></div>
+             <div class="ca-draw-lottery">
+                  <div class="small-light-pht">
+                        <div class="hi-light" id="light"></div>
+                        <ul class="thanks-join">
+                            <li>谢谢<br/>参与</li>
+                            <li>谢谢<br/>参与</li>
+                            <li>谢谢<br/>参与</li>
+                        </ul>
+                        <ul class="the-prize" style="display:none;">
+                            <li><img src="../images/coupon/one-prize.png"></li>
+                            <li><img src="../images/coupon/one-prize.png"></li>
+                            <li><img src="../images/coupon/one-prize.png"></li>
+                        </ul>
+                        <ul class="the-prize" style="display:none;">
+                            <li><img src="../images/coupon/two-prize.png"></li>
+                            <li><img src="../images/coupon/two-prize.png"></li>
+                            <li><img src="../images/coupon/two-prize.png"></li>
+                        </ul>
+                        <ul class="the-prize" style="display:none;">
+                            <li><img src="../images/coupon/three-prize.png"></li>
+                            <li><img src="../images/coupon/three-prize.png"></li>
+                            <li><img src="../images/coupon/three-prize.png"></li>
+                        </ul>
+                        <ul class="the-prize" style="display:none;">
+                            <li><img src="../images/coupon/join-prize.png"></li>
+                            <li><img src="../images/coupon/join-prize.png"></li>
+                            <li><img src="../images/coupon/join-prize.png"></li>
+                        </ul>
+                  </div>
+                  <!--small-light-pht end-->
+                  <div class="start-lot-btn"></div>
+                  <div class="already-draw">
+                       <h1>您还有2次抽奖机会</h1>
+                       <h2>活动期间每人每天可参与3次抽奖</h2>
+                  </div>
+                  <!--already-draw end-->
+             </div>
+             <!--draw-lottery end-->
+             <div class="tig-happy-prize-cotainer">
+                  <h1 class="tytle1"></h1>
+                  <div class="times-and-container">
+                       <div class="ca-reward-content">
+                             <ul>
+                                   <li><i>1</i><span>一等奖:</span>150元订房无限制红包</li>
+                                   <li><i>2</i><span>二等奖:</span>80元订房无限制红包</li>
+                                   <li><i>3</i><span>三等奖:</span>50元订房无限制红包</li>
+                                   <li><i>4</i><span>四等奖:</span>20元订房无限制红包</li>
+                             </ul>
+                             <a href="javascript:;"class="ca-instrction-btn">活动说明</a>
+                       </div>
+                       <!--ca-reward-content end-->
+                  </div>
+                  <!--times-and-container end-->
+             </div>
+             <!--tig-happy-prize-cotainer end-->
+             <div class="tig-happy-prize-cotainer tig-happy-aw-list">
+                  <h1  class="tytle2"></h1>
+                  <div class="times-and-container">
+                       <div class="ca-awards-list">
+                              <ul>
+                                   <li class="border-top-dashed"><i><img src="../images/leve-pht.png"></i><p>美梨子**刮中了<span>一等奖</span></p>150元订房红包</li>
+                                   <li><i><img src="../images/leve-pht.png"></i><p>美梨子**刮中了<span>二等奖</span></p>80元订房红包</li>
+                                   <li><i><img src="../images/leve-pht.png"></i><p>美梨子**刮中了<span>一等奖</span></p>150元订房红包</li>
+                                   <li><i><img src="../images/leve-pht.png"></i><p>美梨子**刮中了<span>三等奖</span></p>50元订房红包</li>
+                                   <li><i><img src="../images/leve-pht.png"></i><p>美梨子**刮中了<span>参与奖</span></p>20元订房红包</li>
+                              </ul>
+                         </div>
+                         <!--ca-awards-list end-->
+                  </div>
+                  <!--times-and-container end-->
+             </div>
+             <!--tig-happy-prize-cotainer end-->
+             <div class="times-and-container tig-hpy-btn">
+                    <div class="ca-dazhuanpan-btn">
+                           <a href="javascript:;" class="tig-my-award"></a>
+                           <a href="javascript:;" class="tig-gg-enter"></a>
+                    </div>
+                    <!--ca-dazhuanpan-btn end-->
+             </div>
+             <!--times-and-container end-->
+             <div class="ca-bottom-pht"></div>
+      </div>
+      <!--ca-guagale end-->
+</body>
+</html>
+<script type="text/javascript">
+        function timer(){
+			 $(".small-light-pht .hi-light").toggleClass("toggle-light")
+			};
+	    setInterval("timer()",500)
+</script>

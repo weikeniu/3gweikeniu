@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+	<meta charset="UTF-8" />
+	<title>大转盘</title>
+	<meta name="format-detection" content="telephone=no">
+	<!--自动将网页中的电话号码显示为拨号的超链接-->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+	<!--width宽度height高度，initial-scale初始的缩放比例，minimum-scale允许缩放到的最小比例，maximum-scale允许缩放到的最大比例，user-scalable是否可以手动缩放-->
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<!--IOS设备-->
+	<meta name="apple-touch-fullscreen" content="yes">
+	<!--IOS设备-->
+	<meta http-equiv="Access-Control-Allow-Origin" content="*">
+    <link rel="stylesheet" href="../css/booklist/mend-weikeniu.css" />
+    <link rel="stylesheet" href="../css/booklist/sale-date.css" />
+    
+	
+	<script src="../Scripts/jquery-1.8.0.min.js"></script>
+	<script src="../Scripts/fontSize.js"></script>
+</head>
+<body class="choujiang-bg-red">
+      <div class="ca-guagale">
+             <div class="ca-guagale-bg"><img src="../images/coupon/bg-bigzup.png"></div>
+             <div class="times-and-container">
+                   <div class="ca-zhuanpan-hours"><p>活动时间</p>2017.06.25-2017.07.15</div>
+                   <!--转盘 开始部分-->
+                   <div class="gb-wheel-container" id="gbWheel">
+                        <div class="gb-wheel-content gb-wheel-run">
+                            <ul class="gb-wheel-line"></ul>
+                            <div class="gb-wheel-list"></div>
+                        </div>
+                        <p class="gb-wheel-btn" id="gbLottery"></p>     
+                   </div>
+                   <!--转盘 结束部分-->
+                   <div class="ca-turntable-change">抽奖次数：<span>3</span>次<a href="javascript:;" class="want-to-award"><img src="../images/coupon/rewards-btn.png"></a></div>
+                   <div class="ca-reward-content ca-prize-menu">
+                         <ul>
+                               <li><i>1</i><span>一等奖:</span>150元订房无限制红包</li>
+                               <li><i>2</i><span>二等奖:</span>80元订房无限制红包</li>
+                               <li><i>3</i><span>三等奖:</span>50元订房无限制红包</li>
+                               <li><i>4</i><span>参与奖:</span>20元订房无限制红包</li>
+                         </ul>
+                         <div class="ca-active-rules"><a href="javascript:;"><b></b>活动规则</a></div>
+                   </div>
+                   <!--ca-reward-content end-->
+                   <div class="ca-awards-list ca-prize-bill">
+                        <ul>
+                             <li><i><img src="../images/leve-pht.png"></i><p>美梨子**刮中了<span>一等奖</span></p>150元订房红包</li>
+                             <li><i><img src="../images/leve-pht.png"></i><p>美梨子**刮中了<span>二等奖</span></p>80元订房红包</li>
+                             <li><i><img src="../images/leve-pht.png"></i><p>美梨子**刮中了<span>一等奖</span></p>150元订房红包</li>
+                             <li><i><img src="../images/leve-pht.png"></i><p>美梨子**刮中了<span>三等奖</span></p>50元订房红包</li>
+                             <li class="lastli"><i><img src="../images/leve-pht.png"></i><p>美梨子**刮中了<span>参与奖</span></p>20元订房红包</li>
+                        </ul>
+                   </div>
+                   <!--ca-awards-list end-->
+                   <div class="ca-dazhuanpan-btn">
+                         <a href="javascript:;" class="zup-my-rewards"></a>
+                         <a href="javascript:;" class="gg-store"></a>
+                   </div>
+                   <!--ca-dazhuanpan-btn end-->
+             <div>
+             <!--times-and-container end-->
+      </div>
+      <!--ca-guagale end-->
+</body>
+</html>
+<script type="text/javascript">
+    (function() {
+    var awards = [
+            {'index': 0, 'text': '谢谢<br/>参与' , 'name': 'icono-headphone'},
+            {'index': 1, 'text': '三等奖' , 'name': 'icono-iphone'},
+            {'index': 2, 'text': '一等奖' , 'name': 'icono-camera'},
+            {'index': 3, 'text': '谢谢<br/>参与' , 'name': 'icono-cup'},
+            {'index': 4, 'text': '参与奖', 'name': 'icono-calendar'},
+            {'index': 5, 'text': '谢谢<br/>参与', 'name': 'icono-calendar'},
+			{'index': 6, 'text': '二等奖', 'name': 'icono-keyboard'}
+        ],
+        len = awards.length,
+        turnNum = 1 / len;  // 文字旋转 turn 值
+
+    var gbWheel = $('gbWheel'),
+        lineList = gbWheel.querySelector('ul.gb-wheel-line'),
+        itemList = gbWheel.querySelector('.gb-wheel-list'),
+        lineListHtml = [],
+        itemListHtml = [];
+
+    var transform = preTransform();
+
+    awards.forEach(function(v, i, a) {
+        // 分隔线
+        lineListHtml.push('<li class="gb-wheel-litem" style="' + transform + ': rotate('+ (i * turnNum + turnNum / 2) +'turn)"></li>');
+
+        // 奖项
+        itemListHtml.push('<div class="gb-wheel-item">');
+        itemListHtml.push('<div class="gb-wheel-icontent" style="' + transform + ': rotate('+ (i * turnNum) +'turn)">');
+        itemListHtml.push('<p class="gb-wheel-iicon">');
+        itemListHtml.push('<i class="'+v.name+'"></i>');
+        itemListHtml.push('</p>');
+        itemListHtml.push('<p class="gb-wheel-itext">');
+        itemListHtml.push(v.text);
+        itemListHtml.push('</p>');
+        itemListHtml.push('</div>');
+        itemListHtml.push('</div>');
+    });           
+
+    lineList.innerHTML = lineListHtml.join('');
+    itemList.innerHTML = itemListHtml.join('');
+
+    function $(id) {
+        return document.getElementById(id);
+    };
+
+    // 旋转
+    var i = 0;
+    $('gbLottery').onclick = function() {
+        i++;
+        gbWheel.querySelector('.gb-wheel-content').style = transform + ': rotate('+ i * 3600 +'deg)';  
+    }
+
+    // transform兼容
+    function preTransform() {
+        var cssPrefix,
+        vendors = {
+          '': '',
+          Webkit: 'webkit',
+          Moz: '',
+          O: 'o',
+          ms: 'ms'
+        },
+        testEle = document.createElement('p'),
+        cssSupport = {};
+
+         // 嗅探特性
+        Object.keys(vendors).some(function(vendor) {
+            if (testEle.style[vendor + (vendor ? 'T' : 't') + 'ransform'] !== undefined) {
+              cssPrefix = vendor ? '-' + vendor.toLowerCase() + '-' : '';
+              return true;
+            }
+        });
+
+      function normalizeCss(name) {
+        name = name.toLowerCase();
+        return cssPrefix ? cssPrefix + name : name;
+      }
+
+      cssSupport = {
+        transform: normalizeCss('Transform'),
+      }
+
+      return cssSupport.transform;
+    }
+}());
+</script>

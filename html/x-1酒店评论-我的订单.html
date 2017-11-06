@@ -1,0 +1,92 @@
+
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html;charset=utf-8" />
+<meta name="keywords" content="关键词1,关键词2,关键词3" />
+<meta name="description" content="对网站的描述" />
+<meta name="format-detection" content="telephone=no">
+<!--自动将网页中的电话号码显示为拨号的超链接-->
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+<!--width宽度height高度，initial-scale初始的缩放比例，minimum-scale允许缩放到的最小比例，maximum-scale允许缩放到的最大比例，user-scalable是否可以手动缩放-->
+<meta name="apple-mobile-web-app-capable" content="yes">
+<!--IOS设备-->
+<meta name="apple-touch-fullscreen" content="yes">
+<!--IOS设备-->
+<meta http-equiv="Access-Control-Allow-Origin" content="*">
+<title>酒店评论--我的订单</title>
+<link type="text/css" rel="stylesheet" href="../css/booklist/sale-date.css"/>
+<link type="text/css" rel="stylesheet" href="../css/booklist/fontSize.css"/>
+<script type="text/javascript" src="../Scripts/jquery-1.8.0.min.js"></script>
+<script type="text/javascript" src="../Scripts/fontSize.js"></script>
+</head>
+<body>
+<section class="yu-bgw">
+	     <div class="bg-Rwhite">
+              <div class="ca-safe-per">
+                    <div class="ca-want-say">
+                          <textarea type="text" placeholder="产品满足你的期待吗？说说你的体验，分享给想买的他们吧！"></textarea>
+                          <div class="ca-load-pht">
+                               <ul>
+                                    <li><img src="../images/leve-pht.png"><p><b class="del"></b></p></li>
+                                    <li><img src="../images/leve-pht.png"><p><b class="del"></b></p></li>
+                                    <li><img src="../images/leve-pht.png"><p><b class="del"></b></p></li>
+                                    <li><img src="../images/leve-pht.png"><p><b class="del"></b></p></li>
+                                    <li><img src="../images/leve-pht.png"><p><b class="del"></b></p></li>
+                                    <li class="add-comment-pht">
+                                        <input type="file">
+                                        <i></i><span style="display:none;">添加图片</span><span><em>3</em>/5</span>
+                                    </li>
+                               </ul>
+                          </div>
+                          <!--ca-load-pht end-->
+                    </div>
+                    <!--ca-want-say end-->
+              </div>
+              <!--ca-safe-per end-->
+         </div>
+         <!--bg-Rwhite end-->
+</section>
+         <div class="bg-Rwhite">
+               <div class="ca-safe-per">
+                     <div class="ca-pf-good">
+                          <h1><i class="type9"></i>酒店评分</h1>
+                          <ul class="ca-pf-stars" id="Goods">
+                               <li><span>卫生服务</span><i class="Star"></i><i></i><i></i><i></i><i></i></li>
+                               <li><span>设施服务</span><i></i><i></i><i></i><i></i><i></i></li>
+                               <li><span>网络服务</span><i></i><i></i><i></i><i></i><i></i></li>
+                               <li><span>服务态度</span><i></i><i></i><i></i><i></i><i></i></li>
+                          </ul>
+                          <!--ca-pf-stars end-->
+                     </div>
+                     <!--ca-pf-start end-->
+               </div>
+               <!--ca-safe-per end-->
+         </div>
+         <!--bg-Rwhite end-->
+         <div class="ca-safe-per">
+              <input type="submit" value="提交评价" class="btn-submit-star">
+         </div>
+<section>
+	
+</section>
+
+<script type="text/javascript">
+		//星星评分
+		$("#Goods li i").click(function(){
+			   $(this).siblings().removeClass("Star")
+			   $(this).prevAll().addClass("Star")
+			   $(this).addClass("Star")
+			});
+	      var Plen=$(".ca-load-pht li").length
+		  //if(Plen==6){
+			 //$(".add-comment-pht").hide();  
+		  //}//当图片已经有5张
+		$(".add-comment-pht").find("em").html(Plen-1)
+		$(".ca-load-pht li .del").click(function(){
+			   $(this).parents("li").remove()
+			});//删除图片
+		
+</script>
+</body>
+</html>

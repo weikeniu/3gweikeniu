@@ -1,0 +1,614 @@
+﻿
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html;charset=utf-8" />
+<meta name="keywords" content="关键词1,关键词2,关键词3" />
+<meta name="description" content="对网站的描述" />
+<meta name="format-detection" content="telephone=no">
+<!--自动将网页中的电话号码显示为拨号的超链接-->
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+<!--width宽度height高度，initial-scale初始的缩放比例，minimum-scale允许缩放到的最小比例，maximum-scale允许缩放到的最大比例，user-scalable是否可以手动缩放-->
+<meta name="apple-mobile-web-app-capable" content="yes">
+<!--IOS设备-->
+<meta name="apple-touch-fullscreen" content="yes">
+<!--IOS设备-->
+<meta http-equiv="Access-Control-Allow-Origin" content="*">
+<title>会议宴会详情</title>
+<link type="text/css" rel="stylesheet" href="../swiper/swiper-3.4.1.min.css"/>
+<link type="text/css" rel="stylesheet" href="../css/booklist/jquery-ui.css"/>
+<link type="text/css" rel="stylesheet" href="../css/booklist/sale-date.css"/>
+<link type="text/css" rel="stylesheet" href="../css/booklist/Restaurant.css"/>
+<link type="text/css" rel="stylesheet" href="../css/booklist/new-style.css"/>
+<link type="text/css" rel="stylesheet" href="../css/booklist/fontSize.css"/>
+<script type="text/javascript" src="../Scripts/jquery-1.8.0.min.js"></script>
+<script type="text/javascript" src="../css/booklist/jquery-ui.js"></script>
+<!--<script type="text/javascript" src="../css/booklist/date-range-picker.js"></script>-->
+<script type="text/javascript" src="../swiper/swiper-3.4.1.jquery.min.js"></script>
+<script type="text/javascript" src="../Scripts/fontSize.js"></script>
+<style>
+	.room-num{
+		display: none;
+	}
+	.data-btn.sub{
+		background: #12B7F5;
+	}
+	.ui-datepicker th{
+		background: #12B7F5;	
+		border:1px solid  #17a7d0;
+	}
+</style>
+</head>
+<body>
+	<article class="full-page">
+		<aside class="l-side">
+			<nav>
+				<a href="#" class="yu-grid yu-alignc">
+					<p class="ico shouye"></p>
+					<p>首页</p>
+				</a>
+				<a href="#" class="yu-grid yu-alignc">
+					<p class="ico jianjie"></p>
+					<p>酒店简介</p>
+				</a>
+				<a href="#" class="yu-grid  yu-alignc">
+					<p class="ico yuding"></p>
+					<p>客房预定</p>
+				</a>
+				<a href="#" class="yu-grid  yu-alignc">
+					<p class="ico dingcan"></p>
+					<p>酒店订餐</p>
+				</a>
+				<a href="#" class="yu-grid  yu-alignc">
+					<p class="ico chaoshi"></p>
+					<p>酒店超市</p>
+				</a>
+				<a href="#" class="yu-grid  yu-alignc">
+					<p class="ico youxuan"></p>
+					<p>特惠优选</p>
+				</a>
+				<a href="#" class="yu-grid  yu-alignc">
+					<p class="ico sheshi"></p>
+					<p>设施服务</p>
+				</a>
+				<a href="#" class="yu-grid  yu-alignc">
+					<p class="ico yanhui"></p>
+					<p>会议宴会</p>
+				</a>
+				<a href="#" class="yu-grid  yu-alignc">
+					<p class="ico huodong"></p>
+					<p>酒店活动</p>
+				</a>
+			</nav>
+		</aside>
+		<header class="yu-grid yu-alignc yu-h40 yu-lrpad10">
+				<div>
+					<div class="yu-grid yu-alignc">
+						<p class="nav-ico l-side-btn"></p>
+						<p class="copy-bor1"></p>
+						<p class="wx-ico"></p>
+					</div>
+				</div>
+				<div class="yu-overflow"></div>
+				<div>
+					<div class="yu-grid yu-alignc">
+						<p class="phone-ico"></p>
+						<p class="copy-bor1"></p>
+						<p class="person-ico"></p>
+					</div>
+				</div>
+			</header>
+		<section class="show-body">
+			
+			<section class="content2 yu-bpad120r">
+				<div class="show-header">
+										<div class="inner yu-h360r">
+											<!--<img src="../images/booking.jpg" />-->
+											<div class="swiper-container yu-h360r">
+											    <div class="swiper-wrapper">
+											      	<div class="swiper-slide full-img"><img src="../images/114.png" /></div>
+											        <div class="swiper-slide full-img"><img src="../images/booking.jpg" /></div>
+											        <div class="swiper-slide full-img"><img src="../images/114.png" /></div>
+													</div>
+											    <div class="swiper-pagination"></div>
+										  	</div>
+										</div>
+										<div class="yu-bgf3 yu-h50 yu-grid yu-alignc yu-bor bbor yu-lrpad10">
+											<p class="yu-overflow yu-f30r">大堂会议厅</p>
+											<p class="yu-blue2 yu-f30r">￥2000</p>
+										</div>
+									</div>
+				<div class="tab-con">
+					<ul class="tab-nav yu-grid yu-bor bbor type3 yu-alignc yu-bmar20r sp">
+						<li class="cur yu-overflow">预订信息</li>
+						<li class="yu-overflow">会议室容量</li>
+						<li class="yu-overflow">设施与服务</li>
+					</ul>
+					<ul class="tab-inner">
+						<li class="cur">
+							<div class="yu-bgw yu-bmar20r yu-lpad10">
+								<div class="yu-h50 yu-bor bbor yu-grid yu-alignc yu-rpad10">
+									<div class="l-ico type5 yu-rmar10"></div>
+									<p class="yu-w60 yu-f30r">联系人</p>
+									<div class="yu-overflow"><input type="text" class="yu-input2" placeholder="请输入姓名"></div>
+									<div class="yu-grid sex-select yu-alignc yu-f30r">
+											<label class="yu-rmar45r">
+												<span>先生</span><span class="ico"></span>
+											</label>
+											<label>
+												<span>女士</span><span class="ico"></span>
+											</label>
+										</div>
+								</div>
+								<div class="yu-h50 yu-bor bbor yu-grid yu-alignc yu-rpad10">
+									<div class="l-ico type6 yu-rmar10"></div>
+									<p class="yu-w60 yu-f30r">手机号</p>
+									<div class="yu-overflow"><input type="number" class="yu-input2" placeholder="请输入订餐人手机号码"></div>
+								</div>
+								<div class="yu-h50 yu-bor bbor yu-grid yu-alignc yu-rpad10">
+									<div class="l-ico type10 yu-rmar10"></div>
+									<p class="yu-w60 yu-f30r">房间号</p>
+									<div class="yu-overflow"><input type="text" class="yu-input2" placeholder="请输入房间号"></div>
+								</div>
+								<div class="yu-h50 yu-bor bbor yu-grid yu-alignc yu-rpad10 yu-arr data-select">
+									<div class="l-ico type2 yu-rmar10"></div>
+									<p class="yu-w60 yu-f30r">日期</p>
+									<div class="yu-overflow yu-f30r">2017-04-18</div>
+								</div>
+								<div class="yu-h50 yu-bor bbor yu-grid yu-alignc yu-rpad10 yu-arr lasttimeselect">
+									<div class="l-ico type15 yu-rmar10"></div>
+									<p class="yu-w60 yu-f30r">时间</p>
+									<div class="yu-overflow yu-f30r">9:00-20:30</div>
+								</div>
+								<div class="yu-h50 yu-bor bbor yu-grid yu-alignc yu-rpad10">
+									<div class="l-ico type7 yu-rmar10"></div>
+									<p class="yu-w60 yu-f30r">备注</p>
+									<div class="yu-overflow"><input type="text" class="yu-input2" placeholder="请输入其它要求"></div>
+								</div>
+								<div class="yu-h50 yu-bor bbor yu-grid yu-alignc yu-rpad10 yu-arr hongbao-btn">
+									<div class="l-ico type8 yu-rmar10"></div>
+									<p class="yu-w60 yu-f30r">红包</p>
+									<div class="yu-overflow">
+										<p class="yu-blue2 yu-f36r"><i class="yu-f30r">￥</i>10</p>
+										<p class="yu-c66 yu-f22r">已从房费金额中扣除</p>
+									</div>
+								</div>
+								<div class="yu-h50 yu-bor bbor yu-grid yu-alignc yu-rpad10">
+									<div class="l-ico type9 yu-rmar10"></div>
+									<p class="yu-w60 yu-f30r">总价</p>
+									<div class="yu-overflow">
+										<p class="yu-blue2 yu-f36r"><i class="yu-f30r">￥</i>480</p>
+										<p class="yu-c66 yu-f22r">已优惠10元，可获<i class="yu-blue2">470</i>积分</p>
+									</div>
+								</div>
+							</div>
+							<div class="yu-bgw yu-bor tbor yu-f26r yu-tb40r yu-lr70r yu-bmar20r">
+								多功能会议厅包括北京厅、惠州厅、惠东厅1厅及2厅满足您对各型会议的需求。我们训练有素的会议管家及宴会服务团队致力于为您打造全新的“度假式”会议组织理念仅作为定金支付，多退少补）更多优惠请致电：0752-8328888
+							</div>
+						</li>
+						<li>
+							<div class="hy-build yu-bmar20r">
+								<p class="yu-h100r yu-bor bbor yu-bgw yu-f30r yu-lpad20r yu-l100r">
+									场地台型及容量
+								</p>
+								<ul class="yu-bgfc yu-lpad20r yu-f30r">
+									<li class="yu-bor bbor yu-h100r yu-grid yu-alignc ">
+										<div class="yu-overflow yu-grid yu-alignc yu-flex-w-w">
+											<p class="ico"></p>
+											<p class="yu-c66 yu-rmar20r">课桌式</p>
+											<p>270人</p>
+											<div class="yu-f18r yu-c66 yu-w-full">备注备注备注备注备注备注备注备注备注</div>
+										</div>
+										
+										
+									</li>
+									<li class="yu-bor bbor yu-h100r yu-grid yu-alignc">
+										<div class="yu-overflow yu-grid yu-alignc">
+											<p class="ico"></p>
+											<p class="yu-c66 yu-rmar20r">U型</p>
+											<p>400人</p>
+											
+										</div>
+									</li>
+									<li class="yu-bor bbor yu-h100r yu-grid yu-alignc">
+										<div class="yu-overflow yu-grid yu-alignc">
+											<p class="ico"></p>
+											<p class="yu-c66 yu-rmar20r">宴会式</p>
+											<p>300-400人</p>
+										</div>
+										
+									</li>
+									<li class="yu-bor bbor yu-h100r yu-grid yu-alignc">
+										<div class="yu-overflow yu-grid yu-alignc">
+											<p class="ico"></p>
+											<p class="yu-c66 yu-rmar20r">回型</p>
+											<p>400人</p>
+											
+										</div>
+									</li>
+									<li class="yu-bor bbor yu-h100r yu-grid yu-alignc">
+										<div class="yu-overflow yu-grid yu-alignc">
+											<p class="ico"></p>
+											<p class="yu-c66 yu-rmar20r">酒会式</p>
+											<p>300-400人</p>
+										</div>
+									</li>
+									<li class="yu-bor bbor yu-h100r yu-grid yu-alignc">
+										<div class="yu-overflow yu-grid yu-alignc">
+											<p class="ico"></p>
+											<p class="yu-c66 yu-rmar20r">董事会型</p>
+											<p>400人</p>
+											
+										</div>
+									</li>
+									<li class="yu-bor bbor yu-h100r yu-grid yu-alignc">
+										<div class="yu-overflow yu-grid yu-alignc">
+											<p class="ico"></p>
+											<p class="yu-c66 yu-rmar20r">剧院式</p>
+											<p>400人</p>
+										</div>
+									</li>
+									<li class="yu-bor bbor yu-h100r yu-grid yu-alignc">
+										<div class="yu-overflow yu-grid yu-alignc">
+											<p class="ico"></p>
+											<p class="yu-c66 yu-rmar20r">分组型</p>
+											<p>400人</p>
+											
+										</div>
+									</li>
+								</ul>
+							</div>
+							
+							<div class="hy-build sp yu-bmar20r">
+								<p class="yu-h100r yu-bor bbor yu-bgw yu-f30r yu-lpad20r yu-l100r">
+									场地数据
+								</p>
+								<ul class="yu-bgfc yu-lpad20r yu-f30r">
+									<li class="yu-bor bbor yu-h100r yu-grid yu-alignc">
+										<div class="yu-overflow yu-grid yu-alignc">
+											<p class="ico"></p>
+											<p class="yu-c66 yu-rmar20r">长&宽(m*m)</p>
+										</div>
+										<div class="yu-overflow yu-grid yu-alignc">
+											<p class="">30m*20m</p>
+										</div>
+									</li>
+									<li class="yu-bor bbor yu-h100r yu-grid yu-alignc">
+										<div class="yu-overflow yu-grid yu-alignc">
+											<p class="ico"></p>
+											<p class="yu-c66 yu-rmar20r">高(m)</p>
+										</div>
+										<div class="yu-overflow yu-grid yu-alignc">
+											<p class="">15m</p>
+										</div>
+									</li>
+									<li class="yu-bor bbor yu-h100r yu-grid yu-alignc">
+										<div class="yu-overflow yu-grid yu-alignc">
+											<p class="ico"></p>
+											<p class="yu-c66 yu-rmar20r">面积(m2)</p>
+										</div>
+										<div class="yu-overflow yu-grid yu-alignc">
+											<p class="yu-c66 yu-rmar20r">600平方</p>
+										</div>
+									</li>
+									<li class="yu-bor bbor yu-h100r yu-grid yu-alignc">
+										<div class="yu-overflow yu-grid yu-alignc">
+											<p class="ico"></p>
+											<p class="yu-c66 yu-rmar20r">门长&门宽(m*m)</p>
+										</div>
+										<div class="yu-overflow yu-grid yu-alignc">
+											<p class="">600平方</p>
+										</div>
+									</li>
+									<li class="yu-bor bbor yu-h100r yu-grid yu-alignc">
+										<div class="yu-overflow yu-grid yu-alignc">
+											<p class="ico"></p>
+											<p class="yu-c66 yu-rmar20r">自然光纤</p>
+										</div>
+										<div class="yu-overflow yu-grid yu-alignc">
+											<p class="">有</p>
+										</div>
+									</li>
+									<li class="yu-bor bbor yu-h100r yu-grid yu-alignc">
+										<div class="yu-overflow yu-grid yu-alignc">
+											<p class="ico"></p>
+											<p class="yu-c66 yu-rmar20r">楼层</p>
+										</div>
+										<div class="yu-overflow yu-grid yu-alignc">
+											<p class="">十二楼</p>
+										</div>
+									</li>
+								</ul>
+							</div>
+						</li>
+						<li>
+							<ul class="yu-bgw hy-build2 yu-f30r">
+								<li class="yu-grid yu-alignc yu-h100r">
+									<div class="yu-overflow yu-grid yu-alignc yu-lpad40r">
+										<p class="ico type1"></p>
+										<p>麦克风</p>
+									</div>
+									
+								</li>
+								<li class="yu-grid yu-alignc yu-h100r">
+									<div class="yu-overflow yu-grid yu-alignc yu-lpad40r">
+										<p class="ico type2"></p>
+										<p>纸/笔/水</p>
+									</div>
+								</li>
+								<li class="yu-grid yu-alignc yu-h100r">
+									<div class="yu-overflow yu-grid yu-alignc yu-lpad40r">
+										<p class="ico type3"></p>
+										<p>立式讲台</p>
+									</div>
+									
+								</li>
+								<li class="yu-grid yu-alignc yu-h100r">
+									<div class="yu-overflow yu-grid yu-alignc yu-lpad40r">
+										<p class="ico type4"></p>
+										<p>引导指示牌</p>
+									</div>
+								</li>
+								<li class="yu-grid yu-alignc yu-h100r">
+									<div class="yu-overflow yu-grid yu-alignc yu-lpad40r">
+										<p class="ico type5"></p>
+										<p>签到台</p>
+									</div>
+									
+								</li>
+								<li class="yu-grid yu-alignc yu-h100r">
+									<div class="yu-overflow yu-grid yu-alignc yu-lpad40r">
+										<p class="ico type6"></p>
+										<p>投影仪</p>
+									</div>
+								</li>
+								<li class="yu-grid yu-alignc yu-h100r">
+									<div class="yu-overflow yu-grid yu-alignc yu-lpad40r">
+										<p class="ico type7"></p>
+										<p>投影幕布</p>
+									</div>
+									
+								</li>
+								<li class="yu-grid yu-alignc yu-h100r">
+									<div class="yu-overflow yu-grid yu-alignc yu-lpad40r">
+										<p class="ico type8"></p>
+										<p>白板</p>
+									</div>
+								</li>
+								<li class="yu-grid yu-alignc yu-h100r">
+									<div class="yu-overflow yu-grid yu-alignc yu-lpad40r">
+										<p class="ico type9"></p>
+										<p>音响</p>
+									</div>
+									
+								</li>
+								<li class="yu-grid yu-alignc yu-h100r">
+									<div class="yu-overflow yu-grid yu-alignc yu-lpad40r">
+										<p class="ico type10"></p>
+										<p>舞台</p>
+									</div>
+								</li>
+								<li class="yu-grid yu-alignc yu-h100r">
+									<div class="yu-overflow yu-grid yu-alignc yu-lpad40r">
+										<p class="ico type11"></p>
+										<p>LED屏幕</p>
+									</div>
+									
+								</li>
+							</ul>
+						</li>
+						
+					</ul>
+				</div>
+				<section class="yu-lrpad10r yu-f34r yu-bpad20r">
+					<input class="yu-btn3 bl" value="立即预定" type="button" />
+				</section>
+			</section>
+			<!--<footer class="yu-grid fix-bottom yu-bor tbor yu-lpad10 sp">
+				<div class="yu-overflow">
+					<p class="yu-f34r">合计￥168</p>
+					<p class="yu-grey yu-f26r">包含服务及增值税￥0</p>
+				</div>
+				<div class="yu-btn yu-bg40" onclick="window.location=#">立即支付</div>
+			</footer>-->
+			
+		</section>
+		<!--红包-->
+	<section class="mask hongbao-mask">
+		<div class="mask-bottom-inner yu-bgw">
+			<p class="yu-h110r yu-l110r yu-textc yu-bor bbor yu-f34r">红包</p>
+			<ul class="yu-lrpad10 yu-c99 hongbao-select bl">
+				<li class="yu-h120r yu-grid yu-alignc yu-bor bbor cur">
+					<p class="yu-overflow yu-f34r">不使用红包</p>
+					<p class="copy-radio"></p>
+				</li>
+				<li class="yu-h120r yu-grid yu-alignc yu-bor bbor">
+					<p class="yu-rmar10 yu-l120r"><i class="yu-f25r">￥</i><i class="yu-f50r yu-fontb">10</i></p>
+					<div class="yu-overflow yu-f24r">
+						<p>0元起用</p>
+						<p>有效期2017.01.01-2017.01.15</p>
+					</div>
+					<p class="copy-radio"></p>
+				</li>
+				<li class="yu-h120r yu-grid yu-alignc yu-bor bbor">
+					<p class="yu-rmar10 yu-l120r"><i class="yu-f25r">￥</i><i class="yu-f50r yu-fontb">20</i></p>
+					<div class="yu-overflow yu-f24r">
+						<p>0元起用</p>
+						<p>有效期2017.01.01-2017.01.15</p>
+					</div>
+					<p class="copy-radio"></p>
+				</li>
+				<li class="yu-h120r yu-grid yu-alignc yu-bor bbor">
+					<p class="yu-rmar10 yu-l120r"><i class="yu-f25r">￥</i><i class="yu-f50r yu-fontb">30</i></p>
+					<div class="yu-overflow yu-f24r">
+						<p>0元起用</p>
+						<p>有效期2017.01.01-2017.01.15</p>
+					</div>
+					<p class="copy-radio"></p>
+				</li>
+			</ul>
+			<div class="yu-l100r yu-h100r yu-bgblue2 yu-white  yu-textc mask-close yu-font32r">关闭</div>
+		</div>
+	</section>
+	<!--时间--> 
+	<section class="mask lasttime-mask">
+		<div class="mask-bottom-inner yu-bgw">
+			<p class="yu-h110r yu-l110r yu-textc yu-bor bbor yu-f34r">时间</p>
+			<ul class="yu-lrpad10 yu-c99 hongbao-select bl">
+				<li class="yu-h120r yu-grid yu-alignc yu-bor bbor">
+					<div class="yu-overflow yu-f30r">
+						9:00-20:30
+					</div>
+					<p class="copy-radio"></p>
+				</li>
+				<li class="yu-h120r yu-grid yu-alignc yu-bor bbor">
+					<div class="yu-overflow yu-f30r">
+						20:00-23:30
+					</div>
+					<p class="copy-radio"></p>
+				</li>
+			</ul>
+			<div class="yu-l100r yu-h100r yu-bgblue2 yu-white  yu-textc mask-close yu-font32r">关闭</div>
+		</div>
+	</section>
+	<!--日历-->
+	<section class="data-page">
+			<div id="datepicker"></div>
+			<div class="fix-bottom yu-bor tbor yu-grid yu-alignc yu-lrpad10 yu-h34r">
+				<p class="yu-overflow ">选择日期</p>
+				<div>
+					<div class="yu-grid yu-alignc">
+						<p class="data-btn cal yu-bor1 bor">取消</p>
+						<p class="data-btn sub">确定</p>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!--日历end-->
+	</article>
+	<script>
+	var swiper = new Swiper('.swiper-container', {
+        pagination: '.swiper-pagination',
+        paginationClickable: true,
+        autoplay: 2500,
+        autoplayDisableOnInteraction: false,
+        loop: true,
+        onSlideChangeStart: function(swiper){
+			$(".hotel-img-mask li").eq(swiper.activeIndex).addClass("cur").siblings().removeClass("cur");
+			$(".activeIndex").text(swiper.activeIndex);
+		    }
+    });  
+	
+	var speciald=new Array(); 
+		 /*日期选择初始号*/
+        var __drp; 
+        __drp = $("#datepicker").datepicker({
+        	dateFormat: 'yy-mm-dd',
+           dayNamesMin: ["日", "一", "二", "三", "四", "五", "六"],
+           monthNames: ["1月", "2月", "3月", "4月", "5月", "6月",
+     "7月", "8月", "9月", "10月", "11月", "12月"],
+           yearSuffix: '年',
+           showMonthAfterYear: true,
+           minDate: new Date(),
+           maxDate: '2017-12-31',
+           numberOfMonths:2,
+           showButtonPanel:false,
+           onSelect:function(date, me){
+           		if(speciald.length<1){
+		       		//speciald.push(date);
+		       		if($.inArray(date, speciald) == -1){
+		       			speciald.push(date);
+		       		}
+		       		
+		       		console.log(speciald)
+		       	}else{
+		       	 	speciald.length=0;
+		       	  	speciald.push(date);
+		       		console.log(speciald)
+		        }
+           },
+           beforeShowDay: function( date ) {
+           		//格式化月份、日
+			        function formatDate(str){
+			       		return str < 10 ? ("0" + str) : str;
+			       	}
+                var m=date.getMonth();
+                var d=date.getDate();
+                var y=date.getFullYear();
+                var formatDate=y+"-"+formatDate(m+1)+"-" + formatDate(d);//此处日期的格式化和speciald中的格式一样
+                //inArray实现数组的匹配
+                if($.inArray(formatDate,speciald)!=-1){
+                    //此处要返回一个数组，specialdays是添加样式的类
+                    return [true,"specialdays",formatDate];
+                }
+                else{
+                    return [true,'',''];
+                }
+            }
+           
+        });
+        
+       
+        
+	
+		$(function(){
+			//左导航
+			var lSideNum=0;
+			$(".l-side-btn").click(function(){
+				if(lSideNum==0){
+					$(".full-page").addClass("shin-slide-right").removeClass("shin-slide-left");
+					$(".l-side").fadeIn();
+					lSideNum=1;
+				}else{
+					$(".full-page").removeClass("shin-slide-right").addClass("shin-slide-left");
+					$(".l-side").fadeOut();
+					lSideNum=0;
+				}
+			})
+			//选项卡
+		  var tabIndex;
+		  $(".tab-nav").children("li").on("click",function(){
+		  	$(this).addClass("cur").siblings("li").removeClass("cur");
+		  	tabIndex=$(this).index();
+		  	$(this).parent(".tab-nav").siblings(".tab-inner").children("li").eq(tabIndex).addClass("cur").siblings().removeClass("cur");
+		  })
+			
+			//性别
+          $(".sex-select>label").on("click",function(){
+          	$(this).addClass("cur").siblings().removeClass("cur");
+          })
+		//红包
+		$(".hongbao-select>li").on("click",function(){
+			$(this).addClass("cur").siblings().removeClass("cur");
+		})
+		$(".hongbao-btn").click(function(){
+			$(".hongbao-mask").fadeIn();
+			$(".mask-bottom-inner").addClass("shin-slide-up");
+		})
+		$(".mask-close,.mask").click(function(){
+			$(".mask").fadeOut();
+		})
+		$(".mask-bottom-inner").on("click",function(e){
+			e.stopPropagation();
+		})
+		//时间
+		$(".lasttimeselect").click(function(){
+			$(".lasttime-mask").fadeIn();
+			$(".mask-bottom-inner").addClass("shin-slide-up");
+			
+		})
+		//选择日期
+		$(".data-select").on("click",function(){
+			$(".show-body").hide();
+			$("header").hide();
+			$(".data-page").show();
+		})
+		$(".data-btn.cal").click(function(){
+			$(".show-body").show();
+			$("header").show();
+			$(".data-page").hide();
+		})
+		})
+	</script>
+</body>
+</html>

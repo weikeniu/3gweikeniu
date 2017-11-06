@@ -1,0 +1,126 @@
+﻿
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html;charset=utf-8" />
+<meta name="keywords" content="关键词1,关键词2,关键词3" />
+<meta name="description" content="对网站的描述" />
+<meta name="format-detection" content="telephone=no">
+<!--自动将网页中的电话号码显示为拨号的超链接-->
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+<!--width宽度height高度，initial-scale初始的缩放比例，minimum-scale允许缩放到的最小比例，maximum-scale允许缩放到的最大比例，user-scalable是否可以手动缩放-->
+<meta name="apple-mobile-web-app-capable" content="yes">
+<!--IOS设备-->
+<meta name="apple-touch-fullscreen" content="yes">
+<!--IOS设备-->
+<meta http-equiv="Access-Control-Allow-Origin" content="*">
+<title>会员特权</title>
+<link type="text/css" rel="stylesheet" href="../css/booklist/sale-date.css"/>
+<script type="text/javascript" src="../Scripts/jquery-1.8.0.min.js"></script>
+<script type="text/javascript" src="../Scripts/fontSize.js"></script>
+</head>
+<body class="yu-bgw">
+ 	<section class="hyk-box">
+ 		<img src="../images/hyk.png" />
+ 		<div class="logo-pic">
+ 			<img  src="../images/newlogo.png" //>
+ 		</div>
+ 		<div class="txt-top">
+ 			<p class="yu-font32r yu-w440r">微可牛酒店</p>
+ 			<p class="yu-font26r">普通会员</p>
+ 		</div>
+ 		<div class="txt-bottom">
+ 			<!--激活前则不显示此卡号-->
+ 			<p class="fl">20094454</p>
+ 			<p class="fr">9.0折<i class="yu-font20r">起</i></p>
+ 		</div>
+ 	</section>
+ 	<section>
+ 		<a class="hyk-btn" href="领取会员卡.html">激活会员卡</a>
+ 		<ul class="yu-bgw yu-bor tbor hy-right ">
+ 			<li class="yu-bor bbor sp">
+ 				<div class="yu-h90r yu-grid yu-alignc yu-lpad42r show-box">
+	 				<p class="ico type1"></p>
+	 				<p class="yu-overflow yu-f34r">会员权益</p>
+ 				</div>
+ 				<div class="slide-box">
+ 					<table class="hy-right-tb">
+ 						<tr>
+ 							<th>&nbsp;</th>
+ 							<th>普通会员</th>
+ 							<th>高级会员</th>
+ 							<th>白金会员</th>
+ 							<th>黄金会员</th>
+ 							<th>钻石会员</th>
+ 						</tr>
+ 						<tr>
+ 							<th>订房优惠</th>
+ 							<td>9.0折</td>
+ 							<td>8.8折</td>
+ 							<td>8.5折</td>
+ 							<td>8.0折</td>
+ 							<td>7.5折</td>
+ 						</tr>
+ 						<tr>
+ 							<th>积分加成</th>
+ 							<td>1.0倍</td>
+ 							<td>1.1倍</td>
+ 							<td>1.2倍</td>
+ 							<td>1.3倍</td>
+ 							<td>1.4倍</td>
+ 						</tr>
+ 					</table>
+ 				</div>
+ 			</li>
+ 			<li class="yu-bor bbor">
+ 				<div class="yu-h90r yu-grid yu-alignc yu-lpad42r show-box">
+	 				<p class="ico type2"></p>
+	 				<p class="yu-overflow yu-f34r">会员说明</p>
+ 				</div>
+ 				<div class="slide-box yu-tbpad20r yu-lrpad30r yu-bgef yu-f24r yu-c99">
+ 					<ol>
+ 						<li>持银卡在酒店消费，客房在优惠价的基础上再享受七五折（例如标间为280*0.75＝208元），餐饮享受九五折优惠（酒水、海鲜除外），康乐（包括酒吧、ktv、桑拿中心、游泳馆、棋牌室、美容美发中心、健身房）享受九折优惠；但不能享受其他任何形式的折上折优惠。</li>
+ 						<li>持金卡在酒店消费，客房在优惠价的基础上再享受七折（例如标间为280*0.7＝198元），餐饮享受九折优惠（酒水、海鲜除外），康乐享受八折优惠；但不享受其他任何形式的折上折优惠。</li>
+ 						<li>持卡人每年度可享受积分累计兑奖、会员特惠及酒店发放的各类消费信息。 </li>
+ 					</ol>
+ 				</div>
+ 			</li>
+ 			<li class="yu-bor bbor">
+ 				<div class="yu-h90r yu-grid yu-alignc yu-lpad42r show-box">
+ 					<p class="ico type3"></p>
+ 					<p class="yu-overflow yu-f34r">会员等级</p>
+ 				</div>
+ 				<div class="slide-box">
+ 					<table class="hy-right-tb">
+ 						<tr>
+ 							<th>等级</th>
+ 							<th>普通会员</th>
+ 							<th>高级会员</th>
+ 							<th>白金会员</th>
+ 							<th>黄金会员</th>
+ 							<th>钻石会员</th>
+ 						</tr>
+ 						<tr>
+ 							<th>间夜</th>
+ 							<td>0</td>
+ 							<td>10</td>
+ 							<td>30</td>
+ 							<td>60</td>
+ 							<td>90</td>
+ 						</tr>
+ 					</table>
+ 				</div>
+ 			</li>
+ 		</ul>
+ 	</section>
+	<script>
+		$(function(){
+			$(".hy-right .show-box").on("click",function(){
+				$(this).siblings(".slide-box").slideToggle(200);
+				$(this).parent("li").toggleClass("cur");
+			})
+		})
+	</script>
+ 	
+</body>
+</html>

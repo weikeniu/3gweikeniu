@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+	<meta charset="UTF-8" />
+	<title>洗衣服务</title>
+	<meta name="format-detection" content="telephone=no">
+	<!--自动将网页中的电话号码显示为拨号的超链接-->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+	<!--width宽度height高度，initial-scale初始的缩放比例，minimum-scale允许缩放到的最小比例，maximum-scale允许缩放到的最大比例，user-scalable是否可以手动缩放-->
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<!--IOS设备-->
+	<meta name="apple-touch-fullscreen" content="yes">
+	<!--IOS设备-->
+	<meta http-equiv="Access-Control-Allow-Origin" content="*">
+	<link rel="stylesheet" href="../css/booklist/sale-date.css" />
+	<link rel="stylesheet" href="../css/booklist/new-style.css" />
+	<link rel="stylesheet" href="../css/booklist/mend-reset.css" />
+    <link type="text/css" rel="stylesheet" href="../css/booklist/fontSize.css"/>
+	
+	<script src="../Scripts/jquery-1.8.0.min.js"></script>
+	<script src="../Scripts/fontSize.js"></script>
+</head>
+<body>
+	
+	<!-- <>主体页面 -->
+	<article class="full-page">
+		<!--//侧边栏-->
+		<aside class="l-side">
+			<nav>
+				<a href="#" class="yu-grid yu-alignc">
+					<p class="ico shouye"></p>
+					<p>首页</p>
+				</a>
+				<a href="#" class="yu-grid yu-alignc">
+					<p class="ico jianjie"></p>
+					<p>酒店简介</p>
+				</a>
+				<a href="#" class="yu-grid  yu-alignc">
+					<p class="ico yuding"></p>
+					<p>客房预定</p>
+				</a>
+				<a href="#" class="yu-grid  yu-alignc">
+					<p class="ico dingcan"></p>
+					<p>酒店订餐</p>
+				</a>
+				<a href="#" class="yu-grid  yu-alignc">
+					<p class="ico chaoshi"></p>
+					<p>酒店超市</p>
+				</a>
+				<a href="#" class="yu-grid  yu-alignc">
+					<p class="ico youxuan"></p>
+					<p>特惠优选</p>
+				</a>
+				<a href="#" class="yu-grid  yu-alignc">
+					<p class="ico sheshi"></p>
+					<p>设施服务</p>
+				</a>
+				<a href="#" class="yu-grid  yu-alignc">
+					<p class="ico yanhui"></p>
+					<p>会议宴会</p>
+				</a>
+				<a href="#" class="yu-grid  yu-alignc">
+					<p class="ico huodong"></p>
+					<p>酒店活动</p>
+				</a>
+			</nav>
+		</aside>
+		
+		<!--//顶部-->
+		<header class="yu-grid yu-alignc yu-h40 yu-lrpad10">
+			<div>
+				<div class="yu-grid yu-alignc">
+					<p class="nav-ico l-side-btn"></p>
+					<p class="copy-bor1"></p>
+					<p class="business-ico"><img src="../images/business-img.png" /></p>
+				</div>
+			</div>
+			<div class="yu-overflow"></div>
+			<div>
+				<div class="yu-grid yu-alignc">
+					<p class="phone-ico"></p>
+					<p class="copy-bor1"></p>
+					<p class="person-ico"></p>
+				</div>
+			</div>
+		</header>
+		
+		<!--//内容区-->
+		<section class="show-body">
+			<section class="content2">
+                     <p class="ca-nao-weak">洗衣服务</p>
+				     <div class="ca-other-goods">
+                           <ul>
+                                <li class="ca-displayfx lasttimeselect"><span><h1>取衣时间</h1><i>*</i></span><input type="text" placeholder="请选择取衣服务时间"><b></b></li>
+                                <li class="ca-displayfx"><span><h1>房号</h1><i>*</i></span><input type="text" placeholder="房间号"></li>
+                                <li class="ca-displayfx"><span><h1>手机号</h1><i>*</i></span><input type="text" placeholder="手机号"></li> 
+                           </ul>
+                           <div class="ca-why-remind">
+                                 <p>特殊要求</p>
+                                 <span><textarea placeholder="其它特殊要求"></textarea></span>
+                           </div>
+                           <!--ca-why-remind end-->
+                     </div>
+                     <!--ca-other-goods end-->
+                     <div class="uc__account-info">
+                           <div class="submit-btn sp">
+                                <input type="button" class="btn-save" value="提交" />
+                           </div>
+                     </div>
+			</section>
+		</section>
+		<!--弹窗-->	
+        <section class="mask lasttime-mask">
+            <div class="mask-bottom-inner yu-bgw">
+                <p class="yu-h110r yu-l110r yu-textc yu-bor bbor yu-f34r">取衣服务时间</p>
+                <ul class="yu-lrpad10 yu-c99 hongbao-select">
+                    <li class="yu-h120r yu-grid yu-alignc yu-bor bbor">
+                        <div class="yu-overflow yu-f30r">
+                            18:00
+                        </div>
+                        <p class="copy-radio"></p>
+                    </li>
+                    <li class="yu-h120r yu-grid yu-alignc yu-bor bbor">
+                        <div class="yu-overflow yu-f30r">
+                            19:00
+                        </div>
+                        <p class="copy-radio"></p>
+                    </li>
+                    <li class="yu-h120r yu-grid yu-alignc yu-bor bbor">
+                        <div class="yu-overflow yu-f30r">
+                            20:00
+                        </div>
+                        <p class="copy-radio"></p>
+                    </li>
+                    <li class="yu-h120r yu-grid yu-alignc yu-bor bbor">
+                        <div class="yu-overflow yu-f30r">
+                            21:00
+                        </div>
+                        <p class="copy-radio"></p>
+                    </li>
+                </ul>
+                <div class="yu-h120r yu-bg40 yu-white yu-l120r yu-textc mask-close yu-f30r">关闭</div>
+            </div>
+        </section>
+	</article>
+    <script type="text/javascript">
+	        //最晚到店
+			$(".lasttimeselect").click(function(){
+				$(".lasttime-mask").fadeIn();
+				$(".mask-bottom-inner").addClass("shin-slide-up");
+				
+			});
+			//选择时间
+			$(".hongbao-select>li").on("click",function(){
+				$(this).addClass("cur").siblings().removeClass("cur");
+			})
+			$(".mask-close,.mask").click(function(){
+				$(".mask").fadeOut();
+			})
+			$(".mask-bottom-inner").on("click",function(e){
+				e.stopPropagation();
+			})
+		
+	</script>
+	<script type="text/javascript">
+		$(function(){
+			//左导航
+			var lSideNum=0;
+			$(".l-side-btn").click(function(){
+				if(lSideNum==0){
+					$(".full-page").addClass("shin-slide-right").removeClass("shin-slide-left");
+					$(".l-side").fadeIn();
+					lSideNum=1;
+				}else{
+					$(".full-page").removeClass("shin-slide-right").addClass("shin-slide-left");
+					$(".l-side").fadeOut();
+					lSideNum=0;
+				}
+			})
+			
+		})
+	</script>
+	
+</body>
+</html>

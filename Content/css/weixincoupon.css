@@ -1,0 +1,20 @@
+﻿body {padding:0px 0px 0px 0px ;margin:0px 0px 0px 0px;background:#ff3f26;
+}
+
+.main{width:100%;text-align:center;margin:0px auto;}
+.line{padding:10px 0px 10px 0px;width:100%}
+.line input{ -moz-border-radius: 5px; -webkit-border-radius: 5px;border-radius:5px;}
+.banner{width:100%;}
+#mobile{padding:8px 10px 8px 10px;border:none;font-size:20px;outline:none;text-align:center;vertical-align:middle;letter-spacing:0.05em;width:75%;}
+#random{padding:8px 10px 8px 10px;border:#fe4d3d solid 1px;font-size:18px;vertical-align:middle;background:#fe4d3d;color:#fff;width:80%}
+.rule{width:80%;background:#FF6A6A;padding:10px 0px 20px 0px;margin:0px auto;  -moz-border-radius:50px;border-radius: 5px}
+.rule ul{list-style:none;padding:0px 0px 0px 0px;margin:0px 0px 0px 0px; position: relative;}
+.rule ul li{text-align:left;font-size: 0.45rem;padding:0px 20px 0px 20px;
+  line-height: 20px;
+  color: #333333;}
+.sec-sub-title{background:url(http://xs01.meituan.net/waimai_c_api_i/img/resource/red-enve2/sub-title-bg.544e2777.png) no-repeat;background-size: 100% auto;}
+.list{width:80%;margin:20px auto;}
+.list tr td{}
+.list .user{text-align:left;color:#ddd}
+.list .money{text-align:left;color:#ddd}
+.list .addtime{text-align:left;color:#ddd}

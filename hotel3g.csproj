@@ -1,0 +1,1203 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{8AAF4504-3FBF-48FF-B375-860A9E02461D}</ProjectGuid>
+    <ProjectTypeGuids>{F85E285D-A4E0-4152-9332-AB1D724D3325};{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>hotel3g</RootNamespace>
+    <AssemblyName>hotel3g</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <MvcBuildViews>false</MvcBuildViews>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+    <UseIISExpress>false</UseIISExpress>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="HotelCloud.Caches">
+      <HintPath>..\..\Reference\HotelCloud.Caches.dll</HintPath>
+    </Reference>
+    <Reference Include="HotelCloud.Common">
+      <HintPath>..\..\Reference\HotelCloud.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="HotelCloud.SqlServer">
+      <HintPath>..\..\Reference\HotelCloud.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="HotelCloud.WebService, Version=1.1.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\HotelCloud.WebService.dll</HintPath>
+    </Reference>
+    <Reference Include="HotelHotel.Utility, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Reference\HotelHotel.Utility.dll</HintPath>
+    </Reference>
+    <Reference Include="ListChangeToJson, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Reference\ListChangeToJson.dll</HintPath>
+    </Reference>
+    <Reference Include="LitJson, Version=0.7.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\LitJson.dll</HintPath>
+    </Reference>
+    <Reference Include="log4net, Version=1.2.10.0, Culture=neutral, PublicKeyToken=1b44e1d426115821, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Reference\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Newtonsoft.Json, Version=4.0.8.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\WeiXinPublic\bin\Debug\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="SQLMerge, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\SQLMerge.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Web.Abstractions" />
+    <Reference Include="System.Web.Routing" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="ThoughtWorks.QRCode, Version=1.0.4778.30637, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\ThoughtWorks.QRCode.dll</HintPath>
+    </Reference>
+    <Reference Include="WayAlipay, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Reference\WayAlipay.dll</HintPath>
+    </Reference>
+    <Reference Include="WeiXinPublic, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\WeiXinPublic.dll</HintPath>
+    </Reference>
+    <Reference Include="WknEntity, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\WknEntity.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Common\BranchEntity.cs" />
+    <Compile Include="Common\business\DownloadBill.cs" />
+    <Compile Include="Common\business\JsApiPay.cs" />
+    <Compile Include="Common\business\MicroPay.cs" />
+    <Compile Include="Common\business\NativeNotify.cs" />
+    <Compile Include="Common\business\NativePay.cs" />
+    <Compile Include="Common\business\OrderQuery.cs" />
+    <Compile Include="Common\business\Refund.cs" />
+    <Compile Include="Common\business\RefundQuery.cs" />
+    <Compile Include="Common\business\ResultNotify.cs" />
+    <Compile Include="Common\Entity.cs" />
+    <Compile Include="Common\GlobalConfig.cs" />
+    <Compile Include="Common\lib\Config.cs" />
+    <Compile Include="Common\lib\Data.cs" />
+    <Compile Include="Common\lib\Exception.cs" />
+    <Compile Include="Common\lib\HttpService.cs" />
+    <Compile Include="Common\lib\Log.cs" />
+    <Compile Include="Common\lib\Notify.cs" />
+    <Compile Include="Common\lib\WxPayApi.cs" />
+    <Compile Include="Common\LogManage.cs" />
+    <Compile Include="Common\ProductEntity.cs" />
+    <Compile Include="Common\RechargeEntity.cs" />
+    <Compile Include="Common\SuperMarketEntitys.cs" />
+    <Compile Include="Content\api\SendChart.ashx.cs">
+      <DependentUpon>SendChart.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\ActionController.cs" />
+    <Compile Include="Controllers\BonusCouponsController.cs" />
+    <Compile Include="Controllers\BranchAController.cs" />
+    <Compile Include="Controllers\BranchController.cs" />
+    <Compile Include="Controllers\CouponController.cs" />
+    <Compile Include="Controllers\DishOrderAController.cs" />
+    <Compile Include="Controllers\DishOrderController.cs" />
+    <Compile Include="Controllers\HomeAController.cs" />
+    <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\HotelAController.cs" />
+    <Compile Include="Controllers\HotelController.cs" />
+    <Compile Include="Controllers\MeetingAController.cs" />
+    <Compile Include="Controllers\MemberCardAController.cs" />
+    <Compile Include="Controllers\MemberCardController.cs" />
+    <Compile Include="Controllers\PayController.cs" />
+    <Compile Include="Controllers\ProductAController.cs" />
+    <Compile Include="Controllers\ProductController.cs" />
+    <Compile Include="Controllers\RechargeAController.cs" />
+    <Compile Include="Controllers\RechargeController.cs" />
+    <Compile Include="Controllers\SupermarketAController.cs" />
+    <Compile Include="Controllers\SupermarketController.cs" />
+    <Compile Include="Controllers\TController.cs" />
+    <Compile Include="Controllers\UserAController.cs" />
+    <Compile Include="Controllers\UserController.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Activity.cs" />
+    <Compile Include="Models\Advertisement.cs" />
+    <Compile Include="Models\Bank.cs" />
+    <Compile Include="Models\BonusCouponsService.cs" />
+    <Compile Include="Models\Cache.cs" />
+    <Compile Include="Models\CommodityService.cs" />
+    <Compile Include="Models\Cookies.cs" />
+    <Compile Include="Models\CouPon.cs" />
+    <Compile Include="Models\DAL\BranchHelper.cs" />
+    <Compile Include="Models\DAL\MeetingDAL.cs" />
+    <Compile Include="Models\DAL\RechargeCardDAL.cs" />
+    <Compile Include="Models\DAL\SaleProduct.cs" />
+    <Compile Include="Models\DES.cs" />
+    <Compile Include="Models\DishOrderClass.cs" />
+    <Compile Include="Models\Filter.cs" />
+    <Compile Include="Models\Home\Activity.cs" />
+    <Compile Include="Models\Home\CouPonContent.cs" />
+    <Compile Include="Models\Home\Meeting.cs" />
+    <Compile Include="Models\Home\Rate.cs" />
+    <Compile Include="Models\Home\RatePlan.cs" />
+    <Compile Include="Models\Home\RechargeCard.cs" />
+    <Compile Include="Models\Home\Room.cs" />
+    <Compile Include="Models\Home\SaleProduct.cs" />
+    <Compile Include="Models\Hotel.cs" />
+    <Compile Include="Models\HotelHelper.cs" />
+    <Compile Include="Models\HotelOrder.cs" />
+    <Compile Include="Models\Img.cs" />
+    <Compile Include="Models\MenuDictionaryResponse.cs" />
+    <Compile Include="Models\Rate.cs" />
+    <Compile Include="Models\RatePlan.cs" />
+    <Compile Include="Models\Result.cs" />
+    <Compile Include="Models\Room.cs" />
+    <Compile Include="Models\Sessions.cs" />
+    <Compile Include="Models\ShoppingCartService.cs" />
+    <Compile Include="Models\StaticHelper.cs" />
+    <Compile Include="Models\SupermarketOrderDetailService.cs" />
+    <Compile Include="Models\SupermarketOrderService.cs" />
+    <Compile Include="Models\User.cs" />
+    <Compile Include="Models\UserGuarantee.cs" />
+    <Compile Include="Models\WeiXinHelper.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Repository\MemberHelper.cs" />
+    <Compile Include="Repository\OrderRepository.cs" />
+    <Compile Include="Tg\tguang.ashx.cs">
+      <DependentUpon>tguang.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Tg\t.aspx.cs">
+      <DependentUpon>t.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Tg\t.aspx.designer.cs">
+      <DependentUpon>t.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WeiXinZhiFu\nativeNotifyPage.aspx.cs">
+      <DependentUpon>nativeNotifyPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WeiXinZhiFu\nativeNotifyPage.aspx.designer.cs">
+      <DependentUpon>nativeNotifyPage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WeiXinZhiFu\qrcode.aspx.cs">
+      <DependentUpon>qrcode.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WeiXinZhiFu\qrcode.aspx.designer.cs">
+      <DependentUpon>qrcode.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WeiXinZhiFu\resultNotifyPage.aspx.cs">
+      <DependentUpon>resultNotifyPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WeiXinZhiFu\resultNotifyPage.aspx.designer.cs">
+      <DependentUpon>resultNotifyPage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WeiXinZhiFu\sweepallback.aspx.cs">
+      <DependentUpon>sweepallback.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WeiXinZhiFu\sweepallback.aspx.designer.cs">
+      <DependentUpon>sweepallback.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WeiXinZhiFu\wxOAuthRedirect.aspx.cs">
+      <DependentUpon>wxOAuthRedirect.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WeiXinZhiFu\wxOAuthRedirect.aspx.designer.cs">
+      <DependentUpon>wxOAuthRedirect.aspx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Config\log4net.config.xml" />
+    <Content Include="Content\css\hobbit.fx.css" />
+    <Content Include="Content\css\hoteldetail.css" />
+    <Content Include="Content\css\Shared.css" />
+    <Content Include="Content\css\weixincoupon.css" />
+    <Content Include="Content\default.css" />
+    <Content Include="Content\Detail.js" />
+    <Content Include="Content\easyui\datagrid-detailview.js" />
+    <Content Include="Content\easyui\easyloader.js" />
+    <Content Include="Content\easyui\jquery.easyui.min.js" />
+    <Content Include="Content\easyui\jquery.min.js" />
+    <Content Include="Content\easyui\locale\easyui-lang-zh_CN.js" />
+    <Content Include="Content\easyui\plugins\jquery.accordion.js" />
+    <Content Include="Content\easyui\plugins\jquery.calendar.js" />
+    <Content Include="Content\easyui\plugins\jquery.combo.js" />
+    <Content Include="Content\easyui\plugins\jquery.combobox.js" />
+    <Content Include="Content\easyui\plugins\jquery.combogrid.js" />
+    <Content Include="Content\easyui\plugins\jquery.combotree.js" />
+    <Content Include="Content\easyui\plugins\jquery.datagrid.js" />
+    <Content Include="Content\easyui\plugins\jquery.datebox.js" />
+    <Content Include="Content\easyui\plugins\jquery.datetimebox.js" />
+    <Content Include="Content\easyui\plugins\jquery.dialog.js" />
+    <Content Include="Content\easyui\plugins\jquery.draggable.js" />
+    <Content Include="Content\easyui\plugins\jquery.droppable.js" />
+    <Content Include="Content\easyui\plugins\jquery.form.js" />
+    <Content Include="Content\easyui\plugins\jquery.layout.js" />
+    <Content Include="Content\easyui\plugins\jquery.linkbutton.js" />
+    <Content Include="Content\easyui\plugins\jquery.menu.js" />
+    <Content Include="Content\easyui\plugins\jquery.menubutton.js" />
+    <Content Include="Content\easyui\plugins\jquery.messager.js" />
+    <Content Include="Content\easyui\plugins\jquery.numberbox.js" />
+    <Content Include="Content\easyui\plugins\jquery.numberspinner.js" />
+    <Content Include="Content\easyui\plugins\jquery.pagination.js" />
+    <Content Include="Content\easyui\plugins\jquery.panel.js" />
+    <Content Include="Content\easyui\plugins\jquery.parser.js" />
+    <Content Include="Content\easyui\plugins\jquery.progressbar.js" />
+    <Content Include="Content\easyui\plugins\jquery.propertygrid.js" />
+    <Content Include="Content\easyui\plugins\jquery.resizable.js" />
+    <Content Include="Content\easyui\plugins\jquery.searchbox.js" />
+    <Content Include="Content\easyui\plugins\jquery.slider.js" />
+    <Content Include="Content\easyui\plugins\jquery.spinner.js" />
+    <Content Include="Content\easyui\plugins\jquery.splitbutton.js" />
+    <Content Include="Content\easyui\plugins\jquery.tabs.js" />
+    <Content Include="Content\easyui\plugins\jquery.timespinner.js" />
+    <Content Include="Content\easyui\plugins\jquery.tooltip.js" />
+    <Content Include="Content\easyui\plugins\jquery.tree.js" />
+    <Content Include="Content\easyui\plugins\jquery.treegrid.js" />
+    <Content Include="Content\easyui\plugins\jquery.validatebox.js" />
+    <Content Include="Content\easyui\plugins\jquery.window.js" />
+    <Content Include="Content\easyui\src\easyloader.js" />
+    <Content Include="Content\easyui\src\jquery.accordion.js" />
+    <Content Include="Content\easyui\src\jquery.calendar.js" />
+    <Content Include="Content\easyui\src\jquery.combobox.js" />
+    <Content Include="Content\easyui\src\jquery.datebox.js" />
+    <Content Include="Content\easyui\src\jquery.draggable.js" />
+    <Content Include="Content\easyui\src\jquery.droppable.js" />
+    <Content Include="Content\easyui\src\jquery.form.js" />
+    <Content Include="Content\easyui\src\jquery.linkbutton.js" />
+    <Content Include="Content\easyui\src\jquery.menu.js" />
+    <Content Include="Content\easyui\src\jquery.parser.js" />
+    <Content Include="Content\easyui\src\jquery.progressbar.js" />
+    <Content Include="Content\easyui\src\jquery.propertygrid.js" />
+    <Content Include="Content\easyui\src\jquery.resizable.js" />
+    <Content Include="Content\easyui\src\jquery.slider.js" />
+    <Content Include="Content\easyui\src\jquery.tabs.js" />
+    <Content Include="Content\easyui\src\jquery.window.js" />
+    <Content Include="Content\easyui\themes\black\accordion.css" />
+    <Content Include="Content\easyui\themes\black\calendar.css" />
+    <Content Include="Content\easyui\themes\black\combo.css" />
+    <Content Include="Content\easyui\themes\black\combobox.css" />
+    <Content Include="Content\easyui\themes\black\datagrid.css" />
+    <Content Include="Content\easyui\themes\black\datebox.css" />
+    <Content Include="Content\easyui\themes\black\dialog.css" />
+    <Content Include="Content\easyui\themes\black\easyui.css" />
+    <Content Include="Content\easyui\themes\black\images\accordion_arrows.png" />
+    <Content Include="Content\easyui\themes\black\images\blank.gif" />
+    <Content Include="Content\easyui\themes\black\images\calendar_arrows.png" />
+    <Content Include="Content\easyui\themes\black\images\combo_arrow.png" />
+    <Content Include="Content\easyui\themes\black\images\datagrid_icons.png" />
+    <Content Include="Content\easyui\themes\black\images\datebox_arrow.png" />
+    <Content Include="Content\easyui\themes\black\images\layout_arrows.png" />
+    <Content Include="Content\easyui\themes\black\images\linkbutton_bg.png" />
+    <Content Include="Content\easyui\themes\black\images\loading.gif" />
+    <Content Include="Content\easyui\themes\black\images\menu_arrows.png" />
+    <Content Include="Content\easyui\themes\black\images\messager_icons.png" />
+    <Content Include="Content\easyui\themes\black\images\pagination_icons.png" />
+    <Content Include="Content\easyui\themes\black\images\panel_tools.png" />
+    <Content Include="Content\easyui\themes\black\images\searchbox_button.png" />
+    <Content Include="Content\easyui\themes\black\images\slider_handle.png" />
+    <Content Include="Content\easyui\themes\black\images\spinner_arrows.png" />
+    <Content Include="Content\easyui\themes\black\images\tabs_icons.png" />
+    <Content Include="Content\easyui\themes\black\images\tree_icons.png" />
+    <Content Include="Content\easyui\themes\black\images\validatebox_warning.png" />
+    <Content Include="Content\easyui\themes\black\layout.css" />
+    <Content Include="Content\easyui\themes\black\linkbutton.css" />
+    <Content Include="Content\easyui\themes\black\menu.css" />
+    <Content Include="Content\easyui\themes\black\menubutton.css" />
+    <Content Include="Content\easyui\themes\black\messager.css" />
+    <Content Include="Content\easyui\themes\black\numberbox.css" />
+    <Content Include="Content\easyui\themes\black\pagination.css" />
+    <Content Include="Content\easyui\themes\black\panel.css" />
+    <Content Include="Content\easyui\themes\black\progressbar.css" />
+    <Content Include="Content\easyui\themes\black\propertygrid.css" />
+    <Content Include="Content\easyui\themes\black\searchbox.css" />
+    <Content Include="Content\easyui\themes\black\slider.css" />
+    <Content Include="Content\easyui\themes\black\spinner.css" />
+    <Content Include="Content\easyui\themes\black\splitbutton.css" />
+    <Content Include="Content\easyui\themes\black\tabs.css" />
+    <Content Include="Content\easyui\themes\black\textbox.css" />
+    <Content Include="Content\easyui\themes\black\tooltip.css" />
+    <Content Include="Content\easyui\themes\black\tree.css" />
+    <Content Include="Content\easyui\themes\black\validatebox.css" />
+    <Content Include="Content\easyui\themes\black\window.css" />
+    <Content Include="Content\easyui\themes\bootstrap\accordion.css" />
+    <Content Include="Content\easyui\themes\bootstrap\calendar.css" />
+    <Content Include="Content\easyui\themes\bootstrap\combo.css" />
+    <Content Include="Content\easyui\themes\bootstrap\combobox.css" />
+    <Content Include="Content\easyui\themes\bootstrap\datagrid.css" />
+    <Content Include="Content\easyui\themes\bootstrap\datebox.css" />
+    <Content Include="Content\easyui\themes\bootstrap\dialog.css" />
+    <Content Include="Content\easyui\themes\bootstrap\easyui.css" />
+    <Content Include="Content\easyui\themes\bootstrap\images\accordion_arrows.png" />
+    <Content Include="Content\easyui\themes\bootstrap\images\blank.gif" />
+    <Content Include="Content\easyui\themes\bootstrap\images\calendar_arrows.png" />
+    <Content Include="Content\easyui\themes\bootstrap\images\combo_arrow.png" />
+    <Content Include="Content\easyui\themes\bootstrap\images\datagrid_icons.png" />
+    <Content Include="Content\easyui\themes\bootstrap\images\datebox_arrow.png" />
+    <Content Include="Content\easyui\themes\bootstrap\images\layout_arrows.png" />
+    <Content Include="Content\easyui\themes\bootstrap\images\linkbutton_bg.png" />
+    <Content Include="Content\easyui\themes\bootstrap\images\loading.gif" />
+    <Content Include="Content\easyui\themes\bootstrap\images\menu_arrows.png" />
+    <Content Include="Content\easyui\themes\bootstrap\images\messager_icons.png" />
+    <Content Include="Content\easyui\themes\bootstrap\images\pagination_icons.png" />
+    <Content Include="Content\easyui\themes\bootstrap\images\panel_tools.png" />
+    <Content Include="Content\easyui\themes\bootstrap\images\searchbox_button.png" />
+    <Content Include="Content\easyui\themes\bootstrap\images\slider_handle.png" />
+    <Content Include="Content\easyui\themes\bootstrap\images\spinner_arrows.png" />
+    <Content Include="Content\easyui\themes\bootstrap\images\tabs_icons.png" />
+    <Content Include="Content\easyui\themes\bootstrap\images\tree_icons.png" />
+    <Content Include="Content\easyui\themes\bootstrap\images\validatebox_warning.png" />
+    <Content Include="Content\easyui\themes\bootstrap\layout.css" />
+    <Content Include="Content\easyui\themes\bootstrap\linkbutton.css" />
+    <Content Include="Content\easyui\themes\bootstrap\menu.css" />
+    <Content Include="Content\easyui\themes\bootstrap\menubutton.css" />
+    <Content Include="Content\easyui\themes\bootstrap\messager.css" />
+    <Content Include="Content\easyui\themes\bootstrap\numberbox.css" />
+    <Content Include="Content\easyui\themes\bootstrap\pagination.css" />
+    <Content Include="Content\easyui\themes\bootstrap\panel.css" />
+    <Content Include="Content\easyui\themes\bootstrap\progressbar.css" />
+    <Content Include="Content\easyui\themes\bootstrap\propertygrid.css" />
+    <Content Include="Content\easyui\themes\bootstrap\searchbox.css" />
+    <Content Include="Content\easyui\themes\bootstrap\slider.css" />
+    <Content Include="Content\easyui\themes\bootstrap\spinner.css" />
+    <Content Include="Content\easyui\themes\bootstrap\splitbutton.css" />
+    <Content Include="Content\easyui\themes\bootstrap\tabs.css" />
+    <Content Include="Content\easyui\themes\bootstrap\textbox.css" />
+    <Content Include="Content\easyui\themes\bootstrap\tooltip.css" />
+    <Content Include="Content\easyui\themes\bootstrap\tree.css" />
+    <Content Include="Content\easyui\themes\bootstrap\validatebox.css" />
+    <Content Include="Content\easyui\themes\bootstrap\window.css" />
+    <Content Include="Content\easyui\themes\default\accordion.css" />
+    <Content Include="Content\easyui\themes\default\calendar.css" />
+    <Content Include="Content\easyui\themes\default\combo.css" />
+    <Content Include="Content\easyui\themes\default\combobox.css" />
+    <Content Include="Content\easyui\themes\default\datagrid.css" />
+    <Content Include="Content\easyui\themes\default\datebox.css" />
+    <Content Include="Content\easyui\themes\default\dialog.css" />
+    <Content Include="Content\easyui\themes\default\easyui.css" />
+    <Content Include="Content\easyui\themes\default\images\accordion_arrows.png" />
+    <Content Include="Content\easyui\themes\default\images\blank.gif" />
+    <Content Include="Content\easyui\themes\default\images\calendar_arrows.png" />
+    <Content Include="Content\easyui\themes\default\images\combo_arrow.png" />
+    <Content Include="Content\easyui\themes\default\images\datagrid_icons.png" />
+    <Content Include="Content\easyui\themes\default\images\datebox_arrow.png" />
+    <Content Include="Content\easyui\themes\default\images\layout_arrows.png" />
+    <Content Include="Content\easyui\themes\default\images\linkbutton_bg.png" />
+    <Content Include="Content\easyui\themes\default\images\loading.gif" />
+    <Content Include="Content\easyui\themes\default\images\menu_arrows.png" />
+    <Content Include="Content\easyui\themes\default\images\messager_icons.png" />
+    <Content Include="Content\easyui\themes\default\images\pagination_icons.png" />
+    <Content Include="Content\easyui\themes\default\images\panel_tools.png" />
+    <Content Include="Content\easyui\themes\default\images\searchbox_button.png" />
+    <Content Include="Content\easyui\themes\default\images\slider_handle.png" />
+    <Content Include="Content\easyui\themes\default\images\spinner_arrows.png" />
+    <Content Include="Content\easyui\themes\default\images\tabs_icons.png" />
+    <Content Include="Content\easyui\themes\default\images\tree_icons.png" />
+    <Content Include="Content\easyui\themes\default\images\validatebox_warning.png" />
+    <Content Include="Content\easyui\themes\default\layout.css" />
+    <Content Include="Content\easyui\themes\default\linkbutton.css" />
+    <Content Include="Content\easyui\themes\default\menu.css" />
+    <Content Include="Content\easyui\themes\default\menubutton.css" />
+    <Content Include="Content\easyui\themes\default\messager.css" />
+    <Content Include="Content\easyui\themes\default\numberbox.css" />
+    <Content Include="Content\easyui\themes\default\pagination.css" />
+    <Content Include="Content\easyui\themes\default\panel.css" />
+    <Content Include="Content\easyui\themes\default\progressbar.css" />
+    <Content Include="Content\easyui\themes\default\propertygrid.css" />
+    <Content Include="Content\easyui\themes\default\searchbox.css" />
+    <Content Include="Content\easyui\themes\default\slider.css" />
+    <Content Include="Content\easyui\themes\default\spinner.css" />
+    <Content Include="Content\easyui\themes\default\splitbutton.css" />
+    <Content Include="Content\easyui\themes\default\tabs.css" />
+    <Content Include="Content\easyui\themes\default\textbox.css" />
+    <Content Include="Content\easyui\themes\default\tooltip.css" />
+    <Content Include="Content\easyui\themes\default\tree.css" />
+    <Content Include="Content\easyui\themes\default\validatebox.css" />
+    <Content Include="Content\easyui\themes\default\window.css" />
+    <Content Include="Content\easyui\themes\demo.css" />
+    <Content Include="Content\easyui\themes\easyui.css" />
+    <Content Include="Content\easyui\themes\gray\accordion.css" />
+    <Content Include="Content\easyui\themes\gray\calendar.css" />
+    <Content Include="Content\easyui\themes\gray\combo.css" />
+    <Content Include="Content\easyui\themes\gray\combobox.css" />
+    <Content Include="Content\easyui\themes\gray\datagrid.css" />
+    <Content Include="Content\easyui\themes\gray\datebox.css" />
+    <Content Include="Content\easyui\themes\gray\dialog.css" />
+    <Content Include="Content\easyui\themes\gray\easyui.css" />
+    <Content Include="Content\easyui\themes\gray\images\accordion_arrows.png" />
+    <Content Include="Content\easyui\themes\gray\images\blank.gif" />
+    <Content Include="Content\easyui\themes\gray\images\calendar_arrows.png" />
+    <Content Include="Content\easyui\themes\gray\images\combo_arrow.png" />
+    <Content Include="Content\easyui\themes\gray\images\datagrid_icons.png" />
+    <Content Include="Content\easyui\themes\gray\images\datebox_arrow.png" />
+    <Content Include="Content\easyui\themes\gray\images\layout_arrows.png" />
+    <Content Include="Content\easyui\themes\gray\images\linkbutton_bg.png" />
+    <Content Include="Content\easyui\themes\gray\images\loading.gif" />
+    <Content Include="Content\easyui\themes\gray\images\menu_arrows.png" />
+    <Content Include="Content\easyui\themes\gray\images\messager_icons.png" />
+    <Content Include="Content\easyui\themes\gray\images\pagination_icons.png" />
+    <Content Include="Content\easyui\themes\gray\images\panel_tools.png" />
+    <Content Include="Content\easyui\themes\gray\images\searchbox_button.png" />
+    <Content Include="Content\easyui\themes\gray\images\slider_handle.png" />
+    <Content Include="Content\easyui\themes\gray\images\spinner_arrows.png" />
+    <Content Include="Content\easyui\themes\gray\images\tabs_icons.png" />
+    <Content Include="Content\easyui\themes\gray\images\tree_icons.png" />
+    <Content Include="Content\easyui\themes\gray\images\validatebox_warning.png" />
+    <Content Include="Content\easyui\themes\gray\layout.css" />
+    <Content Include="Content\easyui\themes\gray\linkbutton.css" />
+    <Content Include="Content\easyui\themes\gray\menu.css" />
+    <Content Include="Content\easyui\themes\gray\menubutton.css" />
+    <Content Include="Content\easyui\themes\gray\messager.css" />
+    <Content Include="Content\easyui\themes\gray\numberbox.css" />
+    <Content Include="Content\easyui\themes\gray\pagination.css" />
+    <Content Include="Content\easyui\themes\gray\panel.css" />
+    <Content Include="Content\easyui\themes\gray\progressbar.css" />
+    <Content Include="Content\easyui\themes\gray\propertygrid.css" />
+    <Content Include="Content\easyui\themes\gray\searchbox.css" />
+    <Content Include="Content\easyui\themes\gray\slider.css" />
+    <Content Include="Content\easyui\themes\gray\spinner.css" />
+    <Content Include="Content\easyui\themes\gray\splitbutton.css" />
+    <Content Include="Content\easyui\themes\gray\tabs.css" />
+    <Content Include="Content\easyui\themes\gray\textbox.css" />
+    <Content Include="Content\easyui\themes\gray\tooltip.css" />
+    <Content Include="Content\easyui\themes\gray\tree.css" />
+    <Content Include="Content\easyui\themes\gray\validatebox.css" />
+    <Content Include="Content\easyui\themes\gray\window.css" />
+    <Content Include="Content\easyui\themes\icon.css" />
+    <Content Include="Content\easyui\themes\icons\back.png" />
+    <Content Include="Content\easyui\themes\icons\blank.gif" />
+    <Content Include="Content\easyui\themes\icons\cancel.png" />
+    <Content Include="Content\easyui\themes\icons\cut.png" />
+    <Content Include="Content\easyui\themes\icons\edit_add.png" />
+    <Content Include="Content\easyui\themes\icons\edit_remove.png" />
+    <Content Include="Content\easyui\themes\icons\filesave.png" />
+    <Content Include="Content\easyui\themes\icons\filter.png" />
+    <Content Include="Content\easyui\themes\icons\help.png" />
+    <Content Include="Content\easyui\themes\icons\large_chart.png" />
+    <Content Include="Content\easyui\themes\icons\large_clipart.png" />
+    <Content Include="Content\easyui\themes\icons\large_picture.png" />
+    <Content Include="Content\easyui\themes\icons\large_shapes.png" />
+    <Content Include="Content\easyui\themes\icons\large_smartart.png" />
+    <Content Include="Content\easyui\themes\icons\mini_add.png" />
+    <Content Include="Content\easyui\themes\icons\mini_edit.png" />
+    <Content Include="Content\easyui\themes\icons\mini_refresh.png" />
+    <Content Include="Content\easyui\themes\icons\no.png" />
+    <Content Include="Content\easyui\themes\icons\ok.png" />
+    <Content Include="Content\easyui\themes\icons\pencil.png" />
+    <Content Include="Content\easyui\themes\icons\print.png" />
+    <Content Include="Content\easyui\themes\icons\redo.png" />
+    <Content Include="Content\easyui\themes\icons\reload.png" />
+    <Content Include="Content\easyui\themes\icons\search.png" />
+    <Content Include="Content\easyui\themes\icons\sum.png" />
+    <Content Include="Content\easyui\themes\icons\tip.png" />
+    <Content Include="Content\easyui\themes\icons\undo.png" />
+    <Content Include="Content\easyui\themes\metro\accordion.css" />
+    <Content Include="Content\easyui\themes\metro\calendar.css" />
+    <Content Include="Content\easyui\themes\metro\combo.css" />
+    <Content Include="Content\easyui\themes\metro\combobox.css" />
+    <Content Include="Content\easyui\themes\metro\datagrid.css" />
+    <Content Include="Content\easyui\themes\metro\datebox.css" />
+    <Content Include="Content\easyui\themes\metro\dialog.css" />
+    <Content Include="Content\easyui\themes\metro\easyui.css" />
+    <Content Include="Content\easyui\themes\metro\images\accordion_arrows.png" />
+    <Content Include="Content\easyui\themes\metro\images\blank.gif" />
+    <Content Include="Content\easyui\themes\metro\images\calendar_arrows.png" />
+    <Content Include="Content\easyui\themes\metro\images\combo_arrow.png" />
+    <Content Include="Content\easyui\themes\metro\images\datagrid_icons.png" />
+    <Content Include="Content\easyui\themes\metro\images\datebox_arrow.png" />
+    <Content Include="Content\easyui\themes\metro\images\layout_arrows.png" />
+    <Content Include="Content\easyui\themes\metro\images\linkbutton_bg.png" />
+    <Content Include="Content\easyui\themes\metro\images\loading.gif" />
+    <Content Include="Content\easyui\themes\metro\images\menu_arrows.png" />
+    <Content Include="Content\easyui\themes\metro\images\messager_icons.png" />
+    <Content Include="Content\easyui\themes\metro\images\pagination_icons.png" />
+    <Content Include="Content\easyui\themes\metro\images\panel_tools.png" />
+    <Content Include="Content\easyui\themes\metro\images\searchbox_button.png" />
+    <Content Include="Content\easyui\themes\metro\images\slider_handle.png" />
+    <Content Include="Content\easyui\themes\metro\images\spinner_arrows.png" />
+    <Content Include="Content\easyui\themes\metro\images\tabs_icons.png" />
+    <Content Include="Content\easyui\themes\metro\images\tree_icons.png" />
+    <Content Include="Content\easyui\themes\metro\images\validatebox_warning.png" />
+    <Content Include="Content\easyui\themes\metro\layout.css" />
+    <Content Include="Content\easyui\themes\metro\linkbutton.css" />
+    <Content Include="Content\easyui\themes\metro\menu.css" />
+    <Content Include="Content\easyui\themes\metro\menubutton.css" />
+    <Content Include="Content\easyui\themes\metro\messager.css" />
+    <Content Include="Content\easyui\themes\metro\numberbox.css" />
+    <Content Include="Content\easyui\themes\metro\pagination.css" />
+    <Content Include="Content\easyui\themes\metro\panel.css" />
+    <Content Include="Content\easyui\themes\metro\progressbar.css" />
+    <Content Include="Content\easyui\themes\metro\propertygrid.css" />
+    <Content Include="Content\easyui\themes\metro\searchbox.css" />
+    <Content Include="Content\easyui\themes\metro\slider.css" />
+    <Content Include="Content\easyui\themes\metro\spinner.css" />
+    <Content Include="Content\easyui\themes\metro\splitbutton.css" />
+    <Content Include="Content\easyui\themes\metro\tabs.css" />
+    <Content Include="Content\easyui\themes\metro\textbox.css" />
+    <Content Include="Content\easyui\themes\metro\tooltip.css" />
+    <Content Include="Content\easyui\themes\metro\tree.css" />
+    <Content Include="Content\easyui\themes\metro\validatebox.css" />
+    <Content Include="Content\easyui\themes\metro\window.css" />
+    <Content Include="Content\hobbit.fx.js" />
+    <Content Include="Content\hobbit\hobbit.css" />
+    <Content Include="Content\hobbit\plugin\calendar\calendar.css" />
+    <Content Include="Content\hobbit\plugin\calendar\calendar.js" />
+    <Content Include="Content\images\ajax-loader.png" />
+    <Content Include="Content\images\bg-yh.png" />
+    <Content Include="Content\images\cityHover.png" />
+    <Content Include="Content\images\code.png" />
+    <Content Include="Content\images\current.png" />
+    <Content Include="Content\images\dot-l2.png" />
+    <Content Include="Content\images\dot-map.png" />
+    <Content Include="Content\images\dot-r1.png" />
+    <Content Include="Content\images\dot-r2.png" />
+    <Content Include="Content\images\hotel-nav-bg.png" />
+    <Content Include="Content\images\hotelimg.png" />
+    <Content Include="Content\images\hotelpic.png" />
+    <Content Include="Content\images\hotel_icon.png" />
+    <Content Include="Content\images\label.png" />
+    <Content Include="Content\images\logo.png" />
+    <Content Include="Content\images\map.png" />
+    <Content Include="Content\images\member-menu-bg.png" />
+    <Content Include="Content\images\nav-back.png" />
+    <Content Include="Content\images\nav-bg.png" />
+    <Content Include="Content\images\nav-tel.png" />
+    <Content Include="Content\images\news-top.png" />
+    <Content Include="Content\images\no_pics_CN.gif" />
+    <Content Include="Content\images\pull-icon%402x.png" />
+    <Content Include="Content\images\site.png" />
+    <Content Include="Content\images\who.png" />
+    <Content Include="Content\load.js" />
+    <Content Include="Content\loading.gif" />
+    <Content Include="Content\main.css" />
+    <Content Include="Content\member.css" />
+    <Content Include="Content\New\index.css" />
+    <Content Include="Content\New\list.css" />
+    <Content Include="Content\New\newlist.css" />
+    <Content Include="Content\New\sale-date.css" />
+    <Content Include="Content\pic\elong_ui2x.png" />
+    <Content Include="Content\pic\icon2x.png" />
+    <Content Include="Content\pic\loading.gif" />
+    <Content Include="Content\pic\ui2x.png" />
+    <Content Include="Content\ProductIndex\iconfont\iconfont.css" />
+    <Content Include="Content\ProductIndex\iconfont\iconfont.svg" />
+    <Content Include="Content\ProductIndex\iscroll.js" />
+    <Content Include="Content\ProductIndex\jquery-ui.css" />
+    <Content Include="Content\ProductIndex\jquery-ui.js" />
+    <Content Include="Content\ProductIndex\pay.css" />
+    <Content Include="Content\ProductIndex\ProductList.css" />
+    <Content Include="Content\ProductIndex\ProductOrder.css" />
+    <Content Include="Content\ProductIndex\ProductYu\jquery-ui.css" />
+    <Content Include="Content\ProductIndex\ProductYu\jquery-ui.js" />
+    <Content Include="Content\ProductIndex\productIndex.css" />
+    <Content Include="Content\ProductIndex\swiper-3.4.1.jquery.min.js" />
+    <Content Include="Content\ProductIndex\swiper-3.4.1.min.css" />
+    <Content Include="Content\style2.css" />
+    <Content Include="css\booklist\iconfont\iconfont.css" />
+    <Content Include="css\booklist\iconfont\iconfont.svg" />
+    <Content Include="css\booklist\index.css" />
+    <Content Include="css\booklist\jquery-ui.css" />
+    <Content Include="css\booklist\jquery-ui.js" />
+    <Content Include="css\booklist\jQuery-ui.min.hotelindex.js" />
+    <Content Include="css\booklist\jquery-ui.min.js" />
+    <Content Include="css\booklist\list.css" />
+    <Content Include="css\booklist\newlist.css" />
+    <Content Include="css\booklist\number-bar.js" />
+    <Content Include="css\booklist\order-details.css" />
+    <Content Include="css\booklist\order-list.css" />
+    <Content Include="css\booklist\Restaurant.css" />
+    <Content Include="css\booklist\sale-date.css" />
+    <Content Include="css\booklist\iconfont\iconfont.css" />
+    <Content Include="css\booklist\iconfont\iconfont.svg" />
+    <Content Include="css\booklist\index.css" />
+    <Content Include="css\booklist\jquery-ui.css" />
+    <Content Include="css\booklist\jquery-ui.js" />
+    <Content Include="css\booklist\list.css" />
+    <Content Include="css\booklist\newlist.css" />
+    <Content Include="css\booklist\number-bar.css" />
+    <Content Include="css\booklist\number-bar.js" />
+    <Content Include="css\booklist\order-details.css" />
+    <Content Include="css\booklist\order-list.css" />
+    <Content Include="css\booklist\sale-date.css" />
+    <Content Include="css\css.css" />
+    <Content Include="css\css1.css" />
+    <Content Include="css\css2.css" />
+    <Content Include="css\dazhuanpan\副本 style.css" />
+    <Content Include="css\images\hbbg_03.jpg" />
+    <Content Include="css\images\hbbg_06.jpg" />
+    <Content Include="css\images\hyk1.png" />
+    <Content Include="css\images\hyk2.jpg" />
+    <Content Include="css\images\hyk3.png" />
+    <Content Include="css\images\loading.gif" />
+    <Content Include="css\images\navico.png" />
+    <Content Include="css\images\pull-icon%402x.png" />
+    <Content Include="css\images\tuan.png" />
+    <Content Include="css\images\ui-icons_444444_256x240.png" />
+    <Content Include="css\images\ui-icons_555555_256x240.png" />
+    <Content Include="css\msgbox_ui.css" />
+    <Content Include="css\newpay.css" />
+    <Content Include="css\number-bar.css" />
+    <Content Include="html\index.html" />
+    <Content Include="html\list0216.html" />
+    <Content Include="html\list0314.html" />
+    <Content Include="html\order-details2.html" />
+    <Content Include="html\order-list2.html" />
+    <Content Include="html\pay0218.html" />
+    <Content Include="html\申请退款.html" />
+    <Content Include="html\编辑信息.html" />
+    <Content Include="html\订单备注.html" />
+    <Content Include="html\订单详情.html" />
+    <Content Include="html\订餐支付.html" />
+    <Content Include="html\订餐支付成功.html" />
+    <Content Include="html\订餐支付页面.html" />
+    <Content Include="html\订餐首页.html" />
+    <Content Include="images\114.png" />
+    <Content Include="images\bg.jpg" />
+    <Content Include="images\border-image.png" />
+    <Content Include="images\daoshu\icon.png" />
+    <Content Include="css\dazhuanpan\style.css" />
+    <Content Include="css\dazhuanpan\ZPalertify.css" />
+    <Content Include="css\dazhuanpan\ZPcommon.css" />
+    <Content Include="css\dazhuanpan\ZPjquery.css" />
+    <Content Include="css\guagua\alertify.css" />
+    <Content Include="css\guagua\common2.css" />
+    <Content Include="css\guagua\jquery.css" />
+    <Content Include="css\images\01.png" />
+    <Content Include="css\images\dazhuanpan.jpg" />
+    <Content Include="css\images\DefaultMode\default.png" />
+    <Content Include="css\images\DefaultMode\default1.png" />
+    <Content Include="css\images\DefaultMode\default2.png" />
+    <Content Include="css\images\DefaultMode\default3.png" />
+    <Content Include="css\images\DefaultMode\default4.png" />
+    <Content Include="css\images\DefaultMode\default5.png" />
+    <Content Include="css\images\DefaultMode\default6.png" />
+    <Content Include="css\images\DefaultMode\default7.png" />
+    <Content Include="css\images\guagua-01-bg.jpg" />
+    <Content Include="css\images\guagua.jpg" />
+    <Content Include="css\images\guaguale.jpg" />
+    <Content Include="css\images\pan3.png" />
+    <Content Include="css\images\ZPmobile_bg1.jpg" />
+    <Content Include="css\images\ZPpan-2.png" />
+    <Content Include="css\photoswipe.css" />
+    <Content Include="css\style111.css" />
+    <Content Include="css\style.css" />
+    <Content Include="css\副本 style.css" />
+    <Content Include="Hotel\Index\css\hobbit.lui.calendar.css" />
+    <Content Include="Hotel\Index\css\hobbit.lui.imggallery.css" />
+    <Content Include="Global.asax" />
+    <Content Include="Hotel\Index\images\icon2x.png" />
+    <Content Include="Hotel\Index\images\loader.gif" />
+    <Content Include="Hotel\Index\images\loading.gif" />
+    <Content Include="Hotel\Index\images\next2x.png" />
+    <Content Include="Hotel\Index\images\pattern_tabs2x.png" />
+    <Content Include="images\1.png" />
+    <Content Include="images\2.png" />
+    <Content Include="images\coupon\bg.jpg" />
+    <Content Include="images\coupon\bg2.jpg" />
+    <Content Include="images\coupon\lost.png" />
+    <Content Include="images\daoshu\logo_03.png" />
+    <Content Include="images\defaultRoomImg.jpg" />
+    <Content Include="images\del.png" />
+    <Content Include="images\hbbg2_03.jpg" />
+    <Content Include="images\hbbg2_06.jpg" />
+    <Content Include="images\hbbg_03.jpg" />
+    <Content Include="images\hbbg_06.jpg" />
+    <Content Include="images\hongbao.png" />
+    <Content Include="images\hyk1.png" />
+    <Content Include="images\hyk2.jpg" />
+    <Content Include="images\hyk3.png" />
+    <Content Include="images\icon.png" />
+    <Content Include="images\daoshu\yanhua.gif" />
+    <Content Include="images\daoshu\djs-1.png" />
+    <Content Include="images\daoshu\djs-2.png" />
+    <Content Include="images\daoshu\djs-3.png" />
+    <Content Include="images\daoshu\djs-bg.png" />
+    <Content Include="images\h1.jpg" />
+    <Content Include="images\h2.jpg" />
+    <Content Include="images\h3.jpg" />
+    <Content Include="images\icon2x.png" />
+    <Content Include="images\icons.png" />
+    <Content Include="images\indexico2.png" />
+    <Content Include="images\jico.png" />
+    <Content Include="images\l1.png" />
+    <Content Include="images\l2.png" />
+    <Content Include="images\l3.png" />
+    <Content Include="images\loader.gif" />
+    <Content Include="images\loading.gif" />
+    <Content Include="images\login.gif" />
+    <Content Include="images\member\back_01.jpg" />
+    <Content Include="images\member\card.jpg" />
+    <Content Include="images\member\card2.png" />
+    <Content Include="images\member\littlecard.jpg" />
+    <Content Include="images\my.png" />
+    <Content Include="images\my1.png" />
+    <Content Include="images\my2.png" />
+    <Content Include="images\navico.png" />
+    <Content Include="images\New\114.png" />
+    <Content Include="images\New\border-image.png" />
+    <Content Include="images\New\del.png" />
+    <Content Include="images\New\hyk1.png" />
+    <Content Include="images\New\hyk2.jpg" />
+    <Content Include="images\New\hyk3.png" />
+    <Content Include="images\New\icons.png" />
+    <Content Include="images\New\indexico.png" />
+    <Content Include="images\New\indexico2.png" />
+    <Content Include="images\New\jico.png" />
+    <Content Include="images\New\loading.gif" />
+    <Content Include="images\New\navico.png" />
+    <Content Include="images\New\orderico.png" />
+    <Content Include="images\New\pull-icon%402x.png" />
+    <Content Include="images\New\radio.png" />
+    <Content Include="images\New\room_03.png" />
+    <Content Include="images\New\t-ico.png" />
+    <Content Include="images\New\tuan.png" />
+    <Content Include="images\New\ui-icons_444444_256x240.png" />
+    <Content Include="images\New\ui-icons_555555_256x240.png" />
+    <Content Include="images\next2x.png" />
+    <Content Include="images\orderico.png" />
+    <Content Include="images\pattern_tabs2x.png" />
+    <Content Include="images\payicon.png" />
+    <Content Include="images\pull-icon%402x.png" />
+    <Content Include="images\radio.png" />
+    <Content Include="images\room_03.png" />
+    <Content Include="images\t-ico.png" />
+    <Content Include="images\tuan.png" />
+    <Content Include="images\room_03.png" />
+    <Content Include="images\turnplate-bg.png" />
+    <Content Include="images\turnplate-pointer.png" />
+    <Content Include="images\ui-icons_444444_256x240.png" />
+    <Content Include="images\ui-icons_555555_256x240.png" />
+    <Content Include="img\hotelmap.png" />
+    <Content Include="img\zhuanpan.jpg" />
+    <Content Include="img\1a.jpg" />
+    <Content Include="img\20130917180320_41801.jpg" />
+    <Content Include="img\20130917180400_45838.jpg" />
+    <Content Include="img\20130917180423_99661.jpg" />
+    <Content Include="img\20130917180448_28596.jpg" />
+    <Content Include="img\20130917204002_77638.jpg" />
+    <Content Include="img\2b.jpg" />
+    <Content Include="img\3c.jpg" />
+    <Content Include="img\bgok_03.png" />
+    <Content Include="img\dazhuanpan.png" />
+    <Content Include="img\dhok_06.png" />
+    <Content Include="img\error.gif" />
+    <Content Include="img\fengqiangok_03.png" />
+    <Content Include="img\guagua.jpg" />
+    <Content Include="img\guide.png" />
+    <Content Include="img\home_05.png" />
+    <Content Include="img\huiyuanok_03.png" />
+    <Content Include="img\huiyuanok_07.png" />
+    <Content Include="img\huiyuanok_10.png" />
+    <Content Include="img\huiyuanok_13.png" />
+    <Content Include="img\huiyuanok_15.png" />
+    <Content Include="img\icons.png" />
+    <Content Include="img\jjok_15.png" />
+    <Content Include="img\kabei.png" />
+    <Content Include="img\kazheng.png" />
+    <Content Include="img\left_03.png" />
+    <Content Include="img\lgook_03.png" />
+    <Content Include="img\loader.gif" />
+    <Content Include="img\logok_07.png" />
+    <Content Include="img\ok_07.png" />
+    <Content Include="img\QIANGok_07.png" />
+    <Content Include="img\quanok_03.png" />
+    <Content Include="img\shouyeok_10.png" />
+    <Content Include="img\shouyeok_16.png" />
+    <Content Include="img\shouyeok_18.png" />
+    <Content Include="img\sy100x90.png" />
+    <Content Include="img\syok_03.png" />
+    <Content Include="img\syok_05.png" />
+    <Content Include="img\syok_08.png" />
+    <Content Include="img\syok_13.png" />
+    <Content Include="img\syok_14.png" />
+    <Content Include="img\tok_18.png" />
+    <Content Include="img\tuok_15.png" />
+    <Content Include="img\tu_10.png" />
+    <Content Include="img\wgok_03.png" />
+    <Content Include="img\youdok_11.png" />
+    <Content Include="img\yudingliebiaook_02.png" />
+    <Content Include="img\yudingliebiaook_06.png" />
+    <Content Include="img\yudingliebiaook_10.png" />
+    <Content Include="img\yudingok_01.png" />
+    <Content Include="img\yudingok_04.png" />
+    <Content Include="img\yudingok_07.png" />
+    <Content Include="img\yudingok_11.png" />
+    <Content Include="jquerymobile.htm" />
+    <Content Include="map.gif" />
+    <Content Include="maptb.png" />
+    <Content Include="mobile.htm" />
+    <Content Include="pc端\css\index.css" />
+    <Content Include="pc端\css\style.css" />
+    <Content Include="pc端\images\568fcdf0-a24d-4fc2-af04-4a0651cba4d2.png" />
+    <Content Include="pc端\images\ad3ffe49-975d-429e-85aa-085fc60dd407.png" />
+    <Content Include="pc端\images\icons.png" />
+    <Content Include="pc端\images\logo.png" />
+    <Content Include="pc端\images\navico.png" />
+    <Content Include="pc端\images\pic %282%29.jpg" />
+    <Content Include="pc端\images\pic%281%29.jpg" />
+    <Content Include="pc端\images\pic%283%29.jpg" />
+    <Content Include="pc端\images\product.png" />
+    <Content Include="pc端\images\sugar.png" />
+    <Content Include="pc端\index.html" />
+    <Content Include="pc端\js\jquery-1.8.3.min.js" />
+    <Content Include="pc端\js\js.js" />
+    <Content Include="pc端\菜单管理.html" />
+    <Content Include="Scripts\awardRotate.js" />
+    <Content Include="Scripts\code_photoswipe_min.js" />
+    <Content Include="Scripts\dazhuanpan.js" />
+    <Content Include="Scripts\details.js" />
+    <Content Include="Scripts\viewjs\fillorder.js" />
+    <Content Include="Scripts\viewjs\hotelindex.js" />
+    <Content Include="Scripts\index.js" />
+    <Content Include="Scripts\jquery-1.8.0.min.js" />
+    <Content Include="Scripts\jquery-jtemplates.js" />
+    <Content Include="Scripts\jquery.js" />
+    <Content Include="Scripts\jquery.lazyLoad.js" />
+    <Content Include="Scripts\jquery_cook.js" />
+    <Content Include="Scripts\jquery_imagesloaded.js" />
+    <Content Include="Scripts\jquery_lazyload.js" />
+    <Content Include="Scripts\jquery_wookmark_min.js" />
+    <Content Include="Scripts\klass_min.js" />
+    <Content Include="Scripts\layer\extend\layer.ext.js" />
+    <Content Include="Scripts\layer\layer.js" />
+    <Content Include="Scripts\layer\skin\default\icon-ext.png" />
+    <Content Include="Scripts\layer\skin\default\icon.png" />
+    <Content Include="Scripts\layer\skin\default\loading-0.gif" />
+    <Content Include="Scripts\layer\skin\default\loading-1.gif" />
+    <Content Include="Scripts\layer\skin\default\loading-2.gif" />
+    <Content Include="Scripts\layer\skin\layer.css" />
+    <Content Include="Scripts\layer\skin\layer.ext.css" />
+    <Content Include="Scripts\m.hotel.com.calendar.min.js" />
+    <Content Include="Scripts\m.hotel.com.core.min.js" />
+    <Content Include="Scripts\mobile.js" />
+    <Content Include="Scripts\swipe.js" />
+    <Content Include="Scripts\ZPmobile.js" />
+    <Content Include="swiper\swiper-3.4.1.jquery.min.js" />
+    <Content Include="swiper\swiper-3.4.1.min.css" />
+    <Content Include="Tg\css\new_file.css" />
+    <Content Include="Tg\img\b-xy.png" />
+    <Content Include="Tg\img\bt-bg.png" />
+    <Content Include="Tg\img\d.png" />
+    <Content Include="Tg\img\images\logo-tell_01.png" />
+    <Content Include="Tg\img\images\logo-tell_02.png" />
+    <Content Include="Tg\img\images\logo-tell_03.png" />
+    <Content Include="Tg\img\images\logo-tell_04.png" />
+    <Content Include="Tg\img\images\logo-tell_05.png" />
+    <Content Include="Tg\img\images\logo-tell_06.png" />
+    <Content Include="Tg\img\images\logo-tell_07.png" />
+    <Content Include="Tg\img\images\logo-tell_08.png" />
+    <Content Include="Tg\img\images\logo-tell_09.png" />
+    <Content Include="Tg\img\images\logo-tell_10.png" />
+    <Content Include="Tg\img\images\logo-tell_11.png" />
+    <Content Include="Tg\img\images\logo-tell_12.png" />
+    <Content Include="Tg\img\images\logo-tell_13.png" />
+    <Content Include="Tg\img\images\logo-tell_14.png" />
+    <Content Include="Tg\img\images\logo-tell_15.png" />
+    <Content Include="Tg\img\images\logo-tell_16.png" />
+    <Content Include="Tg\img\images\logo-tell_17.png" />
+    <Content Include="Tg\img\images\logo-tell_18.png" />
+    <Content Include="Tg\img\images\logo-tell_19.png" />
+    <Content Include="Tg\img\images\logo-tell_20.png" />
+    <Content Include="Tg\img\images\tell_01.png" />
+    <Content Include="Tg\img\images\tell_02.png" />
+    <Content Include="Tg\img\images\tell_03.png" />
+    <Content Include="Tg\img\images\tell_04.png" />
+    <Content Include="Tg\img\images\tell_05.png" />
+    <Content Include="Tg\img\images\tell_06.png" />
+    <Content Include="Tg\img\images\tell_07.png" />
+    <Content Include="Tg\img\images\tell_08.png" />
+    <Content Include="Tg\img\kt.png" />
+    <Content Include="Tg\img\kuang-q.png" />
+    <Content Include="Tg\img\kuang.png" />
+    <Content Include="Tg\img\logo.png" />
+    <Content Include="Tg\img\logo1.png" />
+    <Content Include="Tg\img\lxfs.png" />
+    <Content Include="Tg\img\t-l.png" />
+    <Content Include="Tg\img\xs.jpg" />
+    <Content Include="Tg\img\xs1.jpg" />
+    <Content Include="Tg\img\xse-b.png" />
+    <Content Include="Tg\img\xse-b1.png" />
+    <Content Include="Tg\img\yjsx.png" />
+    <Content Include="Tg\img\yjsx1.png" />
+    <Content Include="Tg\img\yy-b.png" />
+    <Content Include="Tg\img\yy.png" />
+    <Content Include="Tg\img\yy1.png" />
+    <Content Include="Tg\js\jquery-1.11.0.js" />
+    <Content Include="Tg\js\js.js" />
+    <Content Include="Tg\t.aspx" />
+    <Content Include="Views\BonusCoupons\grapCouponWeixinInit.aspx" />
+    <Content Include="Views\Coupon\Index.aspx" />
+    <Content Include="Views\DishOrder\ApplyRefund.aspx" />
+    <Content Include="Views\DishOrder\DishOrderIndex.aspx" />
+    <Content Include="Views\DishOrder\EditAddress.aspx" />
+    <Content Include="Views\DishOrder\OrderPay.aspx" />
+    <Content Include="Views\DishOrder\OrderRemo.aspx" />
+    <Content Include="Views\DishOrder\PagePay.aspx" />
+    <Content Include="Views\DishOrder\PaySuccess.aspx" />
+    <Content Include="Views\DishOrder\ViewOrderDetail.aspx" />
+    <Content Include="Views\DishOrder\副本 PagePay.aspx" />
+    <Content Include="Views\Home\CouPon.aspx" />
+    <Content Include="Views\Home\CouPonInfo.aspx" />
+    <Content Include="Views\Home\Main.aspx" />
+    <Content Include="Views\Hotel\BookList.aspx" />
+    <Content Include="Views\Hotel\Fillorder.aspx" />
+    <Content Include="Views\Hotel\Fillorder_New.aspx" />
+    <Content Include="Views\Hotel\HotelService.aspx" />
+    <Content Include="Views\Hotel\Images.aspx" />
+    <Content Include="Views\Hotel\Images_New.aspx" />
+    <Content Include="Views\Hotel\Index.aspx" />
+    <Content Include="Hotel\Index\js\hobbit.lui.calendar.js" />
+    <Content Include="Hotel\Index\js\hobbit.lui.imggallery.js" />
+    <Content Include="Views\Hotel\Index_New.aspx" />
+    <Content Include="Views\Hotel\Info.aspx" />
+    <Content Include="Views\Hotel\Info_New.aspx" />
+    <Content Include="Views\Hotel\Map.aspx" />
+    <Content Include="Views\Hotel\Map_New.aspx" />
+    <Content Include="Views\Hotel\Newsinfo.aspx" />
+    <Content Include="Views\Hotel\NewsinfoList.aspx" />
+    <Content Include="Views\Hotel\NewsinfoList_New.aspx" />
+    <Content Include="Views\Hotel\Newsinfo_New.aspx" />
+    <Content Include="Views\Hotel\PayOrder.aspx" />
+    <Content Include="Views\Hotel\PicInfo.aspx" />
+    <Content Include="Views\Hotel\PrizeSports.aspx" />
+    <Content Include="Views\Hotel\QuanJing.aspx" />
+    <Content Include="Views\Hotel\roomlistindex.aspx" />
+    <Content Include="Views\Hotel\SucOrder.aspx" />
+    <Content Include="Views\Hotel\SucOrder_New.aspx" />
+    <Content Include="Views\HTMLPage1.htm" />
+    <Content Include="Views\MemberCard\EditMemberCard.aspx" />
+    <Content Include="Views\MemberCard\JiFendetail.aspx" />
+    <Content Include="Views\MemberCard\LuckyDrawSignUp.aspx" />
+    <Content Include="Views\MemberCard\MemberCenter.aspx" />
+    <Content Include="Views\MemberCard\MemberCenterLogin.aspx" />
+    <Content Include="Views\MemberCard\MemberEditPassword.aspx" />
+    <Content Include="Views\MemberCard\MemberRegister.aspx" />
+    <Content Include="Views\MemberCard\MemberRestPassword.aspx" />
+    <Content Include="Views\MemberCard\PwdRest.aspx" />
+    <Content Include="Views\MemberCard\RandomLuckyDraw.aspx" />
+    <Content Include="Views\MemberCard\RandomLuckyDrawNew.aspx" />
+    <Content Include="Views\MemberCard\RandomLuckyDrawNewPC.aspx" />
+    <Content Include="Views\MemberCard\UserLuckyDrawInfo.aspx" />
+    <Content Include="Views\MemberCard\副本 RandomLuckyDraw.aspx" />
+    <Content Include="Views\payorder.htm" />
+    <Content Include="Views\Pay\AlipayPay.aspx" />
+    <Content Include="Views\Pay\AliPaySuccess.aspx" />
+    <Content Include="Views\Pay\PayList.aspx" />
+    <Content Include="Views\Pay\Result.aspx" />
+    <Content Include="Views\Product\NewIndex.aspx" />
+    <Content Include="Views\Product\ProductConfirmOrder.aspx" />
+    <Content Include="Views\Product\ProductErrMsg.aspx" />
+    <Content Include="Views\Product\ProductIndex.aspx" />
+    <Content Include="Views\Product\ProductIndexGroup.aspx" />
+    <Content Include="Views\Product\ProductList.aspx" />
+    <Content Include="Views\Product\ProductPay.aspx" />
+    <Content Include="Views\Product\ProductUserHexiao.aspx" />
+    <Content Include="Views\Product\ProductUserOrderDetail.aspx" />
+    <Content Include="Views\Product\ProductUserOrders.aspx" />
+    <Content Include="Views\Shared\AddressUserControl.ascx" />
+    <Content Include="Views\Shared\Copyright.ascx" />
+    <Content Include="Views\Shared\Footer_Old.ascx" />
+    <Content Include="Views\Shared\JS.ascx" />
+    <Content Include="Views\Shared\JSHeader.ascx" />
+    <Content Include="Views\Shared\NewFooter.ascx" />
+    <Content Include="Views\Shared\ProductSale.ascx" />
+    <Content Include="Views\Shared\roomlist.ascx" />
+    <Content Include="Views\Shared\Footer.ascx" />
+    <Content Include="Views\Shared\ProductSale.ascx" />
+    <Content Include="Views\Shared\UserLeft.ascx" />
+    <Content Include="Views\Supermarket\EditAddress.aspx" />
+    <Content Include="Views\Supermarket\Index.aspx" />
+    <Content Include="Views\Supermarket\Logistics.aspx" />
+    <Content Include="Views\Supermarket\OrderDetails.aspx" />
+    <Content Include="Views\Supermarket\OrderDetails2.aspx" />
+    <Content Include="Views\Supermarket\OrderPay.aspx" />
+    <Content Include="Views\Supermarket\OrderRemark.aspx" />
+    <Content Include="Views\Supermarket\OrderRemark2.aspx" />
+    <Content Include="Views\Supermarket\PayFail.aspx" />
+    <Content Include="Views\Supermarket\Search.aspx" />
+    <Content Include="Views\T\t.aspx" />
+    <Content Include="Views\User\dazhuanpan.aspx" />
+    <Content Include="Views\User\Error.aspx" />
+    <Content Include="Views\User\Guaguale.aspx" />
+    <Content Include="Views\User\Index.aspx" />
+    <Content Include="Views\User\JiFen.aspx" />
+    <Content Include="Views\User\MyBuy.aspx" />
+    <Content Include="Views\User\MyCouPons.aspx" />
+    <Content Include="Views\User\MyInvoice.aspx" />
+    <Content Include="Views\User\MyOrders.aspx" />
+    <Content Include="Views\User\MyReWard.aspx" />
+    <Content Include="Views\User\OrderInfo.aspx" />
+    <Content Include="Views\User\OrderInfo_new.aspx" />
+    <Content Include="Views\User\UserInfo.aspx" />
+    <Content Include="Views\副本 MemberCard\EditMemberCard.aspx" />
+    <Content Include="Views\副本 MemberCard\JiFendetail.aspx" />
+    <Content Include="Views\副本 MemberCard\MemberCenter.aspx" />
+    <Content Include="Views\副本 MemberCard\MemberCenterLogin.aspx" />
+    <Content Include="Views\副本 MemberCard\MemberEditPassword.aspx" />
+    <Content Include="Views\副本 MemberCard\MemberRegister.aspx" />
+    <Content Include="Views\副本 MemberCard\MemberRestPassword.aspx" />
+    <Content Include="Views\副本 MemberCard\PwdRest.aspx" />
+    <Content Include="Views\副本 MemberCard\RandomLuckyDraw.aspx" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Content\Site.css" />
+    <Content Include="Scripts\jquery-1.4.1.min.js" />
+    <Content Include="Views\Shared\Error.aspx" />
+    <Content Include="Views\Web.config" />
+    <Content Include="WeiXinZhiFu\nativeNotifyPage.aspx" />
+    <Content Include="WeiXinZhiFu\qrcode.aspx" />
+    <Content Include="WeiXinZhiFu\resultNotifyPage.aspx" />
+    <Content Include="WeiXinZhiFu\sweepallback.aspx" />
+    <Content Include="WeiXinZhiFu\wxOAuthRedirect.aspx" />
+    <Content Include="副本 css\css.css" />
+    <Content Include="副本 css\css1.css" />
+    <Content Include="副本 css\css2.css" />
+    <Content Include="副本 css\dazhuanpan\ZPalertify.css" />
+    <Content Include="副本 css\dazhuanpan\ZPcommon.css" />
+    <Content Include="副本 css\dazhuanpan\ZPjquery.css" />
+    <Content Include="副本 css\guagua\alertify.css" />
+    <Content Include="副本 css\guagua\common2.css" />
+    <Content Include="副本 css\guagua\jquery.css" />
+    <Content Include="副本 css\images\01.png" />
+    <Content Include="副本 css\images\dazhuanpan.jpg" />
+    <Content Include="副本 css\images\DefaultMode\default.png" />
+    <Content Include="副本 css\images\DefaultMode\default1.png" />
+    <Content Include="副本 css\images\DefaultMode\default2.png" />
+    <Content Include="副本 css\images\DefaultMode\default3.png" />
+    <Content Include="副本 css\images\DefaultMode\default4.png" />
+    <Content Include="副本 css\images\DefaultMode\default5.png" />
+    <Content Include="副本 css\images\DefaultMode\default6.png" />
+    <Content Include="副本 css\images\DefaultMode\default7.png" />
+    <Content Include="副本 css\images\guagua-01-bg.jpg" />
+    <Content Include="副本 css\images\guagua.jpg" />
+    <Content Include="副本 css\images\guaguale.jpg" />
+    <Content Include="副本 css\images\pan3.png" />
+    <Content Include="副本 css\images\ZPmobile_bg1.jpg" />
+    <Content Include="副本 css\images\ZPpan-2.png" />
+    <Content Include="副本 css\photoswipe.css" />
+    <Content Include="副本 css\style.css" />
+    <Content Include="副本 css\style111.css" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+    <Folder Include="Config\LuckyDrawStatus\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Content\api\SendChart.ashx" />
+    <None Include="Content\ProductIndex\iconfont\iconfont.eot" />
+    <None Include="Content\ProductIndex\iconfont\iconfont.ttf" />
+    <None Include="Content\ProductIndex\iconfont\iconfont.woff" />
+    <None Include="Content\Thumbs.db" />
+    <None Include="css\booklist\iconfont\iconfont.eot" />
+    <None Include="css\booklist\iconfont\iconfont.ttf" />
+    <None Include="css\booklist\iconfont\iconfont.woff" />
+    <Content Include="Tg\tguang.ashx" />
+    <None Include="css\booklist\iconfont\iconfont.eot" />
+    <None Include="css\booklist\iconfont\iconfont.ttf" />
+    <None Include="css\booklist\iconfont\iconfont.woff" />
+    <None Include="Views\Hotel\vssver2.scc" />
+    <Content Include="Views\MemberCard\RandomLuckyDraw.aspx 的副本%282%29" />
+    <Content Include="Views\MemberCard\RandomLuckyDraw.aspx 的副本%283%29" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target> -->
+  <Target Name="AfterBuild" Condition="'$(MvcBuildViews)'=='true'">
+    <AspNetCompiler VirtualPath="temp" PhysicalPath="$(ProjectDir)" />
+  </Target>
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>False</AutoAssignPort>
+          <DevelopmentServerPort>6803</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>
+          </IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>

@@ -1,0 +1,724 @@
+
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html;charset=utf-8" />
+<meta name="keywords" content="关键词1,关键词2,关键词3" />
+<meta name="description" content="对网站的描述" />
+<meta name="format-detection" content="telephone=no">
+<!--自动将网页中的电话号码显示为拨号的超链接-->
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+<!--width宽度height高度，initial-scale初始的缩放比例，minimum-scale允许缩放到的最小比例，maximum-scale允许缩放到的最大比例，user-scalable是否可以手动缩放-->
+<meta name="apple-mobile-web-app-capable" content="yes">
+<!--IOS设备-->
+<meta name="apple-touch-fullscreen" content="yes">
+<!--IOS设备-->
+<meta http-equiv="Access-Control-Allow-Origin" content="*">
+<title>酒店</title>
+<link type="text/css" rel="stylesheet" href="../css/booklist/font/iconfont.css"/>
+<link type="text/css" rel="stylesheet" href="../css/booklist/jquery-ui.css"/>
+<link type="text/css" rel="stylesheet" href="../swiper/swiper-3.4.1.min.css"/>
+<link type="text/css" rel="stylesheet" href="../css/booklist/sale-date.css"/>
+
+<link type="text/css" rel="stylesheet" href="../css/booklist/Restaurant.css"/>
+<link type="text/css" rel="stylesheet" href="../css/booklist/new-style.css"/>
+<link type="text/css" rel="stylesheet" href="../css/booklist/travel.css"/>
+
+<!--<link type="text/css" rel="stylesheet" href="../css/booklist/fontSize.css"/>-->
+<script type="text/javascript" src="../Scripts/jquery-1.8.0.min.js"></script>
+<script type="text/javascript" src="../css/booklist/jquery-ui.js"></script>
+<script type="text/javascript" src="../css/booklist/date-range-picker.js"></script>
+<script type="text/javascript" src="../css/booklist/font/iconfont.js"></script>
+<script type="text/javascript" src="../swiper/swiper-3.4.1.jquery.min.js"></script>
+<script type="text/javascript" src="../Scripts/fontSize.js"></script>
+<style>
+body{
+	overflow: auto;
+	max-width: 7.5rem;
+	}
+.date-page{
+	max-width: 7.5rem;
+	margin: 0 auto;
+}
+	.room-num{
+		display: none;
+	}
+	#datepicker{
+		max-width: 7.5rem;
+		padding-bottom: 1.2rem;
+		box-sizing: border-box;
+	}
+	.room-price-d{
+		display: none;
+	}
+	.ui-datepicker td span, .ui-datepicker td a{
+		line-height: 1.08rem;
+	}
+	#datepicker .specialdays a{
+		line-height: .8rem;
+	}
+	.specialdays.first::after,.specialdays.last::after{
+		top: .55rem;
+	}
+	.data-btn.sub{
+		background: #12B7F5;
+	}
+	.ui-datepicker th{
+		background: #12B7F5;	
+		border:1px solid  #17a7d0;
+	}
+	.fix-bottom {
+	    left: auto !important;
+	    max-width: 750px;
+	    height: 1.2rem;
+	}
+	.tab-nav.type3 > .cur{
+		border-bottom: 0;
+		height: 1rem;
+		line-height: 1rem;
+	}
+	body{
+	overflow: auto;
+	}
+	
+	/*旅行社-酒店修改样式*/
+	.icon{background:none;display:inline-block;overflow:hidden;fill:currentColor;margin-top:0;vertical-align:-.4em;height:1.4em;width:1.4em;}
+	.near-pic2{
+		height:2.3rem; width: 2.1rem; position:relative;
+	}
+</style>
+</head>
+<body>
+<!--默认页-->
+<article class="base-page">
+	<section class="yu-pos-r">
+		 <div class="swiper-container yu-h360r">
+		    <div class="swiper-wrapper">
+		      	<div class="swiper-slide full-img"><img src="../images/114.png" /></div>
+		        <div class="swiper-slide full-img"><img src="../images/114.png" /></div>
+		        <div class="swiper-slide full-img"><img src="../images/114.png" /></div>
+				</div>
+		    <div class="swiper-pagination"></div>
+	  	</div>
+  	</section>
+  	<section class="yu-lpad20r">
+  		<div class="yu-grid yu-alignc yu-h90r">
+  			<p class="yu-w70r yu-textc yu-f30r iconfont icon-dingwei1"></p>
+  			<div class="yu-bor bbor yu-h90r yu-overflow">
+  				<div class="yu-grid yu-alignc yu-h90r">
+  					<a class="yu-overflow yu-arr arr1 yu-f32r yu-black local-btn">
+  						广州
+  					</a>
+  					<a class="yu-overflow yu-arr arr1 yu-f32r yu-black near-btn">
+  						<div class="yu-grid yu-alignc">
+  							<p class="yu-f30r iconfont icon-jiudian1 yu-rmar20r"></p>
+  							<p class="yu-f32r">附近酒店</p>
+  						</div>
+  					</a>
+  				</div>
+  			</div>
+  		</div>
+  		<div class="yu-grid yu-alignc yu-h137r yu-arr arr1">
+  			<p class="yu-w70r yu-textc yu-f30r iconfont icon-rili1"></p>
+  			<a class="yu-bor bbor yu-h137r yu-overflow date-btn">
+  				<div class="yu-grid yu-alignc yu-h137r yu-rpad82r">
+  					<div class="yu-overflow">
+  						<div class="yu-f32r">
+  							<span class="yu-f32r yu-black yu-rmar20r">5月26日</span>
+  							<span class="yu-f26r yu-c77 yu-rmar10r">周五</span>
+  							<span class="yu-f26r yu-c77">入住</span>
+  						</div>
+  						<div class="yu-f32r">
+  							<span class="yu-f32r yu-black yu-rmar20r">5月27日</span>
+  							<span class="yu-f26r yu-c77 yu-rmar10r">周六</span>
+  							<span class="yu-f26r yu-c77">离店</span>
+  						</div>
+  					</div>
+  					<p class="yu-f32r yu-black">共<span>1</span>晚</p>
+  				</div>
+  			</a>
+  		</div>
+  		<div class="yu-grid yu-alignc yu-h90r yu-arr arr1">
+  			<p class="yu-w70r yu-textc yu-f30r iconfont icon-soushuo1"></p>
+  			<div class="yu-bor bbor yu-h90r yu-overflow">
+  				<div class="yu-grid yu-alignc yu-h90r yu-f32r yu-cc0 yu-rpad82r keyword-btn">
+  					<p class="yu-overflow">关键字</p>
+  					<p>位置、品牌、酒店</p>
+  				</div>
+  			</div>
+  		</div>
+  		<div class="yu-grid yu-alignc yu-h90r yu-arr arr1">
+  			<p class="yu-w70r yu-textc yu-f30r iconfont icon-xingji2"></p>
+  			<div class="yu-bor bbor yu-h90r yu-overflow">
+  				<div class="yu-grid yu-alignc yu-h90r yu-f32r yu-cc0 yu-rpad82r screen-btn">
+  					<p class="yu-overflow ">价格/星级</p>
+  				</div>
+  			</div>
+  		</div>
+  	</section>
+	<section class="submit-row">
+		<input type="button" value="查询" onclick="window.location='3-1-2-2查询结果.html'" />
+	</section>
+</article>
+<!--默认页end-->
+<!--目的地-->
+<article class="local-page">
+	<section class="yu-h80r yu-bgw yu-bor bbor">
+		<div class="back yu-h80r yu-grid yu-alignc yu-lrpad20r">
+			<a class="yu-back-arr" href="#"></a>
+			<div class="yu-overflow yu-f26r yu-c99">关闭</div>
+			<a class="reset yu-f26r yu-blue" href="#">重置</a>
+		</div>
+	</section>
+
+	<section class="yu-lpad20r yu-tpad40r">
+	<dl class="yu-bmar40r">
+		<dt class="yu-c77 yu-f26r yu-bmar30r">我的位置</dt>
+		<dd class="yu-grid select-item yu-flex-w-w">
+			<p class="sp">乌鲁木齐市乌鲁木齐市乌鲁木齐市</p>
+		</dd>
+	</dl>
+	<dl class="yu-bmar40r">
+		<dt class="yu-c77 yu-f26r yu-bmar30r">历史</dt>
+		<dd class="yu-grid select-item yu-flex-w-w">
+			<p class="sp">广州</p>
+		</dd>
+	</dl>
+	<dl>
+		<dt class="yu-c77 yu-f26r yu-bmar30r">热门</dt>
+		<dd class="yu-grid select-item yu-flex-w-w select-item">
+			<p>丽江</p>
+			<p>北京</p>
+			<p>上海</p>
+			<p>杭州</p>
+			<p>高雄</p>
+			<p>台北</p>
+			<p>香港</p>
+			<p>澳门</p>
+			<p>厦门</p>
+			<p>武汉</p>
+			<p>惠州</p>
+			<p class="cur">广州</p>
+			<p>深圳</p>
+			<p>珠海</p>
+			<p>佛山</p>
+			<p>桂林</p>
+		</dd>
+	</dl>
+</section>
+<section class="letter">
+	<dl>
+		<dt id="a">A</dt>
+		<dd>
+			<p class="yu-bor bbor">阿里</p>
+			<p class="yu-bor bbor">阿里</p>
+			<p class="yu-bor bbor">阿里</p>
+			<p class="yu-bor bbor">阿里</p>
+			<p class="yu-bor bbor">阿里</p>
+			<p class="yu-bor bbor">阿里</p>
+			<p class="yu-bor bbor">阿里</p>
+			<p class="yu-bor bbor">阿里</p>
+			<p class="yu-bor bbor">阿里</p>
+			<p class="yu-bor bbor">阿里</p>
+			<p class="yu-bor bbor">阿里</p>
+			
+		</dd>
+		<dt  id="b">B</dt>
+		<dd>
+			<p class="yu-bor bbor">宝鸡</p>
+			<p class="yu-bor bbor">宝鸡</p>
+			<p class="yu-bor bbor">宝鸡</p>
+			<p class="yu-bor bbor">宝鸡</p>
+			<p class="yu-bor bbor">宝鸡</p>
+			<p class="yu-bor bbor">宝鸡</p>
+			<p class="yu-bor bbor">宝鸡</p>
+			<p class="yu-bor bbor">宝鸡</p>
+			<p class="yu-bor bbor">宝鸡</p>
+			
+		</dd>
+	</dl>
+</section>
+<ul class="index">
+	<li><a href="#a">A</a></li>
+	<li><a href="#b">B</a></li>
+	<li><a href="#c">C</a></li>
+	<li><a href="#a">D</a></li>
+	<li><a href="#a">E</a></li>
+	<li><a href="#a">F</a></li>
+	<li><a href="#a">G</a></li>
+	<li><a href="#a">H</a></li>
+	<li><a href="#a">I</a></li>
+	<li><a href="#a">J</a></li>
+	<li><a href="#a">K</a></li>
+	<li><a href="#a">L</a></li>
+	<li><a href="#a">M</a></li>
+	<li><a href="#a">N</a></li>
+	<li><a href="#a">O</a></li>
+	<li><a href="#a">P</a></li>
+	<li><a href="#a">Q</a></li>
+	<li><a href="#a">R</a></li>
+	<li><a href="#a">S</a></li>
+	<li><a href="#a">T</a></li>
+	<li><a href="#a">U</a></li>
+	<li><a href="#a">V</a></li>
+	<li><a href="#a">W</a></li>
+	<li><a href="#a">X</a></li>
+	<li><a href="#a">Y</a></li>
+	<li><a href="#a">Z</a></li>
+	
+	
+</ul>
+</article>
+<!--目的地end-->
+<!--附近酒店-->
+<article class="near-page">
+	<section class="yu-h80r yu-bgw yu-bor bbor yu-grid yu-alignc yu-lpad20r ">
+		<a class="yu-blue2 yu-f20r yu-grid yu-alignc date-btn2">
+			<div class="yu-overflow yu-rmar10r">
+				<div><span class="yu-rmar8r">住</span><span>05-31</span></div>
+				<div><span class="yu-rmar8r">离</span><span>06-01</span></div>
+			</div>
+			<span class="t-arr"></span>
+		</a>
+		<div class="yu-overflow yu-lrpad20r">
+			<div class="search-bg2 yu-grid yu-alignc">
+				<span class="iconfont icon-soushuo1 yu-rmar10r"></span>
+				<input type="text" class="yu-overflow" placeholder="搜索地点/地标/车站/地铁站" onclick="window.location='3-1-2-3搜索.html'"/>
+			</div>
+		</div>
+	</section>
+<section class="yu-grid yu-lrpad20r yu-h65r yu-bor bbor yu-alignc">
+	<p class="yu-overflow yu-f24r">当前位置：广东省广州市越秀区寺右新马路108号</p>
+	<span class="icon-shuaxin iconfont yu-blue yu-f36r"></span>
+</section>
+<style type="text/css">
+	
+</style>
+<ul class="yu-lpad20r">
+		<li class="yu-bor bbor yu-tbpad20r yu-pos-r">
+			<a href="#" class="yu-grid">
+				<div class="near-pic2 full-img yu-rmar20r">
+					<img src="../images/hotel-bigimg.jpg" />
+					<p class="hotel_label label01"><i><svg class="icon" aria-hidden="true"><use xlink:href="#icon-renqiremai"></use></svg></i>人气热卖</p>
+				</div>
+				<div class="yu-overflow text-ell yu-rmar10r">
+					<h3 class="yu-f28r yu-black yu-f-wn yu-bmar10r h-title" style="white-space:normal;"><span class="yu-overflow">广州奥因斯国际公寓（广州南站）</span><svg class="icon" aria-hidden="true"><use xlink:href="#icon-jinpai"></use></svg></h3> <!-- 银牌：<svg class="icon" aria-hidden="true"><use xlink:href="#icon-yinpai"></use></svg>   铜牌：<svg class="icon" aria-hidden="true"><use xlink:href="#icon-tongpai"></use></svg> -->
+					<p class="yu-f22r yu-c77" style="white-space:normal;">三星级酒店 <i class="h-youhui">会员红包</i><i class="h-youhui">连住优惠</i><i class="h-youhui blue">钟点房</i></p>
+					<div  class="yu-f22r yu-c77 text-ell yu-bmar10r yu-rmar25r">
+						<span class="iconfont icon-dingwei1 yu-f20r yu-f-wb"></span>
+						<span>中国广东广州番禺区石壁街石山大道南捷诚街1中国广东广州番禺区石壁街石山大道南捷诚街1</span>
+					</div>
+					<div  class="yu-f22r yu-c77 text-ell">
+						<span class="iconfont icon-daohang yu-f20r "></span>
+						<span>距离您<i class="yu-c40">2.5</i>公里</span>
+					</div>
+					<div class="h-scoreorder">
+						<p class="yu-f22r yu-blue2">评分：4.6分/非常棒</p>
+						<p class="yu-f22r yu-5dc65b">10分钟前已有人预订</p>
+					</div>
+					
+				</div>
+				<div class="yu-c40 h-price">
+						<span class="yu-f24r">￥</span><span class="yu-f40r">258</span><span class="yu-f20r">起</span>
+					</div>
+			</a>
+		</li>
+		<li class="yu-bor bbor yu-tbpad20r yu-pos-r">
+			<a href="#" class="yu-grid">
+				<div class="near-pic2 full-img yu-rmar20r">
+					<img src="../images/hotel-bigimg.jpg" />
+					<p class="hotel_label label02"><i><svg class="icon" aria-hidden="true"><use xlink:href="#icon-chaogaoxingjiabi"></use></svg></i>超高性价比</p>
+				</div>
+				<div class="yu-overflow text-ell yu-rmar10r">
+					<h3 class="yu-f28r yu-black yu-f-wn yu-bmar10r h-title" style="white-space:normal;"><span class="yu-overflow">广州奥因斯国际公寓（广州南站）</span></h3>
+					<p class="yu-f22r yu-c77" style="white-space:normal;">三星级酒店 <i class="h-youhui">会员红包</i><i class="h-youhui">连住优惠</i><i class="h-youhui blue">钟点房</i></p>
+					<div  class="yu-f22r yu-c77 text-ell yu-bmar10r yu-rmar25r">
+						<span class="iconfont icon-dingwei1 yu-f20r yu-f-wb"></span>
+						<span>中国广东广州番禺区石壁街石山大道南捷诚街1中国广东广州番禺区石壁街石山大道南捷诚街1</span>
+					</div>
+					<div  class="yu-f22r yu-c77 text-ell">
+						<span class="iconfont icon-daohang yu-f20r "></span>
+						<span>距离您<i class="yu-c40">2.5</i>公里</span>
+					</div>
+					<div class="h-scoreorder">
+						<p class="yu-f22r yu-blue2">评分：4.6分/非常棒</p>
+						<p class="yu-f22r yu-5dc65b">10分钟前已有人预订</p>
+					</div>
+					
+				</div>
+				<div class="yu-c40 h-price">
+						<span class="yu-f24r">￥</span><span class="yu-f40r">258</span><span class="yu-f20r">起</span>
+					</div>
+			</a>
+		</li>
+		<li class="yu-bor bbor yu-tbpad20r yu-pos-r">
+			<a href="#" class="yu-grid">
+				<div class="near-pic2 full-img yu-rmar20r">
+					<img src="../images/hotel-bigimg.jpg" />
+					<p class="hotel_label label03"><i><svg class="icon" aria-hidden="true"><use xlink:href="#icon-shishuiyuantuijian"></use></svg></i>试睡员推荐</p>
+				</div>
+				<div class="yu-overflow text-ell yu-rmar10r">
+					<h3 class="yu-f28r yu-black yu-f-wn yu-bmar10r h-title"  style="white-space:normal;"><span class="yu-overflow">广州奥因斯国际公寓（广州南站）</span></h3>
+					<p class="yu-f22r yu-c77" style="white-space:normal;">三星级酒店 <i class="h-youhui">会员红包</i><i class="h-youhui">连住优惠</i></p>
+					<div  class="yu-f22r yu-c77 text-ell yu-bmar10r yu-rmar25r">
+						<span class="iconfont icon-dingwei1 yu-f20r yu-f-wb"></span>
+						<span>中国广东广州番禺区石壁街石山大道南捷诚街1中国广东广州番禺区石壁街石山大道南捷诚街1</span>
+					</div>
+					<div  class="yu-f22r yu-c77 text-ell">
+						<span class="iconfont icon-daohang yu-f20r "></span>
+						<span>距离您<i class="yu-c40">2.5</i>公里</span>
+					</div>
+					<div class="h-scoreorder">
+						<p class="yu-f22r yu-blue2">评分：4.6分/非常棒</p>
+						<p class="yu-f22r yu-5dc65b">10分钟前已有人预订</p>
+					</div>
+					
+				</div>
+				<div class="yu-c40 h-price">
+						<span class="yu-f24r">￥</span><span class="yu-f40r">258</span><span class="yu-f20r">起</span>
+					</div>
+			</a>
+		</li>
+	</ul>
+	<footer class="screen-bottom yu-grid yu-alignc yu-f26r yu-c22">
+ 	<div class="yu-overflow">
+ 		<div class="yu-grid yu-alignc yu-j-c local-btn2">
+ 			<p class="yu-rmar10r">广州</p>
+ 			<p class="arr"></p>
+ 		</div>
+ 	</div>
+ 	<div class="yu-overflow">
+ 		<div class="yu-grid yu-alignc yu-j-c sort-btn">
+ 			<p class="yu-rmar10r">推荐排序</p>
+ 			<p class="arr"></p>
+ 		</div>
+ 	</div>
+ 	<div class="yu-overflow">
+ 		<div class="yu-grid yu-alignc yu-j-c screen-btn">
+ 			<p class="yu-rmar10r">筛选</p>
+ 			<p class="arr"></p>
+ 		</div>
+ 	</div>
+ </footer>
+  <!--排序-->
+ <div class="mask sort-mask">
+ 	<div class="mask-inner ">
+ 		<ul class="yu-f26r sort-list">
+ 			<li class="yu-grid yu-alignc yu-blue">
+ 				<p class="iconfont icon-gouxuan yu-w70r yu-textc"></p>
+ 				<p class="yu-overflow yu-bor bbor yu-h65r yu-l65r">推荐排序</p>
+ 			</li>
+ 			<li class="yu-grid yu-alignc">
+ 				<p class="iconfont yu-w70r yu-textc"></p>
+ 				<p class="yu-overflow yu-bor bbor yu-h65r yu-l65r">距离优先</p>
+ 			</li>
+ 			<li class="yu-grid yu-alignc">
+ 				<p class="iconfont yu-w70r yu-textc"></p>
+ 				<p class="yu-overflow yu-bor bbor yu-h65r yu-l65r">低价优先</p>
+ 			</li>
+ 			<li class="yu-grid yu-alignc">
+ 				<p class="iconfont yu-w70r yu-textc"></p>
+ 				<p class="yu-overflow yu-bor bbor yu-h65r yu-l65r">高价优先</p>
+ 			</li>
+ 			<li class="yu-grid yu-alignc">
+ 				<p class="iconfont yu-w70r yu-textc"></p>
+ 				<p class="yu-overflow yu-bor bbor yu-h65r yu-l65r">星级优先</p>
+ 			</li>
+ 		</ul>
+ 	</div>
+ </div>
+</article>
+<!--附近酒店end-->
+<!--日历-->
+<article class="date-page">
+	<div id="datepicker"></div>
+			<div class="fix-bottom yu-bor tbor yu-grid yu-alignc yu-lrpad10 yu-h34r">
+				<p class="yu-overflow ">入住共<span class="selectNum">1</span>晚</p>
+				<div>
+					<div class="yu-grid yu-alignc">
+						<p class="data-btn cal yu-bor1 bor">取消</p>
+						<p class="data-btn sub">确定</p>
+					</div>
+				</div>
+			</div>
+</article>
+
+<!--日历end-->
+
+<!--关键字-->
+<article class="keyword-page">
+	<section class="yu-h80r yu-bgw yu-bor bbor yu-grid yu-alignc yu-lpad20r ">
+		<a class="yu-back-arr" href="#"></a>
+		<div class="yu-overflow">
+			<div class="search-bg2 yu-grid yu-alignc">
+				<span class="iconfont icon-soushuo1 yu-rmar10r yu-c99"></span>
+				<input type="text" class="yu-overflow" placeholder="搜索地点/地标/车站/地铁站" />
+				<i class="ico-close J__iptClear">×</i>
+			</div>
+		</div>
+		<a class="yu-f26r yu-blue2 yu-lrpad20r cal-btn">取消</a>
+</section>
+<section class="tab-con type2 yu-grid yu-bgw">
+	<ul class="tab-nav type3 yu-f28r ">
+		<li class="cur">品牌</li>
+		<li>商圈</li>
+		<li>行政区</li>
+	</ul>
+	<ul class="tab-inner yu-overflow yu-lrpad20r">
+		<li class="cur">
+			<ul class="tab-inner-scroll type2 yu-f26r">
+				<li>维也纳酒店</li>
+				<li>维也纳酒店</li>
+				<li>维也纳酒店</li>
+				<li>维也纳酒店</li>
+				<li>维也纳酒店</li>
+				<li>维也纳酒店</li>
+				<li>维也纳酒店</li>
+				<li>维也纳酒店</li>
+				<li>维也纳酒店</li>
+				<li>维也纳酒店</li>
+				<li>维也纳酒店</li>
+				<li>维也纳酒店</li>
+				<li>维也纳酒店</li>
+				<li>维也纳酒店</li>
+				<li>维也纳酒店</li>
+				<li>维也纳酒店</li>
+				<li>维也纳酒店</li>
+				<li>维也纳酒店</li>
+				<li>维也纳酒店</li>
+				<li>维也纳酒店</li>
+				<li>维也纳酒店</li>
+				<li>维也纳酒店</li>
+				<li>维也纳酒店</li>
+				<li>最后一个</li>
+			</ul>
+		</li>
+		<li>
+			<ul class="tab-inner-scroll type2 yu-f26r ">
+				<li>7天</li>
+				<li>7天</li>
+				<li>7天</li>
+				<li>7天</li>
+				<li>7天</li>
+				<li>7天</li>
+				<li>7天</li>
+				<li>7天</li>
+				<li>7天</li>
+				<li>7天</li>
+			</ul>
+		</li>
+		<li>
+			<ul class="tab-inner-scroll type2 yu-f26r ">
+				<li>汉庭</li>
+				<li>汉庭</li>
+				<li>汉庭</li>
+				<li>汉庭</li>
+				<li>汉庭</li>
+				<li>汉庭</li>
+				<li>汉庭</li>
+				<li>汉庭</li>
+				
+			</ul>
+		</li>
+	</ul>
+</section>
+</article>
+<!--关键字end-->
+ <!--筛选-->
+ <div class="mask screen-mask">
+ 	<div class="mask-inner yu-lrpad20r">
+ 		<div class="yu-grid yu-h90r yu-f32r yu-alignc yu-bor bbor yu-textc yu-j-s  yu-bmar60r" >
+ 			<p class="yu-w120r cancel-btn2">取消</p>
+ 			<p class="yu-w120r yu-blue2  cancel-btn2">完成</p>
+ 		</div>
+ 		<dl class="yu-bor bbor yu-bmar60r">
+ 			<dt class="yu-f26r yu-c99 yu-bmar30r">价格筛选</dt>
+	 		<dd class="yu-grid yu-j-s price-screen">
+	 			<div class="cur">不限</div>
+	 			<div>0-150</div>
+	 			<div>150-300</div>
+	 			<div>300-600</div>
+	 			<div>600-1000</div>
+	 			<div>1000+</div>
+	 			
+	 		</dd>
+	 	</dl>
+	 	<dl class="">
+ 			<dt class="yu-f26r yu-c99 yu-bmar30r">类别筛选(复选)</dt>
+	 		<dd class="yu-grid yu-j-s type-screen">
+	 			<div class="cur">不限</div>
+	 			<div>经济/客栈</div>
+	 			<div>二星/实惠</div>
+	 			<div>三星/舒适</div>
+	 			<div>四星/高级</div>
+	 			<div>五星/豪华</div>
+	 			
+	 		</dd>
+	 	</dl>
+ 	</div>
+ </div>
+<script type="text/javascript">
+	var swiper = new Swiper('.swiper-container', {
+        pagination: '.swiper-pagination',
+        paginationClickable: true,
+//      autoplay: 2500,
+        autoplayDisableOnInteraction: false,
+        loop: true,
+        onSlideChangeStart: function(swiper){
+			$(".hotel-img-mask li").eq(swiper.activeIndex).addClass("cur").siblings().removeClass("cur");
+			$(".activeIndex").text(swiper.activeIndex);
+		    }
+    });  
+		
+	var dClickNum=0;
+	    /*日期选择初始号*/
+        var __drp; 
+        __drp = $("#datepicker").datepicker({
+        	dateFormat: 'yy-mm-dd',
+           dayNamesMin: ["日", "一", "二", "三", "四", "五", "六"],
+           monthNames: ["1月", "2月", "3月", "4月", "5月", "6月",
+     "7月", "8月", "9月", "10月", "11月", "12月"],
+           yearSuffix: '年',
+           showMonthAfterYear: true,
+           minDate: new Date(),
+           maxDate: '2017-12-31',
+           numberOfMonths:2,
+           showButtonPanel:false,
+           onSelect:function(date){
+           		if(dClickNum==0){
+		    	 	console.log("第一次")
+		    	 	dClickNum=1;
+		    	 }else{
+		    	 	console.log("第二次")
+		    	 	dClickNum=0;
+		    	 }
+           }
+        });
+	
+	$(function(){
+		//价格星级
+		$(".price-screen>div").on("click",function(){
+				$(this).addClass("cur").siblings().removeClass("cur");
+			})
+//			$(".type-screen>div").on("click",function(){
+//				$(this).toggleClass("cur");
+//			})
+			$(".cancel-btn2").on("click",function(){
+				$(".mask").fadeOut();
+				$(".screen-bottom>div").removeClass("cur");
+			})
+			$(".screen-btn").click(function(){
+				$(".screen-mask").fadeIn();
+			})
+			
+			
+		//目的地
+		$(".local-btn").click(function(){
+			$(".base-page").hide();
+			$(".local-page").show();
+		})
+		$(".select-item>p").on("click",function(){
+			$(this).addClass("cur").siblings().removeClass("cur");
+			$(".base-page").show();
+			$(".local-page").hide();
+		})
+		$(".letter dd>p").on("click",function(){
+			$(this).addClass("cur").siblings().removeClass("cur");
+			$(".base-page").show();
+			$(".local-page").hide();
+		})
+		
+		//附近酒店
+		$(".near-btn").click(function(){
+			$(".base-page").hide();
+			$(".near-page").show();
+		})
+		$(".local-btn2").click(function(){
+			$(".near-page").hide();
+			$(".local-page").show();
+		})
+		$(".screen-bottom>div").on("click",function(){
+				$(this).toggleClass("cur").siblings().removeClass("cur");
+			})
+		$(".date-btn2").click(function(){
+			$(".near-page").hide();
+			$(".date-page").show();
+		})
+			//mask通用
+			$(".mask").click(function(){
+				$(this).fadeOut();
+				$(".screen-bottom>div").removeClass("cur");
+				
+			})
+			$(".mask-inner").click(function(e){
+				e.stopPropagation();
+			})
+			//排序
+			$(".sort-btn").click(function(){
+				$(".sort-mask").fadeIn();
+			})
+			$(".sort-list>li").on("click",function(){
+				$(this).addClass("yu-blue").siblings().removeClass("yu-blue");
+				$(this).children(".iconfont").addClass("icon-gouxuan").parent().siblings().children(".iconfont").removeClass("icon-gouxuan");
+				$(".sort-mask").fadeOut();
+				$(".screen-bottom>div").removeClass("cur");
+			})
+			
+			//筛选
+			$(".price-screen>div").on("click",function(){
+				$(this).addClass("cur").siblings().removeClass("cur");
+			})
+			$(".type-screen>div").on("click",function(){
+				$(this).toggleClass("cur");
+			})
+			$(".cancel-btn2").on("click",function(){
+				$(".mask").fadeOut();
+				$(".screen-bottom>div").removeClass("cur");
+			})
+			$(".screen-btn").click(function(){
+				$(".screen-mask").fadeIn();
+			})
+		
+		
+		
+		//日历
+		$(".date-btn").click(function(){
+			$(".date-page").show();
+			$(".base-page").hide();
+		})
+		$(".data-btn.cal").click(function(){
+			$(".date-page").hide();
+			$(".base-page").show();
+		})
+		
+		
+		
+		//关键字
+		$(".keyword-btn").click(function(){
+			$(".base-page").hide();
+			$(".keyword-page").show();
+		})
+		$(".tab-nav").children("li").on("click",function(){
+			$(this).addClass("cur").siblings("li").removeClass("cur");
+		  	tabIndex=$(this).index();
+			$(this).parent(".tab-nav").siblings(".tab-inner").children("li").eq(tabIndex).addClass("cur").siblings().removeClass("cur");
+		})
+		$(".tab-inner-scroll").children("li").on("click",function(){
+			$(this).toggleClass("cur");
+		})
+		$(".keyword-page .cal-btn").click(function(){
+			$(".keyword-page").hide();
+			$(".base-page").show();
+		})
+		
+		//清空文本框
+		$(".J__iptClear").on("click", function(){
+			$(this).siblings("input").val("").focus();
+		})
+		
+	})
+		
+ 
+</script>
+</body>
+</html>

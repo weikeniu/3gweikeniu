@@ -1,0 +1,94 @@
+﻿<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html;charset=utf-8" />
+<meta name="keywords" content="关键词1,关键词2,关键词3" />
+<meta name="description" content="对网站的描述" />
+<meta name="format-detection" content="telephone=no">
+<!--自动将网页中的电话号码显示为拨号的超链接-->
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+<!--width宽度height高度，initial-scale初始的缩放比例，minimum-scale允许缩放到的最小比例，maximum-scale允许缩放到的最大比例，user-scalable是否可以手动缩放-->
+<meta name="apple-mobile-web-app-capable" content="yes">
+<!--IOS设备-->
+<meta name="apple-touch-fullscreen" content="yes">
+<!--IOS设备-->
+<meta http-equiv="Access-Control-Allow-Origin" content="*">
+<title>储值卡</title>
+<link type="text/css" rel="stylesheet" href="../css/booklist/sale-date.css"/>
+<link type="text/css" rel="stylesheet" href="../css/booklist/Restaurant.css"/>
+<link type="text/css" rel="stylesheet" href="../css/booklist/fontSize.css"/>
+<script type="text/javascript" src="../Scripts/jquery-1.8.0.min.js"></script>
+<script type="text/javascript" src="../Scripts/fontSize.js"></script>
+</head>
+<body>
+<!--基本页-->
+<section class="base-page" >
+	<header class="yu-bor bbor">
+	 	<a href="#" class="back"></a>
+	 	支付方式
+	</header>
+	<section class="yu-bgw">
+		<div class="yu-lrpad10 yu-tbpad20 yu-bor bbor yu-grid yu-arr yu-alignc card-pay">
+			<p class="pay-type type1 yu-rmar5"></p>
+			<p class="yu-overflow">用储值卡支付</p>
+		</div>
+		<div class="yu-lrpad10 yu-tbpad20 yu-bor bbor yu-grid yu-arr yu-alignc card-pay">
+			<p class="pay-type type1 yu-rmar5 dis"></p>
+			<p class="yu-overflow">用储值卡支付</p>
+		</div>
+		<div class="yu-lrpad10 yu-tbpad20 yu-bor bbor yu-grid yu-arr yu-alignc">
+			<p class="pay-type type2 yu-rmar5"></p>
+			<p class="yu-overflow">用微信支付</p>
+		</div>
+	</section>
+</section>	
+
+
+<section class="date-page">
+	<header class="yu-bor bbor">
+	 	<a href="#" class="back"></a>
+	 	储值卡支付
+	</header>
+	<section>
+		<div class="yu-bgblue2 yu-white yu-textc yu-tbpad20">
+			<p class="yu-font40 yu-bmar5">￥365.00</p>
+			<p class="yu-font12 balance">卡内余额￥650.00</p>
+		</div>
+		<div class="yu-bgw yu-pad10 yu-bor bor">
+			<form>
+				<div class="pay-password yu-grid">
+					<div class="yu-bor1 bor yu-overflow password-bor"><input type="password" placeholder="请输入储值卡交易密码"  /></div>
+					<div class="yu-bor1 bor submit-bor"><input type="submit" value="提交"/></div>
+				</div>
+			</form>
+			<div class="yu-overflow yu-tpad10"><a href="#" class="fr yu-blue2 yu-font14">忘记密码?</a></div>
+		</div>
+	</section>
+</section>
+<script>
+	$(function(){
+		//选择方式
+		$(".card-pay").click(function(){
+			$(".base-page").hide();
+			$(".date-page").show();
+		})
+		$(".date-page .back").click(function(){
+			$(".base-page").show();
+			$(".date-page").hide();
+		})
+		//密码输入监听
+		function checkVal(){
+			if($(".pay-password input[type='password']").val()!=""){
+				$(".pay-password .submit-bor").addClass("cur");
+			}else{
+				$(".pay-password .submit-bor").removeClass("cur");
+			}
+		};
+		checkVal();
+		$(document).keyup(function(){
+			checkVal();
+		});
+	})
+</script>
+</body>
+</html>

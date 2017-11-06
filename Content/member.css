@@ -1,0 +1,49 @@
+@charset "utf-8";
+/* ## Common ## */
+.text{border-radius:5px;padding:0 2%;height:35px;line-height:35px;border:solid 1px #ccc;width:95%}
+.submit{background:url(images/site.png) no-repeat right 0;width:130px;display:block;margin:0 auto;height:50px;padding:0;border:none;font-family:"微软雅黑";font-size:24px;line-height:50px;color:#FFF;cursor:pointer}
+
+/* ## login.html ## */
+.login ul{clear:both;overflow:hidden;padding:30px}
+.login li{clear:both;overflow:hidden;margin-bottom:20px}
+.login .forget{float:right;color:#999;height:50px;line-height:50px}
+.login .submit{float:left}
+
+/* ## resetpwd.html ## */
+.resetpwd ul{clear:both;overflow:hidden;padding:30px}
+.resetpwd li{clear:both;overflow:hidden;margin-bottom:20px}
+
+/* ## member.html ## */
+.member .tt{background:#f2f2f2;border-bottom:solid 1px #c6c6c6;overflow:hidden;clear:both;padding:20px}
+.member .tt dt,.member .tt dd{color:#000;font-size:18px;font-family:"微软雅黑"}
+.member .tt dd.img{border:solid 1px #999;border-radius:3px;width:48px;height:48px;padding:1px;float:left;margin-right:8px; overflow:hidden; background:#FFF;}
+.member .menu ul{overflow:hidden;clear:both} 
+.member .menu li{background:url(images/member-menu-bg.png) repeat-x;height:59px;clear:both;overflow:hidden;line-height:59px}
+.member .menu li a{width:100%;display:block;clear:both;text-align:center;color:#000;font-size:18px;font-family:"微软雅黑";background:url(images/dot-r1.png) right center no-repeat}
+
+/* ## orderinfo.html ## */
+.orderinfo dt{border-bottom:solid 1px #c6c6c6;height:50px;line-height:50px;position:relative;padding:0 10px;margin-bottom:10px;font-family:"微软雅黑"}
+.orderinfo dt .roomname{color:#4ea20b;float:left;font-size:16px}
+.orderinfo dt .time{position:absolute;color:#555;font-size:14px;text-align:center;width:100%;top:0;left:0}
+.orderinfo dt .time .green{color:#4ea20b}
+.orderinfo dt .time .orange{color:#F60}
+.orderinfo dt .price{float:right;color:#F60;font-size:22px}
+.orderinfo dt .price dfn{font-style:normal;font-size:12px}
+.orderinfo dd{height:35px;line-height:35px;color:#555;padding:0 10px;font-size:16px;font-family:"微软雅黑"}
+
+/* ## orderlist.html ## */
+.orderlist li{border-bottom:solid 1px #c6c6c6;height:50px;line-height:50px;position:relative;padding:0 10px;font-family:"微软雅黑"; overflow:hidden; clear:both;}
+.orderlist li .roomname{color:#4ea20b;float:left;font-size:16px}
+.orderlist li .time{position:absolute;color:#555;font-size:14px;text-align:center;width:100%;top:0;left:0}
+.orderlist li .time .green{color:#4ea20b}
+.orderlist li .time .orange{color:#F60}
+.orderlist li .price{float:right;color:#F60;font-size:22px}
+.orderlist li .price dfn{font-style:normal;font-size:12px}
+
+/* ## forget.html ## */
+.forget ul{ clear:both;overflow:hidden;padding:50px 30px 30px}
+.forget li{clear:both;overflow:hidden;margin-bottom:20px}
+.forget li.code .text{ width:150px; float:left; }
+.forget li.code img{ float:left; margin:0 10px }
+.forget li.code span{ float:right; height:35px; line-height:35px; cursor:pointer; }
+.forget li.tishi{ margin:40px 0 20px; color:#555;}

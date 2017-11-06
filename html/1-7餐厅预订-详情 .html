@@ -1,0 +1,394 @@
+﻿
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html;charset=utf-8" />
+<meta name="keywords" content="关键词1,关键词2,关键词3" />
+<meta name="description" content="对网站的描述" />
+<meta name="format-detection" content="telephone=no">
+<!--自动将网页中的电话号码显示为拨号的超链接-->
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+<!--width宽度height高度，initial-scale初始的缩放比例，minimum-scale允许缩放到的最小比例，maximum-scale允许缩放到的最大比例，user-scalable是否可以手动缩放-->
+<meta name="apple-mobile-web-app-capable" content="yes">
+<!--IOS设备-->
+<meta name="apple-touch-fullscreen" content="yes">
+<!--IOS设备-->
+<meta http-equiv="Access-Control-Allow-Origin" content="*">
+<title>餐厅预订-详情</title>
+<link type="text/css" rel="stylesheet" href="../css/booklist/jquery-ui.css"/>
+<link type="text/css" rel="stylesheet" href="../css/booklist/sale-date.css"/>
+<link type="text/css" rel="stylesheet" href="../css/booklist/Restaurant.css"/>
+<link type="text/css" rel="stylesheet" href="../css/booklist/new-style.css"/>
+<link type="text/css" rel="stylesheet" href="../css/booklist/fontSize.css"/>
+<script type="text/javascript" src="../Scripts/jquery-1.8.0.min.js"></script>
+<script type="text/javascript" src="../css/booklist/jquery-ui.js"></script>
+<script type="text/javascript" src="../Scripts/fontSize.js"></script>
+<style>
+	.room-price-d{
+		display: none;
+	}
+	.ui-datepicker td span, .ui-datepicker td a{
+		line-height: 1.08rem;
+	}
+	.room-num{
+		display: none;
+	}
+</style>
+</head>
+<body >
+	<article class="full-page">
+		<aside class="l-side">
+			<nav>
+				<a href="#" class="yu-grid yu-alignc">
+					<p class="ico shouye"></p>
+					<p>首页</p>
+				</a>
+				<a href="#" class="yu-grid yu-alignc">
+					<p class="ico jianjie"></p>
+					<p>酒店简介</p>
+				</a>
+				<a href="#" class="yu-grid  yu-alignc">
+					<p class="ico yuding"></p>
+					<p>客房预定</p>
+				</a>
+				<a href="#" class="yu-grid  yu-alignc">
+					<p class="ico dingcan"></p>
+					<p>酒店订餐</p>
+				</a>
+				<a href="#" class="yu-grid  yu-alignc">
+					<p class="ico chaoshi"></p>
+					<p>酒店超市</p>
+				</a>
+				<a href="#" class="yu-grid  yu-alignc">
+					<p class="ico youxuan"></p>
+					<p>特惠优选</p>
+				</a>
+				<a href="#" class="yu-grid  yu-alignc">
+					<p class="ico sheshi"></p>
+					<p>设施服务</p>
+				</a>
+				<a href="#" class="yu-grid  yu-alignc">
+					<p class="ico yanhui"></p>
+					<p>会议宴会</p>
+				</a>
+				<a href="#" class="yu-grid  yu-alignc">
+					<p class="ico huodong"></p>
+					<p>酒店活动</p>
+				</a>
+			</nav>
+		</aside>
+		<header class="yu-grid yu-alignc yu-h40 yu-lrpad10">
+				<div>
+					<div class="yu-grid yu-alignc">
+						<p class="nav-ico l-side-btn"></p>
+						<p class="copy-bor1"></p>
+						<p class="wx-ico"></p>
+					</div>
+				</div>
+				<div class="yu-overflow"></div>
+				<div>
+					<div class="yu-grid yu-alignc">
+						<p class="phone-ico"></p>
+						<p class="copy-bor1"></p>
+						<p class="person-ico"></p>
+					</div>
+				</div>
+			</header>
+		<section class="show-body">
+			<section class="content2 yu-bpad60">
+				<div class="show-header">
+					<div class="inner yu-h360r">
+						<img src="../images/booking.jpg">
+					</div>
+					<div class="yu-bgf3 yu-h100r yu-grid yu-alignc yu-bor bbor yu-lrpad10 ">
+						<p class="yu-overflow yu-f30r">盛宴标帜餐厅</p>
+					</div>
+					<div class="yu-bgw yu-lrpad20r yu-tbpad50r yu-f26r yu-l40r yu-bmar20r">
+						<div class="yu-bmar20r">无论是浅酌轻谈或是开怀畅饮，观海酒廊都是最理想的场地。
+							在乐队精彩的演演绎中尽情地品味心仪的鸡尾酒和琳琅满目的
+							小吃，度过惬意的闲暇时光，且窗外中国南海的碧海蓝天定让
+							您流连忘返。</div>
+						<ul>
+							<li>美食: 鸡尾酒、葡萄酒、啤酒和小吃</li>
+							<li>电话: (86)(752) 832 8888 转8550</li>
+							<li>营业时间: 早上 9:00 – 凌晨 12:00</li>
+							<li>环境: 休闲放松</li>
+							<li>着装要求: 休闲</li>
+							<li>可否吸烟: 不可吸烟</li>
+							<li>服务方式: 酒吧菜单</li>
+						</ul>
+					</div>
+					<form>
+					<div class="yu-bgw yu-bor tbor yu-lpad20r">
+						<div class="yu-h50 yu-bor bbor yu-grid yu-alignc yu-rpad10">
+							<div class="l-ico type12 yu-rmar10"></div>
+							<p class="yu-w60 yu-f30r">用餐人数</p>
+							<p class="yu-overflow yu-f30r yu-c99">2人</p>
+							<div class="ar yu-grid">
+													<p class="reduce ico type2"></p>
+													<p class="food-num"></p>
+													<p class="add ico type2"></p>
+											</div>
+							
+						</div>
+						<div class="yu-h50 yu-bor bbor yu-grid yu-alignc yu-rpad10 yu-arr data-select">
+							<div class="l-ico type2 yu-rmar10"></div>
+							<p class="yu-w60 yu-f30r">用餐日期</p>
+							<div class="yu-overflow yu-f30r selectdata"></div>
+						</div>
+						<div class="yu-h50 yu-bor bbor yu-grid yu-alignc yu-rpad10 yu-arr timeselect">
+							<div class="l-ico type15 yu-rmar10"></div>
+							<p class="yu-w60 yu-f30r">到达时间</p>
+							<div class="yu-overflow yu-f30r selecttime"></div>
+						</div>
+						<div class="yu-h50 yu-bor bbor yu-grid yu-alignc yu-rpad10">
+							<div class="l-ico type5 yu-rmar10"></div>
+							<p class="yu-w60 yu-f30r">联系人</p>
+							<div class="yu-overflow"><input type="text" class="yu-input2" placeholder="请输入姓名"></div>
+							<div class="yu-grid sex-select yu-alignc yu-f30r">
+								<label class="yu-rmar45r">
+									<span>先生</span><span class="ico"></span>
+								</label>
+								<label>
+									<span>女士</span><span class="ico"></span>
+								</label>
+							</div>
+						</div>
+						<div class="yu-h50 yu-bor bbor yu-grid yu-alignc yu-rpad10">
+							<div class="l-ico type6 yu-rmar10"></div>
+							<p class="yu-w60 yu-f30r">手机号</p>
+							<div class="yu-overflow"><input type="text" class="yu-input2" placeholder="请输入订餐人手机号码"></div>
+						</div>
+						<!--<div class="yu-h50 yu-bor bbor yu-grid yu-alignc yu-rpad10">
+							<div class="l-ico type14 yu-rmar10"></div>
+							<p class="yu-w60 yu-f30r">邮件地址</p>
+							<div class="yu-overflow"><input type="text" class="yu-input2" placeholder="请输入邮箱地址"></div>
+						</div>-->
+						<div class="yu-h50 yu-bor bbor yu-grid yu-alignc yu-rpad10">
+							<div class="l-ico type7 yu-rmar10"></div>
+							<p class="yu-w60 yu-f30r">备注</p>
+							<div class="yu-overflow"><input type="text" class="yu-input2" placeholder="请输入其它要求"></div>
+						</div>
+					</div>
+					<div class="yu-pad20r">
+						<input type="button" value="立即预订" class="yu-btn3" />
+					</div>
+					</form>
+				</div>
+			</section>
+		</section>
+		<!--红包-->
+	<section class="mask hongbao-mask">
+		<div class="mask-bottom-inner yu-bgw">
+			<p class="yu-h60 yu-line60 yu-textc yu-bor bbor">红包</p>
+			<ul class="yu-lrpad10 yu-c99 hongbao-select">
+				<li class="yu-h60 yu-grid yu-alignc yu-bor bbor cur">
+					<p class="yu-overflow">不使用红包</p>
+					<p class="copy-radio"></p>
+				</li>
+				<li class="yu-h60 yu-grid yu-alignc yu-bor bbor">
+					<p class="yu-rmar10"><i class="yu-font12">￥</i><i class="yu-font26">10</i></p>
+					<div class="yu-overflow yu-font12">
+						<p>0元起用</p>
+						<p>有效期2017.01.01-2017.01.15</p>
+					</div>
+					<p class="copy-radio"></p>
+				</li>
+				<li class="yu-h60 yu-grid yu-alignc yu-bor bbor">
+					<p class="yu-rmar10"><i class="yu-font12">￥</i><i class="yu-font26">30</i></p>
+					<div class="yu-overflow yu-font12">
+						<p>0元起用</p>
+						<p>有效期2017.01.01-2017.01.15</p>
+					</div>
+					<p class="copy-radio"></p>
+				</li>
+				<li class="yu-h60 yu-grid yu-alignc yu-bor bbor">
+					<p class="yu-rmar10"><i class="yu-font12">￥</i><i class="yu-font26">50</i></p>
+					<div class="yu-overflow yu-font12">
+						<p>0元起用</p>
+						<p>有效期2017.01.01-2017.01.15</p>
+					</div>
+					<p class="copy-radio"></p>
+				</li>
+			</ul>
+			<div class="yu-h60 yu-bg40 yu-white yu-line60 yu-textc mask-close">关闭</div>
+		</div>
+	</section>
+	<!--日历-->
+	<section class="data-page">
+			<div id="datepicker"></div>
+			<div class="fix-bottom yu-bor tbor yu-grid yu-alignc yu-lrpad10 yu-h34r">
+				<p class="yu-overflow ">选择日期</p>
+				<div>
+					<div class="yu-grid yu-alignc">
+						<p class="data-btn cal yu-bor1 bor">取消</p>
+						<p class="data-btn sub">确定</p>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!--日历end-->
+	<!--时间--> 
+	<section class="mask lasttime-mask">
+		<div class="mask-bottom-inner yu-bgw">
+			<p class="yu-h110r yu-l110r yu-textc yu-bor bbor yu-f34r">时间</p>
+			<ul class="yu-lrpad10 yu-c99 hongbao-select">
+				<li class="yu-h120r yu-grid yu-alignc yu-bor bbor">
+					<div class="yu-overflow yu-f30r timelist">
+						9:00-20:30
+					</div>
+					<p class="copy-radio"></p>
+				</li>
+				<li class="yu-h120r yu-grid yu-alignc yu-bor bbor">
+					<div class="yu-overflow yu-f30r timelist">
+						20:00-23:30
+					</div>
+					<p class="copy-radio"></p>
+				</li>
+			</ul>
+			<div class="yu-l100r yu-h100r yu-bg40 yu-white  yu-textc mask-close yu-font32r">关闭</div>
+		</div>
+	</section>
+	</article>
+	<script>
+	var speciald=new Array(); 
+	var selectdata;
+		 /*日期选择初始号*/
+        var __drp; 
+        __drp = $("#datepicker").datepicker({
+        	dateFormat: 'yy-mm-dd',
+           dayNamesMin: ["日", "一", "二", "三", "四", "五", "六"],
+           monthNames: ["1月", "2月", "3月", "4月", "5月", "6月",
+     "7月", "8月", "9月", "10月", "11月", "12月"],
+           yearSuffix: '年',
+           showMonthAfterYear: true,
+           minDate: new Date(),
+           maxDate: '2017-12-31',
+           numberOfMonths:2,
+           showButtonPanel:false,
+           onSelect:function(data, me){
+				selectdata=data;
+           },
+           
+        });
+        
+        //选择日期
+         $(".data-btn.sub").click(function(){
+         	$(".show-body").show();
+			$("header").show();
+			$(".data-page").hide();
+			$(".selectdata").text(selectdata)
+         })
+		$(".data-select").on("click",function(){
+			$(".show-body").hide();
+			$("header").hide();
+			$(".data-page").show();
+			
+		})
+		$(".data-btn.cal").click(function(){
+			$(".show-body").show();
+			$("header").show();
+			$(".data-page").hide();
+		})
+       
+		$(function(){
+			//左导航
+			var lSideNum=0;
+			$(".l-side-btn").click(function(){
+				if(lSideNum==0){
+					$(".full-page").addClass("shin-slide-right").removeClass("shin-slide-left");
+					$(".l-side").fadeIn();
+					lSideNum=1;
+				}else{
+					$(".full-page").removeClass("shin-slide-right").addClass("shin-slide-left");
+					$(".l-side").fadeOut();
+					lSideNum=0;
+				}
+			})
+			//选项卡
+		  var tabIndex;
+		  $(".tab-nav").children("li").on("click",function(){
+		  	$(this).addClass("cur").siblings("li").removeClass("cur");
+		  	tabIndex=$(this).index();
+		  	$(this).parent(".tab-nav").siblings(".tab-inner").children("li").eq(tabIndex).addClass("cur").siblings().removeClass("cur");
+		  })
+			
+			//加减餐
+			var foodNum=0;
+			var totalNum=0;
+			$(".add").on("click",function(){
+		//	$(".food-list,.food-details").find("dd").on("click",".add",function(){
+				totalNum++;
+				$(".yu-btn").text("选好了");
+				if($(this).siblings(".food-num").text()==""){
+					foodNum=1;
+					$(this).siblings(".food-num").text(foodNum);
+				}else{
+					foodNum=parseInt($(this).siblings(".food-num").text());
+					foodNum++;
+					$(this).siblings(".food-num").text(foodNum);
+										
+			};
+				$(this).siblings().fadeIn();
+			});
+			
+			$(".reduce").on("click",function(){
+		//		$(".food-list,.food-details").find("dd").on("click",".reduce",function(){
+				foodNum=parseInt($(this).siblings(".food-num").text());
+				if(foodNum>0){
+					totalNum--;
+					foodNum--;
+					$(this).siblings(".food-num").text(foodNum);
+					$(this).parents(".show-header").find(".cart").children(".num").text(foodNum);
+					totalNum==0?$(".yu-btn").text("请选择"):$(".yu-btn").text("选好了");
+					if(totalNum==0){
+						$(".yu-btn").text("请选择");
+						$(".gwc-ico .num").fadeOut();
+					}
+					if(foodNum==0&&$(this).parents("dl").hasClass("food-list")){
+						 $(this).fadeOut().siblings(".food-num").fadeOut();	
+					}
+				};
+			});
+			
+			 //radio
+          $(".radio").on("click",function(){
+            if($(this).hasClass("cur")){
+              $(this).parents(".fapiao").siblings("div").fadeOut();
+              $(this).removeClass("cur");
+            }else{
+                $(this).parents(".fapiao").siblings("div").fadeIn();
+                $(this).addClass("cur");
+            }
+          })
+          //性别
+          $(".sex-select>label").on("click",function(){
+          	$(this).addClass("cur").siblings().removeClass("cur");
+          })
+		//时间
+		var selecttime;
+		$(".hongbao-select>li").on("click",function(){
+			$(this).addClass("cur").siblings().removeClass("cur");
+			selecttime=$(this).find(".timelist").text();
+			$(".selecttime").text(selecttime);
+		})
+		$(".hongbao-btn").click(function(){
+			$(".hongbao-mask").fadeIn();
+			$(".mask-bottom-inner").addClass("shin-slide-up");
+		})
+		$(".mask-close,.mask").click(function(){
+			$(".mask").fadeOut();
+		})
+		$(".mask-bottom-inner").on("click",function(e){
+			e.stopPropagation();
+		})	
+		//时间
+		$(".timeselect").click(function(){
+			$(".lasttime-mask").fadeIn();
+			$(".mask-bottom-inner").addClass("shin-slide-up");
+		})
+		
+		})
+	</script>
+</body>
+</html>

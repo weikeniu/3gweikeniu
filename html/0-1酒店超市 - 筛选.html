@@ -1,0 +1,529 @@
+﻿
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html;charset=utf-8" />
+<meta name="keywords" content="关键词1,关键词2,关键词3" />
+<meta name="description" content="对网站的描述" />
+<meta name="format-detection" content="telephone=no">
+<!--自动将网页中的电话号码显示为拨号的超链接-->
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+<!--width宽度height高度，initial-scale初始的缩放比例，minimum-scale允许缩放到的最小比例，maximum-scale允许缩放到的最大比例，user-scalable是否可以手动缩放-->
+<meta name="apple-mobile-web-app-capable" content="yes">
+<!--IOS设备-->
+<meta name="apple-touch-fullscreen" content="yes">
+<!--IOS设备-->
+<meta http-equiv="Access-Control-Allow-Origin" content="*">
+<title>酒店商城</title>
+<link type="text/css" rel="stylesheet" href="../swiper/swiper-3.4.1.min.css"/>
+<link type="text/css" rel="stylesheet" href="../css/booklist/sale-date.css"/>
+<link type="text/css" rel="stylesheet" href="../css/booklist/Restaurant.css"/>
+<link type="text/css" rel="stylesheet" href="../css/booklist/fontSize.css"/>
+<script type="text/javascript" src="../Scripts/jquery-1.8.0.min.js"></script>
+<script type="text/javascript" src="../swiper/swiper-3.4.1.jquery.min.js"></script>
+<script type="text/javascript" src="../Scripts/drag.js"></script>
+<script type="text/javascript" src="../Scripts/fontSize.js"></script>
+<!--<script type="text/javascript" src="../Scripts/js.js"></script>-->
+<style type="text/css">
+	.big-food-box{height:4.6125rem;}
+</style>
+</head>
+<body class="yu-bpad60 yu-bgw">
+	<section class="yu-bgf3 yu-tpad90r">
+		<div class="market-top yu-bgw yu-bmar10r">
+			<div class="yu-grid yu-alignc yu-h90r yu-bor bbor yu-lrpad20r">
+				<!--<p class="yu-overflow yu-f30r">全部商品</p>-->
+				<ul class="pro-tab yu-overflow">
+					<li class="cur">酒店商品</li>
+					<li>积分房兑换</li>
+					<li>套票</li>
+				</ul>
+				<div class="screen-switch yu-grid yu-alignc yu-bor lbor yu-h90r yu-lpad15r">
+					<span class="yu-f26r yu-c66 yu-rmar10r">筛选</span><span class="screen-ico"></span>
+				</div>
+			</div>
+			
+			<div class="screen-box yu-bgw">
+				<ul class="screen-list">
+					<li class="yu-h80r yu-bor bbor yu-grid yu-alignc yu-lrpad20r all">
+						<p class="yu-overflow yu-f26r screen-con">全部</p>
+						<p class="copy-radio"></p>
+					</li>
+					<li class="yu-h80r yu-bor bbor yu-grid yu-alignc yu-lrpad20r" data-id="0">
+						<p class="yu-overflow yu-f26r screen-con">积分换购</p>
+						<p class="copy-radio"></p>
+					</li>
+					<li class="yu-h80r yu-bor bbor yu-grid yu-alignc yu-lrpad20r" data-id="1">
+						<p class="yu-overflow yu-f26r screen-con">商城优惠</p>
+						<p class="copy-radio"></p>
+					</li>
+					<li class="yu-h80r yu-bor bbor yu-grid yu-alignc yu-lrpad20r" data-id="2">
+						<p class="yu-overflow yu-f26r screen-con">会员折扣</p>
+						<p class="copy-radio"></p>
+					</li>
+					<li class="yu-h80r yu-bor bbor yu-grid yu-alignc yu-lrpad20r" data-id="3">
+						<p class="yu-overflow yu-f26r screen-con">商品打折</p>
+						<p class="copy-radio"></p>
+					</li>
+					<li class="yu-h80r yu-bor bbor yu-grid yu-alignc yu-lrpad20r dis" data-id="4">
+						<p class="yu-overflow yu-f26r screen-con">会员折扣</p>
+						<p class="copy-radio"></p>
+					</li>
+				</ul>
+				<div class="yu-grid yu-alignc screen-btn2 yu-bor tbor yu-j-c">
+					<input type="input" value="重置" />
+					<input type="input" value="确定" />
+					
+				</div>
+			</div>
+		</div>
+		<dl class="yu-h40r yu-tbpad10r yu-lrpad20r yu-grid  yu-bgf3 ">
+				<dt class="yu-f22r yu-c99 yu-l70r">已选标签：</dt>
+				<dd class="yu-overflow2 screen-item-bar">
+				</dd>
+		</dl>
+		<ul class="product-list">
+			<li>
+				<div class="yu-bgw">
+					<a href="javascript:;" class="product-img">
+						<img src="../images/market.jpg" />
+						<div class="jf-mark">积分</div>
+					</a>
+				<div class="yu-pad10">
+					<p class="yu-font16 yu-bmar10">光明牛乳饮品一直椰子牛乳</p>
+					<div class="yu-grid yu-alignc">
+			     		<p class="jf-ico"></p>
+			     		<p class="yu-orange yu-font12">50000积分兑换</p>
+			     	</div>
+					<div class="yu-grid yu-alignc">
+						<p class="yu-orange yu-overflow"><i class="yu-font12">￥</i><i class="yu-font18 yu-fontb">26</i></p>
+						<div class="ar yu-grid">
+								<p class="reduce ico"></p>
+								<p class="food-num"></p>
+								<p class="add ico"></p>
+						</div>
+					</div>
+				</div>
+				</div>
+			</li>
+			<li>
+				<div class="yu-bgw">
+					<a href="javascript:;" class="product-img">
+						<img src="../images/market.jpg" />
+						<div class="jf-mark yu-v-h">积分</div>
+					</a>
+				<div class="yu-pad10">
+					<p class="yu-font16 yu-bmar10">光明牛乳饮品一直椰子牛乳</p>
+					<div class="yu-grid yu-alignc yu-v-h">
+			     		<p class="jf-ico"></p>
+			     		<p class="yu-orange yu-font12">50000积分兑换</p>
+			     	</div>
+					<div class="yu-grid yu-alignc">
+						<p class="yu-orange yu-overflow"><i class="yu-font12">￥</i><i class="yu-font18 yu-fontb">26</i></p>
+						<div class="ar yu-grid">
+								<p class="reduce ico"></p>
+								<p class="food-num"></p>
+								<p class="add ico"></p>
+						</div>
+					</div>
+				</div>
+				</div>
+			</li>
+			<li>
+				<div class="yu-bgw">
+					<a href="javascript:;" class="product-img">
+						<img src="../images/market.jpg" />
+						<div class="jf-mark">积分</div>
+					</a>
+				<div class="yu-pad10">
+					<p class="yu-font16 yu-bmar10">光明牛乳饮品一直椰子牛乳</p>
+					<div class="yu-grid yu-alignc yu-v-h">
+			     		<p class="jf-ico"></p>
+			     		<p class="yu-orange yu-font12">50000积分兑换</p>
+			     	</div>
+					<div class="yu-grid yu-alignc">
+						<p class="yu-orange yu-overflow"><i class="yu-font12">￥</i><i class="yu-font18 yu-fontb">26</i></p>
+						<div class="ar yu-grid">
+								<p class="reduce ico"></p>
+								<p class="food-num"></p>
+								<p class="add ico"></p>
+						</div>
+					</div>
+				</div>
+				</div>
+			</li>
+			<li>
+				<div class="yu-bgw">
+					<a href="javascript:;" class="product-img">
+						<img src="../images/market.jpg" />
+						<div class="jf-mark">积分</div>
+					</a>
+				<div class="yu-pad10">
+					<p class="yu-font16 yu-bmar10">光明牛乳饮品一直椰子牛乳</p>
+					<div class="yu-grid yu-alignc yu-v-h">
+			     		<p class="jf-ico"></p>
+			     		<p class="yu-orange yu-font12">50000积分兑换</p>
+			     	</div>
+					<div class="yu-grid yu-alignc">
+						<p class="yu-orange yu-overflow"><i class="yu-font12">￥</i><i class="yu-font18 yu-fontb">26</i></p>
+						<div class="ar yu-grid">
+								<p class="reduce ico"></p>
+								<p class="food-num"></p>
+								<p class="add ico"></p>
+						</div>
+					</div>
+				</div>
+				</div>
+			</li>
+			
+		</ul>
+	</section>
+	<!--快速导航-->
+	<section class="fix-right" id="drag">
+		<div class="fix-btn yu-grid yu-alignc">
+			<p class="ico"></p>
+			<p class="show-hide cur">快速<br />导航</p>
+			<p class="show-hide">收起</p>
+		</div>
+		<div class="fix-right-slide towrow">
+			<div class="yu-grid yu-alignc">
+				<a class="yu-overflow" href="#">
+					<p class="ico type1"></p>
+					<p>首页</p>
+				</a>
+				<a class="yu-overflow" href="#">
+					<p class="ico type2"></p>
+					<p>搜索</p>
+				</a>
+				<a class="yu-overflow"  href="#">
+					<p class="ico type3"></p>
+					<p>个人中心</p>
+				</a>
+			</div>
+			<div class="yu-grid yu-alignc">
+				<a class="yu-overflow" href="#">
+					<p class="ico type4"></p>
+					<p>订房</p>
+				</a>
+				<a class="yu-overflow" href="#">
+					<p class="ico type5"></p>
+					<p>订餐</p>
+				</a>
+				<a class="yu-overflow"  href="#">
+					<p class="ico type6"></p>
+					<p>超市</p>
+				</a>
+			</div>
+		</div>
+	</section>
+	<!--底部-->
+	<section class="mask bottomMask"></section>
+	<footer class="yu-grid fix-bottom yu-bor tbor yu-lpad10 touch_action">
+	<div class="food-details up-slide-ani">
+		<dl>
+			<dt class="yu-grid yu-bor bbor yu-h40 yu-alignc yu-lrpad10">
+				<span class="ico type1"></span>
+				<p class="yu-rmar10">丰伟大厦23B</p>
+				<p class="yu-font12 yu-lgrey yu-overflow">餐饮将送到此房间</p>
+				<div class="yu-grid yu-alignc yu-greys clearall">
+					<span class="ico type3"></span>
+					清空
+				</div>
+			</dt>
+			<dd>
+				<div class="yu-grid yu-bor bbor yu-h50 yu-alignc yu-lrpad10">
+					<p class="yu-overflow">干炒牛河</p>
+					<p class="yu-orange yu-rmar20"><i class="yu-font12">￥</i><i class="yu-font20">23</i></p>
+					<div class="ar yu-grid">
+												<p class="reduce ico"></p>
+												<p class="food-num"></p>
+												<p class="add ico"></p>
+											</div>
+				</div>
+				<div class="yu-grid yu-bor bbor yu-h50 yu-alignc yu-lrpad10">
+					<p class="yu-overflow">干炒牛河</p>
+					<p class="yu-orange yu-rmar20"><i class="yu-font12">￥</i><i class="yu-font20">23</i></p>
+					<div class="ar yu-grid">
+												<p class="reduce ico"></p>
+												<p class="food-num"></p>
+												<p class="add ico"></p>
+											</div>
+				</div>
+				<div class="yu-grid yu-bor bbor yu-h50 yu-alignc yu-lrpad10">
+					<p class="yu-overflow">干炒牛河</p>
+					<p class="yu-orange yu-rmar20"><i class="yu-font12">￥</i><i class="yu-font20">23</i></p>
+					<div class="ar yu-grid">
+												<p class="reduce ico"></p>
+												<p class="food-num"></p>
+												<p class="add ico"></p>
+											</div>
+				</div>
+				<div class="yu-grid yu-bor bbor yu-h50 yu-alignc yu-lrpad10">
+					<p class="yu-overflow">干炒牛河</p>
+					<p class="yu-orange yu-rmar20"><i class="yu-font12">￥</i><i class="yu-font20">23</i></p>
+					<div class="ar yu-grid">
+												<p class="reduce ico"></p>
+												<p class="food-num"></p>
+												<p class="add ico"></p>
+											</div>
+				</div>
+				<div class="yu-grid yu-bor bbor yu-h50 yu-alignc yu-lrpad10">
+					<p class="yu-overflow">干炒牛河</p>
+					<p class="yu-orange yu-rmar20"><i class="yu-font12">￥</i><i class="yu-font20">23</i></p>
+					<div class="ar yu-grid">
+												<p class="reduce ico"></p>
+												<p class="food-num"></p>
+												<p class="add ico"></p>
+											</div>
+				</div>
+			</dd>
+		</dl>
+		<!--<dl>
+			<dt class="yu-grid yu-bor bbor yu-h40 yu-alignc yu-lrpad10">
+				<span class="ico type2"></span>
+				<p class="yu-overflow">201B</p>
+				<i class="ico type4"></i>
+				<p class="yu-font12 yu-lgrey">若需要分装长按商品拖入此房间</p>
+			</dt>
+		</dl>-->
+		<div class="yu-grid yu-alignc yu-h50 yu-lrpad10">
+			<p>包装费</p>
+			<div class="yu-overflow yu-orange"><i class="yu-font12">￥</i><i class="yu-font20">2.5</i> </div>
+		</div>
+	</div>
+	<div class="gwc-ico"><i class="num"></i><span></span></div>
+	<div class="yu-overflow yu-orange totalPrice"><!--<i class="yu-font26">共</i>--><i class="yu-font14">￥</i><i class="yu-font26">0</i></div>
+	<div class="yu-greys yu-arr type-up yu-rpad20 yu-rmar10 yu-font14">明细</div>
+	<div class="yu-btn">请选择</div>
+	
+</footer>
+<!--底部end-->
+<!--mask-->
+<section class="mask bigimg">
+	<div class="inner">
+		<div class="jf-mark">积分</div>
+		<div class="big-food-box swiper-container2">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide"><img src="../images/114.png" /></div>
+          <div class="swiper-slide"><img src="../images/114.png" /></div>
+          <div class="swiper-slide"><img src="../images/114.png" /></div>
+      </div>
+     </div>
+     <div class="big-food-details">
+     	<p class="yu-font20 yu-bmar5">天然洗护用品一套</p>
+     	<!--<p class="yu-grey yu-font12 yu-bmar10">月售186 赞99</p>-->
+     	<div class="yu-grid yu-grey yu-font12 yu-bmar10">
+     		<p class="yu-rmar5">商品明细:</p>
+     		<!--<p class="yu-overflow">
+     			<span>洗发水一瓶500ML</span>
+     			<span>护发素一瓶500ML</span>
+     			<span>洗面奶一瓶30ML</span>
+     			<span>面霜一瓶300ML</span>
+     		</p>-->
+     		<p class="yu-overflow2" style="max-height: 100px;overflow-y: scroll;">
+				<span>啊是放大看撒法卡刷饭卡沙发沙发噶啊是放大看撒法卡刷饭卡沙发沙发噶啊是放大看撒法卡刷饭卡沙发沙发噶啊是放大看撒法卡刷饭卡沙发沙发噶啊是放大看撒法卡刷饭卡沙发沙发噶啊是放大看撒法卡刷饭卡沙发沙发噶啊是放大看撒法卡刷饭卡沙发沙发噶</span>
+     		</p>
+     	</div>
+     	<div class="yu-grid yu-alignc">
+     		<p class="jf-ico"></p>
+     		<p class="yu-orange yu-font12">50000积分兑换</p>
+     	</div>
+     	<div class="yu-grid">
+     		<p class="yu-overflow yu-orange yu-font20"><i class="yu-font12">￥</i>31</p>
+     		<div class="ar yu-grid">
+				<p class="reduce ico"></p>
+				<p class="food-num"></p>
+				<p class="add ico"></p>
+			</div>
+     	</div>
+     </div>
+	</div>
+</section>
+<script>
+	$(function(){
+	//加减餐
+	var foodNum=0;
+	var totalNum=0;
+	$(".add").on("click",function(){
+//	$(".food-list,.food-details").find("dd").on("click",".add",function(){
+		totalNum++;
+		$(".yu-btn").text("选好了");
+		if($(this).siblings(".food-num").text()==""){
+			foodNum=1;
+			$(this).siblings(".food-num").text(foodNum);
+		}else{
+			foodNum=parseInt($(this).siblings(".food-num").text());
+			foodNum++;
+			$(this).siblings(".food-num").text(foodNum);
+	};
+		$(this).siblings().fadeIn();
+		$(".gwc-ico .num").text(totalNum);
+		$(".gwc-ico .num").fadeIn();
+	});
+	
+	$(".reduce").on("click",function(){
+//		$(".food-list,.food-details").find("dd").on("click",".reduce",function(){
+		foodNum=parseInt($(this).siblings(".food-num").text());
+		if(foodNum>0){
+			totalNum--;
+			foodNum--;
+			$(this).siblings(".food-num").text(foodNum);
+			$(".gwc-ico .num").text(totalNum);
+			totalNum==0?$(".yu-btn").text("请选择"):$(".yu-btn").text("选好了");
+			if(totalNum==0){
+				$(".yu-btn").text("请选择");
+				$(".gwc-ico .num").fadeOut();
+			}
+			if(foodNum==0){
+				 $(this).fadeOut().siblings(".food-num").fadeOut();	
+			}
+		};
+	});
+
+
+
+	//快速导航
+	$(".fix-btn").click(function(){
+		$(this).toggleClass("cur").children(".show-hide").toggleClass("cur");
+		$(".fix-right-slide").toggle();
+	})
+	
+	//明细
+	$(".fix-bottom").click(function(){
+		$(".food-details").toggle();
+		$(this).find(".yu-arr").toggleClass("type-up").toggleClass("type-down");
+		$(".bottomMask").fadeToggle();
+	})
+	$(".fix-bottom .yu-btn").click(function(e){
+		 e.stopPropagation();
+	})
+	$(".food-details").click(function(e){
+		 e.stopPropagation();
+	})
+	$(".bottomMask").click(function(){
+		$(".food-details").toggle();
+		$(".fix-bottom").find(".yu-arr").toggleClass("type-up").toggleClass("type-down");
+		$(".bottomMask").fadeOut();
+	})
+	//清空
+	$(".clearall").click(function(){
+		$(this).parent("dt").siblings("dd").remove();
+	})
+	//mask通用
+	$(".mask").click(function(){
+		$(this).fadeOut();
+	})
+	$(".mask .inner").click(function(e){
+		 e.stopPropagation();
+	})
+	//点击出现大图
+	$(".product-list li a").on("click",function(){
+		$(".bigimg").fadeIn();
+		var swiper2 = new Swiper('.swiper-container2', {
+            paginationClickable: true,
+            autoplayDisableOnInteraction: false,
+            loop: true
+        }); 
+	    //大图弹窗高度
+	    innerH=$(".bigimg .inner").height();
+	    $(".bigimg .inner").css("margin-top",-innerH/2) 
+	})
+//	筛选
+	
+	//高度
+	var s_h=$(window).height()-210*$("body").width()/750;
+	$(".screen-list").height(s_h);
+	$(".screen-list").scroll(function(e){
+		e.preventDefault();
+	});
+	
+    var disLength=$(".screen-list>.dis").length,
+	    allLength=$(".screen-list>li").length,
+	    curLength=$(".screen-list>.cur").length,
+	    allClick=0,
+	    screenSwitch=0,
+	    curTemp;
+	$(".screen-list>li").on("click",function(){
+		if(!$(this).hasClass("dis")&&!$(this).hasClass("all")){
+			$(this).toggleClass("cur");
+			$(".screen-list>.all").hasClass("cur")?curLength=$(".screen-list>.cur").length-1:curLength=$(".screen-list>.cur").length;
+			if(curLength==allLength-disLength-1){
+				$(".screen-list>.all").addClass("cur");
+				allClick=1;
+			}else if(curLength<allLength-disLength-1){
+				$(".screen-list>.all").removeClass("cur");
+				allClick=0;
+			};
+		}else if($(this).hasClass("all")){
+			if(allClick==0){
+				for(var i=0;i<allLength;i++){
+					if(!$(".screen-list>li").eq(i).hasClass("dis")){
+						$(".screen-list>li").eq(i).addClass("cur");
+					}
+				};
+				allClick=1;
+				curLength=$(".screen-list>.cur").length-1
+			}else{
+				$(".screen-list>li").removeClass("cur");
+				allClick=0;
+				curLength=0;
+			};
+		}
+	})
+	$(".screen-btn2").children("input").eq(0).click(function(){
+		$(".screen-list>li").removeClass("cur");
+		allClick=0;
+	})
+	$(".screen-btn2").children("input").eq(1).click(function(){
+		$(".screen-box").hide();
+		screenSwitch=0;
+		$(".screen-item-bar").children().remove();
+		if($(".screen-list>.cur").length>0){
+			var i,j;
+			if($(".screen-list>.all").hasClass("cur")){
+				i=1;
+				curTemp=curLength+1;
+			}else{
+				i=0;
+				curTemp=curLength;
+			}
+			for(i;i<curTemp;i++){
+				j=$(".screen-list>.cur").eq(i).attr("data-id");
+				$(".screen-item-bar").append("<div class='screen-item' data-id="+j+">"
+				+$(".screen-list>.cur").eq(i).children(".screen-con").text()
+				+"<span class='xx'>x</span></div>")
+			}
+		}else{
+			$(".screen-item-bar").children().remove();
+		}
+		
+	})
+	$(".screen-switch").click(function(){
+		 if(screenSwitch==0){
+		 	$(".screen-box").show();
+		 	screenSwitch=1;
+		 }else{
+		 	$(".screen-box").hide();
+		 	screenSwitch=0;
+		 }
+	})
+	$(".screen-item-bar").on("click",".xx",function(){
+		$(this).parent(".screen-item").remove();
+		var dataId=$(this).parent().attr("data-id");
+		$(".screen-list>.all").removeClass("cur");
+		curLength--;
+		for(var i=0;i<allLength;i++){
+			if($(".screen-list>li").eq(i).attr("data-id")==dataId){
+				$(".screen-list>li").eq(i).removeClass("cur");
+			}
+		}
+	})
+	//	筛选end
+	//tab
+	$(".pro-tab").children("li").on("click",function(){
+		$(this).addClass("cur").siblings().removeClass("cur");
+	})
+	})
+</script>
+</body>
+</html>

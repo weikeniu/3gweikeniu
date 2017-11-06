@@ -1,0 +1,540 @@
+﻿
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html;charset=utf-8" />
+<meta name="keywords" content="关键词1,关键词2,关键词3" />
+<meta name="description" content="对网站的描述" />
+<meta name="format-detection" content="telephone=no">
+<!--自动将网页中的电话号码显示为拨号的超链接-->
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+<!--width宽度height高度，initial-scale初始的缩放比例，minimum-scale允许缩放到的最小比例，maximum-scale允许缩放到的最大比例，user-scalable是否可以手动缩放-->
+<meta name="apple-mobile-web-app-capable" content="yes">
+<!--IOS设备-->
+<meta name="apple-touch-fullscreen" content="yes">
+<!--IOS设备-->
+<meta http-equiv="Access-Control-Allow-Origin" content="*">
+<title>特惠优选</title>
+<link type="text/css" rel="stylesheet" href="../css/booklist/jquery-ui.css"/>
+<link type="text/css" rel="stylesheet" href="../css/booklist/sale-date.css"/>
+<link type="text/css" rel="stylesheet" href="../css/booklist/Restaurant.css"/>
+<link type="text/css" rel="stylesheet" href="../css/booklist/new-style.css"/>
+<link type="text/css" rel="stylesheet" href="../css/booklist/fontSize.css"/>
+<script type="text/javascript" src="../Scripts/jquery-1.8.0.min.js"></script>
+<script type="text/javascript" src="../css/booklist/jquery-ui.js"></script>
+<script type="text/javascript" src="../Scripts/fontSize.js"></script>
+<script type="text/javascript" src="../Scripts/drag.js"></script>
+<style>
+	.room-price-d{
+		top: .65rem;
+		font-size: .22rem;
+		color: #666;
+	}
+	.ui-datepicker-current-day .room-price-d{
+		color: #fff;
+		
+	}
+	.ui-datepicker td span, .ui-datepicker td a{
+		line-height: 1.08rem;
+		font-size: .24rem;
+		color: #666 !important;
+	}
+	.ui-datepicker-current-day .ui-state-active {
+		color: #fff !important;
+	}
+	.room-num{
+		position: absolute;
+		top: .03rem;
+		font:.24rem "microsoft yahei",simhei;
+		color: #f40;
+	}
+	.ui-datepicker-today .room-num{
+		color: #f40;
+	}
+	.ui-datepicker-current-day .room-num{
+		color: #fff;
+	}
+</style>
+</head>
+<body>
+	<article class="full-page">
+		<aside class="l-side">
+			<nav>
+				<a href="#" class="yu-grid yu-alignc">
+					<p class="ico shouye"></p>
+					<p>首页</p>
+				</a>
+				<a href="#" class="yu-grid yu-alignc">
+					<p class="ico jianjie"></p>
+					<p>酒店简介</p>
+				</a>
+				<a href="#" class="yu-grid  yu-alignc">
+					<p class="ico yuding"></p>
+					<p>客房预定</p>
+				</a>
+				<a href="#" class="yu-grid  yu-alignc">
+					<p class="ico dingcan"></p>
+					<p>酒店订餐</p>
+				</a>
+				<a href="#" class="yu-grid  yu-alignc">
+					<p class="ico chaoshi"></p>
+					<p>酒店超市</p>
+				</a>
+				<a href="#" class="yu-grid  yu-alignc">
+					<p class="ico youxuan"></p>
+					<p>特惠优选</p>
+				</a>
+				<a href="#" class="yu-grid  yu-alignc">
+					<p class="ico sheshi"></p>
+					<p>设施服务</p>
+				</a>
+				<a href="#" class="yu-grid  yu-alignc">
+					<p class="ico yanhui"></p>
+					<p>会议宴会</p>
+				</a>
+				<a href="#" class="yu-grid  yu-alignc">
+					<p class="ico huodong"></p>
+					<p>酒店活动</p>
+				</a>
+			</nav>
+		</aside>
+		<header class="yu-grid yu-alignc yu-h40 yu-lrpad10">
+				<div>
+					<div class="yu-grid yu-alignc">
+						<p class="nav-ico l-side-btn"></p>
+						<p class="copy-bor1"></p>
+						<p class="wx-ico"></p>
+					</div>
+				</div>
+				<div class="yu-overflow"></div>
+				<div>
+					<div class="yu-grid yu-alignc">
+						<p class="phone-ico"></p>
+						<p class="copy-bor1"></p>
+						<p class="person-ico"></p>
+					</div>
+				</div>
+			</header>
+		<section class="show-body">
+			<section class="content2 yu-bpad180r">
+				<div class="yu-bgw yu-bmar20r">
+					<div class="th-text-bar2">
+						会员福利：<br />
+						分享该产品，当您的朋友成功<span class="yu-fc0">购买</span>，您将获得<span class="yu-fc0">9元</span>现金奖励。次日微信红包发送。
+					</div>
+					<div class="yu-tbpad40r yu-lrpad20r yu-f38r">
+						欢乐亲子时间【欢乐君澜3天2晚】套餐原
+	价2688元，火爆促销仅需1658元！立即
+	抢购!
+					</div>
+					<div class="yu-grid yu-lrpad20r yu-bgw yu-bmar30r yu-flex-w-w" >
+						<div class="th-mark2 type1">周末通用</div>
+						<div class="th-mark2 type2">超长有效期</div>
+						<div class="th-mark2 type3">官网独家</div>
+						<div class="th-mark2 type4">爆款返场</div>
+						<div class="th-mark2 type1">周末通用</div>
+						<div class="th-mark2 type2">超长有效期</div>
+						<div class="th-mark2 type3">官网独家</div>
+						<div class="th-mark2 type4">爆款返场</div>
+					</div>
+					<p class="yu-f24r yu-c57 yu-lpad20r yu-bpad40r">君澜三亚湾迎宾馆直销</p>
+					<div class="show-header">
+						<div class="inner yu-h360r">
+											<img src="../images/booking.jpg">
+											
+											<div class="txt-bar yu-grid yu-alignc">
+												<p class="yu-overflow yu-f30r yu-textr yu-rpad20r">有效期至2017-09-29</p>
+											</div>
+										</div>
+					</div>
+				</div>
+				<div class="yu-bgw yu-bmar20r">
+					<p class="yu-h100r yu-lpad20r yu-bor bbor yu-l100r yu-f30r ">套餐详细</p>
+					<ol class="yu-rpad20r yu-f26r yu-c66 yu-lpad50r yu-tb40r">
+						<li>尊享豪华园景亲子套房3天2晚；</li>
+						<li>尊享2大1小中西式自助早餐每天；</li>
+						<li>亲子主题房布置（需提前一天预约）；</li>
+						<li>首日欢迎水果一份；</li>
+						<li>2位成人及1位1.4m以下儿童的海南黎家特色BBQ&自助海鲜火锅晚餐一次；</li>
+						<li>三亚机场定时定点班车接送（需提前一天16:30前与酒店礼 宾部预约）；</li>
+						<li>儿童娱乐活动免费使用。</li>
+					</ol>
+				</div>
+				<div class="yu-bgw yu-bmar20r">
+					<p class="yu-h100r yu-lpad20r yu-bor bbor yu-l100r yu-f30r ">产品图片</p>
+					<ul class="cp-pic-list">
+						<li class="yu-bmar20r">
+							<div class="show-header">
+								<div class="inner yu-h360r">
+													<img src="../images/booking.jpg">
+													
+													
+												</div>
+							</div>
+						</li>
+						<li class="yu-bmar20r">
+							<div class="show-header">
+								<div class="inner yu-h360r">
+													<img src="../images/booking.jpg">
+													
+													
+												</div>
+							</div>
+						</li>
+						<li class="yu-bmar20r">
+							<div class="show-header">
+								<div class="inner yu-h360r">
+													<img src="../images/booking.jpg">
+													
+													
+												</div>
+							</div>
+						</li>
+						<li class="yu-bmar20r">
+							<div class="show-header">
+								<div class="inner yu-h360r">
+													<img src="../images/booking.jpg">
+													
+													
+												</div>
+							</div>
+						</li>
+						<li class="yu-bmar20r">
+							<div class="show-header">
+								<div class="inner yu-h360r">
+													<img src="../images/booking.jpg">
+													
+													
+												</div>
+							</div>
+						</li>
+					</ul>
+				</div>
+				<a href="javascript:;" class="watch-more-pic yu-bmar40r">查看更多图片</a>
+				<div class="yu-bgw yu-bmar20r">
+					<p class="yu-h100r yu-lpad20r yu-bor bbor yu-l100r yu-f30r ">购买须知</p>
+					<dl class="yu-f26r yu-lrpad20r yu-c66  yu-tb40r">
+						<dt class="yu-blue2 yu-fontb yu-bmar10r">有效期</dt>
+						<dd class="yu-bmar10r">
+							<p class="l-style-p yu-lmar30r">2017-03-23 至 2017-09-29</p>
+						</dd>
+						<dt class="yu-blue2 yu-fontb yu-bmar10r">使用规则</dt>
+						<dd class="yu-bmar10r">
+							<p class="l-style-p yu-lmar30r">购买后凭收到的电子券号提前至少1天预约。</p>
+						</dd>
+						<dt class="yu-blue2 yu-fontb yu-bmar10r">温馨提示</dt>
+						<dd class="yu-bmar10r">
+							<p class="l-style-p yu-lmar30r">抢购时间：抢购还有170天6小时30分28秒结束。</p>
+							<p class="l-style-p yu-lmar30r">购买后不可退款。</p>
+							<p class="l-style-p yu-lmar30r">本产品为特价产品，不提供发票。</p>
+							
+						</dd>
+					</dl>
+				</div>
+				<div class="yu-bgw yu-bmar20r">
+					<p class="yu-h100r yu-lpad20r yu-bor bbor yu-l100r yu-f30r ">联系我们</p>
+					<div class="yu-tb40r yu-grid yu-lrpad20r yu-bor bbor">
+						<div class="yu-overflow yu-bor rbor yu-rpad45r">
+							<p class="yu-f28r yu-bmar10r">君澜三亚湾迎宾馆</p>
+							<p class="yu-c66 yu-f26r yu-bmar10r">电话：<pan>0898-8886688</pan></p>
+							<div class="yu-grid yu-c66 yu-f26r">
+								<p class="l-ico2"></p>
+								<p class="yu-overflow">三亚 三亚湾海坡开发区 三亚湾路217号 ，近凤凰机场。 【 三亚湾 】</p>
+							</div>
+						</div>
+						<div class="yu-w155r">
+							<a class="phone-ico3 sp" href="tel:123456"></a>
+						</div>
+					</div>
+					<div class="yu-grid yu-tb40r yu-lrpad20r">
+						<div class="ewm yu-lmar20r yu-rmar28r">
+							<img src="../images/ewm.jpg" />
+						</div>
+						<div class="yu-overflow">
+							<div class="yu-grid yu-alignc yu-bmar25r">
+								<p class="p-pic yu-rmar28r sp"></p>
+								<p class="yu-f36r yu-c66">长按识别二维码</p>
+							</div>
+							<dl class="yu-f26r">
+								<dt class="yu-blue2">关注酒店官方公众号：</dt>
+								<dd class="yu-c99">可查看已购预售券、提前进行预定，获取最新会员优惠。</dd>
+							</dl>
+						</div>
+					</div>
+				</div>
+				<div class="yu-bgw yu-bmar20r">
+					<p class="yu-h100r yu-lpad20r yu-bor bbor yu-l100r yu-f30r ">联系我们</p>
+					<ul class="yu-lpad20r">
+						<li class="yu-bor bbor yu-tbpad35r yu-rpad20r">
+							<p class="yu-f24r yu-c66 yu-bmar10r">
+								<span class="yu-rmar20r">2022独角星空 </span>
+								<span>2017-03-05</span>
+							</p>
+							<p class="yu-f26r">这个套餐还挺划算的，都买了3套住6天了</p>
+						</li>
+						<li class="yu-bor bbor yu-tbpad35r yu-rpad20r">
+							<p class="yu-f24r yu-c66 yu-bmar10r">
+								<span class="yu-rmar20r">2022独角星空 </span>
+								<span>2017-03-05</span>
+							</p>
+							<p class="yu-f26r">这个套餐还挺划算的，都买了3套住6天了</p>
+						</li>
+						<li class="yu-bor bbor yu-tbpad35r yu-rpad20r">
+							<p class="yu-f24r yu-c66 yu-bmar10r">
+								<span class="yu-rmar20r">2022独角星空 </span>
+								<span>2017-03-05</span>
+							</p>
+							<p class="yu-f26r">这个套餐还挺划算的，都买了3套住6天了</p>
+						</li>
+					</ul>
+				</div>
+			</section>
+			<!--快速导航-->
+	<section class="fix-right" id="drag">
+		<div class="fix-btn yu-grid yu-alignc">
+			<p class="ico"></p>
+			<p class="show-hide cur">快速<br />导航</p>
+			<p class="show-hide">收起</p>
+		</div>
+		<div class="fix-right-slide towrow">
+			<div class="yu-grid yu-alignc">
+				<a class="yu-overflow" href="#">
+					<p class="ico type1"></p>
+					<p>首页</p>
+				</a>
+				<a class="yu-overflow" href="#">
+					<p class="ico type2"></p>
+					<p>搜索</p>
+				</a>
+				<a class="yu-overflow"  href="#">
+					<p class="ico type3"></p>
+					<p>个人中心</p>
+				</a>
+			</div>
+			<div class="yu-grid yu-alignc">
+				<a class="yu-overflow" href="#">
+					<p class="ico type4"></p>
+					<p>订房</p>
+				</a>
+				<a class="yu-overflow" href="#">
+					<p class="ico type5"></p>
+					<p>订餐</p>
+				</a>
+				<a class="yu-overflow"  href="#">
+					<p class="ico type6"></p>
+					<p>超市</p>
+				</a>
+			</div>
+		</div>
+	</section>
+			<!--三种状态的底栏-->
+			<section class="fix-bottom2" style="display: block;">
+				<div class="lasttime-bar yu-bgblue2">
+					抢购还有<span class="t_d"></span>天<span class="t_h"></span>小时<span class="t_m"></span>分<span class="t_s"></span>秒结束
+				</div>
+				<div class="yu-h120r yu-bgw yu-grid yu-alignc yu-bor tbor yu-lpad20r box-s1">
+					<div class="yu-overflow">
+						<p class="yu-f34r">门市价：<span class="yu-f26r yu-linethrough">￥</span><span class="yu-linethrough">2260</span></p>
+						<p class="yu-blue2 yu-f24r yu-lmar40r">(最后50份)</p>
+					</div>
+
+					<a class="yu-btn5 yu-rmar10r yu-bgblue" href="#">￥2200立即抢购</a>
+				</div>
+			</section>
+			<section class="fix-bottom2" style="display:none;">
+				<div class="lasttime-bar">
+					还有<span class="t_d"></span>天<span class="t_h"></span>小时<span class="t_m"></span>分<span class="t_s"></span>秒开始抢购
+				</div>
+				<div class="yu-h120r yu-bgw yu-grid yu-alignc yu-bor tbor yu-lpad20r box-s1">
+					<div class="yu-overflow">
+						<p class="yu-f34r">门市价：<span class="yu-f26r yu-linethrough">￥</span><span class="yu-linethrough">2260</span></p>
+					</div>
+
+					<a class="yu-btn5 yu-rmar10r sp" href="#">￥2200即将开始</a>
+				</div>
+			</section>
+			<section class="fix-bottom2" style="display: none;">
+				<div class="yu-h120r yu-bgw yu-grid yu-alignc yu-bor tbor yu-lpad20r box-s1">
+					<div class="yu-overflow">
+						<p class="yu-f34r">门市价：<span class="yu-f26r yu-linethrough">￥</span><span class="yu-linethrough">2260</span></p>
+					</div>
+
+					<a class="yu-btn5 yu-rmar10r sp" href="#">￥2200已售罄</a>
+				</div>
+			</section>
+			<!--三种状态的底栏end-->
+		</section>
+		<section class="mask tc-mask">
+			<div class="mask-bottom-inner yu-bgw">
+				<div class="yu-lrpad20r yu-bor bbor yu-bpad50r yu-grid ">
+					<div class="full-img1 yu-bor1 bor yu-rmar10r">
+						<img src="../images/cp.jpg" />
+					</div> 
+					<div class="yu-w390r yu-tpad25r yu-pos-r">
+						<p class="yu-f28r">欢乐亲子时间【欢乐君澜3天2晚】套餐原 价2688元，火爆促销仅需1658元！立即 抢购!</p>
+						<p class="yu-c40 yu-f24r tc-price">￥<span class="yu-f36r">2888</span></p>
+					</div>
+					<div class="close-ico mask-close"></div>
+				</div>
+				<div class="p-and-d">
+					<div class="yu-lrpad20r yu-bpad20r yu-bor bbor yu-tpad40r">
+						<p class="yu-f30r yu-bmar40r">套餐类型</p>
+						<ul class="select-li tc-list">
+							<li class="yu-bor1 bor">上海/杭州-克拉玛缇</li>
+							<li class="yu-bor1 bor dis">北京出发-克拉玛缇</li>
+							<li class="yu-bor1 bor">克拉玛缇 4沙</li>
+							<li class="yu-bor1 bor">南京周一/长沙周五</li>
+							<li class="yu-bor1 bor">成都周三/重庆周一</li>
+							<li class="yu-bor1 bor">香港三六/广州周日</li>
+						</ul>
+					</div>
+					<div class="yu-bpad20r yu-bor bbor yu-tpad40r">
+						<p class="yu-f30r yu-bmar40r yu-lrpad20r ">出发日期</p>
+						<div>
+							<div id="datepicker"></div>
+						</div>
+					</div>
+				</div>
+				<div class="yu-h20r yu-bgf4"></div>
+				<div class="yu-h120r yu-grid yu-alignc yu-lrpad20r">
+					<p class="yu-overflow yu-f28r">购买数量</p>
+					<div class="yu-f24r yu-c99 yu-rmar15r">剩余:<span>569</span></div>
+					<div class="ar yu-grid">
+						<p class="reduce ico type3">-</p>
+						<p class="food-num type3">1</p>
+						<p class="add ico type3">+</p>
+					</div>
+				</div>
+				<div class="yu-h120r yu-l120r yu-textc yu-f36r yu-white yu-sub3">确定</div>
+			</div>
+		</section>
+	</article>
+	<script>
+	$("#datepicker").datepicker({
+        	dateFormat: 'yy-mm-dd',
+           dayNamesMin: ["日", "一", "二", "三", "四", "五", "六"],
+           monthNames: ["1月", "2月", "3月", "4月", "5月", "6月",
+     "7月", "8月", "9月", "10月", "11月", "12月"],
+           yearSuffix: '年',
+           showMonthAfterYear: true,
+           minDate: new Date(),
+           maxDate: '2017-12-31',
+           numberOfMonths:1,
+           showButtonPanel:false,
+           onSelect:function(data, me){
+				selectdata=data;
+				console.log(data)
+           }
+           
+        });
+		$(function(){
+			//左导航
+			var lSideNum=0;
+			$(".l-side-btn").click(function(){
+				if(lSideNum==0){
+					$(".full-page").addClass("shin-slide-right").removeClass("shin-slide-left");
+					$(".l-side").fadeIn();
+					lSideNum=1;
+				}else{
+					$(".full-page").removeClass("shin-slide-right").addClass("shin-slide-left");
+					$(".l-side").fadeOut();
+					lSideNum=0;
+				}
+			})
+			//选项卡
+		  var tabIndex;
+		  $(".tab-nav").children("li").on("click",function(){
+		  	$(this).addClass("cur").siblings("li").removeClass("cur");
+		  	tabIndex=$(this).index();
+		  	$(this).parent(".tab-nav").siblings(".tab-inner").children("li").eq(tabIndex).addClass("cur").siblings().removeClass("cur");
+		  })
+			//套餐选择
+			$(".select-li").children("li").on("click",function(){
+				if(!$(this).hasClass("dis")){
+					$(this).toggleClass("cur").siblings().removeClass("cur");
+					if($(".select-li").children("li").hasClass("cur")){
+						$(".yu-sub3").addClass("cur");
+					}else{
+						$(".yu-sub3").removeClass("cur");
+					}
+				}
+			})
+			//加减餐
+			var foodNum=0;
+			$(".add").on("click",function(){
+				if($(this).siblings(".food-num").text()==""){
+					foodNum=1;
+					$(this).siblings(".food-num").text(foodNum);
+				}else{
+					foodNum=parseInt($(this).siblings(".food-num").text());
+					foodNum++;
+					$(this).siblings(".food-num").text(foodNum);
+										
+			};
+			});
+			
+			$(".reduce").on("click",function(){
+				foodNum=parseInt($(this).siblings(".food-num").text());
+				if(foodNum>0){
+					foodNum--;
+					$(this).siblings(".food-num").text(foodNum);
+				};
+			});
+			//mask
+			$(".mask-close,.mask").click(function(){
+				$(".mask").fadeOut();
+			})
+			$(".mask-bottom-inner").on("click",function(e){
+				e.stopPropagation();
+			})	
+			$(".yu-btn5").click(function(){
+				$(".tc-mask").fadeIn();
+				$(".mask-bottom-inner").addClass("shin-slide-up");
+			})
+			//查看更多
+			var watchNum=0;
+			$(".watch-more-pic").click(function(){
+				$(".cp-pic-list").toggleClass("cur");
+				if(watchNum==0){
+					$(".watch-more-pic").text("收起");
+					watchNum=1;
+				}else{
+					$(".watch-more-pic").text("查看更多图片");
+					watchNum=0;
+					
+				}
+			})
+			//倒计时
+			function GetRTime(){
+			    var EndTime= new Date('2017/9/10 00:00:00');
+			    var NowTime = new Date();
+			    var t =EndTime.getTime() - NowTime.getTime();
+			    var d=0;
+			    var h=0;
+			    var m=0;
+			    var s=0;
+			    if(t>=0){
+			      d=Math.floor(t/1000/60/60/24);
+			      h=Math.floor(t/1000/60/60%24);
+			      m=Math.floor(t/1000/60%60);
+			      s=Math.floor(t/1000%60);
+			    }
+			    $(".t_d").text(d);
+			    $(".t_h").text(h);
+			    $(".t_m").text(m);
+			    $(".t_s").text(s);
+			    
+			 }
+			setInterval(GetRTime,0);
+			
+			//快速导航
+	$(".fix-btn").click(function(){
+		$(this).toggleClass("cur").children(".show-hide").toggleClass("cur");
+		$(".fix-right-slide").toggle();
+	})
+			
+			
+		})
+	</script>
+</body>
+</html>

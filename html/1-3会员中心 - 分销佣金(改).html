@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+	<meta charset="UTF-8" />
+	<title>1-3会员中心 - 分销佣金</title>
+	<meta name="format-detection" content="telephone=no">
+	<!--自动将网页中的电话号码显示为拨号的超链接-->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+	<!--width宽度height高度，initial-scale初始的缩放比例，minimum-scale允许缩放到的最小比例，maximum-scale允许缩放到的最大比例，user-scalable是否可以手动缩放-->
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<!--IOS设备-->
+	<meta name="apple-touch-fullscreen" content="yes">
+	<!--IOS设备-->
+	<meta http-equiv="Access-Control-Allow-Origin" content="*">
+	<link rel="stylesheet" href="../css/booklist/sale-date.css" />
+	<link rel="stylesheet" href="../css/booklist/new-style.css" />
+	<link rel="stylesheet" href="../css/booklist/mend-reset.css" />
+	<script src="../Scripts/jquery-1.8.0.min.js"></script>
+	<script src="../Scripts/fontSize.js"></script>
+</head>
+<body class="ca-overflow">
+     <!--//顶部导航-->
+     <div class="ca__headNav fixed">
+           <div class="head">
+                <a class="back" href="#"></a>
+                <h2 class="tit">分销佣金</h2>
+           </div>
+     </div>
+     <div class="ca-ivdetail-content">
+          <div class="ca-fx-title">
+               <ul class="ca-displayfx">
+                   <li class="ca-flex">日期</li>
+                   <li class="ca-flex">金额</li>
+                   <li class="ca-flex ca-last-right">状态</li>
+               </ul>
+          </div>
+          <!--ca-fx-title end-->
+          <div class="ca-fx-yjing">
+                <ul>
+                     <li class="ca-displayfx">
+                         <p class="fl"><span>2017-7-5 19:20:00</span></p>
+                         <dl class="ca-flex ca-displayfx">
+                             <dt><em></em></dt>
+                             <dd>￥26</dd>
+                         </dl>
+                         <span class="ca-last-right fl">已经到账</span>
+                     </li>
+                     <li class="ca-displayfx">
+                         <p class="fl"><span>2017-7-5 19:20:00</span></p>
+                         <dl class="ca-flex ca-displayfx">
+                             <dt><em></em></dt>
+                             <dd>￥26</dd>
+                         </dl>
+                         <span class="ca-last-right fl">已经到账</span>
+                     </li>
+                     <li class="ca-displayfx">
+                         <p class="fl"><span>2017-7-5 19:20:00</span></p>
+                         <dl class="ca-flex ca-displayfx">
+                             <dt><em></em></dt>
+                             <dd>￥26</dd>
+                         </dl>
+                         <span class="ca-last-right fl">已经到账</span>
+                     </li>
+                     <li class="ca-displayfx">
+                         <p class="fl"><span>2017-7-5 19:20:00</span></p>
+                         <dl class="ca-flex ca-displayfx">
+                             <dt><em></em></dt>
+                             <dd>￥26</dd>
+                         </dl>
+                         <span class="ca-last-right fl">已经到账</span>
+                     </li>
+                </ul>
+          </div>
+          <!--ca-fx-yjing end-->
+          <div class="uc__loading-tips">
+              加载中...
+          </div>
+      </div>
+      <!--ca-ivdetail-content end-->
+	<script type="text/javascript">
+		$(function(){
+			//左导航
+			var lSideNum=0;
+			$(".l-side-btn").click(function(){
+				if(lSideNum==0){
+					$(".full-page").addClass("shin-slide-right").removeClass("shin-slide-left");
+					$(".l-side").fadeIn();
+					lSideNum=1;
+				}else{
+					$(".full-page").removeClass("shin-slide-right").addClass("shin-slide-left");
+					$(".l-side").fadeOut();
+					lSideNum=0;
+				}
+			})
+			
+			//选项卡
+			var tabIndex;
+			$(".tab-nav").children("li").on("click",function(){
+				$(this).addClass("cur").siblings("li").removeClass("cur");
+				tabIndex=$(this).index();
+				$(this).parent(".tab-nav").siblings(".tab-inner").children("li").eq(tabIndex).addClass("cur").siblings().removeClass("cur");
+			})
+		})
+	</script>
+	
+</body>
+</html>

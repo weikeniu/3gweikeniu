@@ -1,0 +1,10 @@
+D:\用户目录\Desktop\weixin3g\obj\Debug\hotel3g.csprojResolveAssemblyReference.cache
+D:\用户目录\Desktop\weixin3g\bin\hotel3g.dll
+D:\用户目录\Desktop\weixin3g\bin\hotel3g.pdb
+D:\用户目录\Desktop\weixin3g\bin\System.Web.Mvc.dll
+D:\用户目录\Desktop\weixin3g\bin\log4net.xml
+D:\用户目录\Desktop\weixin3g\bin\System.Web.Mvc.xml
+D:\用户目录\Desktop\weixin3g\bin\WeiXinPublic.pdb
+D:\用户目录\Desktop\weixin3g\bin\zh-Hans\System.Web.Mvc.resources.dll
+D:\用户目录\Desktop\weixin3g\obj\Debug\hotel3g.dll
+D:\用户目录\Desktop\weixin3g\obj\Debug\hotel3g.pdb

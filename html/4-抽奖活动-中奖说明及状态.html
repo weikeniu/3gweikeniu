@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+	<meta charset="UTF-8" />
+	<title>抽奖活动-状态及说明</title>
+	<meta name="format-detection" content="telephone=no">
+	<!--自动将网页中的电话号码显示为拨号的超链接-->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+	<!--width宽度height高度，initial-scale初始的缩放比例，minimum-scale允许缩放到的最小比例，maximum-scale允许缩放到的最大比例，user-scalable是否可以手动缩放-->
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<!--IOS设备-->
+	<meta name="apple-touch-fullscreen" content="yes">
+	<!--IOS设备-->
+	<meta http-equiv="Access-Control-Allow-Origin" content="*">
+    <link rel="stylesheet" href="../css/booklist/mend-weikeniu.css" />
+    <link rel="stylesheet" href="../css/booklist/sale-date.css" />
+    
+	
+	<script src="../Scripts/jquery-1.8.0.min.js"></script>
+	<script src="../Scripts/fontSize.js"></script>
+</head>
+<body class="dig-active-bgblack">
+      <div class="ca-strction-book">
+             <div class="draw-ybg-close"></div>
+             <h1>次数已用完<em></em></h1>
+             <ul>
+                  <li><i class="i1"></i></li>
+                  <li>您今天抽奖次数已经用完</li>
+                  <li>请明天再来!</li>
+                  <li><a href="javascript:;" class="dig-instor-btn b1"></a></li>
+             </ul>
+      </div>
+      <!--ca-strction-book end-->
+      
+      <div class="ca-strction-book">
+             <div class="draw-ybg-close"></div>
+             <h1>没中奖<em></em></h1>
+             <ul>
+                  <li><i class="i2"></i></li>
+                  <li>哎呀，差一点就中奖了</li>
+                  <li>换只手指试试~</li>
+             </ul>
+      </div>
+      <!--ca-strction-book end-->
+      
+      <div class="ca-strction-book">
+             <div class="draw-ybg-close"></div>
+             <h1>中奖啦<em></em></h1>
+             <ul>
+                  <li><i class="i3"></i></li>
+                  <li>手气不错哦~ </li>
+                  <li>恭喜您，刮中了一等奖!</li>
+                  <li><span>150元</span>订房无限制红包</li>
+                  <li><a href="javascript:;" class="dig-instor-btn b2 fl"></a><a href="javascript:;" class="dig-instor-btn b3 fr"></a></li>
+             </ul>
+      </div>
+      <!--ca-strction-book end-->
+      
+      <div class="ca-strction-book ca-gift-list">
+             <div class="draw-ybg-close"></div>
+             <h1>活动说明<em></em></h1>
+             <ul>
+                  <li><p>每天可获得3次抽奖机会，中奖后可以通过预订使用，立即减免相应金额。</p></li>
+                  <li>一等奖：50元红包</li>
+                  <li>二等奖：30元红包</li>
+                  <li>三等奖：20元红包</li>
+                  <li>参与奖：10元红包</li>
+                  <li class="endli">(本活动最终解释权北京新世纪日航饭店所有)</li>
+             </ul>
+             <!--ca-gift-list end-->
+      </div>
+      <!--ca-strction-book end-->
+      
+</body>
+</html>
+<script type="text/javascript">
+        $(".draw-ybg-close").click(function(){
+			    $(this).parent(".ca-strction-book").hide()
+			});
+</script>

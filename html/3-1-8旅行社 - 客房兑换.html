@@ -1,0 +1,157 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html;charset=utf-8" />
+<meta name="keywords" content="关键词1,关键词2,关键词3" />
+<meta name="description" content="对网站的描述" />
+<meta name="format-detection" content="telephone=no">
+<!--自动将网页中的电话号码显示为拨号的超链接-->
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+<!--width宽度height高度，initial-scale初始的缩放比例，minimum-scale允许缩放到的最小比例，maximum-scale允许缩放到的最大比例，user-scalable是否可以手动缩放-->
+<meta name="apple-mobile-web-app-capable" content="yes">
+<!--IOS设备-->
+<meta name="apple-touch-fullscreen" content="yes">
+<!--IOS设备-->
+<meta http-equiv="Access-Control-Allow-Origin" content="*">
+<title>旅行社-客房兑换</title>
+<link type="text/css" rel="stylesheet" href="../css/booklist/jquery-ui.css"/>
+<link type="text/css" rel="stylesheet" href="../css/booklist/sale-date.css"/>
+
+<link type="text/css" rel="stylesheet" href="../css/booklist/Restaurant.css"/>
+<link type="text/css" rel="stylesheet" href="../css/booklist/new-style.css"/>
+
+<link type="text/css" rel="stylesheet" href="../css/booklist/travel.css"/>
+<link type="text/css" rel="stylesheet" href="../css/booklist/font/iconfont.css"/>
+<link type="text/css" rel="stylesheet" href="../css/booklist/fontSize.css"/>
+<script type="text/javascript" src="../Scripts/jquery-1.8.0.min.js"></script>
+<script type="text/javascript" src="../css/booklist/jquery-ui.js"></script>
+<script type="text/javascript" src="../css/booklist/date-range-picker.js"></script>
+<script type="text/javascript" src="../Scripts/fontSize.js"></script>
+<style type="text/css">
+	body{overflow: auto;}
+</style>
+</head>
+<body class="yu-font12">
+	<!--客房兑换-->
+	<div class="room-exchange">
+		<ul class="clearfix">
+			<li class="yu-grid yu-alignc J__chooseHotel">
+				<label class="lbl yu-f24r"><i class="ico i1"></i>酒店名称</label> <em class="res yu-flex1">微可牛大酒店</em><i class="yu-arr"></i>
+			</li>
+			<li class="yu-grid yu-alignc J__chooseRoomType">
+				<label class="lbl yu-f24r"><i class="ico i2"></i>酒店房型</label> <em class="res yu-flex1">豪华大床房</em><i class="yu-arr"></i>
+			</li>
+			
+			<li class="yu-grid yu-alignc yu-tmar10">
+				<label class="lbl yu-f24r"><i class="ico i3"></i>房间数</label>
+				<div class="yu-flex1" style="text-align: right;">
+					<div class="chooseBuyNum">
+			          <div class="minus" bindtap="bindBuyNum" id="0">-</div>
+			          <input class="num ff-hv" type="text" value="1" />
+			          <div class="plus" bindtap="bindBuyNum" id="1">+</div>
+			      	</div>
+				</div>
+			</li>
+			
+			<li class="yu-grid yu-alignc yu-tmar10">
+				<label class="lbl yu-f24r"><i class="ico i4"></i>预估金额</label> <em class="res yu-flex1 yu-c40" style="text-align: right;">￥660</em>
+			</li>
+			
+			<div class="tips">预估金额：<br />该兑换金额和实际到帐金额有一定误差，具体请联系客服咨询，且该金额目前不支持提现，可以在网站上等额消费！</div>
+		</ul>
+		
+		<div class="bottom__btn">
+			<div class="bottomfixed">
+				<a class="btn-submit fl" href="#">提交兑换</a>
+				<a class="btn-reset fr" href="#">重置</a>
+			</div>
+		</div>
+	</div>
+	
+	<!-- 底部弹窗.Start -->
+	<!--酒店名称-->
+	<div class="mask mask-hotelName">
+		<div class="mask-inner yu-lrpad20r">
+			<div class="yu-grid yu-h90r yu-f32r yu-alignc yu-bor bbor yu-textc yu-j-s  yu-bmar40r" >
+				<p class="yu-w120r cancel-btn2">取消</p>
+				<p class="yu-w120r yu-blue2  complete-btn2">完成</p>
+			</div>
+			<ul class="yu-lrpad10 hongbao-select bl hotel-select">
+				<li class="yu-h120r yu-grid yu-alignc yu-bor bbor cur">
+					<p class="yu-overflow yu-f28r">微可牛大酒店</p>
+					<p class="copy-radio"></p>
+				</li>
+				<li class="yu-h120r yu-grid yu-alignc yu-bor bbor">
+					<p class="yu-overflow yu-f28r">微可牛大酒店002</p>
+					<p class="copy-radio"></p>
+				</li>
+				<li class="yu-h120r yu-grid yu-alignc yu-bor bbor">
+					<p class="yu-overflow yu-f28r">微可牛大酒店003</p>
+					<p class="copy-radio"></p>
+				</li>
+			</ul>
+		</div>
+	</div>
+	
+	<!--酒店房型-->
+	<div class="mask mask-roomType">
+		<div class="mask-inner yu-lrpad20r">
+			<div class="yu-grid yu-h90r yu-f32r yu-alignc yu-bor bbor yu-textc yu-j-s  yu-bmar40r" >
+				<p class="yu-w120r cancel-btn2">取消</p>
+				<p class="yu-w120r yu-blue2  complete-btn2">完成</p>
+			</div>
+			<dl class="">
+				<dt class="yu-f26r yu-c99 yu-bmar30r">酒店房型</dt>
+				<dd class="yu-grid yu-j-s type-screen">
+					<div class="cur">不限</div>
+					<div>豪华大床房</div>
+					<div>豪华双人间</div>
+					<div>三星/舒适</div>
+					<div>四星/高级</div>
+					<div>五星/豪华</div>
+					
+				</dd>
+			</dl>
+		</div>
+	</div>
+	<script type="text/javascript">
+		$(function(){
+			//通用
+			$(".mask").click(function(){
+				$(this).fadeOut();
+			});
+			$(".mask-inner").click(function(e){
+				e.stopPropagation();
+			});
+			
+			
+			//酒店选择
+			$(".J__chooseHotel").on("click", function(){
+				$(".mask-hotelName").fadeIn();
+			});
+			$(".hotel-select>li").on("click",function(){
+				if(!$(this).hasClass("dis")){
+					$(this).addClass("cur").siblings().removeClass("cur");
+				}
+			});
+			
+			//酒店房型选择
+			$(".J__chooseRoomType").on("click", function(){
+				$(".mask-roomType").fadeIn();
+			});
+			$(".type-screen>div").on("click",function(){
+				$(this).addClass("cur").siblings().removeClass("cur");
+			})
+			//关闭
+			$(".cancel-btn2").on("click",function(){
+				$(".mask").fadeOut();
+			});
+		});
+	</script>
+	<!-- 底部弹窗.End -->
+	
+	<script type="text/javascript">
+		//...
+	</script>
+</body>
+</html>

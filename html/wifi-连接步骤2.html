@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+	<meta charset="UTF-8" />
+	<title>wifi连接步骤</title>
+	<meta name="format-detection" content="telephone=no">
+	<!--自动将网页中的电话号码显示为拨号的超链接-->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+	<!--width宽度height高度，initial-scale初始的缩放比例，minimum-scale允许缩放到的最小比例，maximum-scale允许缩放到的最大比例，user-scalable是否可以手动缩放-->
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<!--IOS设备-->
+	<meta name="apple-touch-fullscreen" content="yes">
+	<!--IOS设备-->
+	<meta http-equiv="Access-Control-Allow-Origin" content="*">
+	<link rel="stylesheet" href="../css/booklist/mend-reset.css" />
+	<link rel="stylesheet" href="../css/booklist/mend-weikeniu.css" />
+	
+	<script src="../Scripts/jquery-1.8.0.min.js"></script>
+	<script src="../Scripts/fontSize.js"></script>
+</head>
+<body class="bg--ebebeb">
+	
+	<!-- <>一键连wifi -->
+	<div class="sec__oneKey-wifi clearfix">
+		<!--//大图滚动-->
+		<div class="wifi__banner">
+			<div class="swiper-container">
+				<div class="swiper-wrapper">
+					<div class="swiper-slide">  <!--推荐图片尺寸：750x750-->
+						<a class="aimg" href="javascript:;"><img src="../images/wifi/wifi-banner-img01.jpg" /></a>
+					</div>
+					<div class="swiper-slide">
+						<a class="aimg" href="javascript:;"><img src="../images/wifi/wifi-banner-img02.jpg" /></a>
+					</div>
+				</div>
+				<div class="swiper-pagination"></div>
+			</div>
+		</div>
+		
+		<div class="wifi__connection-status J__wifiConnectionStep">
+			<!--状态-->
+			<div class="wifi__cnnt-status">
+				<i class="status i1"></i> <!-- class为i2、i3分别为第二步、第三步	<i class="status i2"></i><i class="status i3"></i>-->
+			</div>
+			
+			<!--步骤-->
+			<div class="wifi__cnnt-panel">
+				<div class="wifi-step step01" data-step="1">
+					<h2 class="tit">第一步：请选择店铺</h2>
+					<div class="options yScroll">
+						<ul>
+							<li class="flexbox"><span class="text flex1">微可牛天河分店1</span> <i class="radio"></i></li>
+							<li class="flexbox on"><span class="text flex1">微可牛天河分店2</span> <i class="radio"></i></li>
+							<li class="flexbox"><span class="text flex1">微可牛天河分店3</span> <i class="radio"></i></li>
+							<li class="flexbox disabled"><span class="text flex1">微可牛天河分店4</span> <i class="radio"></i></li>
+						</ul>
+						<div class="align-c"><a class="btn-next" href="javascript:;">下一步</a></div>
+					</div>
+				</div>
+				<div class="wifi-step step02" data-step="2" style="display:none;">
+					<h2 class="tit">第二步：请选择Wi-Fi</h2>
+					<div class="options yScroll">
+						<ul>
+							<li class="flexbox"><span class="text flex1">weikeniuWIFI001</span> <i class="radio"></i></li>
+							<li class="flexbox"><span class="text flex1">weikeniuWIFI711</span> <i class="radio"></i></li>
+							<li class="flexbox on"><span class="text flex1">weikeniuWIFI029</span> <i class="radio"></i></li>
+							<li class="flexbox disabled"><span class="text flex1">weikeniuWIFI007</span> <i class="radio"></i></li>
+						</ul>
+						<div class="align-c"><a class="btn-prev" href="javascript:;">上一步</a><a class="btn-next" href="javascript:;">下一步</a></div>
+					</div>
+				</div>
+				<div class="wifi-step step03" data-step="3" style="display:none;">
+					<h2 class="tit">第三步：连接Wi-Fi</h2>
+					<div class="options">
+						<ul>
+							<!--wifi图标-->
+							<li style="padding-bottom:.3rem;height:auto;">
+								<p class="wifi-img"><img src="../images/wifi/icon__wifi-img.png" /></p>
+								<div class="tips align-c">
+									<h2>提示：要用连接xxxWifi后点击一键连接。</h2>
+									<p class="c--999">正在使用移动数据</p>
+								</div>
+								<a class="btn-cnnt" href="javascript:;">手动连接</a>
+							</li>
+							
+							<!--二维码图标-->
+							<li style="padding-bottom:.3rem;height:auto; display:none;">
+								<p class="wifi-img wifi-qrcode"><img src="../images/wifi/wifi-qrcode.png" /></p>
+								<a class="btn-cnnt" href="javascript:;">长按连接</a>
+							</li>
+							
+						</ul>
+					</div>
+				</div>
+			</div>
+			
+		</div>
+		
+		<!--暂无可用wifi-->
+		<div class="wifi__connection-status" style="display:none;">
+			<!--步骤-->
+			<div class="wifi__cnnt-panel">
+				<div class="wifi-step">
+					<div class="options">
+						<ul>
+							<!--暂无wifi-->
+							<li style="margin-top:.2rem;height:auto; height:calc(100vh - 4.65rem);">
+								<p class="wifi-img wifi-error" style="padding-top:2.5rem;"><img src="../images/wifi/wifi-cnnt-error.png" /></p>
+								<div class="align-c" style="margin-top:.2rem;">抱歉，暂无可用WIFI！</div>
+							</li>
+							
+						</ul>
+					</div>
+				</div>
+			</div>
+			
+		</div>
+		
+	</div>
+	
+	<!-- 左右滑屏(导航) -->
+	<link href="../swiper/swiper-3.4.1.min.css" rel="stylesheet" />  
+	<script src="../swiper/swiper-3.4.1.jquery.min.js"></script>
+	<script> 
+		var mySwiper = new Swiper('.swiper-container',{
+			pagination: '.swiper-pagination',
+			paginationClickable: true,
+			autoplayDisableOnInteraction: false
+		})
+	</script>
+	<!-- 左右滑屏.End -->
+	
+	<script type="text/javascript">
+		/** __公共函数 */
+		$(function(){
+			//...
+		});
+		
+		/** __自定函数 */
+		$(function(){
+			//wifi连接步骤2
+			//选项选择
+			$(".wifi__cnnt-panel .options li").on("click", function(){
+				if(!$(this).hasClass("disabled")){
+					$(this).addClass("on").siblings().removeClass("on");
+				}
+			});
+			
+			//上一步
+			$(".btn-prev").on("click", function(){
+				var step = $(this).parents(".wifi-step").attr("data-step");
+				//改变状态
+				if(step == 2){
+					$(".wifi__cnnt-status .status").removeClass("i2").addClass("i1");
+				}
+				
+				
+				$(this).parents(".wifi-step").hide();
+				$(this).parents(".wifi-step").prev().show();
+			});
+			//下一步
+			$(".btn-next").on("click", function(){
+				var step = $(this).parents(".wifi-step").attr("data-step");
+				//改变状态
+				if(step == 1){
+					$(".wifi__cnnt-status .status").removeClass("i1").addClass("i2");
+				}else if(step == 2){
+					$(".wifi__cnnt-status .status").removeClass("i2").addClass("i3");
+				}
+				
+				
+				$(this).parents(".wifi-step").hide();
+				$(this).parents(".wifi-step").next().show();
+			});
+		});
+	</script>
+	
+</body>
+</html>

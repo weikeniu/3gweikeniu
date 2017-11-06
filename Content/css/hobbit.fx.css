@@ -1,0 +1,41 @@
+﻿
+ul,li{list-style:none;margin:0;padding:0}
+table{border-collapse:collapse;border-spacing:0;empty-cells:show}
+
+.ui_loader{z-index:9999999;position:fixed;top:50%;left:50%;box-shadow:0 1px 1px -1px white;border:1px solid #444;background:#222;color:white;text-shadow:0 1px 1px #111;font-weight:normal;background-image:-webkit-gradient(linear,left top,left bottom,from(#444),to(#222));background-image:-webkit-linear-gradient(#444,#222);-webkit-border-radius:.6em;border-radius:.6em;width:200px;opacity:.8;height:auto;margin-left:-110px;margin-top:-40px;padding:10px;text-align:center}
+.ui_loader .ui_loader_icon{width:46px;height:46px;-webkit-border-radius:23px;border-radius:23px;-webkit-animation:rotate 1s linear infinite;animation:rotate 1s linear infinite;background:#000;margin:0 auto}
+.ui_loader img{width:32px;height:32px;position:absolute;top:7px;left:7px}
+@-webkit-keyframes rotate{0%{-webkit-transform:rotate(0deg)}
+100%{-webkit-transform:rotate(360deg)}
+}
+.ui_loader .ui_loader_close{position:absolute;right:-6px;top:-6px;height:30px;width:30px;text-align:center;-webkit-border-radius:15px;-moz-border-radius:15px;border-radius:15px;background-color:#000;font-size:26px;font-weight:bold;color:#fff;font-family:Arial;text-shadow:none}
+.ui_loader h1{font-size:16px;text-align:center}
+.ui_mask{background-color:#333;position:fixed;top:0;width:100%;bottom:0;z-index:9998;opacity:.4}
+.ui_toggle{height:100px;line-height:100px;width:20px;position:absolute;top:50%;margin-top:-50px;border-top:dotted 1px #666;border-left:dotted 1px #666;border-bottom:dotted 1px #666;background-color:#3E3B35;border-top-left-radius:8px;border-bottom-left-radius:8px;right:0;z-index:9999;color:#FFF}
+.ui_toggle .ui_icon{position:absolute;top:50%;margin-top:-14px;left:-5px}
+.ui_checkcode{vertical-align:middle;width:60px;height:30px;margin:7px 5px 0 2px;border-radius:8px;box-shadow:0 1px 3px #999;-webkit-box-shadow:0 1px 3px #999}
+.ui_status{background-color:#016DA5;color:#FFF;text-decoration:none;text-shadow:none;height:24px;line-height:24px;font-size:14px;text-indent:20px;background-image:-webkit-gradient(linear,left top,left bottom,from(#016CA4),to(#0D81BD));background-image:-webkit-linear-gradient(#016CA4,#0D81BD)}
+.ui_drawer{display:none;margin:-1px -15px 15px -15px;background-color:#F7F7F7;padding:0;box-shadow:inset 0 -2px 9px #999;-webkit-box-shadow:inset 0 -2px 9px #999;border-bottom:0;overflow:hidden}
+.ico_arr_r{width:6px;height:6px;border-right:3px solid #1387C3;border-top:3px solid #1387C3;-webkit-transform:rotate(45deg);position:absolute;right:10px;top:50%;margin-top:-3px;display:block}
+.ico_arr_d{width:6px;height:6px;border-right:3px solid #1387C3;border-bottom:3px solid #1387C3;-webkit-transform:rotate(45deg);position:absolute;right:10px;top:50%;margin-top:-3px;display:block}
+
+
+.ui{background-image:url("../pic/ui2x.png?t=201306261439");background-repeat:no-repeat;-o-background-size:32px 160px;-webkit-background-size:32px 160px}
+/*shared*/
+.nodata_show{text-align:center;line-height:30px;padding:15% 0 20% 0}
+.nodata_show a{display:inline}
+.extheight{height:40px}
+.price{color:#FF8001}
+.marketprice{text-decoration:line-through;color:#777}
+.ellipsis{display:inline-block;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;width:100%}
+.bold{font-weight:bold}
+div.clear{clear:both;font-size:0;height:0;width:0;line-height:0;overflow:hidden}
+.hiddeninput{visibility:hidden;position:absolute;width:0}
+#header_ui_menu a{width:25%}
+
+.ui_calendar_selector{position:absolute;top:50%;margin-top:-42px;display:block;width:120px;height:84px}
+.ui_calendar_selector_lable{position:absolute;line-height:12px;font-size:12px;top:10px;left:0;height:14px;width:100px;text-align:center;color:#B4B4B4}
+.ui_calendar_selector_date{font-size:44px;line-height:44px;position:absolute;top:30px;left:0;height:44px;font-weight:normal;width:100px;text-align:center}
+.ui_calendar_selector_week{position:absolute;line-height:20px;font-size:12px;top:54px;right:20px}
+.ui_calendar_selector_month{position:absolute;line-height:20px;font-size:12px;top:32px;right:20px}
+.ui_calendar_selector .ui_icon_arrow_r{right:-9px;margin-top:-5px}

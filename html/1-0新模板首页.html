@@ -1,0 +1,171 @@
+﻿
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html;charset=utf-8" />
+<meta name="keywords" content="关键词1,关键词2,关键词3" />
+<meta name="description" content="对网站的描述" />
+<meta name="format-detection" content="telephone=no">
+<!--自动将网页中的电话号码显示为拨号的超链接-->
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+<!--width宽度height高度，initial-scale初始的缩放比例，minimum-scale允许缩放到的最小比例，maximum-scale允许缩放到的最大比例，user-scalable是否可以手动缩放-->
+<meta name="apple-mobile-web-app-capable" content="yes">
+<!--IOS设备-->
+<meta name="apple-touch-fullscreen" content="yes">
+<!--IOS设备-->
+<meta http-equiv="Access-Control-Allow-Origin" content="*">
+<title>首页</title>
+<link type="text/css" rel="stylesheet" href="../css/booklist/font/iconfont.css"/>
+<link type="text/css" rel="stylesheet" href="../css/booklist/sale-date.css"/>
+<link type="text/css" rel="stylesheet" href="../css/booklist/new-style.css"/>
+<link type="text/css" rel="stylesheet" href="../css/booklist/fontSize.css"/>
+
+<script type="text/javascript" src="../Scripts/jquery-1.8.0.min.js"></script>
+<script src="../Scripts/fontSize.js"></script>
+</head>
+<body>
+	<article class="full-page">
+		<aside class="l-side">
+			<nav>
+				<a href="#" class="yu-grid yu-alignc">
+					<p class="ico shouye"></p>
+					<p>首页</p>
+				</a>
+				<a href="#" class="yu-grid yu-alignc">
+					<p class="ico jianjie"></p>
+					<p>酒店简介</p>
+				</a>
+				<a href="#" class="yu-grid  yu-alignc">
+					<p class="ico yuding"></p>
+					<p>客房预定</p>
+				</a>
+				<a href="#" class="yu-grid  yu-alignc">
+					<p class="ico dingcan"></p>
+					<p>酒店订餐</p>
+				</a>
+				<a href="#" class="yu-grid  yu-alignc">
+					<p class="ico chaoshi"></p>
+					<p>酒店超市</p>
+				</a>
+				<a href="#" class="yu-grid  yu-alignc">
+					<p class="ico youxuan"></p>
+					<p>特惠优选</p>
+				</a>
+				<a href="#" class="yu-grid  yu-alignc">
+					<p class="ico sheshi"></p>
+					<p>设施服务</p>
+				</a>
+				<a href="#" class="yu-grid  yu-alignc">
+					<p class="ico yanhui"></p>
+					<p>会议宴会</p>
+				</a>
+				<a href="#" class="yu-grid  yu-alignc">
+					<p class="ico huodong"></p>
+					<p>酒店活动</p>
+				</a>
+				<a href="#" class="yu-grid  yu-alignc">
+					<p class="ico hongbao"></p>
+					<p>我的红包</p>
+				</a>
+				<a href="#" class="yu-grid  yu-alignc">
+					<p class="ico dingdan"></p>
+					<p>我的订单</p>
+				</a>
+			</nav>
+		</aside>
+		<header class="yu-grid yu-alignc yu-h40 yu-lrpad10">
+				<div>
+					<div class="yu-grid yu-alignc">
+						<p class="nav-ico l-side-btn"></p>
+						<p class="copy-bor1"></p>
+						<!--<p class="wx-ico"></p>-->
+						<p class="logo-img"><img src="../images/wxlogo.png" /></p>
+					</div>
+				</div>
+				<div class="yu-overflow"></div>
+				<div>
+					<div class="yu-grid yu-alignc">
+						<p class="phone-ico"></p>
+						<p class="copy-bor1"></p>
+						<p class="person-ico"></p>
+					</div>
+				</div>
+			</header>
+		<section class="show-body">
+			
+			<section class="content">
+				<img src="../images/newbg.jpg" class="content-bg"/>
+				<div class="q-nav type1 yu-grid yu-alignc">
+					<!--<p class="ico"></p>-->
+					<p class="iconfont icon-daohang yu-rmar10"></p>
+					<p class="yu-overflow">一键导航</p>
+				</div>
+				<div class="q-nav type2 yu-grid yu-alignc">
+					<!--<p class="ico"></p>-->
+					<p class="iconfont icon-quanjing- yu-rmar10"></p>
+					<p class="yu-overflow">查看全景</p>
+				</div>
+			</section>
+			<footer>
+			<div class="yu-grid fix-bottom-nav">
+				<a href="#" class="yu-overflow">
+					<!--<p class="ico type1"></p>-->
+					<p class="iconfont icon-dingfang1"></p>
+					<p>客房预订</p>
+				</a>
+				<a href="#" class="yu-overflow">
+					<!--<p class="ico type2"></p>-->
+					<p class="iconfont icon-dingcan1"></p>
+					<p>酒店餐饮</p>
+				</a>
+				<a href="#" class="yu-overflow">
+					<!--<p class="ico type3"></p>-->
+					<p class="iconfont icon-huodong"></p>
+					<p>酒店活动</p>
+				</a>
+				<a href="#" class="yu-overflow">
+					<!--<p class="ico type4"></p>-->
+					<p class="iconfont icon-sheshi1"></p>
+					<p>设施服务</p>
+				</a>
+				<a href="#" class="yu-overflow">
+					<!--<p class="ico type5"></p>-->
+					<p class="iconfont icon-huiyiting"></p>
+					<p>会议宴会</p>
+				</a>
+			</div>
+		</footer>
+		</section>
+		<section class="loading-page" style="display: none;">
+			<div class="inner">
+				<img src="../images/loading-w.png" class="type1" />
+				<img src="../images/loading-n.png" />
+			</div>
+		</section>
+	</article>
+	<script>
+		var lSideNum=0;
+		$(".l-side-btn").click(function(){
+			if(lSideNum==0){
+//				$(".show-body").addClass("shin-animate-right").removeClass("shin-animate-left");
+				$(".full-page").addClass("shin-slide-right").removeClass("shin-slide-left");
+				$(".l-side").fadeIn();
+				$(".l-side-mask").show();
+				lSideNum=1;
+				
+			}else{
+//				$(".show-body").addClass("shin-animate-left").removeClass("shin-animate-right");
+				$(".full-page").removeClass("shin-slide-right").addClass("shin-slide-left");
+				$(".l-side").fadeOut();
+				$(".l-side-mask").hide();
+				lSideNum=0;
+			}
+		})
+		//添加遮罩层   用以点击收起
+		$(".full-page").append($("<div class='l-side-mask'></div>"));
+		$(".l-side-mask").on("click",function(){
+			$(".l-side-btn").click();
+		})
+	</script>
+</body>
+</html>
