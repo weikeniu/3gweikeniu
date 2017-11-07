@@ -94,6 +94,36 @@ a,button,input,label{-webkit-tap-highlight-color:rgba(255,0,0,0);}
 .clamp2{-webkit-line-clamp:2;}
 .clamp3{-webkit-line-clamp:3;}
 
+
+/*背景颜色*/
+.bg--fff{background:#fff;}
+.bg--000{background:#000;}
+/*字体颜色*/
+.ca_c876401{color:#876401;}
+.ca_c666{color:#666;}
+
+/*间距*/
+.car_mt2{margin-top:.2rem;}
+.car_mt4{margin-top:.4rem;}
+.car_mt5{margin-top:.5rem;}
+.car_mt65{margin-top:.65rem;}
+.car_mt1{margin-top:.1rem;}
+.car_mb1{margin-bottom:.1rem;}
+.car_mt15{margin-top:.15rem;}
+.car_ml1{margin-left:.1rem;}
+.car_ml2{margin-left:.2rem;}
+.car_mr1{margin-right:.1rem;}
+.car_pdt25{ padding-top:.25rem;}
+.car_pdt45{ padding-top:.45rem;}
+/*字体大小*/
+.car_fs62{font-size:.62rem;}
+.car_fs52{font-size:.52rem;}
+.car_fs4{font-size:.4rem;}
+.car_fs3{font-size:.3rem;}
+.car_fs24{font-size:.24rem;}
+.car_fs22{font-size:.22rem;}
+.car_fs18{font-size:.18rem;}
+
 /* 文字省略 */
 .ellipsis {
 	text-overflow: ellipsis;
