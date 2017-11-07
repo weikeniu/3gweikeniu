@@ -614,7 +614,7 @@ body.overflow{overflow: hidden;}
 /*swiper滚动区*/
 .wrap__swiper-chinaStyle{
 	background:url(../../images/wkn__tmpl-bg09-nav.png) no-repeat center bottom; background-size:7.5rem;
-	display:block; padding: .2rem 0; overflow:hidden; height:5rem; width:100%; position:absolute;left:0;bottom:0; z-index:11;
+	display:block; padding: .2rem 0; overflow:hidden; height:5rem; width:100%; position:absolute;left:0;bottom:0; z-index:9;
 }
 .wrap__chinaStyle-linkNav{/*padding: 0 .35rem;*/ margin-top:1.4rem; text-align: center; width: 100%;}
 .wrap__chinaStyle-linkNav .nav-list{display: inline-block; padding-bottom:.2rem; width: 100%;}
@@ -633,14 +633,16 @@ body.overflow{overflow: hidden;}
 }
 
 /* __ 模板1-10 -------------------------- */
-.wrap__headNav{background:#fff; max-width:750px; height:.9rem; line-height:.9rem; width:100%; position:absolute;top:0;z-index:11;}
+.wrap__headNav{background:#fff; max-width:750px; height:.9rem; line-height:.9rem; width:100%; position:absolute;top:0;z-index:9;}
 .wrap__headNav .logo{display:block;}
 .wrap__headNav .logo img{margin-top:.21rem; margin-left:.2rem; height:.48rem;}
-.wrap__headNav .cate{padding:0 .2rem;}
+.wrap__headNav .cate{padding:0 .2rem; position:relative;}
 .wrap__headNav .cate .iconfont{color:#876401;}
+.wrap__headNav .cate .dropdown-menu{background:rgba(53,55,62,.85); width:2.4rem; position:absolute;right:0;top:.9rem; z-index:999;}
+.wrap__headNav .cate .dropdown-menu a{color:#fff; display:block; font-size:.28rem; text-align:center; height:.9rem;line-height:.9rem;}
 /*酒店swiper大图*/
 .wrap__swiper-bigimg{
-	display:block; padding: .2rem 0; overflow:hidden; height:6rem; width:100%; position:absolute;left:0;top:1.2rem; z-index:11;
+	display:block; padding: .2rem 0; overflow:hidden; height:6rem; width:100%; position:absolute;left:0;top:1.2rem; z-index:5;
 }
 .wrap__bigimg-box{text-align: center; width: 100%;}
 .wrap__bigimg-box .bigimg{background:url(../../images/wkn__tmpl-bg10-circle.png) no-repeat center; background-size:cover; display: inline-block; overflow:hidden; height:5.62rem;width:5.62rem;}
@@ -652,7 +654,7 @@ body.overflow{overflow: hidden;}
 
 /*底部导航*/
 .wrap__swiper-lovely{
-	display:block; padding: .2rem 0; overflow:hidden; width:100%; position:absolute;left:0;bottom:0; z-index:11;
+	display:block; padding: .2rem 0; overflow:hidden; width:100%; position:absolute;left:0;bottom:0; z-index:6;
 }
 .wrap__lovely-linkNav{/*padding: 0 .35rem;*/ text-align: center; width: 100%;}
 .wrap__lovely-linkNav .nav-list{display: inline-block; padding-bottom:.2rem; width: 100%;}

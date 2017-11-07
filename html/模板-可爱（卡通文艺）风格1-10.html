@@ -38,9 +38,35 @@
 		<!-- //顶部导航栏 -->
 		<div class="wrap__headNav clearfix">
 			<a class="logo fl" href="#"><img src="../images/wkn__tmpl-logo10.png" /></a>
-			<div class="cate fr">
+			<div class="cate fr" id="J__toggleCate">
 				<i class="iconfont icon-cebianlan"></i>
+				<!--下拉菜单-->
+				<div class="dropdown-menu" style="display:none;">
+					<a href="#">客房预订</a>
+					<a href="#">多功能厅</a>
+					<a href="#">酒店超市</a>
+					<a href="#">餐饮美食</a>
+					<a href="#">酒店设施</a>
+					<a href="#">团购预售</a>
+					<a href="#">活动中心</a>
+					<a href="#">酒店定位</a>
+					<a href="#">关于我们</a>
+					<a href="#">我的订单</a>
+				</div>
 			</div>
+			<script type="text/javascript">
+				$(function(){
+					//下拉菜单
+					$("#J__toggleCate").on("click", function(){
+						if($(this).find("i").hasClass("icon-cebianlan")){
+							$(this).find("i").removeClass("icon-cebianlan").addClass("icon-guanbi");
+						}else{
+							$(this).find("i").addClass("icon-cebianlan").removeClass("icon-guanbi");
+						}
+						$(this).find(".dropdown-menu").slideToggle(300);
+					});
+				});
+			</script>
 		</div>
 		
 		<!-- //酒店swiper大图 -->
