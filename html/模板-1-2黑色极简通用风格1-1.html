@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+	<meta charset="UTF-8" />
+	<title>模板-1-2黑色极简通用风格1-1</title>
+	<meta name="format-detection" content="telephone=no">
+	<!--自动将网页中的电话号码显示为拨号的超链接-->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+	<!--width宽度height高度，initial-scale初始的缩放比例，minimum-scale允许缩放到的最小比例，maximum-scale允许缩放到的最大比例，user-scalable是否可以手动缩放-->
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<!--IOS设备-->
+	<meta name="apple-touch-fullscreen" content="yes">
+	<!--IOS设备-->
+	<meta http-equiv="Access-Control-Allow-Origin" content="*">
+	<link type="text/css" rel="stylesheet" href="../css/booklist/font/iconfont.css"/>
+    <link rel="stylesheet" href="../css/booklist/new-style.css" />
+	<link rel="stylesheet" href="../css/booklist/mend-reset.css" />
+	<script src="../Scripts/jquery-1.8.0.min.js"></script>
+	<script src="../Scripts/fontSize.js"></script>
+</head>
+<body>
+	<div class="wkniu_templets">
+		 <div class="tem_miniMalist-bg" style="background:url(../images/Template/Bg_minist.jpg) left center no-repeat; background-size:100% 100%;">
+		 	   <div class="prk_slide-int fr">
+		 	         <ul>
+		 	              <li><span class="iconfont icon-jiudian"></span>订房</li>
+		 	              <li><span class="iconfont icon-dingdan2"></span>订单</li>
+		 	              <li><span class="iconfont icon-ditu2"></span>地图</li>
+		 	              <li><span class="iconfont icon-huiyuan1"></span>会员</li>
+		 	              <li><span class="iconfont icon-jianjie2"></span>简介</li>
+		 	              <li><span class="iconfont icon-sheshi2"></span>设施</li>
+		 	              <li><span class="iconfont icon-tupian3"></span>图片</li>
+		 	              <li><span class="iconfont icon-quanjing-"></span>全景</li>
+		 	              <li id="J_more"><span class="iconfont icon-gengduo"></span>更多</li>
+		 	         </ul>
+		 	   </div>
+		 </div>
+	</div>
+	<div class="tep_e-dilog" id="more_d-tl" style="display:none;">
+         <div class="dig_box-po">
+         <div class="clearfix t_dig-close">
+	          <p class="iconfont icon-guanbi fr car_fs52"></p>
+         </div>
+         <div class="more_dtl-msg">
+               <ul>
+                    <li><i class="iconfont icon-jianjie"></i>简介</li>
+                    <li><i class="iconfont icon-sheshi"></i>设施</li>
+                    <li><i class="iconfont icon-tupian"></i>图片</li>
+                    <li><i class="iconfont icon-quanjing"></i>全景</li>
+                    <li><i class="iconfont icon-hongbao"></i>红包</li>
+                    <li><i class="iconfont icon-qianggou"></i>抢购</li>
+                    <li><i class="iconfont icon-houdong"></i>活动</li>
+                    <li><i class="iconfont icon-choujiang"></i>抽奖</li>
+                    <li><i class="iconfont icon-dingcan"></i>订餐</li>
+                    <li><i class="iconfont icon-huiyuanka"></i>会员卡</li>
+                    <li><i class="iconfont icon-chongzhi"></i>充值</li>
+                    <li><i class="iconfont icon-chaoshi"></i>超市</li>
+                    <li><i class="iconfont icon-dingfang"></i>订房</li>
+                    <li><i class="iconfont icon-dingdan"></i>订单</li>
+                    <li><i class="iconfont icon-ditu"></i>地图</li>
+                    <li><i class="iconfont icon-wuiyuan"></i>会员</li>
+               </ul>
+         </div> 
+         </div>
+	</div>
+</body>
+</html>
+<script type="text/javascript">
+    $("#J_more").click(function(){
+		  $("#more_d-tl").show();
+		  $(".t_dig-close").click(function(){
+			    $("#more_d-tl").hide();
+			  })
+		});
+</script>
