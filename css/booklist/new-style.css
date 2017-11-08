@@ -2551,6 +2551,7 @@ td.ui-datepicker-week-end>a {
 .tem_miniMalist-bg{width:100%; max-width:7.5rem; min-width:3.2rem; height:100%; position:relative; margin:0 auto;}
 .prk_slide-int{margin-top:.4rem; margin-right:.4rem;}
 .prk_slide-int li{width:1.55rem; height:.6rem; line-height:.6rem;  background:rgba(255,255,255,0.3); text-align:center; color:#b8b7b6; font-size:.3rem; border-radius:.04rem; margin-bottom:.2rem;}
+.prk_slide-int li a{display:block;}
 .prk_slide-int li span{font-size:.36rem; margin-right:.15rem;}
 .tep_e-dilog{width:100%; max-width:7.5rem; height:100%;position:absolute; top:0;}
 .dig_box-po{width:100%; max-width:7.5rem; height:100%; position:relative; margin:0 auto; background:rgba(0,0,0,0.68);}
@@ -2562,7 +2563,8 @@ td.ui-datepicker-week-end>a {
 .Hotel-lo-go img{width:5.35rem; height:.95rem;}
 .j_keyLow-box{ width:5.05rem; height:100%; position:relative; margin:0 auto; bottom:1.3rem;}
 .in_detail-main{width:5.05rem; height:2.8rem;background:rgba(2,2,2,0.7); position:absolute; bottom:0; font-size:.24rem; color:#fff3d0;}
-.in_detail-main li{ width:1.26rem; float:left; text-align:center; margin-top:.35rem; line-height:.42rem;}
+.in_detail-main li{ width:1.26rem; float:left; text-align:center; line-height:.42rem;}
+.in_detail-main li a{display:block; padding-top:.35rem;}
 .in_detail-main li i{display:block; font-size:.4rem;}
 /*模板--奢华沉稳*/
 .hv-hua_top{padding:.1rem .15rem .1rem .25rem; background:#fff;}
